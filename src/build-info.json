@@ -1,0 +1,5 @@
+{
+  "project": "gpt_static_html",
+  "branch": "feature/cli-os-guides",
+  "target": "github-pages"
+}

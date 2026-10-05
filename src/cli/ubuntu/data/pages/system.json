@@ -1,0 +1,66 @@
+{
+  "id": "system",
+  "title": "프로세스와 systemd",
+  "eyebrow": "System · Process",
+  "description": "프로세스와 서비스는 별개지만 운영 문제에서는 함께 봅니다. ps/pgrep과 systemctl/journalctl을 연결합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "프로세스",
+      "headers": [
+        "명령",
+        "용도",
+        "예시"
+      ],
+      "rows": [
+        [
+          "ps aux",
+          "전체 프로세스",
+          "ps aux"
+        ],
+        [
+          "pgrep -af",
+          "PID + command line",
+          "pgrep -af node"
+        ],
+        [
+          "top",
+          "리소스",
+          "top"
+        ],
+        [
+          "kill",
+          "종료 요청",
+          "kill PID"
+        ],
+        [
+          "/proc/$PID",
+          "프로세스 세부",
+          "cat /proc/PID/status"
+        ]
+      ]
+    },
+    {
+      "type": "steps",
+      "title": "서비스 장애 기본 순서",
+      "items": [
+        {
+          "title": "상태",
+          "body": "systemctl status SERVICE"
+        },
+        {
+          "title": "로그",
+          "body": "journalctl -u SERVICE"
+        },
+        {
+          "title": "재시작",
+          "body": "sudo systemctl restart SERVICE"
+        },
+        {
+          "title": "포트",
+          "body": "ss -lntp로 실제 LISTEN 확인"
+        }
+      ]
+    }
+  ]
+}

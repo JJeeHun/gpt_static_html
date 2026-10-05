@@ -1,0 +1,54 @@
+{
+  "id": "network",
+  "title": "네트워크와 DNS",
+  "eyebrow": "System · Network",
+  "description": "iproute2와 ss를 중심으로 주소, route, 포트, DNS를 확인합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "네트워크 명령",
+      "headers": [
+        "명령",
+        "용도",
+        "예시"
+      ],
+      "rows": [
+        [
+          "ip addr",
+          "IP·인터페이스",
+          "ip addr"
+        ],
+        [
+          "ip route",
+          "라우팅",
+          "ip route"
+        ],
+        [
+          "ss -lntp",
+          "LISTEN TCP",
+          "ss -lntp"
+        ],
+        [
+          "dig",
+          "DNS",
+          "dig +short example.com"
+        ],
+        [
+          "nc",
+          "포트 연결",
+          "nc -vz host 22"
+        ],
+        [
+          "curl",
+          "HTTP",
+          "curl -I https://example.com"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "DNS → Port → SSH",
+      "code": "dig +short server.example.com\nnc -vz server.example.com 22\nssh -vvv user@server.example.com"
+    }
+  ]
+}

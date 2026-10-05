@@ -1,0 +1,8 @@
+{
+  "id": "search",
+  "kind": "search",
+  "title": "Ubuntu 문서 검색",
+  "eyebrow": "Search",
+  "description": "명령어, 개념, 경로, 문제 상황을 검색합니다.",
+  "blocks": []
+}

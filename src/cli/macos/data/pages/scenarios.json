@@ -1,0 +1,46 @@
+{
+  "id": "scenarios",
+  "title": "macOS 문제 해결 시나리오",
+  "eyebrow": "Practice · Troubleshooting",
+  "description": "완성된 한 줄을 외우지 않고 관찰 → 필터 → 추출 → 전달 → 검증 순서로 문제를 풉니다.",
+  "blocks": [
+    {
+      "type": "steps",
+      "title": "Spring 프로세스 환경변수 확인",
+      "items": [
+        {
+          "title": "PID 후보",
+          "body": "pgrep -f로 command line을 검색합니다."
+        },
+        {
+          "title": "하나 선택",
+          "body": "head -1로 PID 하나를 고릅니다."
+        },
+        {
+          "title": "재조회",
+          "body": "ps eww -p PID로 command/environment를 확인합니다."
+        },
+        {
+          "title": "필터",
+          "body": "tr과 grep으로 필요한 prefix만 빠르게 확인합니다."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "title": "최종 예시",
+      "code": "P=$(pgrep -f 'spring-boot:run|das-app' | head -1)\n\nif [ -n \"$P\" ]; then\n  ps eww -p \"$P\" | tr ' ' '\\n' | grep '^SPRING_'\nelse\n  echo '대상 프로세스를 찾지 못했습니다.' >&2\nfi"
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "빠른 확인용",
+      "body": "공백을 줄바꿈하는 방식은 값 자체에 공백이 있으면 쪼개집니다. 정확한 구조 파싱이 아니라 빠른 육안 확인용입니다."
+    },
+    {
+      "type": "code",
+      "title": "최근 로그에서 ERROR 마지막 20개",
+      "code": "tail -n 5000 app.log \\\n  | grep 'ERROR' \\\n  | tail -n 20"
+    }
+  ]
+}

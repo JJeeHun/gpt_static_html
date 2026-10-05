@@ -1,0 +1,60 @@
+{
+  "id": "packages",
+  "title": "Homebrew와 서비스",
+  "eyebrow": "System · Packages",
+  "description": "macOS 개발 환경에서 패키지 설치와 사용자 서비스 관리를 담당하는 Homebrew 중심 흐름을 정리합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "Homebrew",
+      "headers": [
+        "명령",
+        "의미",
+        "예시"
+      ],
+      "rows": [
+        [
+          "brew search",
+          "패키지 검색",
+          "brew search jq"
+        ],
+        [
+          "brew install",
+          "CLI 설치",
+          "brew install jq"
+        ],
+        [
+          "brew install --cask",
+          "GUI 앱 설치",
+          "brew install --cask iterm2"
+        ],
+        [
+          "brew upgrade",
+          "업데이트",
+          "brew upgrade"
+        ],
+        [
+          "brew --prefix",
+          "설치 prefix",
+          "brew --prefix"
+        ],
+        [
+          "brew services list",
+          "서비스 목록",
+          "brew services list"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "good",
+      "title": "Homebrew prefix",
+      "body": "Apple Silicon은 보통 /opt/homebrew, Intel Mac은 /usr/local입니다. 실제 값은 brew --prefix로 확인합니다."
+    },
+    {
+      "type": "text",
+      "title": "launchd와 brew services",
+      "body": "macOS 자체 서비스 모델은 launchd입니다. Homebrew로 설치한 서비스는 brew services가 launchd 등록을 편하게 다뤄주는 경우가 많습니다."
+    }
+  ]
+}

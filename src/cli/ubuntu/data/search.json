@@ -1,0 +1,370 @@
+[
+  {
+    "type": "page",
+    "title": "Ubuntu CLI 학습 시작",
+    "summary": "Ubuntu/Linux의 GNU 도구, FHS, APT와 systemd를 이해하고 서버·개발 문제를 CLI로 해결하는 흐름을 배웁니다.",
+    "path": "./",
+    "search": "ubuntu cli 학습 시작 gnu linux fhs apt systemd 서버 개발 문제 해결 learn"
+  },
+  {
+    "type": "page",
+    "title": "Ubuntu의 CLI 환경 이해",
+    "summary": "GNU/Linux 환경, FHS, /proc, apt, systemd, iproute2의 역할을 이해합니다.",
+    "path": "overview/",
+    "search": "ubuntu cli 환경 gnu linux fhs proc apt systemd iproute2 os 특성"
+  },
+  {
+    "type": "page",
+    "title": "Ubuntu 핵심 명령 레퍼런스",
+    "summary": "개발·서버 작업에서 필요한 명령을 핵심, 자주 씀, 확장 순서로 학습합니다.",
+    "path": "commands/",
+    "search": "ubuntu 핵심 명령 command reference 개발 서버 essential common advanced"
+  },
+  {
+    "type": "page",
+    "title": "파이프라인과 CLI 사고법",
+    "summary": "stdin, stdout, argument를 이해하고 GNU 도구와 journalctl, /proc를 조합합니다.",
+    "path": "pipeline/",
+    "search": "pipeline cli stdin stdout argument grep awk xargs journalctl proc"
+  },
+  {
+    "type": "page",
+    "title": "Ubuntu 파일시스템",
+    "summary": "FHS 구조와 /proc 같은 Linux 전용 가상 파일시스템을 이해합니다.",
+    "path": "filesystem/",
+    "search": "ubuntu filesystem fhs home etc var tmp usr local opt proc 파일시스템"
+  },
+  {
+    "type": "page",
+    "title": "프로세스와 systemd",
+    "summary": "ps, pgrep, systemctl, journalctl을 연결해 프로세스와 서비스를 진단합니다.",
+    "path": "system/",
+    "search": "process systemd ps pgrep systemctl journalctl 서비스 프로세스"
+  },
+  {
+    "type": "page",
+    "title": "네트워크와 DNS",
+    "summary": "iproute2와 ss를 중심으로 주소, route, 포트, DNS를 확인합니다.",
+    "path": "network/",
+    "search": "network dns ip addr route ss dig nc curl port 네트워크"
+  },
+  {
+    "type": "page",
+    "title": "APT와 systemd 서비스",
+    "summary": "패키지 설치와 서비스 생명주기를 구분해서 관리합니다.",
+    "path": "packages/",
+    "search": "apt dpkg package systemd service systemctl 패키지 서비스"
+  },
+  {
+    "type": "page",
+    "title": "SSH와 원격 운영",
+    "summary": "서버 접속, config, 키, 전송, 원격 진단을 한 흐름으로 정리합니다.",
+    "path": "ssh/",
+    "search": "ssh remote config key scp rsync 원격 운영"
+  },
+  {
+    "type": "page",
+    "title": "Ubuntu 실전 레시피",
+    "summary": "개발·서버 환경에서 반복하는 진단 작업을 짧은 조합으로 확인합니다.",
+    "path": "recipes/",
+    "search": "ubuntu recipes ip route ss journalctl df du 실전 레시피"
+  },
+  {
+    "type": "page",
+    "title": "Ubuntu 문제 해결 시나리오",
+    "summary": "서비스, 로그, /proc, 포트와 프로세스를 연결해서 문제를 단계적으로 풉니다.",
+    "path": "scenarios/",
+    "search": "ubuntu troubleshooting service log proc port process 문제 해결"
+  },
+  {
+    "type": "page",
+    "title": "권한과 위험 명령",
+    "summary": "sudo와 재귀 명령을 쓰기 전에 대상과 범위를 확인하는 습관을 만듭니다.",
+    "path": "safety/",
+    "search": "safety sudo rm chmod kill curl 권한 위험 명령"
+  },
+  {
+    "type": "command",
+    "title": "pwd",
+    "summary": "현재 디렉터리",
+    "path": "commands/",
+    "query": "pwd",
+    "priority": "essential",
+    "search": "pwd 현재 디렉터리 pwd"
+  },
+  {
+    "type": "command",
+    "title": "ls -lah",
+    "summary": "숨김 파일 포함 목록",
+    "path": "commands/",
+    "query": "ls -lah",
+    "priority": "essential",
+    "search": "ls -lah 숨김 파일 포함 목록 ls -lah"
+  },
+  {
+    "type": "command",
+    "title": "cd",
+    "summary": "디렉터리 이동",
+    "path": "commands/",
+    "query": "cd",
+    "priority": "essential",
+    "search": "cd 디렉터리 이동 cd /var/log"
+  },
+  {
+    "type": "command",
+    "title": "mkdir -p",
+    "summary": "중첩 디렉터리 생성",
+    "path": "commands/",
+    "query": "mkdir -p",
+    "priority": "essential",
+    "search": "mkdir -p 중첩 디렉터리 생성 mkdir -p app/logs"
+  },
+  {
+    "type": "command",
+    "title": "cp",
+    "summary": "파일 복사",
+    "path": "commands/",
+    "query": "cp",
+    "priority": "essential",
+    "search": "cp 파일 복사 cp .env .env.bak"
+  },
+  {
+    "type": "command",
+    "title": "mv",
+    "summary": "이동·이름 변경",
+    "path": "commands/",
+    "query": "mv",
+    "priority": "essential",
+    "search": "mv 이동·이름 변경 mv old new"
+  },
+  {
+    "type": "command",
+    "title": "rm",
+    "summary": "파일 삭제",
+    "path": "commands/",
+    "query": "rm",
+    "priority": "essential",
+    "search": "rm 파일 삭제 rm temp"
+  },
+  {
+    "type": "command",
+    "title": "cat / less",
+    "summary": "파일 읽기",
+    "path": "commands/",
+    "query": "cat / less",
+    "priority": "essential",
+    "search": "cat / less 파일 읽기 less app.log"
+  },
+  {
+    "type": "command",
+    "title": "grep",
+    "summary": "텍스트 필터",
+    "path": "commands/",
+    "query": "grep",
+    "priority": "essential",
+    "search": "grep 텍스트 필터 grep -rni todo src"
+  },
+  {
+    "type": "command",
+    "title": "find",
+    "summary": "파일 찾기",
+    "path": "commands/",
+    "query": "find",
+    "priority": "essential",
+    "search": "find 파일 찾기 find . -name '*.conf'"
+  },
+  {
+    "type": "command",
+    "title": "sudo",
+    "summary": "관리자 권한 실행",
+    "path": "commands/",
+    "query": "sudo",
+    "priority": "essential",
+    "search": "sudo 관리자 권한 실행 sudo systemctl status nginx"
+  },
+  {
+    "type": "command",
+    "title": "man",
+    "summary": "매뉴얼",
+    "path": "commands/",
+    "query": "man",
+    "priority": "essential",
+    "search": "man 매뉴얼 man systemctl"
+  },
+  {
+    "type": "command",
+    "title": "systemctl",
+    "summary": "서비스 관리",
+    "path": "commands/",
+    "query": "systemctl",
+    "priority": "common",
+    "search": "systemctl 서비스 관리 systemctl status nginx"
+  },
+  {
+    "type": "command",
+    "title": "journalctl",
+    "summary": "systemd 로그",
+    "path": "commands/",
+    "query": "journalctl",
+    "priority": "common",
+    "search": "journalctl systemd 로그 journalctl -u nginx -n 100"
+  },
+  {
+    "type": "command",
+    "title": "ip",
+    "summary": "주소·라우팅",
+    "path": "commands/",
+    "query": "ip",
+    "priority": "common",
+    "search": "ip 주소·라우팅 ip addr"
+  },
+  {
+    "type": "command",
+    "title": "ss",
+    "summary": "소켓·포트",
+    "path": "commands/",
+    "query": "ss",
+    "priority": "common",
+    "search": "ss 소켓·포트 ss -lntp"
+  },
+  {
+    "type": "command",
+    "title": "ps",
+    "summary": "프로세스",
+    "path": "commands/",
+    "query": "ps",
+    "priority": "common",
+    "search": "ps 프로세스 ps aux"
+  },
+  {
+    "type": "command",
+    "title": "pgrep",
+    "summary": "프로세스 검색",
+    "path": "commands/",
+    "query": "pgrep",
+    "priority": "common",
+    "search": "pgrep 프로세스 검색 pgrep -af node"
+  },
+  {
+    "type": "command",
+    "title": "kill",
+    "summary": "종료 요청",
+    "path": "commands/",
+    "query": "kill",
+    "priority": "common",
+    "search": "kill 종료 요청 kill pid"
+  },
+  {
+    "type": "command",
+    "title": "curl",
+    "summary": "HTTP 요청",
+    "path": "commands/",
+    "query": "curl",
+    "priority": "common",
+    "search": "curl http 요청 curl -fss url"
+  },
+  {
+    "type": "command",
+    "title": "dig",
+    "summary": "DNS 조회",
+    "path": "commands/",
+    "query": "dig",
+    "priority": "common",
+    "search": "dig dns 조회 dig +short example.com"
+  },
+  {
+    "type": "command",
+    "title": "nc",
+    "summary": "포트 연결",
+    "path": "commands/",
+    "query": "nc",
+    "priority": "common",
+    "search": "nc 포트 연결 nc -vz host 443"
+  },
+  {
+    "type": "command",
+    "title": "apt",
+    "summary": "패키지",
+    "path": "commands/",
+    "query": "apt",
+    "priority": "common",
+    "search": "apt 패키지 sudo apt install jq"
+  },
+  {
+    "type": "command",
+    "title": "ssh",
+    "summary": "원격 접속",
+    "path": "commands/",
+    "query": "ssh",
+    "priority": "common",
+    "search": "ssh 원격 접속 ssh prod"
+  },
+  {
+    "type": "command",
+    "title": "awk",
+    "summary": "필드 처리",
+    "path": "commands/",
+    "query": "awk",
+    "priority": "advanced",
+    "search": "awk 필드 처리 awk '{print $2}'"
+  },
+  {
+    "type": "command",
+    "title": "sed",
+    "summary": "패턴 치환",
+    "path": "commands/",
+    "query": "sed",
+    "priority": "advanced",
+    "search": "sed 패턴 치환 sed -i 's/a/b/' file"
+  },
+  {
+    "type": "command",
+    "title": "xargs",
+    "summary": "stdin→argument",
+    "path": "commands/",
+    "query": "xargs",
+    "priority": "advanced",
+    "search": "xargs stdin→argument find . -print0 | xargs -0 grep error"
+  },
+  {
+    "type": "command",
+    "title": "strace",
+    "summary": "시스템 호출 추적",
+    "path": "commands/",
+    "query": "strace",
+    "priority": "advanced",
+    "search": "strace 시스템 호출 추적 strace -p pid"
+  },
+  {
+    "type": "command",
+    "title": "lsof",
+    "summary": "열린 파일·포트",
+    "path": "commands/",
+    "query": "lsof",
+    "priority": "advanced",
+    "search": "lsof 열린 파일·포트 lsof -i :8080"
+  },
+  {
+    "type": "command",
+    "title": "du",
+    "summary": "디렉터리 용량",
+    "path": "commands/",
+    "query": "du",
+    "priority": "advanced",
+    "search": "du 디렉터리 용량 du -sh /var/*"
+  },
+  {
+    "type": "page",
+    "title": "bash, PATH와 환경변수",
+    "summary": "Ubuntu 기본 환경에서 bash, PATH, 환경변수, 프로파일 파일과 실행 파일 탐색 순서를 이해합니다.",
+    "path": "shell/",
+    "search": "ubuntu bash path 환경변수 shell profile command -v type env"
+  },
+  {
+    "type": "page",
+    "title": "개발자 CLI 도구",
+    "summary": "Git, jq, ripgrep, 빌드·로그 확인 도구를 서버와 개발 환경에서 활용합니다.",
+    "path": "development/",
+    "search": "ubuntu 개발 도구 git jq ripgrep rg python watch tee"
+  }
+]

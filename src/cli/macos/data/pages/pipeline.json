@@ -1,0 +1,86 @@
+{
+  "id": "pipeline",
+  "title": "파이프라인과 CLI 사고법",
+  "eyebrow": "Learn · Data Flow",
+  "description": "명령어를 외우는 대신 stdout, stdin, argument가 어떻게 연결되는지 이해하고 여러 도구를 조합하는 방법을 배웁니다.",
+  "goals": [
+    {
+      "title": "데이터 모양 보기",
+      "body": "각 단계의 출력이 무엇인지 먼저 확인합니다."
+    },
+    {
+      "title": "전달 방식 구분",
+      "body": "|, $(...), xargs가 서로 다른 이유를 이해합니다."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "flow",
+      "title": "문제를 조립하는 기본 순서",
+      "items": [
+        {
+          "title": "원본",
+          "body": "ps · find · cat · curl"
+        },
+        {
+          "title": "필터",
+          "body": "grep · 조건"
+        },
+        {
+          "title": "추출",
+          "body": "awk · cut · head"
+        },
+        {
+          "title": "전달",
+          "body": "| · $() · xargs"
+        },
+        {
+          "title": "검증",
+          "body": "sort · less · jq"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "전달 방식 구분",
+      "headers": [
+        "방식",
+        "의미",
+        "예시"
+      ],
+      "rows": [
+        [
+          "|",
+          "stdout → 다음 명령의 stdin",
+          "cat app.log | grep ERROR"
+        ],
+        [
+          "$(...)",
+          "stdout → 현재 명령의 argument",
+          "echo \"$(pwd)\""
+        ],
+        [
+          "xargs",
+          "stdin의 항목들 → command arguments",
+          "printf '%s\\n' a b | xargs echo"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "로그 분석을 한 단계씩 조립",
+      "code": "cat access.log\ncat access.log | grep 'ERROR'\ncat access.log | grep 'ERROR' | grep '/api/'\ncat access.log | grep 'ERROR' | grep '/api/' \\\n  | sort | uniq -c | sort -nr | head -20"
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "find | grep의 흔한 오해",
+      "body": "find의 출력은 파일 내용이 아니라 경로 문자열입니다. 파일 내용을 검색하려면 -exec grep 또는 안전한 -print0 | xargs -0 조합을 사용합니다."
+    },
+    {
+      "type": "code",
+      "title": "파일 내용 검색",
+      "code": "find . -type f -name '*.log' -print0 \\\n  | xargs -0 grep -Hn 'ERROR'"
+    }
+  ]
+}

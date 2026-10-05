@@ -1,0 +1,39 @@
+{
+  "id": "recipes",
+  "title": "macOS 실전 레시피",
+  "eyebrow": "Practice · Recipes",
+  "description": "자주 반복하는 개발 작업을 짧은 조합으로 확인합니다.",
+  "blocks": [
+    {
+      "type": "cards",
+      "title": "바로 쓰는 조합",
+      "items": [
+        {
+          "title": "Finder 열기",
+          "body": "현재 디렉터리를 Finder에서 엽니다.",
+          "code": "open ."
+        },
+        {
+          "title": "경로 복사",
+          "body": "현재 경로를 클립보드에 복사합니다.",
+          "code": "pwd | pbcopy"
+        },
+        {
+          "title": "TODO 찾기",
+          "body": "ripgrep 사용 시 빠른 프로젝트 검색.",
+          "code": "rg 'TODO|FIXME' ."
+        },
+        {
+          "title": "포트 점유",
+          "body": "8080 LISTEN 프로세스 찾기.",
+          "code": "lsof -i :8080"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "title": "API 상태 코드만 확인",
+      "code": "curl -s -o /dev/null -w '%{http_code}\\n' \\\n  https://api.example.com/health"
+    }
+  ]
+}

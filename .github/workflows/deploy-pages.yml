@@ -1,0 +1,63 @@
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - stage
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy-stage]')
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Generate build info
+        shell: bash
+        run: |
+          case "$GITHUB_REF_NAME" in
+            feature/*) MODE="feature"; LABEL="FEATURE" ;;
+            dev) MODE="dev"; LABEL="DEV" ;;
+            stage) MODE="stage"; LABEL="STAGE" ;;
+            main) MODE="prod"; LABEL="PROD" ;;
+            *) MODE="$GITHUB_REF_NAME"; LABEL="$GITHUB_REF_NAME" ;;
+          esac
+
+          SHORT_SHA="${GITHUB_SHA::7}"
+          DEPLOYED_AT="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+          cat > src/cli/build-info.json <<EOF
+          {
+            "branch": "$GITHUB_REF_NAME",
+            "environment": "$MODE",
+            "label": "$LABEL",
+            "commit": "$SHORT_SHA",
+            "deployedAt": "$DEPLOYED_AT"
+          }
+          EOF
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload static site
+        uses: actions/upload-pages-artifact@v5
+        with:
+          path: ./src
+
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v5
