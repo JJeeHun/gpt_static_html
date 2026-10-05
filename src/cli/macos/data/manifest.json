@@ -1,0 +1,38 @@
+{
+  "slug": "macos",
+  "shortTitle": "macOS Developer CLI",
+  "title": "macOS 개발자 CLI 가이드",
+  "subtitle": "BSD · zsh · Homebrew · SSH · 네트워크",
+  "icon": "laptop",
+  "eyebrow": "macOS / Unix",
+  "description": "개발자가 자주 마주치는 터미널 명령과 문제 해결 흐름을 macOS 기준으로 정리합니다. 공통 Unix 개념과 macOS 전용 차이를 함께 확인할 수 있습니다.",
+  "tags": [
+    "검색 가능",
+    "복사 가능",
+    "다크 모드 기본",
+    "OS별 데이터 분리"
+  ],
+  "sections": [
+    {
+      "file": "essential.json"
+    },
+    {
+      "file": "filesystem.json"
+    },
+    {
+      "file": "shell.json"
+    },
+    {
+      "file": "system-network.json"
+    },
+    {
+      "file": "macos-tools.json"
+    },
+    {
+      "file": "ssh-development.json"
+    },
+    {
+      "file": "safety.json"
+    }
+  ]
+}
