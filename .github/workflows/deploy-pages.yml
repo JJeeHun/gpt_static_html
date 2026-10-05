@@ -1,6 +1,9 @@
 name: Deploy GitHub Pages
 
 on:
+  push:
+    branches:
+      - feature/cli-os-guides
   workflow_dispatch:
 
 permissions:
