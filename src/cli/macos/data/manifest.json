@@ -1,38 +1,101 @@
 {
   "slug": "macos",
-  "shortTitle": "macOS Developer CLI",
+  "shortTitle": "macOS CLI",
   "title": "macOS 개발자 CLI 가이드",
-  "subtitle": "BSD · zsh · Homebrew · SSH · 네트워크",
+  "subtitle": "BSD · zsh · Homebrew · launchd",
   "icon": "laptop",
   "eyebrow": "macOS / Unix",
-  "description": "개발자가 자주 마주치는 터미널 명령과 문제 해결 흐름을 macOS 기준으로 정리합니다. 공통 Unix 개념과 macOS 전용 차이를 함께 확인할 수 있습니다.",
+  "description": "명령어 암기보다 macOS의 구조와 Unix 데이터 흐름을 이해하고, 개발·네트워크·SSH 문제를 단계적으로 해결하는 데 초점을 둔 CLI 레퍼런스입니다.",
   "tags": [
-    "검색 가능",
-    "복사 가능",
-    "다크 모드 기본",
-    "OS별 데이터 분리"
+    "BSD 계열",
+    "zsh 기본",
+    "Homebrew",
+    "실전 문제 해결"
   ],
-  "sections": [
+  "facts": [
     {
-      "file": "essential.json"
+      "icon": "terminal",
+      "label": "기본 셸",
+      "value": "zsh",
+      "note": "현대 macOS 기본 로그인 셸"
     },
     {
-      "file": "filesystem.json"
+      "icon": "package",
+      "label": "패키지",
+      "value": "Homebrew",
+      "note": "보통 /opt/homebrew 또는 /usr/local"
     },
     {
-      "file": "shell.json"
+      "icon": "settings",
+      "label": "서비스",
+      "value": "launchd",
+      "note": "launchctl · brew services"
     },
     {
-      "file": "system-network.json"
+      "icon": "folder-tree",
+      "label": "사용자 홈",
+      "value": "/Users/name",
+      "note": "~/Library가 특히 중요"
+    }
+  ],
+  "groups": [
+    {
+      "title": "시작하기",
+      "items": [
+        {
+          "file": "overview.json"
+        },
+        {
+          "file": "essential.json"
+        }
+      ]
     },
     {
-      "file": "macos-tools.json"
+      "title": "시스템 이해",
+      "items": [
+        {
+          "file": "filesystem.json"
+        },
+        {
+          "file": "macos-tools.json"
+        },
+        {
+          "file": "system-network.json"
+        }
+      ]
     },
     {
-      "file": "ssh-development.json"
+      "title": "CLI 원리",
+      "items": [
+        {
+          "file": "shell.json"
+        },
+        {
+          "file": "pipeline.json"
+        }
+      ]
     },
     {
-      "file": "safety.json"
+      "title": "개발 실전",
+      "items": [
+        {
+          "file": "ssh-development.json"
+        },
+        {
+          "file": "recipes.json"
+        },
+        {
+          "file": "scenarios.json"
+        }
+      ]
+    },
+    {
+      "title": "안전",
+      "items": [
+        {
+          "file": "safety.json"
+        }
+      ]
     }
   ]
 }
