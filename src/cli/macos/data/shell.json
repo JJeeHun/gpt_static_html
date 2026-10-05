@@ -1,0 +1,102 @@
+{
+  "id": "shell",
+  "icon": "workflow",
+  "title": "파이프 · 리다이렉션 · PATH",
+  "blocks": [
+    {
+      "type": "callout",
+      "tone": "good",
+      "title": "파이프 핵심",
+      "body": "파이프(|)는 왼쪽 명령의 stdout을 오른쪽 명령의 stdin으로 연결합니다. 함수의 return 값을 인자로 넘기는 개념과 다릅니다."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "문법",
+        "의미",
+        "예시"
+      ],
+      "rows": [
+        [
+          "|",
+          "stdout → 다음 명령 stdin",
+          "printf hello | grep hello"
+        ],
+        [
+          "$(...)",
+          "stdout을 문자열/인자로 치환",
+          "echo $(pwd)"
+        ],
+        [
+          "xargs",
+          "stdin을 다음 명령의 인자로 변환",
+          "printf a | xargs echo"
+        ],
+        [
+          ">",
+          "stdout 덮어쓰기",
+          "npm test > test.log"
+        ],
+        [
+          ">>",
+          "stdout 이어쓰기",
+          "date >> history.log"
+        ],
+        [
+          "2>&1",
+          "stderr를 stdout 목적지로 합침",
+          "cmd > all.log 2>&1"
+        ],
+        [
+          "&&",
+          "앞 명령 성공 시 실행",
+          "npm test && npm run build"
+        ],
+        [
+          "||",
+          "앞 명령 실패 시 실행",
+          "curl -f URL || echo 실패"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "code": "cat access.log \\\n  | grep ERROR \\\n  | grep /api/ \\\n  | sort \\\n  | uniq -c \\\n  | sort -nr \\\n  | head -20"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "확인 항목",
+        "명령"
+      ],
+      "rows": [
+        [
+          "현재 PATH",
+          "echo $PATH | tr ':' '\\n'"
+        ],
+        [
+          "실제 실행 파일",
+          "command -v python3"
+        ],
+        [
+          "같은 이름 후보",
+          "which -a python3"
+        ],
+        [
+          "alias/function/executable 확인",
+          "type python3"
+        ],
+        [
+          "zsh 전체 후보",
+          "whence -va python3"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "파일명 안전 처리",
+      "body": "find와 xargs를 연결할 때는 가능하면 -print0 | xargs -0 조합을 사용합니다."
+    }
+  ]
+}
