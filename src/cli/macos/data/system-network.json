@@ -1,0 +1,74 @@
+{
+  "id": "system-network",
+  "icon": "activity",
+  "title": "프로세스 · 포트 · 네트워크",
+  "blocks": [
+    {
+      "type": "table",
+      "headers": [
+        "명령어",
+        "용도"
+      ],
+      "rows": [
+        [
+          "ps aux",
+          "전체 프로세스"
+        ],
+        [
+          "pgrep -fl node",
+          "이름/command line으로 프로세스 찾기"
+        ],
+        [
+          "top",
+          "CPU/메모리 실시간 확인"
+        ],
+        [
+          "kill PID",
+          "프로세스 정상 종료 요청"
+        ],
+        [
+          "lsof -i :3000",
+          "특정 포트 점유 확인"
+        ],
+        [
+          "lsof -iTCP -sTCP:LISTEN -n -P",
+          "LISTEN 중인 TCP 포트"
+        ],
+        [
+          "sw_vers",
+          "macOS 버전"
+        ],
+        [
+          "uname -m",
+          "CPU 아키텍처"
+        ],
+        [
+          "diskutil list",
+          "디스크/파티션"
+        ],
+        [
+          "dig +short domain",
+          "DNS 빠른 조회"
+        ],
+        [
+          "nc -vz host 443",
+          "TCP 포트 연결 확인"
+        ],
+        [
+          "scutil --dns",
+          "macOS DNS resolver 설정"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "code": "# 3000 포트 점유 프로세스\nlsof -i :3000\nkill 12345\n\n# DNS → 포트 → SSH 순서 확인\ndig +short server.example.com\nnc -vz server.example.com 22\nssh -vvv user@server.example.com"
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "DNS와 SSH 별명은 다름",
+      "body": "~/.ssh/config의 Host는 SSH 안에서만 쓰는 별명입니다. 시스템 전체 이름 해석에는 DNS 또는 /etc/hosts가 필요합니다."
+    }
+  ]
+}
