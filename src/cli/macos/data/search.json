@@ -1,0 +1,370 @@
+[
+  {
+    "type": "page",
+    "title": "macOS CLI 학습 시작",
+    "summary": "macOS가 어떤 Unix 환경인지 이해하고, 필요한 CLI를 익힌 뒤 파이프라인과 실전 문제 해결로 확장합니다.",
+    "path": "./",
+    "search": "macos cli 학습 시작 macos가 어떤 unix 환경인지 이해하고, 필요한 cli를 익힌 뒤 파이프라인과 실전 문제 해결로 확장합니다. learn"
+  },
+  {
+    "type": "page",
+    "title": "macOS의 CLI 환경 이해",
+    "summary": "macOS는 Unix 계열이지만 Linux와 같은 구현이 아닙니다. BSD 도구, Apple 전용 경로, Homebrew 위치, launchd를 구분합니다.",
+    "path": "overview/",
+    "search": "macos의 cli 환경 이해 macos는 unix 계열이지만 linux와 같은 구현이 아닙니다. bsd 도구, apple 전용 경로, homebrew 위치, launchd를 구분합니다. learn"
+  },
+  {
+    "type": "page",
+    "title": "macOS 핵심 명령 레퍼런스",
+    "summary": "처음에는 핵심 명령만 보고, 익숙해진 뒤 자주 쓰는 명령과 확장 명령으로 넓혀갑니다.",
+    "path": "commands/",
+    "search": "macos 핵심 명령 레퍼런스 처음에는 핵심 명령만 보고, 익숙해진 뒤 자주 쓰는 명령과 확장 명령으로 넓혀갑니다. learn"
+  },
+  {
+    "type": "page",
+    "title": "파이프라인과 CLI 사고법",
+    "summary": "명령어를 외우는 대신 stdout, stdin, argument가 어떻게 연결되는지 이해하고 여러 도구를 조합하는 방법을 배웁니다.",
+    "path": "pipeline/",
+    "search": "파이프라인과 cli 사고법 명령어를 외우는 대신 stdout, stdin, argument가 어떻게 연결되는지 이해하고 여러 도구를 조합하는 방법을 배웁니다. learn"
+  },
+  {
+    "type": "page",
+    "title": "macOS 파일시스템",
+    "summary": "Unix 공통 경로와 macOS 고유 경로를 구분하고, 개발자가 실제로 수정하는 영역과 건드리지 말아야 할 영역을 이해합니다.",
+    "path": "filesystem/",
+    "search": "macos 파일시스템 unix 공통 경로와 macos 고유 경로를 구분하고, 개발자가 실제로 수정하는 영역과 건드리지 말아야 할 영역을 이해합니다. system"
+  },
+  {
+    "type": "page",
+    "title": "프로세스와 시스템",
+    "summary": "실행 중인 프로세스, CPU·메모리, 아키텍처와 디스크를 CLI로 확인합니다.",
+    "path": "system/",
+    "search": "프로세스와 시스템 실행 중인 프로세스, cpu·메모리, 아키텍처와 디스크를 cli로 확인합니다. system"
+  },
+  {
+    "type": "page",
+    "title": "네트워크와 DNS",
+    "summary": "연결 문제를 DNS → 포트 → 애플리케이션 순서로 분리해서 점검합니다.",
+    "path": "network/",
+    "search": "네트워크와 dns 연결 문제를 dns → 포트 → 애플리케이션 순서로 분리해서 점검합니다. system"
+  },
+  {
+    "type": "page",
+    "title": "Homebrew와 서비스",
+    "summary": "macOS 개발 환경에서 패키지 설치와 사용자 서비스 관리를 담당하는 Homebrew 중심 흐름을 정리합니다.",
+    "path": "packages/",
+    "search": "homebrew와 서비스 macos 개발 환경에서 패키지 설치와 사용자 서비스 관리를 담당하는 homebrew 중심 흐름을 정리합니다. system"
+  },
+  {
+    "type": "page",
+    "title": "SSH와 원격 개발",
+    "summary": "SSH config, 키, 포트포워딩, 복사를 하나의 원격 개발 흐름으로 이해합니다.",
+    "path": "ssh/",
+    "search": "ssh와 원격 개발 ssh config, 키, 포트포워딩, 복사를 하나의 원격 개발 흐름으로 이해합니다. practice"
+  },
+  {
+    "type": "page",
+    "title": "macOS 실전 레시피",
+    "summary": "자주 반복하는 개발 작업을 짧은 조합으로 확인합니다.",
+    "path": "recipes/",
+    "search": "macos 실전 레시피 자주 반복하는 개발 작업을 짧은 조합으로 확인합니다. practice"
+  },
+  {
+    "type": "page",
+    "title": "macOS 문제 해결 시나리오",
+    "summary": "완성된 한 줄을 외우지 않고 관찰 → 필터 → 추출 → 전달 → 검증 순서로 문제를 풉니다.",
+    "path": "scenarios/",
+    "search": "macos 문제 해결 시나리오 완성된 한 줄을 외우지 않고 관찰 → 필터 → 추출 → 전달 → 검증 순서로 문제를 풉니다. practice"
+  },
+  {
+    "type": "page",
+    "title": "위험 명령과 안전 습관",
+    "summary": "CLI는 빠르지만 경로와 권한을 잘못 지정하면 피해도 빠릅니다. 실행 전 확인 습관을 만듭니다.",
+    "path": "safety/",
+    "search": "위험 명령과 안전 습관 cli는 빠르지만 경로와 권한을 잘못 지정하면 피해도 빠릅니다. 실행 전 확인 습관을 만듭니다. safety"
+  },
+  {
+    "type": "command",
+    "title": "pwd",
+    "summary": "현재 디렉터리 확인",
+    "path": "commands/",
+    "query": "pwd",
+    "priority": "essential",
+    "search": "pwd 현재 디렉터리 확인 pwd"
+  },
+  {
+    "type": "command",
+    "title": "ls -lah",
+    "summary": "숨김 파일까지 자세히 보기",
+    "path": "commands/",
+    "query": "ls -lah",
+    "priority": "essential",
+    "search": "ls -lah 숨김 파일까지 자세히 보기 ls -lah"
+  },
+  {
+    "type": "command",
+    "title": "cd",
+    "summary": "디렉터리 이동",
+    "path": "commands/",
+    "query": "cd",
+    "priority": "essential",
+    "search": "cd 디렉터리 이동 cd ~/downloads"
+  },
+  {
+    "type": "command",
+    "title": "mkdir -p",
+    "summary": "중첩 디렉터리 만들기",
+    "path": "commands/",
+    "query": "mkdir -p",
+    "priority": "essential",
+    "search": "mkdir -p 중첩 디렉터리 만들기 mkdir -p src/api"
+  },
+  {
+    "type": "command",
+    "title": "cp",
+    "summary": "파일 복사",
+    "path": "commands/",
+    "query": "cp",
+    "priority": "essential",
+    "search": "cp 파일 복사 cp .env .env.backup"
+  },
+  {
+    "type": "command",
+    "title": "mv",
+    "summary": "이동·이름 변경",
+    "path": "commands/",
+    "query": "mv",
+    "priority": "essential",
+    "search": "mv 이동·이름 변경 mv old.txt new.txt"
+  },
+  {
+    "type": "command",
+    "title": "rm",
+    "summary": "파일 삭제",
+    "path": "commands/",
+    "query": "rm",
+    "priority": "essential",
+    "search": "rm 파일 삭제 rm temp.txt"
+  },
+  {
+    "type": "command",
+    "title": "cat / less",
+    "summary": "파일 읽기",
+    "path": "commands/",
+    "query": "cat / less",
+    "priority": "essential",
+    "search": "cat / less 파일 읽기 less server.log"
+  },
+  {
+    "type": "command",
+    "title": "grep",
+    "summary": "텍스트 필터",
+    "path": "commands/",
+    "query": "grep",
+    "priority": "essential",
+    "search": "grep 텍스트 필터 grep -rni todo src"
+  },
+  {
+    "type": "command",
+    "title": "find",
+    "summary": "파일·경로 찾기",
+    "path": "commands/",
+    "query": "find",
+    "priority": "essential",
+    "search": "find 파일·경로 찾기 find . -name '*.json'"
+  },
+  {
+    "type": "command",
+    "title": "command -v",
+    "summary": "실행 파일 확인",
+    "path": "commands/",
+    "query": "command -v",
+    "priority": "essential",
+    "search": "command -v 실행 파일 확인 command -v node"
+  },
+  {
+    "type": "command",
+    "title": "man",
+    "summary": "매뉴얼 보기",
+    "path": "commands/",
+    "query": "man",
+    "priority": "essential",
+    "search": "man 매뉴얼 보기 man ssh"
+  },
+  {
+    "type": "command",
+    "title": "lsof",
+    "summary": "파일·포트 사용 프로세스 확인",
+    "path": "commands/",
+    "query": "lsof",
+    "priority": "common",
+    "search": "lsof 파일·포트 사용 프로세스 확인 lsof -i :3000"
+  },
+  {
+    "type": "command",
+    "title": "pgrep",
+    "summary": "프로세스 찾기",
+    "path": "commands/",
+    "query": "pgrep",
+    "priority": "common",
+    "search": "pgrep 프로세스 찾기 pgrep -fl node"
+  },
+  {
+    "type": "command",
+    "title": "ps",
+    "summary": "프로세스 상태",
+    "path": "commands/",
+    "query": "ps",
+    "priority": "common",
+    "search": "ps 프로세스 상태 ps aux"
+  },
+  {
+    "type": "command",
+    "title": "kill",
+    "summary": "프로세스 종료 요청",
+    "path": "commands/",
+    "query": "kill",
+    "priority": "common",
+    "search": "kill 프로세스 종료 요청 kill 12345"
+  },
+  {
+    "type": "command",
+    "title": "curl",
+    "summary": "HTTP 요청",
+    "path": "commands/",
+    "query": "curl",
+    "priority": "common",
+    "search": "curl http 요청 curl -fss https://example.com"
+  },
+  {
+    "type": "command",
+    "title": "dig",
+    "summary": "DNS 조회",
+    "path": "commands/",
+    "query": "dig",
+    "priority": "common",
+    "search": "dig dns 조회 dig +short example.com"
+  },
+  {
+    "type": "command",
+    "title": "nc",
+    "summary": "TCP 연결 점검",
+    "path": "commands/",
+    "query": "nc",
+    "priority": "common",
+    "search": "nc tcp 연결 점검 nc -vz host 443"
+  },
+  {
+    "type": "command",
+    "title": "open",
+    "summary": "Finder/앱으로 열기",
+    "path": "commands/",
+    "query": "open",
+    "priority": "common",
+    "search": "open finder/앱으로 열기 open ."
+  },
+  {
+    "type": "command",
+    "title": "pbcopy",
+    "summary": "클립보드 복사",
+    "path": "commands/",
+    "query": "pbcopy",
+    "priority": "common",
+    "search": "pbcopy 클립보드 복사 pwd | pbcopy"
+  },
+  {
+    "type": "command",
+    "title": "brew",
+    "summary": "패키지 관리",
+    "path": "commands/",
+    "query": "brew",
+    "priority": "common",
+    "search": "brew 패키지 관리 brew install jq"
+  },
+  {
+    "type": "command",
+    "title": "ssh",
+    "summary": "원격 접속",
+    "path": "commands/",
+    "query": "ssh",
+    "priority": "common",
+    "search": "ssh 원격 접속 ssh prod"
+  },
+  {
+    "type": "command",
+    "title": "rsync",
+    "summary": "증분 동기화",
+    "path": "commands/",
+    "query": "rsync",
+    "priority": "common",
+    "search": "rsync 증분 동기화 rsync -avz dist/ prod:/srv/app/"
+  },
+  {
+    "type": "command",
+    "title": "awk",
+    "summary": "필드 추출·조건 처리",
+    "path": "commands/",
+    "query": "awk",
+    "priority": "advanced",
+    "search": "awk 필드 추출·조건 처리 awk '{print $2}'"
+  },
+  {
+    "type": "command",
+    "title": "sed",
+    "summary": "패턴 치환",
+    "path": "commands/",
+    "query": "sed",
+    "priority": "advanced",
+    "search": "sed 패턴 치환 sed -i '' 's/a/b/' file"
+  },
+  {
+    "type": "command",
+    "title": "xargs",
+    "summary": "stdin을 argument로 변환",
+    "path": "commands/",
+    "query": "xargs",
+    "priority": "advanced",
+    "search": "xargs stdin을 argument로 변환 printf '%s\\n' a b | xargs echo"
+  },
+  {
+    "type": "command",
+    "title": "scutil",
+    "summary": "DNS·시스템 설정 확인",
+    "path": "commands/",
+    "query": "scutil",
+    "priority": "advanced",
+    "search": "scutil dns·시스템 설정 확인 scutil --dns"
+  },
+  {
+    "type": "command",
+    "title": "diskutil",
+    "summary": "디스크 관리",
+    "path": "commands/",
+    "query": "diskutil",
+    "priority": "advanced",
+    "search": "diskutil 디스크 관리 diskutil list"
+  },
+  {
+    "type": "command",
+    "title": "launchctl",
+    "summary": "launchd 서비스 제어",
+    "path": "commands/",
+    "query": "launchctl",
+    "priority": "advanced",
+    "search": "launchctl launchd 서비스 제어 launchctl list"
+  },
+  {
+    "type": "page",
+    "title": "zsh, PATH와 환경변수",
+    "summary": "macOS 기본 셸인 zsh에서 PATH, alias, 환경변수, 실행 파일 탐색 순서를 이해합니다.",
+    "path": "shell/",
+    "search": "macos zsh path 환경변수 alias shell command -v which type"
+  },
+  {
+    "type": "page",
+    "title": "개발자 CLI 도구",
+    "summary": "Git, jq, ripgrep, 로컬 서버처럼 개발 흐름에서 자주 연결되는 CLI 도구를 정리합니다.",
+    "path": "development/",
+    "search": "macos 개발 도구 git jq ripgrep rg python http server tree fzf"
+  }
+]

@@ -1,0 +1,81 @@
+{
+  "id": "overview",
+  "title": "macOS의 CLI 환경 이해",
+  "eyebrow": "OS Characteristics",
+  "description": "macOS는 Unix 계열이지만 Linux와 같은 구현이 아닙니다. BSD 도구, Apple 전용 경로, Homebrew 위치, launchd를 구분합니다.",
+  "blocks": [
+    {
+      "type": "cards",
+      "title": "macOS를 볼 때 기억할 네 가지",
+      "items": [
+        {
+          "title": "Unix 기반",
+          "body": "파일·권한·파이프·SSH 같은 개념은 Linux와 매우 비슷합니다.",
+          "code": "pwd | grep | ssh"
+        },
+        {
+          "title": "BSD userland",
+          "body": "sed, date, stat, grep 등 같은 이름이라도 GNU 옵션과 다를 수 있습니다.",
+          "code": "sed -i '' ..."
+        },
+        {
+          "title": "Apple 경로",
+          "body": "/System, /Library, ~/Library, /Volumes가 자주 등장합니다.",
+          "code": "~/Library"
+        },
+        {
+          "title": "Homebrew",
+          "body": "개발 도구는 Homebrew를 많이 사용하고 CPU에 따라 prefix가 달라집니다.",
+          "code": "brew --prefix"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "Ubuntu와 빠르게 비교",
+      "headers": [
+        "작업",
+        "macOS",
+        "Ubuntu"
+      ],
+      "rows": [
+        [
+          "패키지",
+          "brew",
+          "apt"
+        ],
+        [
+          "서비스",
+          "launchctl / brew services",
+          "systemctl"
+        ],
+        [
+          "파일 열기",
+          "open",
+          "xdg-open"
+        ],
+        [
+          "클립보드",
+          "pbcopy / pbpaste",
+          "xclip / wl-copy"
+        ],
+        [
+          "사용자 홈",
+          "/Users/name",
+          "/home/name"
+        ],
+        [
+          "프로세스 환경",
+          "ps eww 등",
+          "/proc/$PID/environ 가능"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "웹의 Linux 예제를 그대로 복사하지 않기",
+      "body": "특히 sed, date, stat, grep 옵션이 다를 수 있습니다. 실패하면 먼저 GNU/BSD 구현 차이를 확인하세요."
+    }
+  ]
+}

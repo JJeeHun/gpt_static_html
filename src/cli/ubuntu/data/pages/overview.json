@@ -1,0 +1,76 @@
+{
+  "id": "overview",
+  "title": "Ubuntu의 CLI 환경 이해",
+  "eyebrow": "OS Characteristics",
+  "description": "Ubuntu는 GNU/Linux 환경을 기준으로 하며 FHS, /proc, apt, systemd, iproute2가 서버·개발 작업에서 중심 역할을 합니다.",
+  "blocks": [
+    {
+      "type": "cards",
+      "title": "Ubuntu를 볼 때 기억할 네 가지",
+      "items": [
+        {
+          "title": "GNU userland",
+          "body": "sed, date, stat, grep 예제는 GNU 구현 기준인 경우가 많습니다.",
+          "code": "sed -i ..."
+        },
+        {
+          "title": "FHS",
+          "body": "/home, /etc, /var 등 역할이 비교적 명확합니다.",
+          "code": "/var/log"
+        },
+        {
+          "title": "APT",
+          "body": "패키지 설치·업데이트·검색은 apt/dpkg 계열을 사용합니다.",
+          "code": "sudo apt install"
+        },
+        {
+          "title": "systemd",
+          "body": "서비스 상태와 로그를 systemctl/journalctl로 연결합니다.",
+          "code": "systemctl status"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "macOS와 빠르게 비교",
+      "headers": [
+        "작업",
+        "Ubuntu",
+        "macOS"
+      ],
+      "rows": [
+        [
+          "패키지",
+          "apt",
+          "brew"
+        ],
+        [
+          "서비스",
+          "systemctl",
+          "launchctl / brew services"
+        ],
+        [
+          "네트워크",
+          "ip / ss",
+          "ifconfig / lsof"
+        ],
+        [
+          "프로세스 정보",
+          "/proc/$PID",
+          "Linux식 /proc 없음"
+        ],
+        [
+          "사용자 홈",
+          "/home/name",
+          "/Users/name"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "good",
+      "title": "서버 작업은 연결해서 보기",
+      "body": "Ubuntu에서는 파일 위치 → 서비스 상태 → 로그 → 포트 → 프로세스를 한 흐름으로 연결해서 보는 일이 많습니다."
+    }
+  ]
+}

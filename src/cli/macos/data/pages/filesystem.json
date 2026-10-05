@@ -1,0 +1,65 @@
+{
+  "id": "filesystem",
+  "title": "macOS 파일시스템",
+  "eyebrow": "System · Filesystem",
+  "description": "Unix 공통 경로와 macOS 고유 경로를 구분하고, 개발자가 실제로 수정하는 영역과 건드리지 말아야 할 영역을 이해합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "중요 경로",
+      "headers": [
+        "경로",
+        "역할",
+        "개발에서"
+      ],
+      "rows": [
+        [
+          "/Users",
+          "사용자 홈",
+          "~ 는 현재 사용자 홈"
+        ],
+        [
+          "/System",
+          "macOS 핵심 시스템",
+          "직접 수정하지 않음"
+        ],
+        [
+          "/Library",
+          "전체 사용자 공용 지원 데이터",
+          "LaunchDaemons, Preferences"
+        ],
+        [
+          "~/Library",
+          "현재 사용자 앱 설정·캐시",
+          "개발도구 문제 해결"
+        ],
+        [
+          "/Volumes",
+          "외장·네트워크 볼륨",
+          "외장 디스크 경로"
+        ],
+        [
+          "/etc",
+          "전역 설정",
+          "/private/etc 연결"
+        ],
+        [
+          "/opt",
+          "추가 소프트웨어",
+          "Apple Silicon Homebrew"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "홈과 심볼릭 링크 확인",
+      "code": "echo $HOME\nls -la ~/.ssh ~/.config\nls -ld /etc /var /tmp\nreadlink /etc"
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "수정 범위",
+      "body": "보통 홈, 프로젝트, ~/.ssh, ~/.zshrc를 수정합니다. /System, /bin, /sbin, /usr/bin은 직접 수정하지 않는 편이 안전합니다."
+    }
+  ]
+}

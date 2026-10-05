@@ -1,0 +1,75 @@
+{
+  "id": "packages",
+  "title": "APT와 systemd 서비스",
+  "eyebrow": "System · Packages",
+  "description": "패키지 설치와 서비스 생명주기를 구분해서 관리합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "APT",
+      "headers": [
+        "명령",
+        "의미",
+        "예시"
+      ],
+      "rows": [
+        [
+          "sudo apt update",
+          "패키지 목록 갱신",
+          "sudo apt update"
+        ],
+        [
+          "sudo apt install",
+          "설치",
+          "sudo apt install jq"
+        ],
+        [
+          "apt search",
+          "검색",
+          "apt search ripgrep"
+        ],
+        [
+          "apt list --installed",
+          "설치 목록",
+          "apt list --installed"
+        ],
+        [
+          "dpkg -L",
+          "패키지 파일 위치",
+          "dpkg -L nginx"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "title": "systemd",
+      "headers": [
+        "명령",
+        "의미",
+        "예시"
+      ],
+      "rows": [
+        [
+          "systemctl status",
+          "상태",
+          "systemctl status nginx"
+        ],
+        [
+          "sudo systemctl restart",
+          "재시작",
+          "sudo systemctl restart nginx"
+        ],
+        [
+          "sudo systemctl enable",
+          "부팅 자동 시작",
+          "sudo systemctl enable nginx"
+        ],
+        [
+          "journalctl -u",
+          "서비스 로그",
+          "journalctl -u nginx"
+        ]
+      ]
+    }
+  ]
+}

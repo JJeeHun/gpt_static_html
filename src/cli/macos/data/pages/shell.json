@@ -1,0 +1,55 @@
+{
+  "id": "shell",
+  "title": "zsh, PATH와 환경변수",
+  "eyebrow": "System · Shell",
+  "description": "macOS 기본 셸인 zsh에서 PATH, alias, 환경변수, 실행 파일 탐색 순서를 이해합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "자주 확인하는 것",
+      "headers": [
+        "목적",
+        "명령",
+        "설명"
+      ],
+      "rows": [
+        [
+          "현재 셸",
+          "echo $SHELL",
+          "로그인 셸 확인"
+        ],
+        [
+          "PATH",
+          "echo $PATH | tr ':' '\\n'",
+          "검색 순서 확인"
+        ],
+        [
+          "실행 파일",
+          "command -v node",
+          "실제로 실행되는 위치"
+        ],
+        [
+          "후보 전체",
+          "which -a python3",
+          "같은 이름 후보"
+        ],
+        [
+          "명령 종류",
+          "type python3",
+          "alias/function/executable 구분"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "~/.zshrc 기본 예시",
+      "code": "export PATH=\"$HOME/bin:$PATH\"\nexport EDITOR=\"code --wait\"\nalias ll='ls -lah'\n\n# 반영\nsource ~/.zshrc"
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "PATH 순서가 중요",
+      "body": "같은 이름의 실행 파일이 여러 개면 PATH에서 먼저 발견된 것이 실행됩니다. 버전 문제가 생기면 command -v와 which -a부터 확인하세요."
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "id": "development",
+  "title": "개발자 CLI 도구",
+  "eyebrow": "Practice · Development",
+  "description": "Git, jq, ripgrep, 빌드·로그 확인 도구를 서버와 개발 환경에서 활용합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "개발 도구",
+      "headers": [
+        "도구",
+        "용도",
+        "예시"
+      ],
+      "rows": [
+        [
+          "git",
+          "버전 관리",
+          "git status"
+        ],
+        [
+          "jq",
+          "JSON 가공",
+          "curl -s URL | jq"
+        ],
+        [
+          "rg",
+          "빠른 검색",
+          "rg 'TODO|FIXME' ."
+        ],
+        [
+          "python3",
+          "로컬 정적 서버",
+          "python3 -m http.server 8000"
+        ],
+        [
+          "watch",
+          "명령 반복 관찰",
+          "watch -n 2 'ss -lntp'"
+        ],
+        [
+          "tee",
+          "화면 출력과 파일 저장",
+          "cmd | tee output.log"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "API 응답과 상태 코드 확인",
+      "code": "curl -s https://api.example.com/users | jq\ncurl -s -o /dev/null -w '%{http_code}\\n' https://api.example.com/health"
+    },
+    {
+      "type": "code",
+      "title": "Git 작업 전 기본 확인",
+      "code": "git status\ngit diff\ngit branch --show-current"
+    }
+  ]
+}

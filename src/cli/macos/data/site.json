@@ -1,0 +1,131 @@
+{
+  "slug": "macos",
+  "name": "macOS CLI Learning",
+  "shortName": "macOS",
+  "subtitle": "BSD · zsh · Homebrew",
+  "icon": "laptop",
+  "otherOsRoot": "../ubuntu/",
+  "searchFile": "data/search.json",
+  "pages": [
+    {
+      "id": "home",
+      "title": "학습 시작",
+      "group": "Learn",
+      "icon": "home",
+      "path": "./",
+      "nav": true
+    },
+    {
+      "id": "overview",
+      "title": "OS 특성",
+      "group": "Learn",
+      "icon": "badge-info",
+      "path": "overview/",
+      "nav": true
+    },
+    {
+      "id": "commands",
+      "title": "핵심 명령",
+      "group": "Learn",
+      "icon": "terminal",
+      "path": "commands/",
+      "nav": true
+    },
+    {
+      "id": "pipeline",
+      "title": "파이프라인",
+      "group": "Learn",
+      "icon": "git-branch",
+      "path": "pipeline/",
+      "nav": true
+    },
+    {
+      "id": "filesystem",
+      "title": "파일시스템",
+      "group": "System",
+      "icon": "folder-tree",
+      "path": "filesystem/",
+      "nav": true
+    },
+    {
+      "id": "system",
+      "title": "시스템·프로세스",
+      "group": "System",
+      "icon": "activity",
+      "path": "system/",
+      "nav": true
+    },
+    {
+      "id": "network",
+      "title": "네트워크·DNS",
+      "group": "System",
+      "icon": "network",
+      "path": "network/",
+      "nav": true
+    },
+    {
+      "id": "shell",
+      "title": "셸·환경변수",
+      "group": "System",
+      "icon": "shell",
+      "path": "shell/",
+      "nav": true
+    },
+    {
+      "id": "packages",
+      "title": "패키지·서비스",
+      "group": "System",
+      "icon": "package",
+      "path": "packages/",
+      "nav": true
+    },
+    {
+      "id": "development",
+      "title": "개발 도구",
+      "group": "Practice",
+      "icon": "code-2",
+      "path": "development/",
+      "nav": true
+    },
+    {
+      "id": "ssh",
+      "title": "SSH·원격",
+      "group": "Practice",
+      "icon": "key-round",
+      "path": "ssh/",
+      "nav": true
+    },
+    {
+      "id": "recipes",
+      "title": "실전 레시피",
+      "group": "Practice",
+      "icon": "wand-sparkles",
+      "path": "recipes/",
+      "nav": true
+    },
+    {
+      "id": "scenarios",
+      "title": "문제 해결",
+      "group": "Practice",
+      "icon": "flask-conical",
+      "path": "scenarios/",
+      "nav": true
+    },
+    {
+      "id": "safety",
+      "title": "안전",
+      "group": "Safety",
+      "icon": "shield-alert",
+      "path": "safety/",
+      "nav": true
+    },
+    {
+      "id": "search",
+      "title": "검색",
+      "group": "Search",
+      "icon": "search",
+      "path": "search/",
+      "nav": false
+    }
+  ]
+}
