@@ -1,0 +1,59 @@
+{
+  "id": "development",
+  "title": "개발자 CLI 도구",
+  "eyebrow": "Practice · Development",
+  "description": "Git, jq, ripgrep, 로컬 서버처럼 개발 흐름에서 자주 연결되는 CLI 도구를 정리합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "개발 도구",
+      "headers": [
+        "도구",
+        "용도",
+        "예시"
+      ],
+      "rows": [
+        [
+          "git",
+          "버전 관리",
+          "git status"
+        ],
+        [
+          "jq",
+          "JSON 가공",
+          "curl -s URL | jq"
+        ],
+        [
+          "rg",
+          "빠른 텍스트 검색",
+          "rg 'TODO|FIXME' ."
+        ],
+        [
+          "python3",
+          "간단한 로컬 서버",
+          "python3 -m http.server 8000"
+        ],
+        [
+          "tree",
+          "디렉터리 구조",
+          "tree -L 2"
+        ],
+        [
+          "fzf",
+          "대화형 필터",
+          "find . -type f | fzf"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "API 응답을 보기 좋게 확인",
+      "code": "curl -s https://api.example.com/users | jq"
+    },
+    {
+      "type": "code",
+      "title": "Git 작업 전 기본 확인",
+      "code": "git status\ngit diff\ngit branch --show-current"
+    }
+  ]
+}

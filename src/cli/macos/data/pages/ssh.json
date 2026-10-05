@@ -1,0 +1,60 @@
+{
+  "id": "ssh",
+  "title": "SSH와 원격 개발",
+  "eyebrow": "Practice · Remote",
+  "description": "SSH config, 키, 포트포워딩, 복사를 하나의 원격 개발 흐름으로 이해합니다.",
+  "blocks": [
+    {
+      "type": "code",
+      "title": "macOS SSH config 예시",
+      "code": "Host dev\n    HostName dev.example.com\n    User ubuntu\n    IdentityFile ~/.ssh/id_ed25519_dev\n    IdentitiesOnly yes\n    AddKeysToAgent yes\n    UseKeychain yes"
+    },
+    {
+      "type": "table",
+      "title": "진단·관리",
+      "headers": [
+        "작업",
+        "명령",
+        "설명"
+      ],
+      "rows": [
+        [
+          "설정 확인",
+          "ssh -G dev",
+          "최종 적용 설정"
+        ],
+        [
+          "디버깅",
+          "ssh -vvv dev",
+          "연결 단계 상세"
+        ],
+        [
+          "키 목록",
+          "ssh-add -l",
+          "agent 키"
+        ],
+        [
+          "known_hosts",
+          "ssh-keygen -F host",
+          "등록 검색"
+        ],
+        [
+          "복사",
+          "scp file dev:/tmp/",
+          "단순 복사"
+        ],
+        [
+          "동기화",
+          "rsync -avz dir/ dev:/srv/",
+          "증분 복사"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "danger",
+      "title": "개인키",
+      "body": "개인키는 공유하지 않습니다. 서버나 Git 서비스에 등록하는 것은 .pub 공개키입니다."
+    }
+  ]
+}

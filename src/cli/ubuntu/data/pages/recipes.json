@@ -1,0 +1,39 @@
+{
+  "id": "recipes",
+  "title": "Ubuntu 실전 레시피",
+  "eyebrow": "Practice · Recipes",
+  "description": "개발·서버 환경에서 반복하는 진단 작업을 짧은 조합으로 확인합니다.",
+  "blocks": [
+    {
+      "type": "cards",
+      "title": "바로 쓰는 조합",
+      "items": [
+        {
+          "title": "IP 확인",
+          "body": "주소와 인터페이스.",
+          "code": "ip addr"
+        },
+        {
+          "title": "Route 확인",
+          "body": "기본 gateway.",
+          "code": "ip route"
+        },
+        {
+          "title": "LISTEN 포트",
+          "body": "프로세스 포함.",
+          "code": "ss -lntp"
+        },
+        {
+          "title": "서비스 로그",
+          "body": "최근 100줄.",
+          "code": "journalctl -u nginx -n 100"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "title": "디스크와 큰 디렉터리",
+      "code": "df -h\ndu -sh /var/* 2>/dev/null | sort -h | tail"
+    }
+  ]
+}

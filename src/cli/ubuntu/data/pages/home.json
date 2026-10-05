@@ -1,0 +1,78 @@
+{
+  "id": "home",
+  "title": "Ubuntu CLI 학습 시작",
+  "eyebrow": "Ubuntu Learning Map",
+  "description": "Ubuntu/Linux의 GNU 도구, FHS, APT와 systemd를 이해하고 서버·개발 문제를 CLI로 해결하는 흐름을 배웁니다.",
+  "goals": [
+    {
+      "title": "Linux 구조 이해",
+      "body": "FHS, /proc, systemd가 어떤 역할인지 먼저 봅니다."
+    },
+    {
+      "title": "핵심 명령 우선",
+      "body": "서버와 개발에서 자주 쓰는 명령부터 익힙니다."
+    },
+    {
+      "title": "파이프라인 이해",
+      "body": "GNU 도구를 조합해 데이터를 필터링하고 추출합니다."
+    },
+    {
+      "title": "운영 문제 해결",
+      "body": "서비스·로그·포트·SSH 문제를 단계적으로 진단합니다."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "links",
+      "title": "추천 학습 순서",
+      "items": [
+        {
+          "title": "1. Ubuntu 특성",
+          "body": "GNU/Linux와 서버 환경의 기본 구조.",
+          "href": "overview/"
+        },
+        {
+          "title": "2. 핵심 명령",
+          "body": "자주 쓰는 명령부터 우선 학습.",
+          "href": "commands/"
+        },
+        {
+          "title": "3. 파이프라인",
+          "body": "stdin/stdout과 조합 원리.",
+          "href": "pipeline/"
+        },
+        {
+          "title": "4. 문제 해결",
+          "body": "서비스와 로그 진단 연습.",
+          "href": "scenarios/"
+        }
+      ]
+    },
+    {
+      "type": "links",
+      "title": "필요할 때 바로 찾기",
+      "items": [
+        {
+          "title": "파일시스템",
+          "body": "/home, /etc, /var, /proc",
+          "href": "filesystem/"
+        },
+        {
+          "title": "네트워크",
+          "body": "ip, ss, dig, nc",
+          "href": "network/"
+        },
+        {
+          "title": "APT · systemd",
+          "body": "패키지와 서비스 관리",
+          "href": "packages/"
+        },
+        {
+          "title": "SSH",
+          "body": "config, agent, 원격 운영",
+          "href": "ssh/"
+        }
+      ]
+    }
+  ]
+}

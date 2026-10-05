@@ -1,0 +1,62 @@
+{
+  "id": "network",
+  "title": "네트워크와 DNS",
+  "eyebrow": "System · Network",
+  "description": "연결 문제를 DNS → 포트 → 애플리케이션 순서로 분리해서 점검합니다.",
+  "blocks": [
+    {
+      "type": "steps",
+      "title": "연결 문제 진단 순서",
+      "items": [
+        {
+          "title": "이름 해석",
+          "body": "dig로 도메인이 어떤 IP로 해석되는지 확인합니다."
+        },
+        {
+          "title": "포트 연결",
+          "body": "nc로 TCP 포트가 열려 있는지 확인합니다."
+        },
+        {
+          "title": "프로토콜",
+          "body": "curl 또는 ssh -vvv로 실제 프로토콜 단계까지 확인합니다."
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "title": "DNS → Port → SSH",
+      "code": "dig +short server.example.com\nnc -vz server.example.com 22\nssh -vvv user@server.example.com"
+    },
+    {
+      "type": "table",
+      "title": "자주 쓰는 네트워크 명령",
+      "headers": [
+        "명령",
+        "용도",
+        "예시"
+      ],
+      "rows": [
+        [
+          "scutil --dns",
+          "resolver 설정",
+          "scutil --dns"
+        ],
+        [
+          "ifconfig",
+          "인터페이스",
+          "ifconfig"
+        ],
+        [
+          "route -n get default",
+          "기본 route",
+          "route -n get default"
+        ],
+        [
+          "lsof -iTCP -sTCP:LISTEN -n -P",
+          "LISTEN 포트",
+          "lsof -iTCP -sTCP:LISTEN -n -P"
+        ]
+      ]
+    }
+  ]
+}

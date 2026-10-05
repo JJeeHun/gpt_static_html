@@ -1,0 +1,59 @@
+{
+  "id": "filesystem",
+  "title": "Ubuntu 파일시스템",
+  "eyebrow": "System · Filesystem",
+  "description": "FHS 구조와 /proc 같은 Linux 전용 가상 파일시스템을 이해합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "중요 경로",
+      "headers": [
+        "경로",
+        "역할",
+        "개발에서"
+      ],
+      "rows": [
+        [
+          "/home",
+          "사용자 홈",
+          "~"
+        ],
+        [
+          "/etc",
+          "전역 설정",
+          "ssh, hosts, 서비스 설정"
+        ],
+        [
+          "/var",
+          "로그·상태·캐시",
+          "/var/log"
+        ],
+        [
+          "/tmp",
+          "임시 파일",
+          "빌드·테스트"
+        ],
+        [
+          "/usr/local",
+          "로컬 설치 소프트웨어",
+          "/usr/local/bin"
+        ],
+        [
+          "/opt",
+          "추가 소프트웨어",
+          "벤더 패키지"
+        ],
+        [
+          "/proc",
+          "프로세스·커널 가상 FS",
+          "/proc/$PID"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "OS와 프로세스 기본 정보",
+      "code": "cat /etc/os-release\nuname -a\nls -la /proc/$$"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "pipeline",
+  "title": "파이프라인과 CLI 사고법",
+  "eyebrow": "Learn · Data Flow",
+  "description": "Unix 파이프 원리는 macOS와 같지만 Ubuntu에서는 GNU 도구와 /proc, journalctl을 활용하는 응용이 많습니다.",
+  "goals": [
+    {
+      "title": "데이터 모양 보기",
+      "body": "원본 출력부터 확인하고 조건을 한 단계씩 추가합니다."
+    },
+    {
+      "title": "전달 방식 구분",
+      "body": "stdin과 argument를 구분해 파이프를 설계합니다."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "flow",
+      "title": "문제를 조립하는 기본 순서",
+      "items": [
+        {
+          "title": "원본",
+          "body": "ps · find · journalctl · curl"
+        },
+        {
+          "title": "필터",
+          "body": "grep · 조건"
+        },
+        {
+          "title": "추출",
+          "body": "awk · cut · head"
+        },
+        {
+          "title": "전달",
+          "body": "| · $() · xargs"
+        },
+        {
+          "title": "검증",
+          "body": "sort · less · jq"
+        }
+      ]
+    },
+    {
+      "type": "table",
+      "title": "전달 방식 구분",
+      "headers": [
+        "방식",
+        "의미",
+        "예시"
+      ],
+      "rows": [
+        [
+          "|",
+          "stdout → 다음 명령의 stdin",
+          "journalctl -u nginx | grep error"
+        ],
+        [
+          "$(...)",
+          "stdout → 현재 명령의 argument",
+          "ps -p \"$(pgrep -n node)\""
+        ],
+        [
+          "xargs",
+          "stdin → command arguments",
+          "find . -print0 | xargs -0 grep ERROR"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "서비스 로그에서 오류 좁히기",
+      "code": "journalctl -u nginx -n 500 --no-pager\njournalctl -u nginx -n 500 --no-pager | grep -i 'error'\njournalctl -u nginx -n 500 --no-pager \\\n  | grep -i 'error' | tail -n 20"
+    },
+    {
+      "type": "code",
+      "title": "Linux /proc 환경변수",
+      "code": "P=$(pgrep -f 'my-app' | head -1)\n[ -n \"$P\" ] && tr '\\0' '\\n' < \"/proc/$P/environ\" | sort"
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "출력 형식을 먼저 확인",
+      "body": "ps나 ss의 열 위치를 가정하고 바로 awk를 붙이지 말고 원본 명령을 먼저 실행해 실제 출력 모양을 확인하세요."
+    }
+  ]
+}

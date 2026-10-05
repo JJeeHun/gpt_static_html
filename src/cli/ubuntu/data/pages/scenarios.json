@@ -1,0 +1,44 @@
+{
+  "id": "scenarios",
+  "title": "Ubuntu 문제 해결 시나리오",
+  "eyebrow": "Practice · Troubleshooting",
+  "description": "서비스, 로그, /proc, 포트와 프로세스를 연결해서 실제 운영 문제를 단계적으로 풉니다.",
+  "blocks": [
+    {
+      "type": "steps",
+      "title": "서비스가 안 뜰 때",
+      "items": [
+        {
+          "title": "status",
+          "body": "active/failed와 최근 메시지"
+        },
+        {
+          "title": "journal",
+          "body": "실패 원인 로그"
+        },
+        {
+          "title": "reload",
+          "body": "unit 변경 시 daemon-reload"
+        },
+        {
+          "title": "restart",
+          "body": "재시작 후 상태 재확인"
+        },
+        {
+          "title": "port",
+          "body": "ss -lntp로 LISTEN 확인"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "title": "systemd 진단 흐름",
+      "code": "systemctl status myapp\njournalctl -u myapp -n 100 --no-pager\nsudo systemctl daemon-reload\nsudo systemctl restart myapp\nsystemctl status myapp\nss -lntp"
+    },
+    {
+      "type": "code",
+      "title": "프로세스 환경변수",
+      "code": "P=$(pgrep -f 'my-app' | head -1)\n[ -n \"$P\" ] && tr '\\0' '\\n' < \"/proc/$P/environ\" | sort"
+    }
+  ]
+}

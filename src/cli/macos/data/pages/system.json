@@ -1,0 +1,75 @@
+{
+  "id": "system",
+  "title": "프로세스와 시스템",
+  "eyebrow": "System · Process",
+  "description": "실행 중인 프로세스, CPU·메모리, 아키텍처와 디스크를 CLI로 확인합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "프로세스",
+      "headers": [
+        "명령",
+        "용도",
+        "예시"
+      ],
+      "rows": [
+        [
+          "ps aux",
+          "전체 프로세스",
+          "ps aux"
+        ],
+        [
+          "pgrep -fl",
+          "이름·command line 검색",
+          "pgrep -fl node"
+        ],
+        [
+          "top",
+          "CPU·메모리 실시간",
+          "top"
+        ],
+        [
+          "kill",
+          "정상 종료 요청",
+          "kill PID"
+        ],
+        [
+          "lsof -i",
+          "포트 점유",
+          "lsof -i :3000"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "title": "시스템 정보",
+      "headers": [
+        "명령",
+        "용도",
+        "예시"
+      ],
+      "rows": [
+        [
+          "sw_vers",
+          "macOS 버전",
+          "sw_vers"
+        ],
+        [
+          "uname -m",
+          "CPU 아키텍처",
+          "uname -m"
+        ],
+        [
+          "diskutil list",
+          "디스크·파티션",
+          "diskutil list"
+        ],
+        [
+          "df -h",
+          "파일시스템 용량",
+          "df -h"
+        ]
+      ]
+    }
+  ]
+}
