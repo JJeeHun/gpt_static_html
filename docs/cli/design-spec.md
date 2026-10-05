@@ -19,6 +19,7 @@ Group labels stay consistent across OSes, while page content can differ.
 ## Search UX
 Search is a primary task and stays visible on desktop.
 Submit navigates to a real search result page.
+Mobile search remains visible by wrapping below the utility row rather than disappearing.
 Search results show type, priority, title or command, explanation, and target.
 
 ## Visual hierarchy
