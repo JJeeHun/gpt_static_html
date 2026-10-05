@@ -1,0 +1,101 @@
+{
+  "id": "shell",
+  "icon": "workflow",
+  "title": "파이프 · 리다이렉션 · PATH",
+  "blocks": [
+    {
+      "type": "callout",
+      "tone": "good",
+      "title": "파이프 핵심",
+      "body": "파이프(|)는 왼쪽 명령의 stdout을 오른쪽 명령의 stdin으로 연결합니다. 이 개념은 macOS와 같습니다."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "문법",
+        "의미",
+        "예시"
+      ],
+      "rows": [
+        [
+          "|",
+          "stdout → 다음 명령 stdin",
+          "printf hello | grep hello"
+        ],
+        [
+          "$(...)",
+          "stdout을 문자열/인자로 치환",
+          "echo $(pwd)"
+        ],
+        [
+          "xargs",
+          "stdin을 다음 명령의 인자로 변환",
+          "printf a | xargs echo"
+        ],
+        [
+          ">",
+          "stdout 덮어쓰기",
+          "npm test > test.log"
+        ],
+        [
+          ">>",
+          "stdout 이어쓰기",
+          "date >> history.log"
+        ],
+        [
+          "2>&1",
+          "stderr를 stdout 목적지로 합침",
+          "cmd > all.log 2>&1"
+        ],
+        [
+          "&&",
+          "앞 명령 성공 시 실행",
+          "npm test && npm run build"
+        ],
+        [
+          "||",
+          "앞 명령 실패 시 실행",
+          "curl -f URL || echo 실패"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "code": "cat access.log \\\n  | grep ERROR \\\n  | grep /api/ \\\n  | sort \\\n  | uniq -c \\\n  | sort -nr \\\n  | head -20"
+    },
+    {
+      "type": "table",
+      "headers": [
+        "확인 항목",
+        "명령"
+      ],
+      "rows": [
+        [
+          "현재 PATH",
+          "echo $PATH | tr ':' '\\n'"
+        ],
+        [
+          "실제 실행 파일",
+          "command -v python3"
+        ],
+        [
+          "같은 이름 후보",
+          "which -a python3"
+        ],
+        [
+          "명령 종류",
+          "type python3"
+        ],
+        [
+          "셸 확인",
+          "echo $SHELL"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "title": "GNU 도구",
+      "body": "Ubuntu에서는 GNU sed, date, stat, grep 옵션을 기준으로 보는 경우가 많습니다. macOS의 BSD 구현과 같은 명령 이름이어도 옵션이 다를 수 있습니다."
+    }
+  ]
+}
