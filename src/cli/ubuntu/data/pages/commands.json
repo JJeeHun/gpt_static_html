@@ -1,0 +1,196 @@
+{
+  "id": "commands",
+  "kind": "commands",
+  "title": "Ubuntu 핵심 명령 레퍼런스",
+  "eyebrow": "Command Reference",
+  "description": "개발·서버 작업에서 필요한 명령을 핵심, 자주 씀, 확장 순서로 학습합니다.",
+  "blocks": [
+    {
+      "type": "commands",
+      "title": "명령어",
+      "intro": "기본값은 핵심 명령만 표시합니다.",
+      "items": [
+        {
+          "command": "pwd",
+          "summary": "현재 디렉터리",
+          "example": "pwd",
+          "priority": "essential"
+        },
+        {
+          "command": "ls -lah",
+          "summary": "숨김 파일 포함 목록",
+          "example": "ls -lah",
+          "priority": "essential"
+        },
+        {
+          "command": "cd",
+          "summary": "디렉터리 이동",
+          "example": "cd /var/log",
+          "priority": "essential"
+        },
+        {
+          "command": "mkdir -p",
+          "summary": "중첩 디렉터리 생성",
+          "example": "mkdir -p app/logs",
+          "priority": "essential"
+        },
+        {
+          "command": "cp",
+          "summary": "파일 복사",
+          "example": "cp .env .env.bak",
+          "priority": "essential"
+        },
+        {
+          "command": "mv",
+          "summary": "이동·이름 변경",
+          "example": "mv old new",
+          "priority": "essential"
+        },
+        {
+          "command": "rm",
+          "summary": "파일 삭제",
+          "example": "rm temp",
+          "priority": "essential"
+        },
+        {
+          "command": "cat / less",
+          "summary": "파일 읽기",
+          "example": "less app.log",
+          "priority": "essential"
+        },
+        {
+          "command": "grep",
+          "summary": "텍스트 필터",
+          "example": "grep -Rni TODO src",
+          "priority": "essential"
+        },
+        {
+          "command": "find",
+          "summary": "파일 찾기",
+          "example": "find . -name '*.conf'",
+          "priority": "essential"
+        },
+        {
+          "command": "sudo",
+          "summary": "관리자 권한 실행",
+          "example": "sudo systemctl status nginx",
+          "priority": "essential"
+        },
+        {
+          "command": "man",
+          "summary": "매뉴얼",
+          "example": "man systemctl",
+          "priority": "essential"
+        },
+        {
+          "command": "systemctl",
+          "summary": "서비스 관리",
+          "example": "systemctl status nginx",
+          "priority": "common"
+        },
+        {
+          "command": "journalctl",
+          "summary": "systemd 로그",
+          "example": "journalctl -u nginx -n 100",
+          "priority": "common"
+        },
+        {
+          "command": "ip",
+          "summary": "주소·라우팅",
+          "example": "ip addr",
+          "priority": "common"
+        },
+        {
+          "command": "ss",
+          "summary": "소켓·포트",
+          "example": "ss -lntp",
+          "priority": "common"
+        },
+        {
+          "command": "ps",
+          "summary": "프로세스",
+          "example": "ps aux",
+          "priority": "common"
+        },
+        {
+          "command": "pgrep",
+          "summary": "프로세스 검색",
+          "example": "pgrep -af node",
+          "priority": "common"
+        },
+        {
+          "command": "kill",
+          "summary": "종료 요청",
+          "example": "kill PID",
+          "priority": "common"
+        },
+        {
+          "command": "curl",
+          "summary": "HTTP 요청",
+          "example": "curl -fsS URL",
+          "priority": "common"
+        },
+        {
+          "command": "dig",
+          "summary": "DNS 조회",
+          "example": "dig +short example.com",
+          "priority": "common"
+        },
+        {
+          "command": "nc",
+          "summary": "포트 연결",
+          "example": "nc -vz host 443",
+          "priority": "common"
+        },
+        {
+          "command": "apt",
+          "summary": "패키지",
+          "example": "sudo apt install jq",
+          "priority": "common"
+        },
+        {
+          "command": "ssh",
+          "summary": "원격 접속",
+          "example": "ssh prod",
+          "priority": "common"
+        },
+        {
+          "command": "awk",
+          "summary": "필드 처리",
+          "example": "awk '{print $2}'",
+          "priority": "advanced"
+        },
+        {
+          "command": "sed",
+          "summary": "패턴 치환",
+          "example": "sed -i 's/a/b/' file",
+          "priority": "advanced"
+        },
+        {
+          "command": "xargs",
+          "summary": "stdin→argument",
+          "example": "find . -print0 | xargs -0 grep ERROR",
+          "priority": "advanced"
+        },
+        {
+          "command": "strace",
+          "summary": "시스템 호출 추적",
+          "example": "strace -p PID",
+          "priority": "advanced"
+        },
+        {
+          "command": "lsof",
+          "summary": "열린 파일·포트",
+          "example": "lsof -i :8080",
+          "priority": "advanced"
+        },
+        {
+          "command": "du",
+          "summary": "디렉터리 용량",
+          "example": "du -sh /var/*",
+          "priority": "advanced"
+        }
+      ]
+    }
+  ]
+}
