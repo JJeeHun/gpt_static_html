@@ -1,0 +1,55 @@
+{
+  "id": "ssh",
+  "title": "SSH와 원격 운영",
+  "eyebrow": "Practice · Remote",
+  "description": "서버 접속, config, 키, 전송, 원격 진단을 한 흐름으로 정리합니다.",
+  "blocks": [
+    {
+      "type": "code",
+      "title": "Ubuntu SSH config",
+      "code": "Host prod\n    HostName prod.example.com\n    User ubuntu\n    IdentityFile ~/.ssh/id_ed25519_prod\n    IdentitiesOnly yes"
+    },
+    {
+      "type": "table",
+      "title": "진단·관리",
+      "headers": [
+        "작업",
+        "명령",
+        "설명"
+      ],
+      "rows": [
+        [
+          "설정 확인",
+          "ssh -G prod",
+          "최종 적용 설정"
+        ],
+        [
+          "디버깅",
+          "ssh -vvv prod",
+          "연결 단계"
+        ],
+        [
+          "키 목록",
+          "ssh-add -l",
+          "agent 키"
+        ],
+        [
+          "복사",
+          "scp file prod:/tmp/",
+          "단순 복사"
+        ],
+        [
+          "동기화",
+          "rsync -avz dir/ prod:/srv/",
+          "증분 복사"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "danger",
+      "title": "개인키",
+      "body": "개인키는 공유하지 않습니다. 서버에 등록하는 것은 공개키입니다."
+    }
+  ]
+}
