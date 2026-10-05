@@ -1,0 +1,55 @@
+{
+  "id": "shell",
+  "title": "bash, PATH와 환경변수",
+  "eyebrow": "System · Shell",
+  "description": "Ubuntu 기본 환경에서 bash, PATH, 환경변수, 프로파일 파일과 실행 파일 탐색 순서를 이해합니다.",
+  "blocks": [
+    {
+      "type": "table",
+      "title": "자주 확인하는 것",
+      "headers": [
+        "목적",
+        "명령",
+        "설명"
+      ],
+      "rows": [
+        [
+          "현재 셸",
+          "echo $SHELL",
+          "로그인 셸"
+        ],
+        [
+          "PATH",
+          "echo $PATH | tr ':' '\\n'",
+          "검색 순서"
+        ],
+        [
+          "실행 파일",
+          "command -v node",
+          "실제 실행 위치"
+        ],
+        [
+          "명령 종류",
+          "type node",
+          "alias/function/executable"
+        ],
+        [
+          "환경변수",
+          "env | sort",
+          "현재 환경 확인"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "title": "~/.bashrc 기본 예시",
+      "code": "export PATH=\"$HOME/bin:$PATH\"\nexport EDITOR=\"nano\"\nalias ll='ls -lah'\n\n# 반영\nsource ~/.bashrc"
+    },
+    {
+      "type": "callout",
+      "tone": "good",
+      "title": "서버 로그인 셸",
+      "body": "대화형 셸과 서비스 프로세스의 환경은 다를 수 있습니다. systemd 서비스 환경은 unit 파일과 Environment/EnvironmentFile도 함께 확인하세요."
+    }
+  ]
+}
