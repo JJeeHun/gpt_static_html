@@ -352,5 +352,19 @@
     "query": "du",
     "priority": "advanced",
     "search": "du 디렉터리 용량 du -sh /var/*"
+  },
+  {
+    "type": "page",
+    "title": "bash, PATH와 환경변수",
+    "summary": "Ubuntu 기본 환경에서 bash, PATH, 환경변수, 프로파일 파일과 실행 파일 탐색 순서를 이해합니다.",
+    "path": "shell/",
+    "search": "ubuntu bash path 환경변수 shell profile command -v type env"
+  },
+  {
+    "type": "page",
+    "title": "개발자 CLI 도구",
+    "summary": "Git, jq, ripgrep, 빌드·로그 확인 도구를 서버와 개발 환경에서 활용합니다.",
+    "path": "development/",
+    "search": "ubuntu 개발 도구 git jq ripgrep rg python watch tee"
   }
 ]
