@@ -1,0 +1,53 @@
+{
+  "id": "recipes",
+  "icon": "wand-sparkles",
+  "kicker": "개발 실전",
+  "title": "빠른 실전 조합",
+  "summary": "현장에서 반복적으로 쓰는 작업을 짧은 레시피 형태로 모았습니다.",
+  "blocks": [
+    {
+      "type": "cards",
+      "items": [
+        {
+          "icon": "folder-open",
+          "title": "현재 경로 Finder",
+          "body": "현재 작업 위치를 Finder에서 바로 엽니다.",
+          "code": "open ."
+        },
+        {
+          "icon": "clipboard",
+          "title": "현재 경로 복사",
+          "body": "pwd 결과를 macOS 클립보드로 보냅니다.",
+          "code": "pwd | pbcopy"
+        },
+        {
+          "icon": "search",
+          "title": "TODO 검색",
+          "body": "ripgrep으로 TODO/FIXME를 빠르게 찾습니다.",
+          "code": "rg 'TODO|FIXME' ."
+        },
+        {
+          "icon": "radio-tower",
+          "title": "8080 포트 확인",
+          "body": "포트를 점유한 프로세스를 찾습니다.",
+          "code": "lsof -i :8080"
+        }
+      ]
+    },
+    {
+      "type": "code",
+      "title": "DNS → Port → SSH 장애 확인",
+      "code": "dig +short server.example.com\nnc -vz server.example.com 22\nssh -vvv user@server.example.com"
+    },
+    {
+      "type": "code",
+      "title": "API 상태 코드만 확인",
+      "code": "curl -s -o /dev/null -w '%{http_code}\\n' \\\n  https://api.example.com/health"
+    },
+    {
+      "type": "code",
+      "title": "SSH config 최종 적용값 확인",
+      "code": "ssh -G prod | less"
+    }
+  ]
+}
