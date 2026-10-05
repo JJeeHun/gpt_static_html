@@ -1,0 +1,74 @@
+{
+  "id": "system-network",
+  "icon": "activity",
+  "title": "프로세스 · 서비스 · 네트워크",
+  "blocks": [
+    {
+      "type": "table",
+      "headers": [
+        "명령어",
+        "용도"
+      ],
+      "rows": [
+        [
+          "ps aux",
+          "전체 프로세스"
+        ],
+        [
+          "pgrep -af node",
+          "command line으로 프로세스 찾기"
+        ],
+        [
+          "top",
+          "CPU/메모리 실시간 확인"
+        ],
+        [
+          "kill PID",
+          "프로세스 정상 종료 요청"
+        ],
+        [
+          "ss -lntp",
+          "LISTEN 중인 TCP 포트"
+        ],
+        [
+          "lsof -i :3000",
+          "특정 포트 점유 확인"
+        ],
+        [
+          "systemctl status SERVICE",
+          "systemd 서비스 상태"
+        ],
+        [
+          "journalctl -u SERVICE",
+          "서비스 로그"
+        ],
+        [
+          "ip addr",
+          "인터페이스/IP 확인"
+        ],
+        [
+          "ip route",
+          "라우팅 확인"
+        ],
+        [
+          "dig +short domain",
+          "DNS 빠른 조회"
+        ],
+        [
+          "nc -vz host 443",
+          "TCP 포트 연결 확인"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "code": "# 서비스 상태와 로그\nsystemctl status nginx\njournalctl -u nginx -n 100 --no-pager\n\n# DNS → 포트 → SSH\ndig +short server.example.com\nnc -vz server.example.com 22\nssh -vvv user@server.example.com"
+    },
+    {
+      "type": "callout",
+      "tone": "warn",
+      "title": "프로세스 환경변수",
+      "body": "Linux에서는 /proc/$PID/environ을 NUL 기준으로 읽는 방법을 사용할 수 있습니다. macOS에는 같은 형태의 /proc가 없습니다."
+    }
+  ]
+}
