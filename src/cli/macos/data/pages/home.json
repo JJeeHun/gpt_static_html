@@ -1,0 +1,78 @@
+{
+  "id": "home",
+  "title": "macOS CLI 학습 시작",
+  "eyebrow": "macOS Learning Map",
+  "description": "macOS가 어떤 Unix 환경인지 이해하고, 필요한 CLI를 익힌 뒤 파이프라인과 실전 문제 해결로 확장합니다.",
+  "goals": [
+    {
+      "title": "OS부터 이해",
+      "body": "BSD 계열 도구, Apple 디렉터리, Homebrew와 launchd를 먼저 구분합니다."
+    },
+    {
+      "title": "명령은 우선순위로",
+      "body": "핵심 명령부터 익히고 상황별 명령은 필요할 때 확장합니다."
+    },
+    {
+      "title": "파이프라인 이해",
+      "body": "stdin/stdout/argument의 차이를 배워 명령을 조합합니다."
+    },
+    {
+      "title": "실전으로 연결",
+      "body": "포트, 로그, SSH, API 문제를 단계적으로 해결합니다."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "links",
+      "title": "추천 학습 순서",
+      "items": [
+        {
+          "title": "1. macOS 특성",
+          "body": "Linux와 무엇이 같고 다른지부터 이해합니다.",
+          "href": "overview/"
+        },
+        {
+          "title": "2. 핵심 명령",
+          "body": "매일 쓰는 명령을 우선순위로 익힙니다.",
+          "href": "commands/"
+        },
+        {
+          "title": "3. 파이프라인",
+          "body": "명령을 연결하는 원리를 학습합니다.",
+          "href": "pipeline/"
+        },
+        {
+          "title": "4. 문제 해결",
+          "body": "실전 시나리오에서 조합법을 연습합니다.",
+          "href": "scenarios/"
+        }
+      ]
+    },
+    {
+      "type": "links",
+      "title": "필요할 때 바로 찾기",
+      "items": [
+        {
+          "title": "파일시스템",
+          "body": "/System, /Library, ~/Library, /Volumes",
+          "href": "filesystem/"
+        },
+        {
+          "title": "네트워크",
+          "body": "포트, DNS, route, curl, nc",
+          "href": "network/"
+        },
+        {
+          "title": "Homebrew · 서비스",
+          "body": "brew, brew services, launchd",
+          "href": "packages/"
+        },
+        {
+          "title": "SSH",
+          "body": "config, keychain, 복사와 동기화",
+          "href": "ssh/"
+        }
+      ]
+    }
+  ]
+}
