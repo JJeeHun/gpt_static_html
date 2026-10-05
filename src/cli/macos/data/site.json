@@ -64,11 +64,27 @@
       "nav": true
     },
     {
+      "id": "shell",
+      "title": "셸·환경변수",
+      "group": "System",
+      "icon": "shell",
+      "path": "shell/",
+      "nav": true
+    },
+    {
       "id": "packages",
       "title": "패키지·서비스",
       "group": "System",
       "icon": "package",
       "path": "packages/",
+      "nav": true
+    },
+    {
+      "id": "development",
+      "title": "개발 도구",
+      "group": "Practice",
+      "icon": "code-2",
+      "path": "development/",
       "nav": true
     },
     {
