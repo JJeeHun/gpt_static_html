@@ -1,0 +1,65 @@
+{
+  "id": "ubuntu-tools",
+  "icon": "package",
+  "title": "Ubuntu 전용 도구 · APT · systemd",
+  "blocks": [
+    {
+      "type": "table",
+      "headers": [
+        "명령어",
+        "설명"
+      ],
+      "rows": [
+        [
+          "sudo apt update",
+          "패키지 목록 갱신"
+        ],
+        [
+          "sudo apt install name",
+          "패키지 설치"
+        ],
+        [
+          "apt list --installed",
+          "설치된 패키지 확인"
+        ],
+        [
+          "apt search name",
+          "패키지 검색"
+        ],
+        [
+          "systemctl status SERVICE",
+          "서비스 상태 확인"
+        ],
+        [
+          "sudo systemctl start SERVICE",
+          "서비스 시작"
+        ],
+        [
+          "sudo systemctl restart SERVICE",
+          "서비스 재시작"
+        ],
+        [
+          "sudo systemctl enable SERVICE",
+          "부팅 시 자동 시작"
+        ],
+        [
+          "xdg-open .",
+          "기본 GUI 프로그램으로 열기"
+        ],
+        [
+          "ip addr",
+          "IP/인터페이스 확인"
+        ]
+      ]
+    },
+    {
+      "type": "code",
+      "code": "sudo apt update\nsudo apt install git jq ripgrep fd-find fzf tree curl\n\n# 서비스 예시\nsystemctl status nginx\nsudo systemctl restart nginx"
+    },
+    {
+      "type": "callout",
+      "title": "macOS와 주요 차이",
+      "body": "패키지는 Homebrew 대신 apt, 서비스는 launchctl/brew services 대신 systemctl을 주로 사용합니다. 파일 열기는 open 대신 xdg-open을 사용합니다."
+    }
+  ]
+}
