@@ -30,6 +30,8 @@ Scenario → observe → filter → extract → pass → verify.
 - System and process
 - Network and DNS
 - Packages and services
+- Shell and environment
+- Developer CLI tools
 - Pipeline and shell concepts
 - SSH and remote
 - Practical recipes
