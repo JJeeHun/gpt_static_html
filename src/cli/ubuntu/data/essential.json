@@ -1,0 +1,73 @@
+{
+  "id": "essential",
+  "icon": "bookmark",
+  "title": "가장 먼저 외울 것",
+  "blocks": [
+    {
+      "type": "table",
+      "headers": [
+        "명령어",
+        "설명",
+        "예시"
+      ],
+      "rows": [
+        [
+          "pwd",
+          "현재 디렉터리 확인",
+          "pwd"
+        ],
+        [
+          "ls -lah",
+          "숨김 파일까지 자세히 표시",
+          "ls -lah"
+        ],
+        [
+          "cd",
+          "디렉터리 이동",
+          "cd ~/Downloads"
+        ],
+        [
+          "mkdir -p",
+          "중첩 디렉터리 생성",
+          "mkdir -p src/components"
+        ],
+        [
+          "cp / mv",
+          "복사 / 이동 / 이름 변경",
+          "mv old.txt new.txt"
+        ],
+        [
+          "rm",
+          "파일 삭제",
+          "rm temp.txt"
+        ],
+        [
+          "cat / less",
+          "파일 내용 읽기",
+          "less server.log"
+        ],
+        [
+          "grep / find",
+          "내용 / 파일 검색",
+          "grep -Rni TODO src"
+        ],
+        [
+          "command -v",
+          "실제 실행 파일 위치 확인",
+          "command -v node"
+        ],
+        [
+          "man",
+          "명령 매뉴얼",
+          "man ssh"
+        ]
+      ]
+    },
+    {
+      "type": "callout",
+      "tone": "good",
+      "title": "macOS와 공통",
+      "body": "기본 파일/디렉터리, 파이프, SSH, Git 명령은 macOS와 매우 비슷합니다. 패키지·서비스·네트워크·GNU/BSD 옵션에서 차이가 커집니다."
+    }
+  ]
+}
