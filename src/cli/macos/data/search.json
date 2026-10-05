@@ -352,5 +352,19 @@
     "query": "launchctl",
     "priority": "advanced",
     "search": "launchctl launchd 서비스 제어 launchctl list"
+  },
+  {
+    "type": "page",
+    "title": "zsh, PATH와 환경변수",
+    "summary": "macOS 기본 셸인 zsh에서 PATH, alias, 환경변수, 실행 파일 탐색 순서를 이해합니다.",
+    "path": "shell/",
+    "search": "macos zsh path 환경변수 alias shell command -v which type"
+  },
+  {
+    "type": "page",
+    "title": "개발자 CLI 도구",
+    "summary": "Git, jq, ripgrep, 로컬 서버처럼 개발 흐름에서 자주 연결되는 CLI 도구를 정리합니다.",
+    "path": "development/",
+    "search": "macos 개발 도구 git jq ripgrep rg python http server tree fzf"
   }
 ]
