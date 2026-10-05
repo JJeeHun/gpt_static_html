@@ -1,9 +1,7 @@
 name: Deploy GitHub Pages
 
 on:
-  push:
-    branches:
-      - feature/cli-os-guides
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -26,8 +24,6 @@ jobs:
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
-        with:
-          enablement: true
 
       - name: Upload static site
         uses: actions/upload-pages-artifact@v5
