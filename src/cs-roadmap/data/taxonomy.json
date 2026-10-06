@@ -1,0 +1,280 @@
+{
+  "schemaVersion": 3,
+  "description": "학부 졸업 수준의 CS 영역·세부영역 분류 체계",
+  "areas": [
+    {
+      "id": "foundations",
+      "label": "컴퓨터 기초",
+      "icon": "binary",
+      "subareas": [
+        "데이터 표현",
+        "논리·단위",
+        "직렬화",
+        "성능 기초",
+        "논리·집합",
+        "증명",
+        "경우의 수",
+        "그래프",
+        "계산 모델",
+        "형식 언어",
+        "계산 가능성",
+        "계산 복잡도",
+        "확률·통계",
+        "Machine Learning"
+      ],
+      "aliases": [
+        "CS 기초",
+        "computer basics",
+        "fundamentals",
+        "기초"
+      ]
+    },
+    {
+      "id": "data-structures",
+      "label": "자료구조",
+      "icon": "braces",
+      "subareas": [
+        "선형 구조",
+        "Hash",
+        "Tree",
+        "Graph"
+      ],
+      "aliases": [
+        "자료 구조",
+        "data structure",
+        "data structures",
+        "DS"
+      ]
+    },
+    {
+      "id": "algorithms",
+      "label": "알고리즘",
+      "icon": "route",
+      "subareas": [
+        "복잡도",
+        "탐색·정렬",
+        "문제 해결",
+        "Graph"
+      ],
+      "aliases": [
+        "algorithm",
+        "algorithms",
+        "알고리즘"
+      ]
+    },
+    {
+      "id": "architecture",
+      "label": "컴퓨터 구조",
+      "icon": "cpu",
+      "subareas": [
+        "CPU",
+        "Memory",
+        "Instruction",
+        "I/O",
+        "Graphics",
+        "Embedded"
+      ],
+      "aliases": [
+        "컴퓨터구조",
+        "computer architecture",
+        "architecture"
+      ]
+    },
+    {
+      "id": "os",
+      "label": "OS",
+      "icon": "layers-3",
+      "subareas": [
+        "Process",
+        "Scheduling",
+        "Concurrency",
+        "Memory",
+        "File & I/O",
+        "IPC"
+      ],
+      "aliases": [
+        "운영체제",
+        "operating system"
+      ]
+    },
+    {
+      "id": "linux",
+      "label": "Linux",
+      "icon": "terminal",
+      "subareas": [
+        "Shell",
+        "Process",
+        "Permission",
+        "Service",
+        "Observability",
+        "Container"
+      ],
+      "aliases": [
+        "리눅스"
+      ]
+    },
+    {
+      "id": "network",
+      "label": "Network",
+      "icon": "network",
+      "subareas": [
+        "기초 계층",
+        "Link",
+        "IP",
+        "Transport",
+        "Name Resolution",
+        "Application"
+      ],
+      "aliases": [
+        "네트워크",
+        "networking"
+      ]
+    },
+    {
+      "id": "storage",
+      "label": "Storage",
+      "icon": "hard-drive",
+      "subareas": [
+        "Device",
+        "Block I/O",
+        "Cache & Durability"
+      ],
+      "aliases": [
+        "저장장치",
+        "스토리지"
+      ]
+    },
+    {
+      "id": "database",
+      "label": "Database",
+      "icon": "database",
+      "subareas": [
+        "Relational",
+        "Index",
+        "Transaction",
+        "Query",
+        "Storage",
+        "Replication"
+      ],
+      "aliases": [
+        "DB",
+        "데이터베이스"
+      ]
+    },
+    {
+      "id": "runtime",
+      "label": "Runtime",
+      "icon": "box",
+      "subareas": [
+        "Memory",
+        "GC",
+        "JIT",
+        "JVM",
+        "Language Model"
+      ],
+      "aliases": [
+        "런타임",
+        "language runtime"
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "icon": "server",
+      "subareas": [
+        "Server Model",
+        "Pool",
+        "Cache",
+        "Proxy",
+        "Queue",
+        "Traffic Control",
+        "Software Engineering",
+        "HCI"
+      ],
+      "aliases": [
+        "백엔드",
+        "server"
+      ]
+    },
+    {
+      "id": "container",
+      "label": "Container",
+      "icon": "container",
+      "subareas": [
+        "Isolation",
+        "Resource",
+        "Filesystem",
+        "Network",
+        "Security"
+      ],
+      "aliases": [
+        "컨테이너",
+        "Docker"
+      ]
+    },
+    {
+      "id": "distributed",
+      "label": "Distributed",
+      "icon": "waypoints",
+      "subareas": [
+        "Failure",
+        "Replication",
+        "Partition",
+        "Consistency",
+        "Consensus",
+        "Coordination"
+      ],
+      "aliases": [
+        "분산",
+        "분산시스템",
+        "distributed systems"
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Security",
+      "icon": "shield-check",
+      "subareas": [
+        "Crypto",
+        "Identity",
+        "Session",
+        "Permission"
+      ],
+      "aliases": [
+        "보안",
+        "security"
+      ]
+    },
+    {
+      "id": "native",
+      "label": "Native",
+      "icon": "code-2",
+      "subareas": [
+        "C & ABI",
+        "Memory",
+        "Toolchain",
+        "Debugging"
+      ],
+      "aliases": [
+        "네이티브",
+        "native programming"
+      ]
+    },
+    {
+      "id": "kernel",
+      "label": "Kernel",
+      "icon": "microchip",
+      "subareas": [
+        "Scheduler",
+        "Memory",
+        "VFS",
+        "Network",
+        "Interrupt"
+      ],
+      "aliases": [
+        "커널",
+        "linux kernel"
+      ]
+    }
+  ]
+}
