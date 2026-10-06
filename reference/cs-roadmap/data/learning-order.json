@@ -1,0 +1,204 @@
+{
+  "schemaVersion": 1,
+  "description": "분야별 완독 순서가 아니라, 개발자가 기본 원리를 연결해 이해하기 좋은 개념 단위 추천 순서",
+  "principle": [
+    "큰 분야를 한 번에 끝내지 않는다.",
+    "다음 개념을 이해하는 데 필요한 만큼만 먼저 본다.",
+    "관심이 생긴 개념은 중간에 먼저 확인해도 된다.",
+    "순서는 길을 잃지 않게 하는 추천선이며 강제 커리큘럼이 아니다."
+  ],
+  "stages": [
+    {
+      "order": 1,
+      "id": "data-machine",
+      "title": "컴퓨터가 데이터를 다루는 법",
+      "purpose": "뒤에서 나오는 메모리·파일·네트워크 데이터가 무엇인지 이해하는 바탕",
+      "concepts": [
+        {
+          "id": "data-representation",
+          "priority": "core"
+        },
+        {
+          "id": "cpu-cache",
+          "priority": "core"
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "id": "program-execution",
+      "title": "프로그램이 실행되는 법",
+      "purpose": "코드가 실행 중인 프로세스가 되고 OS와 만나는 흐름",
+      "concepts": [
+        {
+          "id": "process",
+          "priority": "core"
+        },
+        {
+          "id": "interrupt-syscall",
+          "priority": "core"
+        },
+        {
+          "id": "virtual-memory",
+          "priority": "core"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "id": "concurrency",
+      "title": "여러 작업이 함께 실행되는 법",
+      "purpose": "서버·DB·런타임에서 반복해서 만나는 동시성의 바탕",
+      "concepts": [
+        {
+          "id": "thread",
+          "priority": "core"
+        },
+        {
+          "id": "sync",
+          "priority": "core"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "id": "io-storage",
+      "title": "프로그램이 읽고 쓰는 법",
+      "purpose": "파일·파이프·디스크 I/O가 같은 흐름에서 어떻게 연결되는지 이해",
+      "concepts": [
+        {
+          "id": "file-descriptor-io",
+          "priority": "core"
+        },
+        {
+          "id": "filesystem",
+          "priority": "core"
+        },
+        {
+          "id": "page-cache",
+          "priority": "connect"
+        },
+        {
+          "id": "storage-raid",
+          "priority": "connect"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "id": "network",
+      "title": "서버가 서로 통신하는 법",
+      "purpose": "주소를 찾고 연결을 만들고 웹 요청을 주고받는 흐름",
+      "concepts": [
+        {
+          "id": "ip-routing",
+          "priority": "core"
+        },
+        {
+          "id": "dns",
+          "priority": "core"
+        },
+        {
+          "id": "socket-tcp",
+          "priority": "core"
+        },
+        {
+          "id": "http-tls",
+          "priority": "core"
+        },
+        {
+          "id": "epoll",
+          "priority": "connect"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "id": "linux-runtime",
+      "title": "Linux에서 직접 다루는 법",
+      "purpose": "배운 원리를 명령어와 관찰 도구로 연결하고 컨테이너 기반을 이해",
+      "concepts": [
+        {
+          "id": "linux-shell-pipeline",
+          "priority": "core"
+        },
+        {
+          "id": "observability",
+          "priority": "core"
+        },
+        {
+          "id": "namespace",
+          "priority": "connect"
+        },
+        {
+          "id": "cgroup",
+          "priority": "connect"
+        },
+        {
+          "id": "docker-fs-net",
+          "priority": "connect"
+        }
+      ]
+    },
+    {
+      "order": 7,
+      "id": "runtime-database",
+      "title": "런타임과 DB에 연결하기",
+      "purpose": "기본지식이 JVM·DB 같은 실제 개발 기술에서 어떻게 보이는지 연결",
+      "concepts": [
+        {
+          "id": "jvm-os",
+          "priority": "connect"
+        },
+        {
+          "id": "db-index-mvcc",
+          "priority": "core"
+        },
+        {
+          "id": "db-buffer-wal",
+          "priority": "core"
+        }
+      ]
+    },
+    {
+      "order": 8,
+      "id": "distributed",
+      "title": "여러 서버로 확장하기",
+      "purpose": "한 머신의 원리를 여러 머신 환경의 실패·복제·일관성 문제로 확장",
+      "concepts": [
+        {
+          "id": "distributed",
+          "priority": "connect"
+        }
+      ]
+    },
+    {
+      "order": 9,
+      "id": "native-kernel",
+      "title": "더 아래로 내려가기",
+      "purpose": "네이티브 코드와 Linux 커널 내부가 궁금해졌을 때 들어가는 심화 길",
+      "concepts": [
+        {
+          "id": "native-c-abi",
+          "priority": "deep"
+        },
+        {
+          "id": "compile-link-loader",
+          "priority": "deep"
+        },
+        {
+          "id": "kernel-sched",
+          "priority": "deep"
+        },
+        {
+          "id": "kernel-mm",
+          "priority": "deep"
+        },
+        {
+          "id": "kernel-vfs-net",
+          "priority": "deep"
+        }
+      ]
+    }
+  ]
+}
