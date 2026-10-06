@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CS Curriculum Roadmap</title>
+  <script>
+    (() => {
+      const saved = localStorage.getItem('cs-roadmap-theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark"><i data-lucide="route" class="icon icon-lg"></i></span>
+        <span>CS Roadmap <small>Curriculum</small></span>
+      </div>
+      <div id="deploymentMeta" class="deployment-meta" hidden></div>
+      <div class="top-actions">
+        <button class="quiet-btn" id="themeToggle" type="button" aria-label="다크 모드로 전환" title="테마 전환">
+          <i data-lucide="moon" class="icon icon-sm" id="themeIcon"></i>
+          <span id="themeLabel">Dark</span>
+        </button>
+        <button class="quiet-btn" id="topSearchButton" type="button">
+          <i data-lucide="search" class="icon icon-sm"></i>
+          <span>검색</span>
+        </button>
+        <button class="quiet-btn" id="learningResourcesButton" type="button">
+          <i data-lucide="book-open" class="icon icon-sm"></i>
+          <span>학습 자료</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-row">
+      <div>
+        <div class="kicker"><i data-lucide="compass" class="icon icon-sm"></i> 어디서 무엇을 공부할지 찾는 지도</div>
+        <h1>분야보다 먼저,<br>이해의 순서를 따라간다.</h1>
+        <p class="hero-desc">
+          컴공 학부 졸업 수준의 전체 지도를 펼쳐두고, 필요한 개념을 분야와 학년을 넘나들며 찾아봅니다.
+          추천 순서는 길잡이일 뿐이고 실제 학습은 궁금한 곳을 자유롭게 오갑니다.
+        </p>
+        <div class="hero-rule">
+          <i data-lucide="info" class="icon"></i>
+          추천 순서는 길을 잃지 않게 하는 기준일 뿐입니다. 궁금한 개념은 언제든 먼저 확인해도 됩니다.
+        </div>
+      </div>
+
+      <div class="search-card">
+        <label for="search">지금 궁금한 단어나 기술이 있나요?</label>
+        <div class="search-box">
+          <div class="search-input-wrap">
+            <i data-lucide="search" class="icon"></i>
+            <input id="search" type="search" placeholder="2학년 OS, TLB, 컴파일러, 선형대수 필요..." />
+          </div>
+          <button class="search-submit" id="searchSubmit" type="button">학습 위치 찾기</button>
+        </div>
+        <div class="search-samples">
+          <button class="sample" type="button" data-query="Docker 메모리">Docker 메모리</button>
+          <button class="sample" type="button" data-query="TCP">TCP</button>
+          <button class="sample" type="button" data-query="Linux pipe">Linux pipe</button>
+          <button class="sample" type="button" data-query="DB WAL">DB WAL</button>
+          <button class="sample" type="button" data-query="2학년 OS">2학년 OS</button>
+          <button class="sample" type="button" data-query="선형대수 필요">선형대수 필요</button>
+        </div>
+        <div class="search-feedback" id="searchFeedback" aria-live="polite"></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="legend-bar">
+    <span class="legend-title">표시 기준</span>
+    <span class="badge core"><i data-lucide="circle-check" class="icon icon-sm"></i>핵심</span>
+    <span class="badge connect"><i data-lucide="git-branch" class="icon icon-sm"></i>연결</span>
+    <span class="badge deep"><i data-lucide="chevrons-down" class="icon icon-sm"></i>심화</span>
+    <span class="badge domain">CS</span>
+    <span class="badge domain">OS</span>
+    <span class="badge domain">Linux</span>
+    <span class="badge domain">Network</span>
+  </div>
+
+  <main class="layout">
+    <aside class="panel side">
+      <div class="side-head">빠른 이동</div>
+      <button class="side-btn active" data-target="roadmapStart"><i data-lucide="route" class="icon"></i>추천 학습 순서</button>
+      <button class="side-btn" data-target="academicCurriculum"><i data-lucide="graduation-cap" class="icon"></i>전공 커리큘럼</button>
+      <button class="side-btn" data-target="mathRoadmap"><i data-lucide="sigma" class="icon"></i>필요 수학</button>
+      <button class="side-btn" data-target="curriculumCatalog"><i data-lucide="library-big" class="icon"></i>전체 개념</button>
+      <button class="side-btn" data-target="stage-01"><i data-lucide="cpu" class="icon"></i>컴퓨터 기본</button>
+      <button class="side-btn" data-target="stage-02"><i data-lucide="layers-3" class="icon"></i>OS 핵심</button>
+      <button class="side-btn" data-target="stage-06"><i data-lucide="terminal" class="icon"></i>Linux</button>
+      <button class="side-btn" data-target="stage-05"><i data-lucide="network" class="icon"></i>Network</button>
+      <button class="side-btn" data-target="stage-07"><i data-lucide="database" class="icon"></i>Storage · DB</button>
+      <button class="side-btn" data-target="stage-06"><i data-lucide="container" class="icon"></i>Container</button>
+      <button class="side-btn" data-target="stage-09"><i data-lucide="code-2" class="icon"></i>Native · Kernel</button>
+      <div class="side-divider"></div>
+      <div class="side-note">
+        <strong>이 페이지의 역할</strong>
+        개념 전체를 가르치지 않습니다.<br>
+        무엇을, 어디서, 어떤 순서로 볼지 안내합니다.
+      </div>
+    </aside>
+
+    <section class="main-col">
+      <div class="mobile-filter">
+        <button class="active" data-target="roadmapStart"><i data-lucide="route" class="icon icon-sm"></i>추천 순서</button>
+        <button data-target="academicCurriculum"><i data-lucide="graduation-cap" class="icon icon-sm"></i>전공</button>
+        <button data-target="mathRoadmap"><i data-lucide="sigma" class="icon icon-sm"></i>수학</button>
+        <button data-target="curriculumCatalog"><i data-lucide="library-big" class="icon icon-sm"></i>전체 개념</button>
+        <button data-target="stage-02">OS</button>
+        <button data-target="stage-05">Network</button>
+        <button data-target="stage-07">DB</button>
+      </div>
+
+      <section class="panel roadmap" id="roadmapStart">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="milestone" class="icon icon-lg"></i></div>
+            <div>
+              <h2>추천 학습 순서</h2>
+              <p>분야가 아니라 “다음 내용을 이해하기 좋은 순서”로 이어집니다.</p>
+            </div>
+          </div>
+          <span class="guide-pill"><i data-lucide="shuffle" class="icon icon-sm"></i>샛길 학습 가능</span>
+        </div>
+
+        <div class="timeline">
+          <article class="stage" id="stage-01">
+            <div class="stage-index">01</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>컴퓨터가 데이터를 다루는 법</h3>
+                  <p>메모리·파일·네트워크 데이터가 결국 무엇인지 먼저 잡습니다.</p>
+                </div>
+                <span class="stage-domain">CS</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="data">
+                  <span class="concept-icon"><i data-lucide="binary" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Bit · Byte · Encoding</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">CS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="cpu">
+                  <span class="concept-icon"><i data-lucide="cpu" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">CPU · Cache · Memory</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">CS</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage" id="stage-02">
+            <div class="stage-index">02</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>프로그램이 실행되는 법</h3>
+                  <p>코드가 프로세스가 되고 OS와 만나는 흐름을 봅니다.</p>
+                </div>
+                <span class="stage-domain">OS · CS</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="process">
+                  <span class="concept-icon"><i data-lucide="app-window" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Process</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="syscall">
+                  <span class="concept-icon"><i data-lucide="shield-check" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Interrupt · Syscall</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS</span></span>
+                  </span>
+                </button>
+                <button class="concept active" data-id="vm">
+                  <span class="concept-icon"><i data-lucide="memory-stick" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Virtual Memory</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS · CS</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage" id="stage-03">
+            <div class="stage-index">03</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>여러 작업이 함께 실행되는 법</h3>
+                  <p>서버·DB에서 계속 만나는 동시성의 바탕입니다.</p>
+                </div>
+                <span class="stage-domain">OS · CONCURRENCY</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="thread">
+                  <span class="concept-icon"><i data-lucide="split" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Thread · Context Switch</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="sync">
+                  <span class="concept-icon"><i data-lucide="lock-keyhole" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Lock · Atomic · Race</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS · DB</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage" id="stage-04">
+            <div class="stage-index">04</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>프로그램이 읽고 쓰는 법</h3>
+                  <p>파일·파이프·디스크 I/O가 어디서 연결되는지 봅니다.</p>
+                </div>
+                <span class="stage-domain">OS · LINUX · STORAGE</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="fd">
+                  <span class="concept-icon"><i data-lucide="hash" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">File Descriptor</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS · Linux</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="fs">
+                  <span class="concept-icon"><i data-lucide="folder-tree" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">File System · VFS</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="pagecache">
+                  <span class="concept-icon"><i data-lucide="layers" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Page Cache · fsync</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Linux · DB</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage" id="stage-05">
+            <div class="stage-index">05</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>서버가 서로 통신하는 법</h3>
+                  <p>주소 찾기부터 TCP 연결, HTTP 요청까지 한 흐름으로 봅니다.</p>
+                </div>
+                <span class="stage-domain">NETWORK · OS</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="ip">
+                  <span class="concept-icon"><i data-lucide="map" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">IP · Routing</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Network</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="dns">
+                  <span class="concept-icon"><i data-lucide="book-key" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">DNS</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Network</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="tcp">
+                  <span class="concept-icon"><i data-lucide="plug-zap" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">TCP · Socket</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Network · OS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="http">
+                  <span class="concept-icon"><i data-lucide="globe-lock" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">HTTP · TLS</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Network</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="epoll">
+                  <span class="concept-icon"><i data-lucide="radio-tower" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">epoll · Event Loop</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Linux</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage" id="stage-06">
+            <div class="stage-index">06</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>Linux에서 직접 다루는 법</h3>
+                  <p>원리를 CLI·관찰 도구·컨테이너 기반으로 연결합니다.</p>
+                </div>
+                <span class="stage-domain">LINUX · CONTAINER</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="shell">
+                  <span class="concept-icon"><i data-lucide="terminal" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Shell · Pipe</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Linux</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="observe">
+                  <span class="concept-icon"><i data-lucide="scan-search" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Observability</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Linux</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="container">
+                  <span class="concept-icon"><i data-lucide="container" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Namespace · cgroup</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Linux</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage" id="stage-07">
+            <div class="stage-index">07</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>런타임과 DB에 연결하기</h3>
+                  <p>기본지식이 JVM·DB에서 어떻게 보이는지 연결합니다.</p>
+                </div>
+                <span class="stage-domain">RUNTIME · DATABASE</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="jvm">
+                  <span class="concept-icon"><i data-lucide="coffee" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">JVM ↔ OS</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Runtime</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="mvcc">
+                  <span class="concept-icon"><i data-lucide="list-tree" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Index · Transaction · MVCC</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">DB</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="wal">
+                  <span class="concept-icon"><i data-lucide="database-backup" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Buffer Pool · WAL</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">DB · OS</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage" id="stage-08">
+            <div class="stage-index">08</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>여러 서버로 확장하기</h3>
+                  <p>한 머신의 지식을 실패·복제·일관성 문제로 확장합니다.</p>
+                </div>
+                <span class="stage-domain">DISTRIBUTED</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="distributed">
+                  <span class="concept-icon"><i data-lucide="waypoints" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Replication · Consistency · Consensus</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Distributed</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage" id="stage-09">
+            <div class="stage-index">09</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>더 아래로 내려가기</h3>
+                  <p>네이티브 실행 모델과 Linux 커널 내부가 궁금할 때 보는 길입니다.</p>
+                </div>
+                <span class="stage-domain">NATIVE · KERNEL</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="native">
+                  <span class="concept-icon"><i data-lucide="braces" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">C · Pointer · ABI</span></span>
+                    <span class="concept-meta"><span class="badge deep">심화</span><span class="badge domain">Native</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="elf">
+                  <span class="concept-icon"><i data-lucide="package-open" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Compile · Link · ELF</span></span>
+                    <span class="concept-meta"><span class="badge deep">심화</span><span class="badge domain">Native</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="kernel">
+                  <span class="concept-icon"><i data-lucide="microchip" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Scheduler · MM · VFS</span></span>
+                    <span class="concept-meta"><span class="badge deep">심화</span><span class="badge domain">Kernel</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+
+      <section class="panel curriculum-map" id="academicCurriculum">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="graduation-cap" class="icon icon-lg"></i></div>
+            <div>
+              <h2>컴공 전공 커리큘럼</h2>
+              <p>대학교에서 보통 어느 학년에 어떤 과목을 배우는지 먼저 전체 지도를 봅니다.</p>
+            </div>
+          </div>
+          <span class="guide-pill" id="courseCountBadge"><i data-lucide="book-copy" class="icon icon-sm"></i>과목 불러오는 중</span>
+        </div>
+        <div class="curriculum-note">
+          <strong>학년은 위치 정보입니다.</strong>
+          실제 학습은 1학년부터 순서대로 끝낼 필요 없이 필요한 과목과 Concept를 자유롭게 오가면 됩니다. 학교마다 과목 배치 시점은 달라질 수 있습니다.
+        </div>
+        <div class="year-tabs" id="academicYearTabs">
+          <button class="year-tab active" type="button" data-academic-year="">전체</button>
+          <button class="year-tab" type="button" data-academic-year="1">1학년</button>
+          <button class="year-tab" type="button" data-academic-year="2">2학년</button>
+          <button class="year-tab" type="button" data-academic-year="3">3학년</button>
+          <button class="year-tab" type="button" data-academic-year="4">4학년</button>
+        </div>
+        <div class="course-grid" id="courseGrid"></div>
+      </section>
+
+      <section class="panel math-map" id="mathRoadmap">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="sigma" class="icon icon-lg"></i></div>
+            <div>
+              <h2>필요 수학 지도</h2>
+              <p>수학을 먼저 전부 끝내는 대신 CS에서 필요해질 때 해당 범위만 보충합니다.</p>
+            </div>
+          </div>
+          <span class="guide-pill"><i data-lucide="route" class="icon icon-sm"></i>Just-in-time Math</span>
+        </div>
+        <div class="math-intro">
+          <i data-lucide="info" class="icon"></i>
+          <div><strong>수학 때문에 CS를 미루지 않습니다.</strong><br>예: OS는 바로 공부하고, 알고리즘에서 log가 나오면 M2 지수·로그를 잠깐 공부한 뒤 다시 돌아옵니다.</div>
+        </div>
+        <div class="math-grid" id="mathGrid"></div>
+      </section>
+
+      <section class="panel catalog" id="curriculumCatalog">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="library-big" class="icon icon-lg"></i></div>
+            <div>
+              <h2>전체 개념 탐색</h2>
+              <p>학년·과목·분야·세부 주제·수학 요구도까지 조합해서 필요한 내용을 바로 찾습니다.</p>
+            </div>
+          </div>
+          <span class="guide-pill" id="catalogCountBadge"><i data-lucide="database" class="icon icon-sm"></i>데이터 불러오는 중</span>
+        </div>
+
+        <div class="catalog-toolbar">
+          <input class="catalog-search" id="catalogSearch" type="search" placeholder="2학년 OS, TLB, 컴파일러, 선형대수 필요..." aria-label="전체 커리큘럼 검색" />
+          <select class="catalog-select" id="catalogYear" aria-label="학년 선택">
+            <option value="">전체 학년</option>
+            <option value="1">1학년</option>
+            <option value="2">2학년</option>
+            <option value="3">3학년</option>
+            <option value="4">4학년</option>
+          </select>
+          <select class="catalog-select" id="catalogCourse" aria-label="과목 선택"><option value="">전체 과목</option></select>
+          <select class="catalog-select" id="catalogArea" aria-label="영역 선택"><option value="">전체 영역</option></select>
+          <select class="catalog-select" id="catalogSubarea" aria-label="세부 영역 선택"><option value="">전체 세부 영역</option></select>
+          <select class="catalog-select" id="catalogMathLevel" aria-label="수학 요구도 선택">
+            <option value="">전체 수학 요구도</option>
+            <option value="low">낮음 · 바로 시작</option>
+            <option value="medium">중간 · 필요할 때 보충</option>
+            <option value="high">높음 · 선수 수학 권장</option>
+          </select>
+          <select class="catalog-select" id="catalogImportance" aria-label="중요도 선택">
+            <option value="">전체 중요도</option>
+            <option value="core">핵심</option>
+            <option value="connect">연결</option>
+            <option value="deep">심화</option>
+          </select>
+          <button class="catalog-reset" id="catalogReset" type="button"><i data-lucide="rotate-ccw" class="icon icon-sm"></i>초기화</button>
+        </div>
+
+        <div class="catalog-quick" id="catalogQuick">
+          <button class="catalog-chip" type="button" data-area="">전체</button>
+          <button class="catalog-chip" type="button" data-area="os">OS</button>
+          <button class="catalog-chip" type="button" data-area="linux">Linux</button>
+          <button class="catalog-chip" type="button" data-area="network">Network</button>
+          <button class="catalog-chip" type="button" data-area="database">Database</button>
+          <button class="catalog-chip" type="button" data-area="data-structures">자료구조</button>
+          <button class="catalog-chip" type="button" data-area="algorithms">알고리즘</button>
+          <button class="catalog-chip" type="button" data-area="native">Native</button>
+        </div>
+
+        <div class="catalog-status">
+          <span id="catalogStatus">데이터를 불러오는 중입니다.</span>
+          <span>한 페이지에 12개</span>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
+        <nav class="catalog-pager" id="catalogPager" aria-label="커리큘럼 페이지"></nav>
+      </section>
+
+      <section class="panel applications">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="git-merge" class="icon icon-lg"></i></div>
+            <div>
+              <h2>왜 배우는지 연결해서 보기</h2>
+              <p>대표 기술이 어떤 기본지식의 조합인지 빠르게 확인합니다.</p>
+            </div>
+          </div>
+        </div>
+        <div class="app-grid">
+          <article class="app-card">
+            <div class="app-card-head"><i data-lucide="container" class="icon"></i>Docker</div>
+            <p>컨테이너는 새로운 OS가 아니라 Linux 기능의 조합입니다.</p>
+            <div class="flow"><span>Process</span><span class="arrow">→</span><span>Namespace</span><span class="arrow">→</span><span>cgroup</span><span class="arrow">→</span><span>Docker</span></div>
+          </article>
+          <article class="app-card">
+            <div class="app-card-head"><i data-lucide="network" class="icon"></i>고성능 서버</div>
+            <p>많은 연결을 처리하는 구조를 OS I/O에서 따라갑니다.</p>
+            <div class="flow"><span>FD</span><span class="arrow">→</span><span>Socket</span><span class="arrow">→</span><span>epoll</span><span class="arrow">→</span><span>Event Loop</span></div>
+          </article>
+          <article class="app-card">
+            <div class="app-card-head"><i data-lucide="database" class="icon"></i>Database</div>
+            <p>데이터를 빠르고 안전하게 저장하는 이유를 연결합니다.</p>
+            <div class="flow"><span>File System</span><span class="arrow">→</span><span>Page Cache</span><span class="arrow">→</span><span>fsync</span><span class="arrow">→</span><span>WAL</span></div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <aside class="panel detail" id="detail" aria-live="polite">
+      <header class="detail-head">
+        <div class="detail-head-row">
+          <div class="detail-icon"><i data-lucide="memory-stick" class="icon icon-lg" id="detailIcon"></i></div>
+          <div>
+            <div class="detail-eyebrow" id="detailEyebrow">STEP 02 · OS / CS</div>
+            <h2 id="detailTitle">Virtual Memory</h2>
+          </div>
+          <button class="detail-close" id="detailClose" type="button" aria-label="닫기"><i data-lucide="x" class="icon"></i></button>
+        </div>
+        <p class="detail-summary" id="detailSummary">프로그램마다 자기만의 메모리가 있는 것처럼 보이게 하는 OS의 핵심 기능입니다.</p>
+      </header>
+      <div class="detail-body">
+        <section class="detail-section" id="detailAcademicSection" hidden>
+          <h3 class="detail-label"><i data-lucide="graduation-cap" class="icon icon-sm"></i>전공 커리큘럼 위치</h3>
+          <div class="detail-academic" id="detailAcademic"></div>
+        </section>
+        <section class="detail-section" id="detailMathSection" hidden>
+          <h3 class="detail-label"><i data-lucide="sigma" class="icon icon-sm"></i>필요 수학</h3>
+          <div class="detail-academic" id="detailMathBadges"></div>
+          <p class="detail-math-copy" id="detailMathCopy"></p>
+        </section>
+        <section class="detail-section">
+          <h3 class="detail-label"><i data-lucide="route" class="icon icon-sm"></i>추천 위치</h3>
+          <div class="route" id="detailRoute">
+            <span class="route-node">Process</span><span>→</span><span class="route-node">Virtual Memory</span><span>→</span><span class="route-node">Page Cache</span>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h3 class="detail-label"><i data-lucide="list-checks" class="icon icon-sm"></i>여기서 볼 키워드</h3>
+          <div class="keyword-list" id="detailKeywords">
+            <span class="keyword">Virtual / Physical Address</span>
+            <span class="keyword">Page Table</span>
+            <span class="keyword">Page Fault</span>
+            <span class="keyword">MMU · TLB</span>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h3 class="detail-label"><i data-lucide="link" class="icon icon-sm"></i>알게 되면 연결되는 것</h3>
+          <ul class="outcome-list" id="detailOutcomes">
+            <li>JVM Heap과 RSS 차이</li>
+            <li>Docker Memory Limit과 OOM</li>
+            <li>mmap과 Page Cache 관계</li>
+          </ul>
+        </section>
+
+        <div class="study-actions">
+          <strong><i data-lucide="sparkles" class="icon"></i>실제 학습은 밖에서 진행</strong>
+          <p>로드맵은 위치와 키워드까지만 제공합니다. AI·책·강의로 바로 이어가세요.</p>
+          <div class="action-row">
+            <button class="action-btn" id="promptButton" type="button"><i data-lucide="copy" class="icon icon-sm"></i>AI 프롬프트</button>
+            <button class="action-btn" id="bookButton" type="button"><i data-lucide="book-open" class="icon icon-sm"></i>책 키워드</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <div class="detail-backdrop" id="detailBackdrop"></div>
+
+  <div class="learning-modal" id="learningModal" aria-hidden="true">
+    <div class="learning-modal-backdrop" id="learningModalBackdrop"></div>
+    <section class="learning-modal-card" role="dialog" aria-modal="true" aria-labelledby="learningModalTitle">
+      <header class="learning-modal-head">
+        <div class="learning-modal-title-wrap">
+          <div class="learning-modal-kicker" id="learningModalKicker">AI 학습 프롬프트</div>
+          <h2 id="learningModalTitle">Virtual Memory 학습 시작</h2>
+        </div>
+        <button class="modal-close" id="learningModalClose" type="button" aria-label="닫기">
+          <i data-lucide="x" class="icon"></i>
+        </button>
+      </header>
+      <div class="learning-modal-body" id="learningModalBody"></div>
+    </section>
+  </div>
+
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
+  <script src="./js/app.js"></script>
+</body>
+</html>
