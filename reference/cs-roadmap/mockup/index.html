@@ -1,0 +1,860 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>CS Roadmap · UI Mockup</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f8fb;
+      --surface: #ffffff;
+      --surface-soft: #f9fafb;
+      --surface-strong: #eef2f7;
+      --text: #172033;
+      --muted: #667085;
+      --line: #dfe4ea;
+      --line-strong: #c9d1dc;
+      --brand: #315efb;
+      --brand-soft: #eef3ff;
+      --success: #18794e;
+      --success-soft: #eaf8f1;
+      --warning: #8a5a00;
+      --warning-soft: #fff7df;
+      --native: #6f42c1;
+      --native-soft: #f4efff;
+      --radius-sm: .65rem;
+      --radius-md: .9rem;
+      --radius-lg: 1.2rem;
+      --shadow: 0 .8rem 2.2rem rgba(23, 32, 51, .07);
+      --content: 92rem;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+    }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    a { color: inherit; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      border-bottom: 1px solid rgba(223, 228, 234, .9);
+      background: rgba(246, 248, 251, .9);
+      backdrop-filter: blur(1rem);
+    }
+    .topbar-inner {
+      max-width: var(--content);
+      min-height: 4rem;
+      margin: 0 auto;
+      padding: 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      font-weight: 850;
+      white-space: nowrap;
+    }
+    .brand-mark {
+      width: 2rem;
+      height: 2rem;
+      display: grid;
+      place-items: center;
+      border-radius: .7rem;
+      color: #fff;
+      background: var(--brand);
+      font-size: .85rem;
+      letter-spacing: -.02em;
+    }
+    .top-nav {
+      display: flex;
+      align-items: center;
+      gap: .25rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      margin-left: .75rem;
+    }
+    .top-nav::-webkit-scrollbar { display: none; }
+    .nav-btn {
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      padding: .55rem .75rem;
+      border-radius: .7rem;
+      font-size: .9rem;
+      white-space: nowrap;
+    }
+    .nav-btn:hover,
+    .nav-btn.active {
+      color: var(--text);
+      background: var(--surface);
+      box-shadow: 0 .1rem .4rem rgba(23,32,51,.05);
+    }
+    .top-help {
+      margin-left: auto;
+      color: var(--muted);
+      font-size: .82rem;
+      white-space: nowrap;
+    }
+
+    .hero {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 2.6rem 1.25rem 1.4rem;
+    }
+    .hero-kicker {
+      margin: 0 0 .5rem;
+      color: var(--brand);
+      font-weight: 800;
+      font-size: .8rem;
+      letter-spacing: .05em;
+    }
+    .hero h1 {
+      margin: 0;
+      max-width: 55rem;
+      font-size: clamp(2rem, 4vw, 3.45rem);
+      line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+    .hero-desc {
+      max-width: 48rem;
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+    .search-wrap {
+      max-width: 48rem;
+      margin-top: 1.5rem;
+      display: flex;
+      gap: .6rem;
+      padding: .55rem;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+    .search-wrap input {
+      min-width: 0;
+      flex: 1;
+      border: 0;
+      outline: 0;
+      padding: .55rem .65rem;
+      color: var(--text);
+      background: transparent;
+    }
+    .search-wrap input::placeholder { color: #98a2b3; }
+    .search-btn {
+      border: 0;
+      border-radius: .75rem;
+      padding: .6rem .9rem;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 750;
+    }
+    .hero-hint {
+      margin: .65rem 0 0 .2rem;
+      color: var(--muted);
+      font-size: .8rem;
+    }
+
+    .workspace {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 1rem 1.25rem 3rem;
+      display: grid;
+      grid-template-columns: 13rem minmax(0, 1fr) 21rem;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .panel {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      background: var(--surface);
+      box-shadow: 0 .4rem 1.6rem rgba(23, 32, 51, .04);
+    }
+    .side {
+      position: sticky;
+      top: 5rem;
+      padding: .8rem;
+    }
+    .side-title {
+      margin: .35rem .45rem .55rem;
+      color: var(--muted);
+      font-size: .76rem;
+      font-weight: 800;
+      letter-spacing: .05em;
+    }
+    .track-btn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: .7rem;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      text-align: left;
+      padding: .7rem .75rem;
+      border-radius: .75rem;
+      font-size: .91rem;
+    }
+    .track-btn:hover { background: var(--surface-soft); color: var(--text); }
+    .track-btn.active { background: var(--brand-soft); color: var(--brand); font-weight: 800; }
+    .track-dot {
+      width: .55rem;
+      height: .55rem;
+      border-radius: 99rem;
+      background: currentColor;
+      opacity: .75;
+      flex: 0 0 auto;
+    }
+    .side-note {
+      margin-top: .85rem;
+      padding: .8rem;
+      border-radius: .8rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .roadmap {
+      padding: 1.2rem;
+    }
+    .section-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 1.25rem;
+      letter-spacing: -.02em;
+    }
+    .section-head p {
+      margin: .3rem 0 0;
+      color: var(--muted);
+      font-size: .86rem;
+    }
+    .view-chip {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      border-radius: 99rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      padding: .4rem .65rem;
+      font-size: .75rem;
+    }
+
+    .lane {
+      display: grid;
+      grid-template-columns: 8rem minmax(0,1fr);
+      gap: 1rem;
+      padding: 1rem 0;
+      border-top: 1px solid var(--line);
+    }
+    .lane:first-of-type { border-top: 0; }
+    .lane-title {
+      padding-top: .2rem;
+    }
+    .lane-title strong {
+      display: block;
+      font-size: .88rem;
+    }
+    .lane-title span {
+      display: block;
+      margin-top: .25rem;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    .node-row {
+      display: flex;
+      gap: .55rem;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .node {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+      background: var(--surface);
+      color: var(--text);
+      padding: .7rem .8rem;
+      text-align: left;
+      min-height: 3.6rem;
+      transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+    .node:hover {
+      transform: translateY(-.08rem);
+      border-color: var(--line-strong);
+      box-shadow: 0 .35rem 1rem rgba(23, 32, 51, .06);
+    }
+    .node.active {
+      border-color: #aabcfb;
+      background: var(--brand-soft);
+      box-shadow: 0 0 0 .15rem rgba(49, 94, 251, .07);
+    }
+    .node small {
+      display: block;
+      color: var(--muted);
+      font-size: .66rem;
+      margin-bottom: .15rem;
+    }
+    .node b {
+      font-size: .86rem;
+      letter-spacing: -.01em;
+    }
+    .connector {
+      color: #a0a9b8;
+      font-weight: 800;
+      align-self: center;
+      user-select: none;
+    }
+    .node.native {
+      border-color: #ded2f8;
+      background: var(--native-soft);
+    }
+    .node.native small { color: var(--native); }
+
+    .application {
+      margin-top: 1rem;
+      padding: 1.2rem;
+    }
+    .flow-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: .7rem;
+    }
+    .flow-card {
+      border: 1px solid var(--line);
+      border-radius: .9rem;
+      background: var(--surface-soft);
+      padding: .9rem;
+    }
+    .flow-card strong {
+      font-size: .88rem;
+    }
+    .flow-card p {
+      margin: .35rem 0 .7rem;
+      color: var(--muted);
+      font-size: .76rem;
+    }
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: .35rem;
+      color: #475467;
+      font-size: .72rem;
+    }
+    .flow i { font-style: normal; color: #98a2b3; }
+
+    .detail {
+      position: sticky;
+      top: 5rem;
+      overflow: hidden;
+    }
+    .detail-head {
+      padding: 1rem 1rem .85rem;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--brand-soft), #fff);
+    }
+    .detail-eyebrow {
+      color: var(--brand);
+      font-size: .7rem;
+      font-weight: 850;
+      letter-spacing: .04em;
+    }
+    .detail h2 {
+      margin: .25rem 0 0;
+      font-size: 1.25rem;
+      letter-spacing: -.02em;
+    }
+    .detail-body { padding: 1rem; }
+    .summary {
+      margin: 0;
+      font-size: .9rem;
+      color: #344054;
+    }
+    .detail-section {
+      margin-top: 1.1rem;
+    }
+    .detail-section h3 {
+      margin: 0 0 .5rem;
+      color: var(--muted);
+      font-size: .7rem;
+      letter-spacing: .05em;
+    }
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .4rem;
+    }
+    .tag {
+      border: 1px solid var(--line);
+      border-radius: 99rem;
+      background: var(--surface-soft);
+      padding: .35rem .55rem;
+      color: #475467;
+      font-size: .72rem;
+    }
+    .learn-list {
+      margin: 0;
+      padding-left: 1.05rem;
+      color: #344054;
+      font-size: .82rem;
+    }
+    .learn-list li + li { margin-top: .35rem; }
+    .ai-box {
+      margin-top: 1.1rem;
+      padding: .85rem;
+      border-radius: .85rem;
+      background: var(--success-soft);
+      color: #245e46;
+    }
+    .ai-box strong {
+      display: block;
+      font-size: .8rem;
+    }
+    .ai-box p {
+      margin: .3rem 0 .75rem;
+      font-size: .74rem;
+    }
+    .ai-actions {
+      display: flex;
+      gap: .45rem;
+      flex-wrap: wrap;
+    }
+    .ghost-btn, .primary-btn {
+      border-radius: .7rem;
+      padding: .55rem .7rem;
+      font-size: .74rem;
+      font-weight: 760;
+    }
+    .ghost-btn {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--text);
+    }
+    .primary-btn {
+      border: 1px solid #9fcdb8;
+      background: #fff;
+      color: var(--success);
+    }
+
+    .mobile-track { display: none; }
+
+    @media (max-width: 72rem) {
+      .workspace {
+        grid-template-columns: 12rem minmax(0,1fr);
+      }
+      .detail {
+        grid-column: 1 / -1;
+        position: static;
+        display: grid;
+        grid-template-columns: 18rem 1fr;
+      }
+      .detail-head { border-right: 1px solid var(--line); border-bottom: 0; }
+    }
+
+    @media (max-width: 52rem) {
+      .top-help { display: none; }
+      .top-nav { margin-left: auto; max-width: 60vw; }
+      .hero { padding-top: 1.8rem; }
+      .workspace { display: block; padding-top: .4rem; }
+      .side { display: none; }
+      .mobile-track {
+        display: flex;
+        gap: .4rem;
+        overflow-x: auto;
+        padding-bottom: .8rem;
+        scrollbar-width: none;
+      }
+      .mobile-track button {
+        flex: 0 0 auto;
+        border: 1px solid var(--line);
+        border-radius: 99rem;
+        background: var(--surface);
+        color: var(--muted);
+        padding: .5rem .7rem;
+        font-size: .75rem;
+      }
+      .mobile-track button.active {
+        background: var(--brand-soft);
+        border-color: #cbd6ff;
+        color: var(--brand);
+        font-weight: 800;
+      }
+      .roadmap, .application, .detail { margin-bottom: .8rem; }
+      .detail { display: block; }
+      .detail-head { border-right: 0; border-bottom: 1px solid var(--line); }
+      .flow-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 38rem) {
+      .topbar-inner { min-height: 3.6rem; padding: 0 .9rem; }
+      .brand span:last-child { display: none; }
+      .hero { padding: 1.4rem .9rem 1rem; }
+      .workspace { padding: .6rem .9rem 2rem; }
+      .search-wrap { display: block; }
+      .search-btn { width: 100%; margin-top: .35rem; }
+      .roadmap, .application { padding: .95rem; }
+      .lane { grid-template-columns: 1fr; gap: .55rem; }
+      .node-row { display: grid; grid-template-columns: 1fr 1fr; }
+      .connector { display: none; }
+      .node { width: 100%; }
+      .section-head { display: block; }
+      .view-chip { display: inline-block; margin-top: .55rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <span class="brand-mark">CS</span>
+        <span>Foundation Roadmap</span>
+      </div>
+      <nav class="top-nav" aria-label="빠른 분야 이동">
+        <button class="nav-btn active">전체</button>
+        <button class="nav-btn">OS</button>
+        <button class="nav-btn">Linux</button>
+        <button class="nav-btn">Network</button>
+        <button class="nav-btn">Database</button>
+        <button class="nav-btn">Native</button>
+      </nav>
+      <span class="top-help">/ 로 검색</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <p class="hero-kicker">LEARNING MAP · PROTOTYPE</p>
+    <h1>모르는 단어가 나오면,<br>어디서 공부할지 바로 찾는다.</h1>
+    <p class="hero-desc">
+      이 페이지는 강의가 아닙니다. CS · OS · Linux · Network · Database의 핵심 지식이
+      어디에 있고, 무엇과 연결되는지 알려주는 학습 지도입니다.
+    </p>
+
+    <div class="search-wrap">
+      <label class="sr-only" for="conceptSearch">개념 검색</label>
+      <input id="conceptSearch" type="search" placeholder="가상 메모리, TCP, cgroup, WAL, syscall ..." />
+      <button class="search-btn" type="button">학습 위치 찾기</button>
+    </div>
+    <p class="hero-hint">예: “Docker 메모리 제한이 궁금함” → Virtual Memory → cgroup → Docker</p>
+  </section>
+
+  <main class="workspace">
+    <aside class="panel side">
+      <p class="side-title">학습 영역</p>
+      <button class="track-btn active"><span class="track-dot"></span>전체 지도</button>
+      <button class="track-btn"><span class="track-dot"></span>컴퓨터 기본</button>
+      <button class="track-btn"><span class="track-dot"></span>OS 핵심</button>
+      <button class="track-btn"><span class="track-dot"></span>Linux</button>
+      <button class="track-btn"><span class="track-dot"></span>Network</button>
+      <button class="track-btn"><span class="track-dot"></span>Storage · DB</button>
+      <button class="track-btn"><span class="track-dot"></span>Container</button>
+      <button class="track-btn"><span class="track-dot"></span>Native · Kernel</button>
+      <div class="side-note">
+        순서대로 완독하는 커리큘럼이 아닙니다.<br>
+        궁금한 곳에서 시작하고 연결된 개념만 따라가면 됩니다.
+      </div>
+    </aside>
+
+    <section>
+      <div class="mobile-track" aria-label="모바일 학습 영역">
+        <button class="active">전체</button>
+        <button>OS</button>
+        <button>Linux</button>
+        <button>Network</button>
+        <button>DB</button>
+        <button>Native</button>
+      </div>
+
+      <section class="panel roadmap">
+        <div class="section-head">
+          <div>
+            <h2>전체 학습 지도</h2>
+            <p>카드를 누르면 “어디서 무엇을 볼지”만 짧게 확인합니다.</p>
+          </div>
+          <span class="view-chip">핵심 개념만 표시</span>
+        </div>
+
+        <div class="lane">
+          <div class="lane-title">
+            <strong>컴퓨터 기본</strong>
+            <span>데이터와 실행 기반</span>
+          </div>
+          <div class="node-row">
+            <button class="node" data-concept="data">
+              <small>Computer</small><b>Bit · Byte · Encoding</b>
+            </button>
+            <span class="connector">→</span>
+            <button class="node" data-concept="cpu">
+              <small>Computer</small><b>CPU · Cache</b>
+            </button>
+            <span class="connector">→</span>
+            <button class="node" data-concept="syscall">
+              <small>Computer / OS</small><b>Interrupt · Syscall</b>
+            </button>
+          </div>
+        </div>
+
+        <div class="lane">
+          <div class="lane-title">
+            <strong>OS 핵심</strong>
+            <span>프로그램 실행의 기본</span>
+          </div>
+          <div class="node-row">
+            <button class="node" data-concept="process">
+              <small>OS</small><b>Process · Thread</b>
+            </button>
+            <span class="connector">→</span>
+            <button class="node active" data-concept="vm">
+              <small>OS / Memory</small><b>Virtual Memory</b>
+            </button>
+            <button class="node" data-concept="fd">
+              <small>OS / I/O</small><b>File Descriptor</b>
+            </button>
+            <button class="node" data-concept="fs">
+              <small>OS / Storage</small><b>File System</b>
+            </button>
+          </div>
+        </div>
+
+        <div class="lane">
+          <div class="lane-title">
+            <strong>Linux · Network</strong>
+            <span>OS가 실제로 보이는 곳</span>
+          </div>
+          <div class="node-row">
+            <button class="node" data-concept="shell">
+              <small>Linux</small><b>Shell · Pipe</b>
+            </button>
+            <button class="node" data-concept="cgroup">
+              <small>Linux</small><b>Namespace · cgroup</b>
+            </button>
+            <button class="node" data-concept="ip">
+              <small>Network</small><b>IP · Routing · DNS</b>
+            </button>
+            <button class="node" data-concept="tcp">
+              <small>Network</small><b>TCP · Socket</b>
+            </button>
+            <button class="node" data-concept="http">
+              <small>Network</small><b>HTTP · TLS</b>
+            </button>
+          </div>
+        </div>
+
+        <div class="lane">
+          <div class="lane-title">
+            <strong>Native · Kernel</strong>
+            <span>더 깊게 내려가고 싶다면</span>
+          </div>
+          <div class="node-row">
+            <button class="node native" data-concept="native">
+              <small>Native</small><b>C · Pointer · ABI</b>
+            </button>
+            <span class="connector">→</span>
+            <button class="node native" data-concept="link">
+              <small>Native</small><b>Compile · Link · ELF</b>
+            </button>
+            <span class="connector">→</span>
+            <button class="node native" data-concept="kernel">
+              <small>Kernel</small><b>Scheduler · MM · VFS</b>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel application">
+        <div class="section-head">
+          <div>
+            <h2>기본지식이 실제 기술로 연결되는 과정</h2>
+            <p>“왜 이걸 공부하지?”를 잊지 않도록 대표 연결만 보여줍니다.</p>
+          </div>
+        </div>
+
+        <div class="flow-grid">
+          <article class="flow-card">
+            <strong>Docker는 무엇으로 만들어질까?</strong>
+            <p>컨테이너를 Linux 기능으로 바라보는 흐름</p>
+            <div class="flow">
+              <span>Process</span><i>→</i><span>Namespace</span><i>→</i><span>cgroup</span><i>→</i><span>Docker</span>
+            </div>
+          </article>
+          <article class="flow-card">
+            <strong>서버는 많은 연결을 어떻게 받을까?</strong>
+            <p>고성능 서버의 기반을 따라가는 흐름</p>
+            <div class="flow">
+              <span>Socket</span><i>→</i><span>epoll</span><i>→</i><span>Event Loop</span><i>→</i><span>Nginx</span>
+            </div>
+          </article>
+          <article class="flow-card">
+            <strong>DB는 데이터를 어떻게 지킬까?</strong>
+            <p>메모리와 디스크 사이를 이해하는 흐름</p>
+            <div class="flow">
+              <span>File System</span><i>→</i><span>Page Cache</span><i>→</i><span>fsync</span><i>→</i><span>WAL</span>
+            </div>
+          </article>
+        </div>
+      </section>
+    </section>
+
+    <aside class="panel detail" aria-live="polite">
+      <div class="detail-head">
+        <div class="detail-eyebrow" id="detailDomain">OS · MEMORY</div>
+        <h2 id="detailTitle">Virtual Memory</h2>
+      </div>
+      <div class="detail-body">
+        <p class="summary" id="detailSummary">
+          프로그램마다 자기만의 메모리가 있는 것처럼 보이게 하는 OS의 핵심 기능입니다.
+        </p>
+
+        <section class="detail-section">
+          <h3>먼저 보면 좋음</h3>
+          <div class="tag-list" id="detailBefore">
+            <span class="tag">Process</span>
+            <span class="tag">Memory 기초</span>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h3>여기서 공부할 것</h3>
+          <ul class="learn-list" id="detailLearn">
+            <li>Virtual / Physical Address</li>
+            <li>Page · Page Table</li>
+            <li>Page Fault</li>
+            <li>MMU · TLB</li>
+          </ul>
+        </section>
+
+        <section class="detail-section">
+          <h3>이걸 알면 이해되는 것</h3>
+          <div class="tag-list" id="detailOutcome">
+            <span class="tag">Docker Memory</span>
+            <span class="tag">JVM RSS</span>
+            <span class="tag">OOM</span>
+            <span class="tag">mmap</span>
+          </div>
+        </section>
+
+        <div class="ai-box">
+          <strong>실제 학습은 AI · 책 · 강의에서</strong>
+          <p>로드맵은 학습 위치까지만 알려줍니다. 필요한 주제로 바로 넘깁니다.</p>
+          <div class="ai-actions">
+            <button class="primary-btn" type="button">AI 학습 프롬프트</button>
+            <button class="ghost-btn" type="button">책에서 찾을 키워드</button>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script>
+    (() => {
+      const concepts = {
+        vm: {
+          domain: 'OS · MEMORY',
+          title: 'Virtual Memory',
+          summary: '프로그램마다 자기만의 메모리가 있는 것처럼 보이게 하는 OS의 핵심 기능입니다.',
+          before: ['Process', 'Memory 기초'],
+          learn: ['Virtual / Physical Address', 'Page · Page Table', 'Page Fault', 'MMU · TLB'],
+          outcome: ['Docker Memory', 'JVM RSS', 'OOM', 'mmap']
+        },
+        tcp: {
+          domain: 'NETWORK',
+          title: 'TCP · Socket',
+          summary: '프로그램끼리 네트워크 연결을 만들고 데이터를 주고받는 기본 구조입니다.',
+          before: ['IP · Routing', 'File Descriptor'],
+          learn: ['TCP 연결', 'Socket', 'Port', 'Timeout · Backlog'],
+          outcome: ['HTTP', 'DB Connection', 'Nginx', 'Docker Network']
+        },
+        cgroup: {
+          domain: 'LINUX · CONTAINER',
+          title: 'Namespace · cgroup',
+          summary: '프로세스를 격리하고 CPU·메모리 같은 자원 사용량을 제한하는 Linux 기능입니다.',
+          before: ['Process', 'Virtual Memory'],
+          learn: ['Namespace 종류', 'cgroup v2', 'CPU / Memory 제한', 'Resource 계측'],
+          outcome: ['Docker', 'Kubernetes', 'Container OOM', 'CPU Limit']
+        },
+        fd: {
+          domain: 'OS · LINUX',
+          title: 'File Descriptor',
+          summary: 'Linux가 파일·소켓·파이프 같은 입출력 대상을 작은 번호로 다루는 방식입니다.',
+          before: ['Process', 'System Call'],
+          learn: ['stdin / stdout / stderr', 'open · read · write', 'Redirection', 'Pipe'],
+          outcome: ['Shell Pipeline', 'Socket', 'epoll', 'lsof']
+        }
+      };
+
+      const fallback = {
+        domain: 'ROADMAP',
+        title: '학습 위치 안내',
+        summary: '이 목업에서는 대표 개념 몇 개만 우측 패널과 연결했습니다. 실제 구현에서는 concepts.json 데이터를 사용합니다.',
+        before: ['연결된 선행 개념'],
+        learn: ['핵심 학습 키워드', '찾아볼 주제'],
+        outcome: ['연결 기술', '다음 학습 위치']
+      };
+
+      const domain = document.getElementById('detailDomain');
+      const title = document.getElementById('detailTitle');
+      const summary = document.getElementById('detailSummary');
+      const before = document.getElementById('detailBefore');
+      const learn = document.getElementById('detailLearn');
+      const outcome = document.getElementById('detailOutcome');
+      const search = document.getElementById('conceptSearch');
+
+      function renderDetail(data) {
+        domain.textContent = data.domain;
+        title.textContent = data.title;
+        summary.textContent = data.summary;
+        before.innerHTML = data.before.map(x => '<span class="tag">' + x + '</span>').join('');
+        learn.innerHTML = data.learn.map(x => '<li>' + x + '</li>').join('');
+        outcome.innerHTML = data.outcome.map(x => '<span class="tag">' + x + '</span>').join('');
+      }
+
+      document.querySelectorAll('.node').forEach(node => {
+        node.addEventListener('click', () => {
+          document.querySelectorAll('.node').forEach(x => x.classList.remove('active'));
+          node.classList.add('active');
+          renderDetail(concepts[node.dataset.concept] || {
+            ...fallback,
+            title: node.querySelector('b')?.textContent || fallback.title
+          });
+        });
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === '/' && !/input|textarea|select/i.test(document.activeElement.tagName)) {
+          event.preventDefault();
+          search.focus();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
