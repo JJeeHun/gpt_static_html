@@ -1467,8 +1467,8 @@
         <div class="kicker"><i data-lucide="compass" class="icon icon-sm"></i> 어디서 무엇을 공부할지 찾는 지도</div>
         <h1>분야보다 먼저,<br>이해의 순서를 따라간다.</h1>
         <p class="hero-desc">
-          OS를 다 끝낸 뒤 Network로 넘어가는 방식이 아닙니다.
-          다음 개념을 이해하는 데 필요한 기본지식을 분야를 넘나들며 연결합니다.
+          컴공 학부 졸업 수준의 전체 지도를 펼쳐두고, 필요한 개념을 분야와 학년을 넘나들며 찾아봅니다.
+          추천 순서는 길잡이일 뿐이고 실제 학습은 궁금한 곳을 자유롭게 오갑니다.
         </p>
         <div class="hero-rule">
           <i data-lucide="info" class="icon"></i>
@@ -1481,7 +1481,7 @@
         <div class="search-box">
           <div class="search-input-wrap">
             <i data-lucide="search" class="icon"></i>
-            <input id="search" type="search" placeholder="가상 메모리, TCP, cgroup, WAL, syscall..." />
+            <input id="search" type="search" placeholder="2학년 OS, TLB, 컴파일러, 선형대수 필요..." />
           </div>
           <button class="search-submit" id="searchSubmit" type="button">학습 위치 찾기</button>
         </div>
@@ -1534,11 +1534,12 @@
     <section class="main-col">
       <div class="mobile-filter">
         <button class="active" data-target="roadmapStart"><i data-lucide="route" class="icon icon-sm"></i>추천 순서</button>
+        <button data-target="academicCurriculum"><i data-lucide="graduation-cap" class="icon icon-sm"></i>전공</button>
+        <button data-target="mathRoadmap"><i data-lucide="sigma" class="icon icon-sm"></i>수학</button>
+        <button data-target="curriculumCatalog"><i data-lucide="library-big" class="icon icon-sm"></i>전체 개념</button>
         <button data-target="stage-02">OS</button>
-        <button data-target="stage-06">Linux</button>
         <button data-target="stage-05">Network</button>
         <button data-target="stage-07">DB</button>
-        <button data-target="stage-09">Native</button>
       </div>
 
       <section class="panel roadmap" id="roadmapStart">
@@ -2483,6 +2484,12 @@
           btn.classList.toggle('active',(btn.dataset.academicYear||'')===academicYearFilter)
         );
         courseGrid.querySelectorAll('[data-course-id]').forEach(btn=>btn.addEventListener('click',()=>{
+          catalogSearch.value='';
+          catalogYear.value='';
+          catalogArea.value='';
+          catalogSubarea.value='';
+          catalogMathLevel.value='';
+          catalogImportance.value='';
           setCatalogCourse(btn.dataset.courseId||'');
         }));
         if(window.lucide) window.lucide.createIcons();
@@ -2500,6 +2507,12 @@
         mathGrid.querySelectorAll('[data-math-topic]').forEach(btn=>btn.addEventListener('click',()=>{
           const m=mathMeta(btn.dataset.mathTopic);
           if(!m)return;
+          catalogYear.value='';
+          catalogCourse.value='';
+          catalogArea.value='';
+          catalogSubarea.value='';
+          catalogMathLevel.value='';
+          catalogImportance.value='';
           catalogSearch.value=m.title;
           catalogPage=1;
           renderCatalog();
@@ -2543,7 +2556,8 @@
       function catalogMatchesQuery(c,q) {
         if(!q) return true;
         const n=normalizeSearch(q);
-        const tokens=n.split(/\s+/).filter(Boolean);
+        const stopWords=new Set(['필요','관련','과목','개념','보기','공부']);
+        const tokens=n.split(/\s+/).filter(Boolean).filter(token=>!stopWords.has(token));
         const area=areaMeta(c.area);
         const courses=(c.courseIds||[]).map(courseMeta).filter(Boolean);
         const searchable=[
