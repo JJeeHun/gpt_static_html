@@ -64,7 +64,7 @@
       "path": "./cli/",
       "category": "guide",
       "status": "active",
-      "icon": "terminal-square",
+      "icon": "square-terminal",
       "tags": ["CLI", "macOS", "Ubuntu"],
       "keywords": ["개발 환경", "터미널", "명령어", "셸"],
       "featured": true,
