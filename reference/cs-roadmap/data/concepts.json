@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 2,
-  "description": "IT·개발에서 네이티브 수준까지 이어지는 핵심 기본지식의 위치와 연결을 안내하는 로드맵 개념 데이터",
+  "schemaVersion": 3,
+  "description": "학교 CS 커리큘럼 수준의 범위를 실무·Linux·Backend·Native까지 연결해 탐색하기 위한 로드맵 개념 데이터",
   "levels": {
     "A": "핵심. 실무 문제를 이해하려면 먼저 보는 단계",
     "B": "심화. 커널·네이티브 내부까지 내려갈 때 보는 단계"
@@ -47,7 +47,18 @@
         "network": 2,
         "linux": 1,
         "kernel": 0
-      }
+      },
+      "area": "architecture",
+      "subarea": "Memory",
+      "course": "컴퓨터 구조",
+      "importance": "core",
+      "aliases": [
+        "cache",
+        "cpu cache",
+        "memory hierarchy",
+        "locality",
+        "캐시"
+      ]
     },
     {
       "id": "interrupt-syscall",
@@ -90,7 +101,18 @@
         "network": 1,
         "linux": 0,
         "kernel": 0
-      }
+      },
+      "area": "os",
+      "subarea": "File & I/O",
+      "course": "운영체제",
+      "importance": "core",
+      "aliases": [
+        "syscall",
+        "system call",
+        "interrupt",
+        "exception",
+        "커널 모드"
+      ]
     },
     {
       "id": "process",
@@ -138,7 +160,18 @@
         "network": 1,
         "linux": 0,
         "kernel": 0
-      }
+      },
+      "area": "os",
+      "subarea": "Process",
+      "course": "운영체제",
+      "importance": "core",
+      "aliases": [
+        "process",
+        "pid",
+        "fork",
+        "exec",
+        "프로세스"
+      ]
     },
     {
       "id": "thread",
@@ -186,7 +219,16 @@
         "network": 1,
         "linux": 1,
         "kernel": 0
-      }
+      },
+      "area": "os",
+      "subarea": "Process",
+      "course": "운영체제",
+      "importance": "core",
+      "aliases": [
+        "thread",
+        "context switch",
+        "스레드"
+      ]
     },
     {
       "id": "virtual-memory",
@@ -239,7 +281,19 @@
         "network": 2,
         "linux": 0,
         "kernel": 0
-      }
+      },
+      "area": "os",
+      "subarea": "Memory",
+      "course": "운영체제",
+      "importance": "core",
+      "aliases": [
+        "virtual memory",
+        "page table",
+        "page fault",
+        "tlb",
+        "swap",
+        "가상 메모리"
+      ]
     },
     {
       "id": "sync",
@@ -288,7 +342,20 @@
         "network": 2,
         "linux": 1,
         "kernel": 1
-      }
+      },
+      "area": "os",
+      "subarea": "Concurrency",
+      "course": "운영체제",
+      "importance": "core",
+      "aliases": [
+        "mutex",
+        "semaphore",
+        "lock",
+        "atomic",
+        "race condition",
+        "deadlock",
+        "동기화"
+      ]
     },
     {
       "id": "file-descriptor-io",
@@ -338,7 +405,19 @@
         "network": 0,
         "linux": 0,
         "kernel": 1
-      }
+      },
+      "area": "os",
+      "subarea": "File & I/O",
+      "course": "운영체제",
+      "importance": "core",
+      "aliases": [
+        "file descriptor",
+        "fd",
+        "stdin",
+        "stdout",
+        "stderr",
+        "파일 디스크립터"
+      ]
     },
     {
       "id": "filesystem",
@@ -388,7 +467,19 @@
         "network": 2,
         "linux": 0,
         "kernel": 1
-      }
+      },
+      "area": "os",
+      "subarea": "File & I/O",
+      "course": "운영체제",
+      "importance": "core",
+      "aliases": [
+        "file system",
+        "filesystem",
+        "inode",
+        "vfs",
+        "mount",
+        "파일 시스템"
+      ]
     },
     {
       "id": "page-cache",
@@ -435,7 +526,18 @@
         "network": 2,
         "linux": 0,
         "kernel": 1
-      }
+      },
+      "area": "storage",
+      "subarea": "Cache & Durability",
+      "course": "운영체제·저장장치",
+      "importance": "core",
+      "aliases": [
+        "page cache",
+        "fsync",
+        "writeback",
+        "dirty page",
+        "페이지 캐시"
+      ]
     },
     {
       "id": "storage-raid",
@@ -479,7 +581,19 @@
         "network": 2,
         "linux": 1,
         "kernel": 1
-      }
+      },
+      "area": "storage",
+      "subarea": "Device",
+      "course": "컴퓨터 저장장치",
+      "importance": "connect",
+      "aliases": [
+        "ssd",
+        "hdd",
+        "raid",
+        "iops",
+        "storage",
+        "저장장치"
+      ]
     },
     {
       "id": "socket-tcp",
@@ -533,7 +647,19 @@
         "network": 0,
         "linux": 0,
         "kernel": 1
-      }
+      },
+      "area": "network",
+      "subarea": "Transport",
+      "course": "컴퓨터 네트워크",
+      "importance": "core",
+      "aliases": [
+        "tcp",
+        "socket",
+        "port",
+        "handshake",
+        "backlog",
+        "소켓"
+      ]
     },
     {
       "id": "epoll",
@@ -582,7 +708,18 @@
         "network": 0,
         "linux": 0,
         "kernel": 1
-      }
+      },
+      "area": "linux",
+      "subarea": "Observability",
+      "course": "Linux 시스템",
+      "importance": "connect",
+      "aliases": [
+        "epoll",
+        "select",
+        "poll",
+        "nonblocking",
+        "event loop"
+      ]
     },
     {
       "id": "linux-shell-pipeline",
@@ -635,7 +772,20 @@
         "network": 1,
         "linux": 0,
         "kernel": 2
-      }
+      },
+      "area": "linux",
+      "subarea": "Shell",
+      "course": "Linux 시스템",
+      "importance": "core",
+      "aliases": [
+        "shell",
+        "pipe",
+        "grep",
+        "awk",
+        "xargs",
+        "pipeline",
+        "파이프"
+      ]
     },
     {
       "id": "namespace",
@@ -685,7 +835,17 @@
         "network": 1,
         "linux": 0,
         "kernel": 1
-      }
+      },
+      "area": "container",
+      "subarea": "Isolation",
+      "course": "컨테이너",
+      "importance": "connect",
+      "aliases": [
+        "namespace",
+        "pid namespace",
+        "mount namespace",
+        "network namespace"
+      ]
     },
     {
       "id": "cgroup",
@@ -735,7 +895,17 @@
         "network": 2,
         "linux": 0,
         "kernel": 1
-      }
+      },
+      "area": "container",
+      "subarea": "Resource",
+      "course": "컨테이너",
+      "importance": "connect",
+      "aliases": [
+        "cgroup",
+        "cgroup v2",
+        "memory.max",
+        "cpu quota"
+      ]
     },
     {
       "id": "docker-fs-net",
@@ -787,7 +957,18 @@
         "network": 1,
         "linux": 1,
         "kernel": 2
-      }
+      },
+      "area": "container",
+      "subarea": "Filesystem",
+      "course": "컨테이너",
+      "importance": "connect",
+      "aliases": [
+        "docker",
+        "overlayfs",
+        "veth",
+        "bridge",
+        "container runtime"
+      ]
     },
     {
       "id": "db-buffer-wal",
@@ -835,7 +1016,18 @@
         "network": 2,
         "linux": 1,
         "kernel": 2
-      }
+      },
+      "area": "database",
+      "subarea": "Storage",
+      "course": "데이터베이스",
+      "importance": "core",
+      "aliases": [
+        "wal",
+        "buffer pool",
+        "checkpoint",
+        "redo",
+        "durability"
+      ]
     },
     {
       "id": "db-index-mvcc",
@@ -882,7 +1074,19 @@
         "network": 2,
         "linux": 2,
         "kernel": 2
-      }
+      },
+      "area": "database",
+      "subarea": "Transaction",
+      "course": "데이터베이스",
+      "importance": "core",
+      "aliases": [
+        "index",
+        "mvcc",
+        "transaction",
+        "isolation",
+        "lock",
+        "b-tree"
+      ]
     },
     {
       "id": "jvm-os",
@@ -932,7 +1136,19 @@
         "network": 1,
         "linux": 1,
         "kernel": 2
-      }
+      },
+      "area": "runtime",
+      "subarea": "JVM",
+      "course": "프로그래밍 언어·런타임",
+      "importance": "connect",
+      "aliases": [
+        "jvm",
+        "heap",
+        "rss",
+        "native memory",
+        "jstack",
+        "gc"
+      ]
     },
     {
       "id": "observability",
@@ -979,7 +1195,19 @@
         "network": 1,
         "linux": 0,
         "kernel": 1
-      }
+      },
+      "area": "linux",
+      "subarea": "Observability",
+      "course": "Linux 시스템",
+      "importance": "core",
+      "aliases": [
+        "observability",
+        "top",
+        "vmstat",
+        "iostat",
+        "strace",
+        "perf"
+      ]
     },
     {
       "id": "distributed",
@@ -1027,7 +1255,18 @@
         "network": 1,
         "linux": 2,
         "kernel": 2
-      }
+      },
+      "area": "distributed",
+      "subarea": "Failure",
+      "course": "분산 시스템",
+      "importance": "connect",
+      "aliases": [
+        "distributed system",
+        "replication",
+        "consistency",
+        "quorum",
+        "consensus"
+      ]
     },
     {
       "id": "kernel-sched",
@@ -1072,7 +1311,17 @@
         "network": 2,
         "linux": 1,
         "kernel": 0
-      }
+      },
+      "area": "kernel",
+      "subarea": "Scheduler",
+      "course": "운영체제·커널",
+      "importance": "deep",
+      "aliases": [
+        "kernel scheduler",
+        "runqueue",
+        "eevdf",
+        "scheduler"
+      ]
     },
     {
       "id": "kernel-mm",
@@ -1119,7 +1368,18 @@
         "network": 2,
         "linux": 1,
         "kernel": 0
-      }
+      },
+      "area": "kernel",
+      "subarea": "Memory",
+      "course": "운영체제·커널",
+      "importance": "deep",
+      "aliases": [
+        "kernel memory",
+        "buddy",
+        "slab",
+        "reclaim",
+        "oom"
+      ]
     },
     {
       "id": "kernel-vfs-net",
@@ -1165,7 +1425,17 @@
         "network": 1,
         "linux": 1,
         "kernel": 0
-      }
+      },
+      "area": "kernel",
+      "subarea": "VFS",
+      "course": "운영체제·커널",
+      "importance": "deep",
+      "aliases": [
+        "kernel vfs",
+        "network stack",
+        "packet path",
+        "vfs"
+      ]
     },
     {
       "id": "native-c-abi",
@@ -1212,7 +1482,18 @@
         "network": 2,
         "linux": 1,
         "kernel": 0
-      }
+      },
+      "area": "native",
+      "subarea": "C & ABI",
+      "course": "시스템 프로그래밍",
+      "importance": "deep",
+      "aliases": [
+        "c",
+        "pointer",
+        "abi",
+        "calling convention",
+        "struct layout"
+      ]
     },
     {
       "id": "data-representation",
@@ -1256,7 +1537,20 @@
         "network": 1,
         "linux": 1,
         "kernel": 0
-      }
+      },
+      "area": "foundations",
+      "subarea": "데이터 표현",
+      "course": "컴퓨터 기초",
+      "importance": "core",
+      "aliases": [
+        "bit",
+        "byte",
+        "binary",
+        "hex",
+        "encoding",
+        "바이트",
+        "2진수"
+      ]
     },
     {
       "id": "ip-routing",
@@ -1300,7 +1594,19 @@
         "network": 0,
         "linux": 1,
         "kernel": 1
-      }
+      },
+      "area": "network",
+      "subarea": "IP",
+      "course": "컴퓨터 네트워크",
+      "importance": "core",
+      "aliases": [
+        "ip",
+        "subnet",
+        "routing",
+        "gateway",
+        "nat",
+        "라우팅"
+      ]
     },
     {
       "id": "dns",
@@ -1346,7 +1652,17 @@
         "network": 0,
         "linux": 1,
         "kernel": 2
-      }
+      },
+      "area": "network",
+      "subarea": "Name Resolution",
+      "course": "컴퓨터 네트워크",
+      "importance": "core",
+      "aliases": [
+        "dns",
+        "resolver",
+        "dns record",
+        "name resolution"
+      ]
     },
     {
       "id": "http-tls",
@@ -1395,7 +1711,18 @@
         "network": 0,
         "linux": 1,
         "kernel": 2
-      }
+      },
+      "area": "network",
+      "subarea": "Application",
+      "course": "컴퓨터 네트워크",
+      "importance": "core",
+      "aliases": [
+        "http",
+        "https",
+        "tls",
+        "certificate",
+        "request response"
+      ]
     },
     {
       "id": "compile-link-loader",
@@ -1446,7 +1773,2114 @@
         "network": 2,
         "linux": 1,
         "kernel": 0
-      }
+      },
+      "area": "native",
+      "subarea": "Toolchain",
+      "course": "시스템 프로그래밍",
+      "importance": "deep",
+      "aliases": [
+        "compile",
+        "link",
+        "elf",
+        "loader",
+        "symbol",
+        "shared library"
+      ]
+    },
+    {
+      "id": "boolean-logic",
+      "titleKo": "불리언 논리와 비트 연산",
+      "titleEn": "Boolean Logic · Bitwise Operations",
+      "area": "foundations",
+      "subarea": "논리·단위",
+      "course": "컴퓨터 기초",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "컴퓨터가 참·거짓과 비트 단위 조건을 다루는 가장 기본적인 방법입니다.",
+      "prerequisites": [
+        "data-representation"
+      ],
+      "learn": [
+        "AND / OR / NOT",
+        "bit mask",
+        "shift",
+        "flag"
+      ],
+      "outcomes": [
+        "권한 플래그",
+        "네트워크 비트 마스크",
+        "저수준 최적화"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "boolean",
+        "bitwise",
+        "비트 연산",
+        "bit mask"
+      ]
+    },
+    {
+      "id": "data-size-units",
+      "titleKo": "데이터 크기와 단위",
+      "titleEn": "Data Size · Units",
+      "area": "foundations",
+      "subarea": "논리·단위",
+      "course": "컴퓨터 기초",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "KB·MB·GB와 bit·byte 차이를 읽고 성능 수치를 해석하는 기준입니다.",
+      "prerequisites": [
+        "data-representation"
+      ],
+      "learn": [
+        "bit vs byte",
+        "KB / KiB",
+        "MB / MiB",
+        "bandwidth 단위"
+      ],
+      "outcomes": [
+        "메모리 크기",
+        "네트워크 대역폭",
+        "스토리지 용량"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "kib",
+        "mib",
+        "gbps",
+        "throughput unit"
+      ]
+    },
+    {
+      "id": "serialization-format",
+      "titleKo": "직렬화와 데이터 형식",
+      "titleEn": "Serialization · Data Format",
+      "area": "foundations",
+      "subarea": "직렬화",
+      "course": "컴퓨터 기초",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "메모리의 데이터를 파일이나 네트워크로 옮길 수 있는 형식으로 바꾸는 개념입니다.",
+      "prerequisites": [
+        "data-representation"
+      ],
+      "learn": [
+        "JSON",
+        "binary format",
+        "schema",
+        "endianness와 encoding 연결"
+      ],
+      "outcomes": [
+        "API payload",
+        "로그 형식",
+        "메시지 큐 데이터"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "serialization",
+        "json",
+        "protobuf",
+        "binary format"
+      ]
+    },
+    {
+      "id": "array-dynamic-array",
+      "titleKo": "배열과 동적 배열",
+      "titleEn": "Array · Dynamic Array",
+      "area": "data-structures",
+      "subarea": "선형 구조",
+      "course": "자료구조",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "연속된 메모리 공간에 값을 저장하고 인덱스로 빠르게 접근하는 구조입니다.",
+      "prerequisites": [
+        "data-representation"
+      ],
+      "learn": [
+        "index access",
+        "contiguous memory",
+        "resize",
+        "append"
+      ],
+      "outcomes": [
+        "ArrayList",
+        "Vector",
+        "cache locality"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "array",
+        "dynamic array",
+        "배열",
+        "arraylist"
+      ]
+    },
+    {
+      "id": "linked-list",
+      "titleKo": "연결 리스트",
+      "titleEn": "Linked List",
+      "area": "data-structures",
+      "subarea": "선형 구조",
+      "course": "자료구조",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "각 원소가 다음 원소의 위치를 가리키는 연결 구조입니다.",
+      "prerequisites": [
+        "array-dynamic-array"
+      ],
+      "learn": [
+        "node",
+        "pointer/reference",
+        "insert/delete",
+        "traversal"
+      ],
+      "outcomes": [
+        "메모리 배치 차이",
+        "포인터 기반 구조"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "linked list",
+        "연결 리스트"
+      ]
+    },
+    {
+      "id": "stack-queue",
+      "titleKo": "스택과 큐",
+      "titleEn": "Stack · Queue",
+      "area": "data-structures",
+      "subarea": "선형 구조",
+      "course": "자료구조",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "LIFO와 FIFO 순서로 데이터를 처리하는 대표적인 기본 구조입니다.",
+      "prerequisites": [
+        "array-dynamic-array"
+      ],
+      "learn": [
+        "push/pop",
+        "enqueue/dequeue",
+        "LIFO",
+        "FIFO"
+      ],
+      "outcomes": [
+        "함수 호출 스택",
+        "작업 큐",
+        "BFS"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "stack",
+        "queue",
+        "deque",
+        "스택",
+        "큐"
+      ]
+    },
+    {
+      "id": "hash-table",
+      "titleKo": "해시 테이블",
+      "titleEn": "Hash Table",
+      "area": "data-structures",
+      "subarea": "Hash",
+      "course": "자료구조",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "키를 해시 값으로 바꿔 빠르게 값을 찾는 구조입니다.",
+      "prerequisites": [
+        "array-dynamic-array"
+      ],
+      "learn": [
+        "hash function",
+        "bucket",
+        "collision",
+        "load factor"
+      ],
+      "outcomes": [
+        "HashMap",
+        "cache key lookup",
+        "symbol table"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "hash map",
+        "hashtable",
+        "hash table",
+        "해시"
+      ]
+    },
+    {
+      "id": "tree-bst",
+      "titleKo": "트리와 이진 탐색 트리",
+      "titleEn": "Tree · Binary Search Tree",
+      "area": "data-structures",
+      "subarea": "Tree",
+      "course": "자료구조",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "계층 관계를 표현하고 정렬된 탐색을 가능하게 하는 구조입니다.",
+      "prerequisites": [
+        "linked-list"
+      ],
+      "learn": [
+        "node/edge",
+        "depth/height",
+        "BST property",
+        "traversal"
+      ],
+      "outcomes": [
+        "DB index 이해의 바탕",
+        "filesystem tree"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "tree",
+        "bst",
+        "binary search tree",
+        "트리"
+      ]
+    },
+    {
+      "id": "heap-priority-queue",
+      "titleKo": "힙과 우선순위 큐",
+      "titleEn": "Heap · Priority Queue",
+      "area": "data-structures",
+      "subarea": "Tree",
+      "course": "자료구조",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "가장 크거나 작은 값을 빠르게 꺼내기 위한 트리 기반 구조입니다.",
+      "prerequisites": [
+        "tree-bst"
+      ],
+      "learn": [
+        "min/max heap",
+        "heapify",
+        "priority queue",
+        "top-k"
+      ],
+      "outcomes": [
+        "scheduler",
+        "top-k",
+        "Dijkstra"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "heap",
+        "priority queue",
+        "우선순위 큐"
+      ]
+    },
+    {
+      "id": "graph-structure",
+      "titleKo": "그래프 구조",
+      "titleEn": "Graph Data Structure",
+      "area": "data-structures",
+      "subarea": "Graph",
+      "course": "자료구조",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "노드와 연결 관계로 네트워크·의존성·경로를 표현하는 구조입니다.",
+      "prerequisites": [
+        "stack-queue"
+      ],
+      "learn": [
+        "vertex/edge",
+        "directed/undirected",
+        "weighted graph",
+        "adjacency list"
+      ],
+      "outcomes": [
+        "네트워크 경로",
+        "dependency graph",
+        "분산 시스템 topology"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "graph",
+        "그래프",
+        "adjacency"
+      ]
+    },
+    {
+      "id": "complexity-big-o",
+      "titleKo": "시간·공간 복잡도",
+      "titleEn": "Time · Space Complexity · Big-O",
+      "area": "algorithms",
+      "subarea": "복잡도",
+      "course": "알고리즘",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "입력 크기가 커질 때 코드의 시간과 메모리 사용이 어떻게 늘어나는지 보는 기준입니다.",
+      "prerequisites": [
+        "array-dynamic-array"
+      ],
+      "learn": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n log n)",
+        "space complexity"
+      ],
+      "outcomes": [
+        "자료구조 선택",
+        "성능 병목 판단"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "big o",
+        "complexity",
+        "시간복잡도",
+        "공간복잡도"
+      ]
+    },
+    {
+      "id": "sorting",
+      "titleKo": "정렬 알고리즘",
+      "titleEn": "Sorting Algorithms",
+      "area": "algorithms",
+      "subarea": "탐색·정렬",
+      "course": "알고리즘",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "데이터를 순서대로 배치하는 대표 알고리즘의 차이를 비교합니다.",
+      "prerequisites": [
+        "complexity-big-o"
+      ],
+      "learn": [
+        "comparison sort",
+        "merge sort",
+        "quick sort",
+        "stable sort"
+      ],
+      "outcomes": [
+        "DB sort",
+        "로그 정렬",
+        "인덱스 사고방식"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "sorting",
+        "sort",
+        "정렬"
+      ]
+    },
+    {
+      "id": "binary-search",
+      "titleKo": "이진 탐색",
+      "titleEn": "Binary Search",
+      "area": "algorithms",
+      "subarea": "탐색·정렬",
+      "course": "알고리즘",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "정렬된 범위를 절반씩 줄여 빠르게 값을 찾는 방식입니다.",
+      "prerequisites": [
+        "sorting"
+      ],
+      "learn": [
+        "sorted condition",
+        "low/high",
+        "O(log n)",
+        "boundary search"
+      ],
+      "outcomes": [
+        "B-Tree 탐색 사고",
+        "범위 검색"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "binary search",
+        "이진 탐색"
+      ]
+    },
+    {
+      "id": "recursion-divide-conquer",
+      "titleKo": "재귀와 분할 정복",
+      "titleEn": "Recursion · Divide and Conquer",
+      "area": "algorithms",
+      "subarea": "문제 해결",
+      "course": "알고리즘",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "큰 문제를 작은 문제로 나누고 같은 방식으로 해결하는 사고 방법입니다.",
+      "prerequisites": [
+        "stack-queue",
+        "complexity-big-o"
+      ],
+      "learn": [
+        "base case",
+        "call stack",
+        "divide",
+        "combine"
+      ],
+      "outcomes": [
+        "트리 순회",
+        "merge sort",
+        "재귀 호출 스택"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "recursion",
+        "divide conquer",
+        "재귀",
+        "분할정복"
+      ]
+    },
+    {
+      "id": "greedy",
+      "titleKo": "그리디",
+      "titleEn": "Greedy Algorithm",
+      "area": "algorithms",
+      "subarea": "문제 해결",
+      "course": "알고리즘",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "매 순간 가장 좋아 보이는 선택을 하는 문제 해결 방식입니다.",
+      "prerequisites": [
+        "complexity-big-o"
+      ],
+      "learn": [
+        "local optimum",
+        "choice property",
+        "counterexample",
+        "scheduling example"
+      ],
+      "outcomes": [
+        "스케줄링 문제",
+        "자원 선택 문제"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "greedy",
+        "그리디"
+      ]
+    },
+    {
+      "id": "dynamic-programming",
+      "titleKo": "동적 계획법",
+      "titleEn": "Dynamic Programming",
+      "area": "algorithms",
+      "subarea": "문제 해결",
+      "course": "알고리즘",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "겹치는 작은 문제의 결과를 저장해 다시 계산하지 않는 방법입니다.",
+      "prerequisites": [
+        "recursion-divide-conquer"
+      ],
+      "learn": [
+        "state",
+        "transition",
+        "memoization",
+        "tabulation"
+      ],
+      "outcomes": [
+        "캐시 사고",
+        "최적화 문제"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "dynamic programming",
+        "dp",
+        "동적 계획법"
+      ]
+    },
+    {
+      "id": "graph-traversal",
+      "titleKo": "그래프 탐색",
+      "titleEn": "BFS · DFS · Graph Traversal",
+      "area": "algorithms",
+      "subarea": "Graph",
+      "course": "알고리즘",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "그래프의 노드를 빠짐없이 탐색하는 기본 방법입니다.",
+      "prerequisites": [
+        "graph-structure",
+        "stack-queue"
+      ],
+      "learn": [
+        "BFS",
+        "DFS",
+        "visited",
+        "queue/stack"
+      ],
+      "outcomes": [
+        "네트워크 경로",
+        "dependency traversal",
+        "shortest path 기초"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "bfs",
+        "dfs",
+        "graph traversal",
+        "그래프 탐색"
+      ]
+    },
+    {
+      "id": "instruction-cycle-isa",
+      "titleKo": "명령어와 ISA",
+      "titleEn": "Instruction Cycle · ISA",
+      "area": "architecture",
+      "subarea": "Instruction",
+      "course": "컴퓨터 구조",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "CPU가 어떤 명령어를 이해하고 가져와 실행하는지 보는 기본 구조입니다.",
+      "prerequisites": [
+        "data-representation"
+      ],
+      "learn": [
+        "instruction",
+        "fetch/decode/execute",
+        "ISA",
+        "opcode"
+      ],
+      "outcomes": [
+        "어셈블리",
+        "컴파일러 출력",
+        "system call ABI"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "isa",
+        "instruction cycle",
+        "opcode",
+        "명령어"
+      ]
+    },
+    {
+      "id": "registers-assembly",
+      "titleKo": "레지스터와 어셈블리 기초",
+      "titleEn": "Registers · Assembly Basics",
+      "area": "architecture",
+      "subarea": "CPU",
+      "course": "컴퓨터 구조",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "CPU가 바로 사용하는 작은 저장공간과 저수준 명령 표현을 봅니다.",
+      "prerequisites": [
+        "instruction-cycle-isa"
+      ],
+      "learn": [
+        "general register",
+        "stack pointer",
+        "program counter",
+        "assembly instruction"
+      ],
+      "outcomes": [
+        "함수 호출",
+        "ABI",
+        "디버깅"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "register",
+        "assembly",
+        "레지스터",
+        "어셈블리"
+      ]
+    },
+    {
+      "id": "cpu-pipeline-branch",
+      "titleKo": "CPU 파이프라인과 분기 예측",
+      "titleEn": "CPU Pipeline · Branch Prediction",
+      "area": "architecture",
+      "subarea": "CPU",
+      "course": "컴퓨터 구조",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "CPU가 여러 명령을 겹쳐 처리하고 분기 결과를 미리 예상하는 이유를 봅니다.",
+      "prerequisites": [
+        "instruction-cycle-isa",
+        "cpu-cache"
+      ],
+      "learn": [
+        "pipeline",
+        "hazard",
+        "branch prediction",
+        "speculation"
+      ],
+      "outcomes": [
+        "분기 많은 코드 성능",
+        "CPU stall"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "pipeline",
+        "branch prediction",
+        "파이프라인",
+        "분기예측"
+      ]
+    },
+    {
+      "id": "dma-device-io",
+      "titleKo": "장치 I/O와 DMA",
+      "titleEn": "Device I/O · DMA",
+      "area": "architecture",
+      "subarea": "I/O",
+      "course": "컴퓨터 구조",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "CPU가 저장장치·네트워크 장치와 데이터를 주고받을 때 DMA가 왜 필요한지 봅니다.",
+      "prerequisites": [
+        "interrupt-syscall"
+      ],
+      "learn": [
+        "device controller",
+        "DMA",
+        "interrupt",
+        "memory buffer"
+      ],
+      "outcomes": [
+        "NIC·SSD I/O",
+        "zero-copy 이해의 바탕"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "dma",
+        "device io",
+        "direct memory access"
+      ]
+    },
+    {
+      "id": "scheduler-basics",
+      "titleKo": "CPU 스케줄링 기초",
+      "titleEn": "CPU Scheduling Basics",
+      "area": "os",
+      "subarea": "Scheduling",
+      "course": "운영체제",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "여러 실행 가능한 작업 중 어떤 작업을 CPU에 올릴지 정하는 기본 원리입니다.",
+      "prerequisites": [
+        "process",
+        "thread"
+      ],
+      "learn": [
+        "ready queue",
+        "time slice",
+        "preemption",
+        "fairness"
+      ],
+      "outcomes": [
+        "CPU 사용률",
+        "latency",
+        "kernel scheduler 심화"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "scheduling",
+        "scheduler",
+        "cpu scheduling",
+        "스케줄링"
+      ]
+    },
+    {
+      "id": "ipc",
+      "titleKo": "프로세스 간 통신",
+      "titleEn": "IPC · Inter-Process Communication",
+      "area": "os",
+      "subarea": "IPC",
+      "course": "운영체제",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "서로 다른 프로세스가 데이터를 주고받는 대표 방법들을 비교합니다.",
+      "prerequisites": [
+        "process",
+        "file-descriptor-io"
+      ],
+      "learn": [
+        "pipe",
+        "shared memory",
+        "message queue",
+        "socket IPC"
+      ],
+      "outcomes": [
+        "서비스 간 통신",
+        "daemon 구조"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "ipc",
+        "inter process communication",
+        "프로세스 간 통신"
+      ]
+    },
+    {
+      "id": "signal",
+      "titleKo": "시그널",
+      "titleEn": "Signal",
+      "area": "os",
+      "subarea": "IPC",
+      "course": "운영체제",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "OS가 프로세스에 비동기적으로 이벤트를 전달하는 방법입니다.",
+      "prerequisites": [
+        "process"
+      ],
+      "learn": [
+        "SIGTERM",
+        "SIGKILL",
+        "handler",
+        "signal mask"
+      ],
+      "outcomes": [
+        "프로세스 종료",
+        "daemon reload",
+        "shell job control"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "signal",
+        "sigterm",
+        "sigkill",
+        "시그널"
+      ]
+    },
+    {
+      "id": "deadlock",
+      "titleKo": "교착상태",
+      "titleEn": "Deadlock",
+      "area": "os",
+      "subarea": "Concurrency",
+      "course": "운영체제",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "여러 작업이 서로 자원을 기다리며 영원히 진행하지 못하는 상태입니다.",
+      "prerequisites": [
+        "sync"
+      ],
+      "learn": [
+        "mutual exclusion",
+        "hold and wait",
+        "circular wait",
+        "prevention"
+      ],
+      "outcomes": [
+        "DB deadlock",
+        "thread hang"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "deadlock",
+        "교착상태"
+      ]
+    },
+    {
+      "id": "mmap-shared-memory",
+      "titleKo": "mmap과 공유 메모리",
+      "titleEn": "mmap · Shared Memory",
+      "area": "os",
+      "subarea": "Memory",
+      "course": "운영체제",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "파일이나 메모리를 프로세스 주소 공간에 직접 연결하고 여러 프로세스가 공유하는 방식을 봅니다.",
+      "prerequisites": [
+        "virtual-memory",
+        "filesystem"
+      ],
+      "learn": [
+        "mmap",
+        "shared memory",
+        "copy-on-write",
+        "memory mapped file"
+      ],
+      "outcomes": [
+        "DB mmap",
+        "shared memory IPC",
+        "파일 매핑"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "mmap",
+        "shared memory",
+        "공유 메모리"
+      ]
+    },
+    {
+      "id": "users-permissions",
+      "titleKo": "사용자·그룹·권한",
+      "titleEn": "Users · Groups · Permissions",
+      "area": "linux",
+      "subarea": "Permission",
+      "course": "Linux 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "Linux가 사용자와 파일 권한으로 접근을 제한하는 기본 방식입니다.",
+      "prerequisites": [
+        "filesystem"
+      ],
+      "learn": [
+        "uid/gid",
+        "rwx",
+        "owner/group",
+        "sudo"
+      ],
+      "outcomes": [
+        "서버 권한 문제",
+        "least privilege"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "chmod",
+        "chown",
+        "uid",
+        "gid",
+        "permission",
+        "권한"
+      ]
+    },
+    {
+      "id": "proc-process-tools",
+      "titleKo": "/proc와 프로세스 관찰",
+      "titleEn": "/proc · Process Tools",
+      "area": "linux",
+      "subarea": "Process",
+      "course": "Linux 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "Linux가 프로세스와 시스템 상태를 파일처럼 보여주는 /proc를 활용합니다.",
+      "prerequisites": [
+        "process"
+      ],
+      "learn": [
+        "/proc/<pid>",
+        "ps",
+        "top",
+        "lsof"
+      ],
+      "outcomes": [
+        "메모리·FD·상태 확인",
+        "장애 분석"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "procfs",
+        "/proc",
+        "ps",
+        "top"
+      ]
+    },
+    {
+      "id": "systemd-service",
+      "titleKo": "서비스와 systemd",
+      "titleEn": "Service · systemd",
+      "area": "linux",
+      "subarea": "Service",
+      "course": "Linux 시스템",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "서버 프로그램을 시작·중지·자동 실행하고 로그를 관리하는 기본 도구입니다.",
+      "prerequisites": [
+        "process",
+        "signal"
+      ],
+      "learn": [
+        "unit",
+        "service",
+        "systemctl",
+        "journalctl"
+      ],
+      "outcomes": [
+        "daemon 운영",
+        "서비스 재시작",
+        "부팅 자동화"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "systemd",
+        "systemctl",
+        "journalctl",
+        "service"
+      ]
+    },
+    {
+      "id": "ebpf-basics",
+      "titleKo": "eBPF 기초",
+      "titleEn": "eBPF Basics",
+      "area": "linux",
+      "subarea": "Observability",
+      "course": "Linux 시스템",
+      "importance": "deep",
+      "level": "B",
+      "kind": "single",
+      "summary": "커널 이벤트를 비교적 안전하게 관찰하고 추적하는 현대적인 Linux 도구의 바탕입니다.",
+      "prerequisites": [
+        "observability",
+        "interrupt-syscall"
+      ],
+      "learn": [
+        "probe",
+        "tracepoint",
+        "BPF map",
+        "user/kernel tracing"
+      ],
+      "outcomes": [
+        "고급 성능 분석",
+        "네트워크 추적",
+        "커널 관찰"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "ebpf",
+        "bpf",
+        "tracepoint"
+      ]
+    },
+    {
+      "id": "network-layer-model",
+      "titleKo": "네트워크 계층 모델",
+      "titleEn": "TCP/IP · Layer Model",
+      "area": "network",
+      "subarea": "기초 계층",
+      "course": "컴퓨터 네트워크",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "통신 기능을 Link·IP·Transport·Application 계층으로 나눠 위치를 이해합니다.",
+      "prerequisites": [
+        "data-representation"
+      ],
+      "learn": [
+        "link layer",
+        "internet layer",
+        "transport layer",
+        "application layer"
+      ],
+      "outcomes": [
+        "TCP와 HTTP가 다른 위치에 있는 이유",
+        "장애 위치 구분"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "osi",
+        "tcp ip model",
+        "network layer",
+        "계층"
+      ]
+    },
+    {
+      "id": "ethernet-arp",
+      "titleKo": "Ethernet·MAC·ARP",
+      "titleEn": "Ethernet · MAC · ARP",
+      "area": "network",
+      "subarea": "Link",
+      "course": "컴퓨터 네트워크",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "같은 네트워크 안에서 장치가 MAC 주소를 이용해 데이터를 전달하는 흐름입니다.",
+      "prerequisites": [
+        "network-layer-model"
+      ],
+      "learn": [
+        "MAC address",
+        "Ethernet frame",
+        "ARP",
+        "switch"
+      ],
+      "outcomes": [
+        "같은 LAN 통신",
+        "gateway로 가기 전 단계"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "ethernet",
+        "mac",
+        "arp",
+        "frame"
+      ]
+    },
+    {
+      "id": "udp",
+      "titleKo": "UDP",
+      "titleEn": "UDP",
+      "area": "network",
+      "subarea": "Transport",
+      "course": "컴퓨터 네트워크",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "연결을 만들지 않고 빠르게 데이터를 보내는 전송 방식입니다.",
+      "prerequisites": [
+        "ip-routing",
+        "network-layer-model"
+      ],
+      "learn": [
+        "datagram",
+        "connectionless",
+        "loss/reorder",
+        "port"
+      ],
+      "outcomes": [
+        "DNS",
+        "streaming",
+        "게임·실시간 통신"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "udp",
+        "datagram"
+      ]
+    },
+    {
+      "id": "tcp-flow-congestion",
+      "titleKo": "TCP 흐름·혼잡 제어",
+      "titleEn": "TCP Flow · Congestion Control",
+      "area": "network",
+      "subarea": "Transport",
+      "course": "컴퓨터 네트워크",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "TCP가 수신자와 네트워크 상황에 맞춰 전송 속도를 조절하는 원리를 봅니다.",
+      "prerequisites": [
+        "socket-tcp"
+      ],
+      "learn": [
+        "flow control",
+        "receive window",
+        "congestion window",
+        "RTT",
+        "packet loss"
+      ],
+      "outcomes": [
+        "느린 TCP",
+        "bandwidth-delay product",
+        "네트워크 튜닝"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "flow control",
+        "congestion control",
+        "cwnd",
+        "rtt",
+        "혼잡 제어"
+      ]
+    },
+    {
+      "id": "block-device-io",
+      "titleKo": "블록 장치와 I/O",
+      "titleEn": "Block Device · Block I/O",
+      "area": "storage",
+      "subarea": "Block I/O",
+      "course": "컴퓨터 저장장치",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "SSD·HDD를 파일보다 아래 단계인 블록 장치 관점에서 이해합니다.",
+      "prerequisites": [
+        "storage-raid",
+        "dma-device-io"
+      ],
+      "learn": [
+        "block",
+        "sector",
+        "queue",
+        "read/write request"
+      ],
+      "outcomes": [
+        "filesystem 아래 I/O",
+        "DB storage latency"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "block device",
+        "block io",
+        "sector"
+      ]
+    },
+    {
+      "id": "backup-recovery",
+      "titleKo": "백업과 복구",
+      "titleEn": "Backup · Recovery",
+      "area": "storage",
+      "subarea": "Cache & Durability",
+      "course": "컴퓨터 저장장치",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "RAID·복제와 별개로 데이터를 되돌릴 수 있게 만드는 백업과 복구의 기본입니다.",
+      "prerequisites": [
+        "storage-raid",
+        "db-buffer-wal"
+      ],
+      "learn": [
+        "snapshot",
+        "full/incremental",
+        "RPO/RTO",
+        "restore test"
+      ],
+      "outcomes": [
+        "장애 복구",
+        "DB backup 전략"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "backup",
+        "restore",
+        "rpo",
+        "rto",
+        "백업"
+      ]
+    },
+    {
+      "id": "relational-model-sql",
+      "titleKo": "관계형 모델과 SQL",
+      "titleEn": "Relational Model · SQL",
+      "area": "database",
+      "subarea": "Relational",
+      "course": "데이터베이스",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "행·열·테이블과 관계를 사용해 데이터를 표현하고 SQL로 다루는 기본입니다.",
+      "prerequisites": [
+        "data-structures"
+      ],
+      "learn": [
+        "table/row/column",
+        "primary key",
+        "foreign key",
+        "SELECT/JOIN"
+      ],
+      "outcomes": [
+        "ORM",
+        "JOIN",
+        "스키마 설계"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "sql",
+        "relational model",
+        "join",
+        "관계형"
+      ]
+    },
+    {
+      "id": "normalization",
+      "titleKo": "정규화와 데이터 모델링",
+      "titleEn": "Normalization · Data Modeling",
+      "area": "database",
+      "subarea": "Relational",
+      "course": "데이터베이스",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "중복과 갱신 문제를 줄이기 위해 데이터를 나누고 관계를 설계하는 방법입니다.",
+      "prerequisites": [
+        "relational-model-sql"
+      ],
+      "learn": [
+        "functional dependency",
+        "1NF/2NF/3NF",
+        "denormalization",
+        "schema design"
+      ],
+      "outcomes": [
+        "테이블 설계",
+        "중복 데이터 판단"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "normalization",
+        "정규화",
+        "denormalization"
+      ]
+    },
+    {
+      "id": "index-internals",
+      "titleKo": "인덱스 구조",
+      "titleEn": "Index Structures · B+Tree",
+      "area": "database",
+      "subarea": "Index",
+      "course": "데이터베이스",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "DB가 전체 데이터를 읽지 않고 빠르게 찾기 위해 사용하는 인덱스 구조를 봅니다.",
+      "prerequisites": [
+        "tree-bst",
+        "db-index-mvcc"
+      ],
+      "learn": [
+        "B+Tree",
+        "clustered/nonclustered",
+        "composite index",
+        "selectivity"
+      ],
+      "outcomes": [
+        "복합 인덱스",
+        "range scan",
+        "query tuning"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "b+tree",
+        "composite index",
+        "selectivity",
+        "인덱스"
+      ]
+    },
+    {
+      "id": "query-optimizer",
+      "titleKo": "쿼리 옵티마이저와 실행 계획",
+      "titleEn": "Query Optimizer · Execution Plan",
+      "area": "database",
+      "subarea": "Query",
+      "course": "데이터베이스",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "DB가 여러 실행 방법 중 비용이 낮은 방법을 선택하는 과정을 봅니다.",
+      "prerequisites": [
+        "relational-model-sql",
+        "index-internals"
+      ],
+      "learn": [
+        "cost",
+        "cardinality",
+        "join order",
+        "EXPLAIN"
+      ],
+      "outcomes": [
+        "느린 쿼리 분석",
+        "인덱스 사용 여부 판단"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "optimizer",
+        "execution plan",
+        "explain",
+        "cardinality"
+      ]
+    },
+    {
+      "id": "replication-db",
+      "titleKo": "DB 복제",
+      "titleEn": "Database Replication",
+      "area": "database",
+      "subarea": "Replication",
+      "course": "데이터베이스",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "같은 데이터를 여러 DB 노드에 복사해 읽기 확장과 장애 대응을 하는 기본 방식입니다.",
+      "prerequisites": [
+        "db-buffer-wal",
+        "socket-tcp"
+      ],
+      "learn": [
+        "primary/replica",
+        "replication lag",
+        "sync/async",
+        "failover"
+      ],
+      "outcomes": [
+        "read replica",
+        "failover",
+        "분산 일관성"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "database replication",
+        "replica",
+        "replication lag",
+        "복제"
+      ]
+    },
+    {
+      "id": "stack-heap-runtime",
+      "titleKo": "런타임의 Stack과 Heap",
+      "titleEn": "Runtime Stack · Heap",
+      "area": "runtime",
+      "subarea": "Memory",
+      "course": "프로그래밍 언어·런타임",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "함수 호출과 동적 객체가 메모리 어디에 놓이는지 런타임 관점에서 봅니다.",
+      "prerequisites": [
+        "virtual-memory",
+        "registers-assembly"
+      ],
+      "learn": [
+        "call stack",
+        "stack frame",
+        "heap object",
+        "lifetime"
+      ],
+      "outcomes": [
+        "재귀",
+        "메모리 누수",
+        "GC"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "stack",
+        "heap",
+        "stack frame",
+        "런타임 메모리"
+      ]
+    },
+    {
+      "id": "garbage-collection",
+      "titleKo": "가비지 컬렉션",
+      "titleEn": "Garbage Collection",
+      "area": "runtime",
+      "subarea": "GC",
+      "course": "프로그래밍 언어·런타임",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "더 이상 사용하지 않는 객체 메모리를 자동으로 회수하는 방식을 봅니다.",
+      "prerequisites": [
+        "stack-heap-runtime"
+      ],
+      "learn": [
+        "reachability",
+        "mark/sweep",
+        "generational",
+        "pause"
+      ],
+      "outcomes": [
+        "JVM GC",
+        "latency pause",
+        "memory pressure"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "gc",
+        "garbage collection",
+        "mark sweep"
+      ]
+    },
+    {
+      "id": "jit-runtime",
+      "titleKo": "JIT 컴파일",
+      "titleEn": "JIT Compilation",
+      "area": "runtime",
+      "subarea": "JIT",
+      "course": "프로그래밍 언어·런타임",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "실행 중 자주 쓰는 코드를 기계어로 바꿔 성능을 높이는 런타임 기법입니다.",
+      "prerequisites": [
+        "instruction-cycle-isa",
+        "jvm-os"
+      ],
+      "learn": [
+        "hot code",
+        "profiling",
+        "optimization",
+        "deoptimization"
+      ],
+      "outcomes": [
+        "JVM 성능",
+        "warm-up",
+        "CPU 최적화 연결"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "jit",
+        "just in time",
+        "warmup"
+      ]
+    },
+    {
+      "id": "language-memory-model",
+      "titleKo": "언어 메모리 모델",
+      "titleEn": "Language Memory Model",
+      "area": "runtime",
+      "subarea": "Language Model",
+      "course": "프로그래밍 언어·런타임",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "여러 스레드가 메모리를 읽고 쓸 때 언어가 보장하는 순서와 가시성 규칙입니다.",
+      "prerequisites": [
+        "sync",
+        "cpu-cache"
+      ],
+      "learn": [
+        "visibility",
+        "ordering",
+        "happens-before",
+        "volatile"
+      ],
+      "outcomes": [
+        "Java Memory Model",
+        "lock-free 코드"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "memory model",
+        "happens before",
+        "volatile",
+        "jmm"
+      ]
+    },
+    {
+      "id": "server-execution-model",
+      "titleKo": "서버 실행 모델",
+      "titleEn": "Server Execution Model",
+      "area": "backend",
+      "subarea": "Server Model",
+      "course": "백엔드 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "요청 하나가 프로세스·스레드·이벤트 루프 중 어디에서 처리되는지 모델을 구분합니다.",
+      "prerequisites": [
+        "process",
+        "thread",
+        "epoll"
+      ],
+      "learn": [
+        "process model",
+        "thread per request",
+        "event loop",
+        "async"
+      ],
+      "outcomes": [
+        "Tomcat",
+        "Netty",
+        "Node.js"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "server model",
+        "request model",
+        "event loop server"
+      ]
+    },
+    {
+      "id": "thread-pool",
+      "titleKo": "스레드 풀",
+      "titleEn": "Thread Pool",
+      "area": "backend",
+      "subarea": "Pool",
+      "course": "백엔드 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "스레드를 매번 만들지 않고 미리 준비해 요청 작업에 재사용하는 구조입니다.",
+      "prerequisites": [
+        "thread",
+        "sync"
+      ],
+      "learn": [
+        "worker",
+        "queue",
+        "pool size",
+        "saturation"
+      ],
+      "outcomes": [
+        "Tomcat executor",
+        "blocking task",
+        "queue backlog"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "thread pool",
+        "executor",
+        "worker pool"
+      ]
+    },
+    {
+      "id": "connection-pool",
+      "titleKo": "커넥션 풀",
+      "titleEn": "Connection Pool",
+      "area": "backend",
+      "subarea": "Pool",
+      "course": "백엔드 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "DB나 외부 서비스 연결을 매번 만들지 않고 재사용하는 구조입니다.",
+      "prerequisites": [
+        "socket-tcp"
+      ],
+      "learn": [
+        "pool size",
+        "borrow/return",
+        "timeout",
+        "leak"
+      ],
+      "outcomes": [
+        "DB connection pool",
+        "pool exhaustion"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "connection pool",
+        "hikari",
+        "pool exhaustion"
+      ]
+    },
+    {
+      "id": "cache-strategy",
+      "titleKo": "애플리케이션 캐시",
+      "titleEn": "Application Cache Strategy",
+      "area": "backend",
+      "subarea": "Cache",
+      "course": "백엔드 시스템",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "느린 원본 접근을 줄이기 위해 결과를 임시 저장하고 만료·일관성을 관리합니다.",
+      "prerequisites": [
+        "hash-table",
+        "cpu-cache"
+      ],
+      "learn": [
+        "cache hit/miss",
+        "TTL",
+        "eviction",
+        "cache invalidation"
+      ],
+      "outcomes": [
+        "Redis cache",
+        "cache stampede",
+        "TTL"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "cache",
+        "ttl",
+        "eviction",
+        "cache invalidation"
+      ]
+    },
+    {
+      "id": "reverse-proxy-load-balancer",
+      "titleKo": "리버스 프록시와 로드 밸런서",
+      "titleEn": "Reverse Proxy · Load Balancer",
+      "area": "backend",
+      "subarea": "Proxy",
+      "course": "백엔드 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "클라이언트 앞에서 요청을 받아 여러 서버로 전달하고 분산하는 구조입니다.",
+      "prerequisites": [
+        "http-tls",
+        "ip-routing"
+      ],
+      "learn": [
+        "reverse proxy",
+        "L4/L7",
+        "health check",
+        "load balancing"
+      ],
+      "outcomes": [
+        "Nginx",
+        "ALB",
+        "TLS termination"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "reverse proxy",
+        "load balancer",
+        "nginx",
+        "l4",
+        "l7"
+      ]
+    },
+    {
+      "id": "message-queue",
+      "titleKo": "메시지 큐",
+      "titleEn": "Message Queue",
+      "area": "backend",
+      "subarea": "Queue",
+      "course": "백엔드 시스템",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "작업을 바로 처리하지 않고 큐에 넣어 비동기로 전달하는 구조입니다.",
+      "prerequisites": [
+        "stack-queue",
+        "socket-tcp"
+      ],
+      "learn": [
+        "producer/consumer",
+        "ack",
+        "retry",
+        "ordering",
+        "backpressure"
+      ],
+      "outcomes": [
+        "Kafka/RabbitMQ 기초",
+        "비동기 작업"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "message queue",
+        "kafka",
+        "rabbitmq",
+        "producer consumer"
+      ]
+    },
+    {
+      "id": "rate-limiting",
+      "titleKo": "요청 제한",
+      "titleEn": "Rate Limiting",
+      "area": "backend",
+      "subarea": "Traffic Control",
+      "course": "백엔드 시스템",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "특정 시간 동안 허용할 요청 수를 제한해 서버와 외부 시스템을 보호합니다.",
+      "prerequisites": [
+        "hash-table",
+        "distributed"
+      ],
+      "learn": [
+        "token bucket",
+        "leaky bucket",
+        "quota",
+        "throttling"
+      ],
+      "outcomes": [
+        "API quota",
+        "DDoS 완화 일부",
+        "공정한 자원 사용"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "rate limit",
+        "token bucket",
+        "throttling"
+      ]
+    },
+    {
+      "id": "distributed-time-failure",
+      "titleKo": "분산 시스템의 시간과 부분 실패",
+      "titleEn": "Time · Partial Failure",
+      "area": "distributed",
+      "subarea": "Failure",
+      "course": "분산 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "여러 서버에서는 일부만 느리거나 실패할 수 있고 정확한 시간도 공유하지 않는다는 기본 문제입니다.",
+      "prerequisites": [
+        "socket-tcp",
+        "distributed"
+      ],
+      "learn": [
+        "partial failure",
+        "timeout",
+        "clock",
+        "network delay"
+      ],
+      "outcomes": [
+        "timeout 설계",
+        "장애 판단",
+        "retry"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "partial failure",
+        "clock skew",
+        "timeout",
+        "부분 실패"
+      ]
+    },
+    {
+      "id": "replication-distributed",
+      "titleKo": "분산 복제",
+      "titleEn": "Distributed Replication",
+      "area": "distributed",
+      "subarea": "Replication",
+      "course": "분산 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "같은 데이터를 여러 노드에 두고 복제 지연과 장애를 다루는 방법입니다.",
+      "prerequisites": [
+        "replication-db"
+      ],
+      "learn": [
+        "leader/follower",
+        "sync/async",
+        "replication lag",
+        "failover"
+      ],
+      "outcomes": [
+        "Kafka replica",
+        "DB replica",
+        "read consistency"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "distributed replication",
+        "leader follower",
+        "replication"
+      ]
+    },
+    {
+      "id": "partition-consistency",
+      "titleKo": "파티션과 일관성",
+      "titleEn": "Partition · Consistency",
+      "area": "distributed",
+      "subarea": "Consistency",
+      "course": "분산 시스템",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "네트워크가 나뉘거나 여러 복사본이 있을 때 어떤 값을 옳다고 볼지 다룹니다.",
+      "prerequisites": [
+        "replication-distributed"
+      ],
+      "learn": [
+        "network partition",
+        "strong/eventual consistency",
+        "availability",
+        "quorum"
+      ],
+      "outcomes": [
+        "CAP를 과장하지 않고 이해",
+        "read/write consistency"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "network partition",
+        "eventual consistency",
+        "strong consistency",
+        "cap"
+      ]
+    },
+    {
+      "id": "consensus-coordination",
+      "titleKo": "합의와 조정",
+      "titleEn": "Consensus · Coordination",
+      "area": "distributed",
+      "subarea": "Consensus",
+      "course": "분산 시스템",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "여러 노드가 하나의 결정이나 리더에 동의해야 할 때 필요한 원리를 봅니다.",
+      "prerequisites": [
+        "partition-consistency"
+      ],
+      "learn": [
+        "leader election",
+        "term",
+        "log replication",
+        "quorum"
+      ],
+      "outcomes": [
+        "Raft/Paxos 입문",
+        "metadata coordination"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "consensus",
+        "raft",
+        "paxos",
+        "leader election"
+      ]
+    },
+    {
+      "id": "crypto-hash-encryption",
+      "titleKo": "해시·암호화 기초",
+      "titleEn": "Hash · Encryption Basics",
+      "area": "security",
+      "subarea": "Crypto",
+      "course": "보안 기초",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "무결성 확인용 해시와 데이터를 숨기는 암호화가 어떻게 다른지 구분합니다.",
+      "prerequisites": [
+        "data-representation"
+      ],
+      "learn": [
+        "hash",
+        "symmetric encryption",
+        "asymmetric encryption",
+        "key"
+      ],
+      "outcomes": [
+        "TLS",
+        "password storage",
+        "signature 이해"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "hash",
+        "encryption",
+        "aes",
+        "rsa",
+        "암호화"
+      ]
+    },
+    {
+      "id": "authentication-authorization",
+      "titleKo": "인증과 인가",
+      "titleEn": "Authentication · Authorization",
+      "area": "security",
+      "subarea": "Identity",
+      "course": "보안 기초",
+      "importance": "core",
+      "level": "A",
+      "kind": "required",
+      "summary": "누구인지 확인하는 인증과 무엇을 할 수 있는지 정하는 인가를 구분합니다.",
+      "prerequisites": [
+        "users-permissions"
+      ],
+      "learn": [
+        "identity",
+        "credential",
+        "role",
+        "permission"
+      ],
+      "outcomes": [
+        "로그인",
+        "RBAC",
+        "API 권한"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "authentication",
+        "authorization",
+        "authn",
+        "authz",
+        "인증",
+        "인가"
+      ]
+    },
+    {
+      "id": "session-token",
+      "titleKo": "세션과 토큰",
+      "titleEn": "Session · Token",
+      "area": "security",
+      "subarea": "Session",
+      "course": "보안 기초",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "로그인 상태를 서버 세션이나 토큰으로 유지하는 대표 방식을 봅니다.",
+      "prerequisites": [
+        "http-tls",
+        "authentication-authorization"
+      ],
+      "learn": [
+        "cookie",
+        "session id",
+        "token",
+        "expiration"
+      ],
+      "outcomes": [
+        "웹 로그인",
+        "JWT를 볼 때 필요한 기준"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "session",
+        "cookie",
+        "jwt",
+        "token"
+      ]
+    },
+    {
+      "id": "least-privilege-capability",
+      "titleKo": "최소 권한과 Capability",
+      "titleEn": "Least Privilege · Capability",
+      "area": "security",
+      "subarea": "Permission",
+      "course": "보안 기초",
+      "importance": "connect",
+      "level": "A",
+      "kind": "single",
+      "summary": "필요한 권한만 주고 프로세스 권한을 세분화하는 기본 보안 원칙입니다.",
+      "prerequisites": [
+        "users-permissions",
+        "namespace"
+      ],
+      "learn": [
+        "least privilege",
+        "Linux capability",
+        "root",
+        "sandbox"
+      ],
+      "outcomes": [
+        "container security",
+        "서비스 계정 권한"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "least privilege",
+        "capability",
+        "capabilities",
+        "최소 권한"
+      ]
+    },
+    {
+      "id": "memory-layout-alignment",
+      "titleKo": "메모리 배치와 정렬",
+      "titleEn": "Memory Layout · Alignment",
+      "area": "native",
+      "subarea": "Memory",
+      "course": "시스템 프로그래밍",
+      "importance": "deep",
+      "level": "B",
+      "kind": "single",
+      "summary": "struct와 데이터가 메모리에 어떤 순서와 간격으로 놓이는지 봅니다.",
+      "prerequisites": [
+        "native-c-abi",
+        "data-representation"
+      ],
+      "learn": [
+        "alignment",
+        "padding",
+        "struct layout",
+        "endianness"
+      ],
+      "outcomes": [
+        "ABI",
+        "binary protocol",
+        "native performance"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "alignment",
+        "padding",
+        "memory layout"
+      ]
+    },
+    {
+      "id": "interrupt-driver-kernel",
+      "titleKo": "커널 인터럽트와 장치 드라이버",
+      "titleEn": "Kernel Interrupt · Device Driver",
+      "area": "kernel",
+      "subarea": "Interrupt",
+      "course": "운영체제·커널",
+      "importance": "deep",
+      "level": "B",
+      "kind": "single",
+      "summary": "하드웨어 이벤트가 커널 드라이버를 거쳐 프로그램 I/O로 이어지는 경로를 봅니다.",
+      "prerequisites": [
+        "interrupt-syscall",
+        "dma-device-io"
+      ],
+      "learn": [
+        "IRQ",
+        "driver",
+        "device queue",
+        "bottom half 개념"
+      ],
+      "outcomes": [
+        "NIC·SSD 처리 경로",
+        "커널 I/O 추적"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "irq",
+        "device driver",
+        "kernel interrupt",
+        "드라이버"
+      ]
     }
   ]
 }
