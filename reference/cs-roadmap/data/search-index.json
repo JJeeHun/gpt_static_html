@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 3,
-  "description": "개념·과목·학년·수학 요구도까지 검색하는 정적 인덱스",
+  "schemaVersion": 4,
+  "description": "개념·과목·학년·수학 요구도를 함께 검색하는 전공 커리큘럼 인덱스",
   "entries": [
     {
       "term": "/proc",
@@ -371,7 +371,8 @@
         "hci-evaluation",
         "microcontroller-io",
         "memory-mapped-io",
-        "real-time-scheduling"
+        "real-time-scheduling",
+        "capstone-system-project"
       ]
     },
     {
@@ -793,6 +794,12 @@
       "term": "구문 분석",
       "conceptIds": [
         "compiler-parsing"
+      ]
+    },
+    {
+      "term": "구현과 테스트",
+      "conceptIds": [
+        "capstone-system-project"
       ]
     },
     {
@@ -1631,7 +1638,8 @@
         "hci-evaluation",
         "microcontroller-io",
         "memory-mapped-io",
-        "real-time-scheduling"
+        "real-time-scheduling",
+        "capstone-system-project"
       ]
     },
     {
@@ -2148,6 +2156,12 @@
       ]
     },
     {
+      "term": "문서와 발표",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
       "term": "문자 인코딩",
       "conceptIds": [
         "data-representation"
@@ -2236,6 +2250,12 @@
       ]
     },
     {
+      "term": "문제 정의",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
       "term": "문제 해결",
       "conceptIds": [
         "recursion-divide-conquer",
@@ -2306,6 +2326,12 @@
       ]
     },
     {
+      "term": "배포·운영",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
       "term": "백업",
       "conceptIds": [
         "backup-recovery"
@@ -2342,7 +2368,8 @@
         "slo-reliability",
         "hci-usability",
         "hci-accessibility",
-        "hci-evaluation"
+        "hci-evaluation",
+        "capstone-system-project"
       ]
     },
     {
@@ -3086,7 +3113,8 @@
     {
       "term": "설계 의사결정",
       "conceptIds": [
-        "requirements-modeling"
+        "requirements-modeling",
+        "capstone-system-project"
       ]
     },
     {
@@ -3433,7 +3461,8 @@
         "hci-accessibility",
         "hci-evaluation",
         "microcontroller-io",
-        "memory-mapped-io"
+        "memory-mapped-io",
+        "capstone-system-project"
       ]
     },
     {
@@ -3525,7 +3554,8 @@
         "hci-accessibility",
         "hci-evaluation",
         "microcontroller-io",
-        "memory-mapped-io"
+        "memory-mapped-io",
+        "capstone-system-project"
       ]
     },
     {
@@ -3688,7 +3718,8 @@
         "hci-accessibility",
         "hci-evaluation",
         "microcontroller-io",
-        "memory-mapped-io"
+        "memory-mapped-io",
+        "capstone-system-project"
       ]
     },
     {
@@ -3966,6 +3997,12 @@
       ]
     },
     {
+      "term": "아키텍처 설계",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
       "term": "안전한 변경",
       "conceptIds": [
         "testing-strategy"
@@ -4130,6 +4167,12 @@
       ]
     },
     {
+      "term": "여러 전공 지식을 실제 문제 하나에 통합해 요구사항부터 설계·구현·테스트·운영까지 경험합니다.",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
       "term": "여러 층의 선형 변환과 비선형 함수를 조합해 복잡한 패턴을 학습합니다.",
       "conceptIds": [
         "neural-network-basics"
@@ -4185,6 +4228,12 @@
       "term": "요구사항과 모델링",
       "conceptIds": [
         "requirements-modeling"
+      ]
+    },
+    {
+      "term": "요구사항과 범위",
+      "conceptIds": [
+        "capstone-system-project"
       ]
     },
     {
@@ -4759,6 +4808,12 @@
       ]
     },
     {
+      "term": "전공 지식 통합",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
       "term": "전자서명과 PKI",
       "conceptIds": [
         "digital-signature-pki"
@@ -4918,7 +4973,21 @@
     },
     {
       "term": "졸업 프로젝트",
-      "conceptIds": []
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
+      "term": "종합 설계",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
+      "term": "종합 시스템 설계 프로젝트",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
     },
     {
       "term": "좌표 변환",
@@ -5128,8 +5197,16 @@
       ]
     },
     {
+      "term": "캡스톤",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
       "term": "캡스톤·종합 프로젝트",
-      "conceptIds": []
+      "conceptIds": [
+        "capstone-system-project"
+      ]
     },
     {
       "term": "커널",
@@ -5513,7 +5590,8 @@
         "hci-evaluation",
         "microcontroller-io",
         "memory-mapped-io",
-        "real-time-scheduling"
+        "real-time-scheduling",
+        "capstone-system-project"
       ]
     },
     {
@@ -5876,6 +5954,12 @@
       "term": "특정 시간 동안 허용할 요청 수를 제한해 서버와 외부 시스템을 보호합니다.",
       "conceptIds": [
         "rate-limiting"
+      ]
+    },
+    {
+      "term": "팀 프로젝트 경험",
+      "conceptIds": [
+        "capstone-system-project"
       ]
     },
     {
@@ -6820,7 +6904,8 @@
         "slo-reliability",
         "hci-usability",
         "hci-accessibility",
-        "hci-evaluation"
+        "hci-evaluation",
+        "capstone-system-project"
       ]
     },
     {
@@ -7287,11 +7372,21 @@
     },
     {
       "term": "Capstone",
-      "conceptIds": []
+      "conceptIds": [
+        "capstone-system-project"
+      ]
     },
     {
       "term": "Capstone Project",
-      "conceptIds": []
+      "conceptIds": [
+        "capstone-system-project"
+      ]
+    },
+    {
+      "term": "Capstone System Project",
+      "conceptIds": [
+        "capstone-system-project"
+      ]
     },
     {
       "term": "capture",
@@ -14008,7 +14103,8 @@
         "slo-reliability",
         "hci-usability",
         "hci-accessibility",
-        "hci-evaluation"
+        "hci-evaluation",
+        "capstone-system-project"
       ]
     },
     {
