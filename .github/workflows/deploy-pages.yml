@@ -40,7 +40,7 @@ jobs:
           SHORT_SHA="${GITHUB_SHA::7}"
           DEPLOYED_AT="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
-          cat > src/cli/build-info.json <<EOF
+          cat > src/build-info.json <<EOF
           {
             "branch": "$GITHUB_REF_NAME",
             "environment": "$MODE",
@@ -49,6 +49,9 @@ jobs:
             "deployedAt": "$DEPLOYED_AT"
           }
           EOF
+
+          mkdir -p src/cli
+          cp src/build-info.json src/cli/build-info.json
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
