@@ -3,31 +3,40 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>CS Roadmap · UI Mockup</title>
+  <title>Foundation Roadmap · UI Prototype</title>
   <style>
     :root {
       color-scheme: light;
-      --bg: #f6f8fb;
+      --bg: #f5f7fa;
       --surface: #ffffff;
-      --surface-soft: #f9fafb;
-      --surface-strong: #eef2f7;
-      --text: #172033;
+      --surface-soft: #f8fafc;
+      --surface-hover: #f3f6fa;
+      --text: #162033;
+      --text-soft: #344054;
       --muted: #667085;
-      --line: #dfe4ea;
-      --line-strong: #c9d1dc;
-      --brand: #315efb;
-      --brand-soft: #eef3ff;
-      --success: #18794e;
-      --success-soft: #eaf8f1;
-      --warning: #8a5a00;
-      --warning-soft: #fff7df;
-      --native: #6f42c1;
-      --native-soft: #f4efff;
+      --muted-soft: #98a2b3;
+      --line: #e1e6ed;
+      --line-strong: #cfd6e1;
+      --primary: #315efb;
+      --primary-soft: #edf2ff;
+      --primary-line: #c9d5ff;
+      --core: #147a52;
+      --core-soft: #e9f8f1;
+      --core-line: #b9e4d0;
+      --connect: #936100;
+      --connect-soft: #fff7df;
+      --connect-line: #f0d899;
+      --deep: #7047b7;
+      --deep-soft: #f5efff;
+      --deep-line: #d9c8f5;
+      --danger: #b42318;
+      --shadow: 0 1rem 2.5rem rgba(16, 24, 40, .07);
+      --shadow-soft: 0 .35rem 1.2rem rgba(16, 24, 40, .05);
       --radius-sm: .65rem;
       --radius-md: .9rem;
-      --radius-lg: 1.2rem;
-      --shadow: 0 .8rem 2.2rem rgba(23, 32, 51, .07);
-      --content: 92rem;
+      --radius-lg: 1.15rem;
+      --content: 96rem;
+      --header-h: 4.15rem;
     }
 
     * { box-sizing: border-box; }
@@ -36,35 +45,35 @@
       margin: 0;
       background: var(--bg);
       color: var(--text);
-      font-family: Inter, Pretendard, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Pretendard, Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.55;
     }
     button, input { font: inherit; }
     button { cursor: pointer; }
     a { color: inherit; }
-    .sr-only {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      padding: 0;
-      margin: -1px;
-      overflow: hidden;
-      clip: rect(0,0,0,0);
-      white-space: nowrap;
-      border: 0;
+    [hidden] { display: none !important; }
+
+    .icon {
+      width: 1rem;
+      height: 1rem;
+      stroke-width: 1.9;
+      flex: 0 0 auto;
     }
+    .icon-sm { width: .88rem; height: .88rem; }
+    .icon-lg { width: 1.25rem; height: 1.25rem; }
 
     .topbar {
       position: sticky;
       top: 0;
-      z-index: 30;
-      border-bottom: 1px solid rgba(223, 228, 234, .9);
-      background: rgba(246, 248, 251, .9);
+      z-index: 50;
+      min-height: var(--header-h);
+      border-bottom: 1px solid rgba(225, 230, 237, .92);
+      background: rgba(245, 247, 250, .9);
       backdrop-filter: blur(1rem);
     }
     .topbar-inner {
       max-width: var(--content);
-      min-height: 4rem;
+      min-height: var(--header-h);
       margin: 0 auto;
       padding: 0 1.25rem;
       display: flex;
@@ -83,109 +92,180 @@
       height: 2rem;
       display: grid;
       place-items: center;
-      border-radius: .7rem;
+      border-radius: .65rem;
+      background: var(--text);
       color: #fff;
-      background: var(--brand);
-      font-size: .85rem;
-      letter-spacing: -.02em;
     }
-    .top-nav {
+    .brand small {
+      color: var(--muted);
+      font-weight: 650;
+      margin-left: .25rem;
+    }
+    .top-actions {
+      margin-left: auto;
       display: flex;
       align-items: center;
-      gap: .25rem;
-      overflow-x: auto;
-      scrollbar-width: none;
-      margin-left: .75rem;
+      gap: .5rem;
     }
-    .top-nav::-webkit-scrollbar { display: none; }
-    .nav-btn {
-      border: 0;
-      background: transparent;
-      color: var(--muted);
-      padding: .55rem .75rem;
+    .quiet-btn {
+      min-height: 2.35rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      border: 1px solid var(--line);
       border-radius: .7rem;
-      font-size: .9rem;
-      white-space: nowrap;
-    }
-    .nav-btn:hover,
-    .nav-btn.active {
-      color: var(--text);
+      padding: .45rem .7rem;
       background: var(--surface);
-      box-shadow: 0 .1rem .4rem rgba(23,32,51,.05);
+      color: var(--text-soft);
+      font-size: .8rem;
     }
-    .top-help {
-      margin-left: auto;
-      color: var(--muted);
-      font-size: .82rem;
-      white-space: nowrap;
-    }
+    .quiet-btn:hover { border-color: var(--line-strong); background: var(--surface-hover); }
 
     .hero {
       max-width: var(--content);
       margin: 0 auto;
-      padding: 2.6rem 1.25rem 1.4rem;
+      padding: 2.5rem 1.25rem 1.2rem;
     }
-    .hero-kicker {
-      margin: 0 0 .5rem;
-      color: var(--brand);
-      font-weight: 800;
-      font-size: .8rem;
-      letter-spacing: .05em;
+    .hero-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(20rem, 35rem);
+      gap: 2rem;
+      align-items: end;
+    }
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      margin-bottom: .7rem;
+      color: var(--primary);
+      font-size: .76rem;
+      font-weight: 850;
+      letter-spacing: .04em;
     }
     .hero h1 {
+      max-width: 50rem;
       margin: 0;
-      max-width: 55rem;
-      font-size: clamp(2rem, 4vw, 3.45rem);
-      line-height: 1.08;
-      letter-spacing: -.045em;
+      font-size: clamp(2rem, 4.1vw, 3.65rem);
+      line-height: 1.06;
+      letter-spacing: -.05em;
     }
     .hero-desc {
-      max-width: 48rem;
+      max-width: 51rem;
       margin: 1rem 0 0;
       color: var(--muted);
-      font-size: 1.02rem;
+      font-size: 1rem;
     }
-    .search-wrap {
-      max-width: 48rem;
-      margin-top: 1.5rem;
+    .hero-rule {
+      margin-top: 1rem;
       display: flex;
-      gap: .6rem;
-      padding: .55rem;
+      align-items: center;
+      gap: .45rem;
+      color: var(--text-soft);
+      font-size: .82rem;
+      font-weight: 700;
+    }
+    .search-card {
       border: 1px solid var(--line);
-      border-radius: 1rem;
+      border-radius: var(--radius-lg);
       background: var(--surface);
+      padding: 1rem;
       box-shadow: var(--shadow);
     }
-    .search-wrap input {
+    .search-card label {
+      display: block;
+      margin-bottom: .45rem;
+      color: var(--text-soft);
+      font-size: .78rem;
+      font-weight: 800;
+    }
+    .search-box {
+      display: flex;
+      gap: .55rem;
+      border: 1px solid var(--line-strong);
+      border-radius: .85rem;
+      padding: .42rem;
+      background: var(--surface-soft);
+    }
+    .search-input-wrap {
       min-width: 0;
       flex: 1;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      padding: 0 .55rem;
+      color: var(--muted);
+    }
+    .search-box input {
+      min-width: 0;
+      width: 100%;
       border: 0;
       outline: 0;
-      padding: .55rem .65rem;
-      color: var(--text);
       background: transparent;
+      color: var(--text);
+      padding: .55rem 0;
     }
-    .search-wrap input::placeholder { color: #98a2b3; }
-    .search-btn {
+    .search-submit {
       border: 0;
-      border-radius: .75rem;
-      padding: .6rem .9rem;
-      background: var(--brand);
+      border-radius: .7rem;
+      background: var(--primary);
       color: #fff;
-      font-weight: 750;
+      padding: .6rem .8rem;
+      font-size: .78rem;
+      font-weight: 800;
     }
-    .hero-hint {
-      margin: .65rem 0 0 .2rem;
+    .search-samples {
+      display: flex;
+      gap: .35rem;
+      flex-wrap: wrap;
+      margin-top: .65rem;
+    }
+    .sample {
+      border: 0;
+      border-radius: 99rem;
+      background: var(--surface-soft);
       color: var(--muted);
-      font-size: .8rem;
+      padding: .34rem .55rem;
+      font-size: .7rem;
     }
 
-    .workspace {
+    .legend-bar {
       max-width: var(--content);
       margin: 0 auto;
-      padding: 1rem 1.25rem 3rem;
+      padding: .2rem 1.25rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      flex-wrap: wrap;
+    }
+    .legend-title {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 800;
+      margin-right: .2rem;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      border: 1px solid var(--line);
+      border-radius: 99rem;
+      padding: .28rem .5rem;
+      font-size: .67rem;
+      font-weight: 800;
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .badge.core { background: var(--core-soft); border-color: var(--core-line); color: var(--core); }
+    .badge.connect { background: var(--connect-soft); border-color: var(--connect-line); color: var(--connect); }
+    .badge.deep { background: var(--deep-soft); border-color: var(--deep-line); color: var(--deep); }
+    .badge.domain { background: var(--surface-soft); color: var(--muted); font-weight: 750; }
+
+    .layout {
+      max-width: var(--content);
+      margin: 0 auto;
+      padding: 0 1.25rem 3.5rem;
       display: grid;
-      grid-template-columns: 13rem minmax(0, 1fr) 21rem;
+      grid-template-columns: 12.5rem minmax(0, 1fr) 21.5rem;
       gap: 1rem;
       align-items: start;
     }
@@ -194,341 +274,525 @@
       border: 1px solid var(--line);
       border-radius: var(--radius-lg);
       background: var(--surface);
-      box-shadow: 0 .4rem 1.6rem rgba(23, 32, 51, .04);
+      box-shadow: var(--shadow-soft);
     }
+
     .side {
       position: sticky;
-      top: 5rem;
-      padding: .8rem;
+      top: calc(var(--header-h) + .8rem);
+      padding: .75rem;
     }
-    .side-title {
-      margin: .35rem .45rem .55rem;
+    .side-head {
+      margin: .3rem .45rem .6rem;
       color: var(--muted);
-      font-size: .76rem;
-      font-weight: 800;
-      letter-spacing: .05em;
-    }
-    .track-btn {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      gap: .7rem;
-      border: 0;
-      background: transparent;
-      color: var(--muted);
-      text-align: left;
-      padding: .7rem .75rem;
-      border-radius: .75rem;
-      font-size: .91rem;
-    }
-    .track-btn:hover { background: var(--surface-soft); color: var(--text); }
-    .track-btn.active { background: var(--brand-soft); color: var(--brand); font-weight: 800; }
-    .track-dot {
-      width: .55rem;
-      height: .55rem;
-      border-radius: 99rem;
-      background: currentColor;
-      opacity: .75;
-      flex: 0 0 auto;
-    }
-    .side-note {
-      margin-top: .85rem;
-      padding: .8rem;
-      border-radius: .8rem;
-      background: var(--surface-soft);
-      color: var(--muted);
-      font-size: .78rem;
-    }
-
-    .roadmap {
-      padding: 1.2rem;
-    }
-    .section-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 1rem;
-      margin-bottom: 1rem;
-    }
-    .section-head h2 {
-      margin: 0;
-      font-size: 1.25rem;
-      letter-spacing: -.02em;
-    }
-    .section-head p {
-      margin: .3rem 0 0;
-      color: var(--muted);
-      font-size: .86rem;
-    }
-    .view-chip {
-      flex: 0 0 auto;
-      border: 1px solid var(--line);
-      border-radius: 99rem;
-      background: var(--surface-soft);
-      color: var(--muted);
-      padding: .4rem .65rem;
-      font-size: .75rem;
-    }
-
-    .lane {
-      display: grid;
-      grid-template-columns: 8rem minmax(0,1fr);
-      gap: 1rem;
-      padding: 1rem 0;
-      border-top: 1px solid var(--line);
-    }
-    .lane:first-of-type { border-top: 0; }
-    .lane-title {
-      padding-top: .2rem;
-    }
-    .lane-title strong {
-      display: block;
-      font-size: .88rem;
-    }
-    .lane-title span {
-      display: block;
-      margin-top: .25rem;
-      color: var(--muted);
-      font-size: .74rem;
-    }
-    .node-row {
-      display: flex;
-      gap: .55rem;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .node {
-      position: relative;
-      border: 1px solid var(--line);
-      border-radius: .8rem;
-      background: var(--surface);
-      color: var(--text);
-      padding: .7rem .8rem;
-      text-align: left;
-      min-height: 3.6rem;
-      transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
-    }
-    .node:hover {
-      transform: translateY(-.08rem);
-      border-color: var(--line-strong);
-      box-shadow: 0 .35rem 1rem rgba(23, 32, 51, .06);
-    }
-    .node.active {
-      border-color: #aabcfb;
-      background: var(--brand-soft);
-      box-shadow: 0 0 0 .15rem rgba(49, 94, 251, .07);
-    }
-    .node small {
-      display: block;
-      color: var(--muted);
-      font-size: .66rem;
-      margin-bottom: .15rem;
-    }
-    .node b {
-      font-size: .86rem;
-      letter-spacing: -.01em;
-    }
-    .connector {
-      color: #a0a9b8;
-      font-weight: 800;
-      align-self: center;
-      user-select: none;
-    }
-    .node.native {
-      border-color: #ded2f8;
-      background: var(--native-soft);
-    }
-    .node.native small { color: var(--native); }
-
-    .application {
-      margin-top: 1rem;
-      padding: 1.2rem;
-    }
-    .flow-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: .7rem;
-    }
-    .flow-card {
-      border: 1px solid var(--line);
-      border-radius: .9rem;
-      background: var(--surface-soft);
-      padding: .9rem;
-    }
-    .flow-card strong {
-      font-size: .88rem;
-    }
-    .flow-card p {
-      margin: .35rem 0 .7rem;
-      color: var(--muted);
-      font-size: .76rem;
-    }
-    .flow {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: .35rem;
-      color: #475467;
-      font-size: .72rem;
-    }
-    .flow i { font-style: normal; color: #98a2b3; }
-
-    .detail {
-      position: sticky;
-      top: 5rem;
-      overflow: hidden;
-    }
-    .detail-head {
-      padding: 1rem 1rem .85rem;
-      border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, var(--brand-soft), #fff);
-    }
-    .detail-eyebrow {
-      color: var(--brand);
       font-size: .7rem;
       font-weight: 850;
       letter-spacing: .04em;
     }
-    .detail h2 {
-      margin: .25rem 0 0;
-      font-size: 1.25rem;
-      letter-spacing: -.02em;
-    }
-    .detail-body { padding: 1rem; }
-    .summary {
-      margin: 0;
-      font-size: .9rem;
-      color: #344054;
-    }
-    .detail-section {
-      margin-top: 1.1rem;
-    }
-    .detail-section h3 {
-      margin: 0 0 .5rem;
-      color: var(--muted);
-      font-size: .7rem;
-      letter-spacing: .05em;
-    }
-    .tag-list {
+    .side-btn {
+      width: 100%;
       display: flex;
-      flex-wrap: wrap;
-      gap: .4rem;
-    }
-    .tag {
-      border: 1px solid var(--line);
-      border-radius: 99rem;
-      background: var(--surface-soft);
-      padding: .35rem .55rem;
-      color: #475467;
-      font-size: .72rem;
-    }
-    .learn-list {
-      margin: 0;
-      padding-left: 1.05rem;
-      color: #344054;
-      font-size: .82rem;
-    }
-    .learn-list li + li { margin-top: .35rem; }
-    .ai-box {
-      margin-top: 1.1rem;
-      padding: .85rem;
-      border-radius: .85rem;
-      background: var(--success-soft);
-      color: #245e46;
-    }
-    .ai-box strong {
-      display: block;
+      align-items: center;
+      gap: .55rem;
+      border: 0;
+      border-radius: .7rem;
+      background: transparent;
+      color: var(--muted);
+      padding: .65rem .7rem;
+      text-align: left;
       font-size: .8rem;
     }
-    .ai-box p {
-      margin: .3rem 0 .75rem;
-      font-size: .74rem;
+    .side-btn:hover { background: var(--surface-hover); color: var(--text); }
+    .side-btn.active { background: var(--primary-soft); color: var(--primary); font-weight: 800; }
+    .side-divider {
+      height: 1px;
+      background: var(--line);
+      margin: .7rem .25rem;
     }
-    .ai-actions {
+    .side-note {
+      margin-top: .65rem;
+      padding: .8rem;
+      border-radius: .8rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: .72rem;
+    }
+    .side-note strong { display: block; color: var(--text-soft); margin-bottom: .2rem; }
+
+    .main-col { min-width: 0; }
+    .roadmap {
+      padding: 1rem;
+    }
+    .section-head {
       display: flex;
-      gap: .45rem;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: flex-start;
+      padding: .25rem .2rem 1rem;
+    }
+    .section-title-wrap {
+      display: flex;
+      align-items: flex-start;
+      gap: .7rem;
+    }
+    .section-icon {
+      width: 2.25rem;
+      height: 2.25rem;
+      display: grid;
+      place-items: center;
+      border-radius: .75rem;
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+    .section-head h2 {
+      margin: 0;
+      font-size: 1.18rem;
+      letter-spacing: -.025em;
+    }
+    .section-head p {
+      margin: .28rem 0 0;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+    .guide-pill {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      border-radius: 99rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      padding: .42rem .65rem;
+      font-size: .68rem;
+      font-weight: 750;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: .7rem;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 1.32rem;
+      top: 2rem;
+      bottom: 2rem;
+      width: .12rem;
+      background: var(--line);
+    }
+    .stage {
+      position: relative;
+      display: grid;
+      grid-template-columns: 2.7rem minmax(0, 1fr);
+      gap: .7rem;
+    }
+    .stage-index {
+      position: relative;
+      z-index: 2;
+      width: 2.7rem;
+      height: 2.7rem;
+      display: grid;
+      place-items: center;
+      border: .35rem solid var(--surface);
+      border-radius: 99rem;
+      background: var(--text);
+      color: #fff;
+      font-size: .72rem;
+      font-weight: 900;
+      box-shadow: 0 0 0 1px var(--line);
+    }
+    .stage-card {
+      min-width: 0;
+      border: 1px solid var(--line);
+      border-radius: .95rem;
+      background: var(--surface);
+      overflow: hidden;
+    }
+    .stage-head {
+      padding: .75rem .85rem .65rem;
+      display: flex;
+      gap: .8rem;
+      justify-content: space-between;
+      align-items: flex-start;
+      background: linear-gradient(180deg, #fff, var(--surface-soft));
+      border-bottom: 1px solid var(--line);
+    }
+    .stage-head h3 {
+      margin: 0;
+      font-size: .9rem;
+      letter-spacing: -.015em;
+    }
+    .stage-head p {
+      margin: .22rem 0 0;
+      color: var(--muted);
+      font-size: .7rem;
+    }
+    .stage-domain {
+      flex: 0 0 auto;
+      color: var(--muted-soft);
+      font-size: .66rem;
+      font-weight: 800;
+      letter-spacing: .04em;
+    }
+    .concepts {
+      padding: .7rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(10.8rem, 1fr));
+      gap: .5rem;
+    }
+    .concept {
+      min-width: 0;
+      min-height: 4.45rem;
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+      background: var(--surface);
+      color: var(--text);
+      padding: .67rem;
+      text-align: left;
+      transition: border-color .14s ease, background .14s ease, transform .14s ease, box-shadow .14s ease;
+    }
+    .concept:hover {
+      transform: translateY(-.06rem);
+      border-color: var(--line-strong);
+      background: var(--surface-hover);
+      box-shadow: 0 .25rem .8rem rgba(16, 24, 40, .05);
+    }
+    .concept.active {
+      border-color: var(--primary-line);
+      background: var(--primary-soft);
+      box-shadow: 0 0 0 .12rem rgba(49, 94, 251, .06);
+    }
+    .concept-icon {
+      width: 2rem;
+      height: 2rem;
+      display: grid;
+      place-items: center;
+      border-radius: .62rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      flex: 0 0 auto;
+    }
+    .concept.active .concept-icon { background: #fff; color: var(--primary); }
+    .concept-main { min-width: 0; flex: 1; }
+    .concept-top {
+      display: flex;
+      justify-content: space-between;
+      gap: .4rem;
+      align-items: center;
+    }
+    .concept-title {
+      min-width: 0;
+      display: block;
+      color: var(--text);
+      font-size: .78rem;
+      font-weight: 850;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .concept-meta {
+      margin-top: .35rem;
+      display: flex;
+      gap: .3rem;
       flex-wrap: wrap;
     }
-    .ghost-btn, .primary-btn {
-      border-radius: .7rem;
-      padding: .55rem .7rem;
-      font-size: .74rem;
-      font-weight: 760;
+
+    .applications {
+      margin-top: 1rem;
+      padding: 1rem;
     }
-    .ghost-btn {
+    .app-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .6rem;
+    }
+    .app-card {
       border: 1px solid var(--line);
-      background: #fff;
-      color: var(--text);
+      border-radius: .85rem;
+      background: var(--surface-soft);
+      padding: .8rem;
     }
-    .primary-btn {
-      border: 1px solid #9fcdb8;
+    .app-card-head {
+      display: flex;
+      align-items: center;
+      gap: .45rem;
+      color: var(--text-soft);
+      font-size: .76rem;
+      font-weight: 850;
+    }
+    .app-card p {
+      margin: .35rem 0 .6rem;
+      color: var(--muted);
+      font-size: .68rem;
+    }
+    .flow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .3rem;
+      align-items: center;
+      color: var(--text-soft);
+      font-size: .66rem;
+    }
+    .flow .arrow { color: var(--muted-soft); }
+
+    .detail {
+      position: sticky;
+      top: calc(var(--header-h) + .8rem);
+      overflow: hidden;
+    }
+    .detail-head {
+      padding: 1rem;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(180deg, var(--primary-soft), #fff);
+    }
+    .detail-head-row {
+      display: flex;
+      align-items: flex-start;
+      gap: .7rem;
+    }
+    .detail-icon {
+      width: 2.45rem;
+      height: 2.45rem;
+      display: grid;
+      place-items: center;
+      border-radius: .8rem;
       background: #fff;
-      color: var(--success);
+      color: var(--primary);
+      border: 1px solid var(--primary-line);
+      flex: 0 0 auto;
+    }
+    .detail-eyebrow {
+      color: var(--primary);
+      font-size: .66rem;
+      font-weight: 900;
+      letter-spacing: .045em;
+    }
+    .detail h2 {
+      margin: .17rem 0 0;
+      font-size: 1.12rem;
+      letter-spacing: -.025em;
+    }
+    .detail-summary {
+      margin: .75rem 0 0;
+      color: var(--text-soft);
+      font-size: .8rem;
+    }
+    .detail-close {
+      display: none;
+      margin-left: auto;
+      width: 2rem;
+      height: 2rem;
+      border: 1px solid var(--line);
+      border-radius: .65rem;
+      background: #fff;
+      color: var(--muted);
+      place-items: center;
+    }
+    .detail-body { padding: 1rem; }
+    .detail-section + .detail-section { margin-top: 1rem; }
+    .detail-label {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      margin: 0 0 .5rem;
+      color: var(--muted);
+      font-size: .68rem;
+      font-weight: 850;
+      letter-spacing: .025em;
+    }
+    .route {
+      display: flex;
+      align-items: center;
+      gap: .35rem;
+      flex-wrap: wrap;
+      color: var(--text-soft);
+      font-size: .72rem;
+    }
+    .route .route-node {
+      border-radius: .5rem;
+      background: var(--surface-soft);
+      padding: .28rem .42rem;
+      font-weight: 750;
+    }
+    .keyword-list {
+      display: flex;
+      gap: .35rem;
+      flex-wrap: wrap;
+    }
+    .keyword {
+      border: 1px solid var(--line);
+      border-radius: .55rem;
+      background: var(--surface-soft);
+      color: var(--text-soft);
+      padding: .35rem .45rem;
+      font-size: .68rem;
+    }
+    .outcome-list {
+      margin: 0;
+      padding-left: 1rem;
+      color: var(--text-soft);
+      font-size: .73rem;
+    }
+    .outcome-list li + li { margin-top: .3rem; }
+    .study-actions {
+      margin-top: 1rem;
+      padding: .8rem;
+      border-radius: .85rem;
+      background: var(--core-soft);
+      border: 1px solid var(--core-line);
+    }
+    .study-actions strong {
+      display: flex;
+      align-items: center;
+      gap: .4rem;
+      color: var(--core);
+      font-size: .75rem;
+    }
+    .study-actions p {
+      margin: .35rem 0 .7rem;
+      color: #386b56;
+      font-size: .67rem;
+    }
+    .action-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .4rem;
+    }
+    .action-btn {
+      min-height: 2.25rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .35rem;
+      border: 1px solid var(--core-line);
+      border-radius: .65rem;
+      background: #fff;
+      color: var(--core);
+      padding: .45rem .5rem;
+      font-size: .68rem;
+      font-weight: 800;
     }
 
-    .mobile-track { display: none; }
+    .mobile-filter {
+      display: none;
+      gap: .35rem;
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding-bottom: .7rem;
+    }
+    .mobile-filter::-webkit-scrollbar { display: none; }
+    .mobile-filter button {
+      flex: 0 0 auto;
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      border: 1px solid var(--line);
+      border-radius: 99rem;
+      background: var(--surface);
+      color: var(--muted);
+      padding: .48rem .65rem;
+      font-size: .7rem;
+    }
+    .mobile-filter button.active {
+      border-color: var(--primary-line);
+      background: var(--primary-soft);
+      color: var(--primary);
+      font-weight: 800;
+    }
+    .detail-backdrop { display: none; }
 
-    @media (max-width: 72rem) {
-      .workspace {
-        grid-template-columns: 12rem minmax(0,1fr);
-      }
+    @media (max-width: 78rem) {
+      .layout { grid-template-columns: 12rem minmax(0, 1fr); }
       .detail {
         grid-column: 1 / -1;
         position: static;
         display: grid;
-        grid-template-columns: 18rem 1fr;
+        grid-template-columns: 21rem minmax(0, 1fr);
       }
-      .detail-head { border-right: 1px solid var(--line); border-bottom: 0; }
+      .detail-head { border-bottom: 0; border-right: 1px solid var(--line); }
+      .detail-body {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: .8rem 1rem;
+      }
+      .study-actions { margin-top: 0; }
     }
 
-    @media (max-width: 52rem) {
-      .top-help { display: none; }
-      .top-nav { margin-left: auto; max-width: 60vw; }
-      .hero { padding-top: 1.8rem; }
-      .workspace { display: block; padding-top: .4rem; }
+    @media (max-width: 60rem) {
+      .hero-row { grid-template-columns: 1fr; gap: 1.2rem; }
+      .search-card { max-width: 42rem; }
+      .layout { display: block; }
       .side { display: none; }
-      .mobile-track {
-        display: flex;
-        gap: .4rem;
-        overflow-x: auto;
-        padding-bottom: .8rem;
-        scrollbar-width: none;
+      .mobile-filter { display: flex; }
+      .app-grid { grid-template-columns: 1fr; }
+
+      .detail-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 79;
+        background: rgba(16, 24, 40, .35);
+        backdrop-filter: blur(.15rem);
       }
-      .mobile-track button {
-        flex: 0 0 auto;
-        border: 1px solid var(--line);
-        border-radius: 99rem;
-        background: var(--surface);
-        color: var(--muted);
-        padding: .5rem .7rem;
-        font-size: .75rem;
+      body.detail-open .detail-backdrop { display: block; }
+      .detail {
+        position: fixed;
+        z-index: 80;
+        left: .7rem;
+        right: .7rem;
+        bottom: .7rem;
+        top: auto;
+        max-height: min(76vh, 42rem);
+        overflow: auto;
+        display: block;
+        transform: translateY(calc(100% + 1.5rem));
+        transition: transform .2s ease;
+        box-shadow: 0 1.5rem 4rem rgba(16, 24, 40, .2);
       }
-      .mobile-track button.active {
-        background: var(--brand-soft);
-        border-color: #cbd6ff;
-        color: var(--brand);
-        font-weight: 800;
-      }
-      .roadmap, .application, .detail { margin-bottom: .8rem; }
-      .detail { display: block; }
+      body.detail-open .detail { transform: translateY(0); }
       .detail-head { border-right: 0; border-bottom: 1px solid var(--line); }
-      .flow-grid { grid-template-columns: 1fr; }
+      .detail-body { display: block; }
+      .detail-close { display: grid; }
     }
 
-    @media (max-width: 38rem) {
-      .topbar-inner { min-height: 3.6rem; padding: 0 .9rem; }
-      .brand span:last-child { display: none; }
-      .hero { padding: 1.4rem .9rem 1rem; }
-      .workspace { padding: .6rem .9rem 2rem; }
-      .search-wrap { display: block; }
-      .search-btn { width: 100%; margin-top: .35rem; }
-      .roadmap, .application { padding: .95rem; }
-      .lane { grid-template-columns: 1fr; gap: .55rem; }
-      .node-row { display: grid; grid-template-columns: 1fr 1fr; }
-      .connector { display: none; }
-      .node { width: 100%; }
+    @media (max-width: 42rem) {
+      :root { --header-h: 3.65rem; }
+      .topbar-inner { padding: 0 .9rem; }
+      .brand small { display: none; }
+      .top-actions .quiet-btn span { display: none; }
+      .hero { padding: 1.5rem .9rem .95rem; }
+      .hero h1 { font-size: clamp(1.85rem, 10vw, 2.75rem); }
+      .hero-desc { font-size: .88rem; }
+      .hero-rule { align-items: flex-start; font-size: .75rem; }
+      .search-card { padding: .8rem; }
+      .search-box { display: grid; grid-template-columns: 1fr; }
+      .search-submit { width: 100%; }
+      .legend-bar { padding: .15rem .9rem .8rem; }
+      .layout { padding: 0 .9rem 2.5rem; }
+      .roadmap, .applications { padding: .8rem; }
       .section-head { display: block; }
-      .view-chip { display: inline-block; margin-top: .55rem; }
+      .guide-pill { margin-top: .65rem; }
+      .timeline::before { left: 1.08rem; }
+      .stage { grid-template-columns: 2.2rem minmax(0,1fr); gap: .55rem; }
+      .stage-index {
+        width: 2.2rem;
+        height: 2.2rem;
+        border-width: .28rem;
+        font-size: .64rem;
+      }
+      .stage-head { display: block; }
+      .stage-domain { margin-top: .4rem; }
+      .concepts { grid-template-columns: 1fr; }
+      .concept { min-height: 4rem; }
+      .detail {
+        left: .5rem;
+        right: .5rem;
+        bottom: max(.5rem, env(safe-area-inset-bottom));
+      }
+      .action-row { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -536,57 +800,89 @@
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">
-        <span class="brand-mark">CS</span>
-        <span>Foundation Roadmap</span>
+        <span class="brand-mark"><i data-lucide="route" class="icon icon-lg"></i></span>
+        <span>Foundation Roadmap <small>Prototype</small></span>
       </div>
-      <nav class="top-nav" aria-label="빠른 분야 이동">
-        <button class="nav-btn active">전체</button>
-        <button class="nav-btn">OS</button>
-        <button class="nav-btn">Linux</button>
-        <button class="nav-btn">Network</button>
-        <button class="nav-btn">Database</button>
-        <button class="nav-btn">Native</button>
-      </nav>
-      <span class="top-help">/ 로 검색</span>
+      <div class="top-actions">
+        <button class="quiet-btn" type="button">
+          <i data-lucide="search" class="icon icon-sm"></i>
+          <span>검색</span>
+        </button>
+        <button class="quiet-btn" type="button">
+          <i data-lucide="book-open" class="icon icon-sm"></i>
+          <span>학습 자료</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <section class="hero">
-    <p class="hero-kicker">LEARNING MAP · PROTOTYPE</p>
-    <h1>모르는 단어가 나오면,<br>어디서 공부할지 바로 찾는다.</h1>
-    <p class="hero-desc">
-      이 페이지는 강의가 아닙니다. CS · OS · Linux · Network · Database의 핵심 지식이
-      어디에 있고, 무엇과 연결되는지 알려주는 학습 지도입니다.
-    </p>
+    <div class="hero-row">
+      <div>
+        <div class="kicker"><i data-lucide="compass" class="icon icon-sm"></i> 어디서 무엇을 공부할지 찾는 지도</div>
+        <h1>분야보다 먼저,<br>이해의 순서를 따라간다.</h1>
+        <p class="hero-desc">
+          OS를 다 끝낸 뒤 Network로 넘어가는 방식이 아닙니다.
+          다음 개념을 이해하는 데 필요한 기본지식을 분야를 넘나들며 연결합니다.
+        </p>
+        <div class="hero-rule">
+          <i data-lucide="info" class="icon"></i>
+          추천 순서는 길을 잃지 않게 하는 기준일 뿐입니다. 궁금한 개념은 언제든 먼저 확인해도 됩니다.
+        </div>
+      </div>
 
-    <div class="search-wrap">
-      <label class="sr-only" for="conceptSearch">개념 검색</label>
-      <input id="conceptSearch" type="search" placeholder="가상 메모리, TCP, cgroup, WAL, syscall ..." />
-      <button class="search-btn" type="button">학습 위치 찾기</button>
+      <div class="search-card">
+        <label for="search">지금 궁금한 단어나 기술이 있나요?</label>
+        <div class="search-box">
+          <div class="search-input-wrap">
+            <i data-lucide="search" class="icon"></i>
+            <input id="search" type="search" placeholder="가상 메모리, TCP, cgroup, WAL, syscall..." />
+          </div>
+          <button class="search-submit" type="button">학습 위치 찾기</button>
+        </div>
+        <div class="search-samples">
+          <button class="sample" type="button">Docker 메모리</button>
+          <button class="sample" type="button">TCP</button>
+          <button class="sample" type="button">Linux pipe</button>
+          <button class="sample" type="button">DB WAL</button>
+        </div>
+      </div>
     </div>
-    <p class="hero-hint">예: “Docker 메모리 제한이 궁금함” → Virtual Memory → cgroup → Docker</p>
   </section>
 
-  <main class="workspace">
+  <div class="legend-bar">
+    <span class="legend-title">표시 기준</span>
+    <span class="badge core"><i data-lucide="circle-check" class="icon icon-sm"></i>핵심</span>
+    <span class="badge connect"><i data-lucide="git-branch" class="icon icon-sm"></i>연결</span>
+    <span class="badge deep"><i data-lucide="chevrons-down" class="icon icon-sm"></i>심화</span>
+    <span class="badge domain">CS</span>
+    <span class="badge domain">OS</span>
+    <span class="badge domain">Linux</span>
+    <span class="badge domain">Network</span>
+  </div>
+
+  <main class="layout">
     <aside class="panel side">
-      <p class="side-title">학습 영역</p>
-      <button class="track-btn active"><span class="track-dot"></span>전체 지도</button>
-      <button class="track-btn"><span class="track-dot"></span>컴퓨터 기본</button>
-      <button class="track-btn"><span class="track-dot"></span>OS 핵심</button>
-      <button class="track-btn"><span class="track-dot"></span>Linux</button>
-      <button class="track-btn"><span class="track-dot"></span>Network</button>
-      <button class="track-btn"><span class="track-dot"></span>Storage · DB</button>
-      <button class="track-btn"><span class="track-dot"></span>Container</button>
-      <button class="track-btn"><span class="track-dot"></span>Native · Kernel</button>
+      <div class="side-head">빠른 이동</div>
+      <button class="side-btn active"><i data-lucide="route" class="icon"></i>추천 학습 순서</button>
+      <button class="side-btn"><i data-lucide="cpu" class="icon"></i>컴퓨터 기본</button>
+      <button class="side-btn"><i data-lucide="layers-3" class="icon"></i>OS 핵심</button>
+      <button class="side-btn"><i data-lucide="terminal" class="icon"></i>Linux</button>
+      <button class="side-btn"><i data-lucide="network" class="icon"></i>Network</button>
+      <button class="side-btn"><i data-lucide="database" class="icon"></i>Storage · DB</button>
+      <button class="side-btn"><i data-lucide="container" class="icon"></i>Container</button>
+      <button class="side-btn"><i data-lucide="code-2" class="icon"></i>Native · Kernel</button>
+      <div class="side-divider"></div>
       <div class="side-note">
-        순서대로 완독하는 커리큘럼이 아닙니다.<br>
-        궁금한 곳에서 시작하고 연결된 개념만 따라가면 됩니다.
+        <strong>이 페이지의 역할</strong>
+        개념 전체를 가르치지 않습니다.<br>
+        무엇을, 어디서, 어떤 순서로 볼지 안내합니다.
       </div>
     </aside>
 
-    <section>
-      <div class="mobile-track" aria-label="모바일 학습 영역">
-        <button class="active">전체</button>
+    <section class="main-col">
+      <div class="mobile-filter">
+        <button class="active"><i data-lucide="route" class="icon icon-sm"></i>추천 순서</button>
         <button>OS</button>
         <button>Linux</button>
         <button>Network</button>
@@ -596,264 +892,648 @@
 
       <section class="panel roadmap">
         <div class="section-head">
-          <div>
-            <h2>전체 학습 지도</h2>
-            <p>카드를 누르면 “어디서 무엇을 볼지”만 짧게 확인합니다.</p>
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="milestone" class="icon icon-lg"></i></div>
+            <div>
+              <h2>추천 학습 순서</h2>
+              <p>분야가 아니라 “다음 내용을 이해하기 좋은 순서”로 이어집니다.</p>
+            </div>
           </div>
-          <span class="view-chip">핵심 개념만 표시</span>
+          <span class="guide-pill"><i data-lucide="shuffle" class="icon icon-sm"></i>샛길 학습 가능</span>
         </div>
 
-        <div class="lane">
-          <div class="lane-title">
-            <strong>컴퓨터 기본</strong>
-            <span>데이터와 실행 기반</span>
-          </div>
-          <div class="node-row">
-            <button class="node" data-concept="data">
-              <small>Computer</small><b>Bit · Byte · Encoding</b>
-            </button>
-            <span class="connector">→</span>
-            <button class="node" data-concept="cpu">
-              <small>Computer</small><b>CPU · Cache</b>
-            </button>
-            <span class="connector">→</span>
-            <button class="node" data-concept="syscall">
-              <small>Computer / OS</small><b>Interrupt · Syscall</b>
-            </button>
-          </div>
-        </div>
+        <div class="timeline">
+          <article class="stage">
+            <div class="stage-index">01</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>컴퓨터가 데이터를 다루는 법</h3>
+                  <p>메모리·파일·네트워크 데이터가 결국 무엇인지 먼저 잡습니다.</p>
+                </div>
+                <span class="stage-domain">CS</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="data">
+                  <span class="concept-icon"><i data-lucide="binary" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Bit · Byte · Encoding</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">CS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="cpu">
+                  <span class="concept-icon"><i data-lucide="cpu" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">CPU · Cache · Memory</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">CS</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
 
-        <div class="lane">
-          <div class="lane-title">
-            <strong>OS 핵심</strong>
-            <span>프로그램 실행의 기본</span>
-          </div>
-          <div class="node-row">
-            <button class="node" data-concept="process">
-              <small>OS</small><b>Process · Thread</b>
-            </button>
-            <span class="connector">→</span>
-            <button class="node active" data-concept="vm">
-              <small>OS / Memory</small><b>Virtual Memory</b>
-            </button>
-            <button class="node" data-concept="fd">
-              <small>OS / I/O</small><b>File Descriptor</b>
-            </button>
-            <button class="node" data-concept="fs">
-              <small>OS / Storage</small><b>File System</b>
-            </button>
-          </div>
-        </div>
+          <article class="stage">
+            <div class="stage-index">02</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>프로그램이 실행되는 법</h3>
+                  <p>코드가 프로세스가 되고 OS와 만나는 흐름을 봅니다.</p>
+                </div>
+                <span class="stage-domain">OS · CS</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="process">
+                  <span class="concept-icon"><i data-lucide="app-window" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Process</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="syscall">
+                  <span class="concept-icon"><i data-lucide="shield-check" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Interrupt · Syscall</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS</span></span>
+                  </span>
+                </button>
+                <button class="concept active" data-id="vm">
+                  <span class="concept-icon"><i data-lucide="memory-stick" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Virtual Memory</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS · CS</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
 
-        <div class="lane">
-          <div class="lane-title">
-            <strong>Linux · Network</strong>
-            <span>OS가 실제로 보이는 곳</span>
-          </div>
-          <div class="node-row">
-            <button class="node" data-concept="shell">
-              <small>Linux</small><b>Shell · Pipe</b>
-            </button>
-            <button class="node" data-concept="cgroup">
-              <small>Linux</small><b>Namespace · cgroup</b>
-            </button>
-            <button class="node" data-concept="ip">
-              <small>Network</small><b>IP · Routing · DNS</b>
-            </button>
-            <button class="node" data-concept="tcp">
-              <small>Network</small><b>TCP · Socket</b>
-            </button>
-            <button class="node" data-concept="http">
-              <small>Network</small><b>HTTP · TLS</b>
-            </button>
-          </div>
-        </div>
+          <article class="stage">
+            <div class="stage-index">03</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>여러 작업이 함께 실행되는 법</h3>
+                  <p>서버·DB에서 계속 만나는 동시성의 바탕입니다.</p>
+                </div>
+                <span class="stage-domain">OS · CONCURRENCY</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="thread">
+                  <span class="concept-icon"><i data-lucide="split" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Thread · Context Switch</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="sync">
+                  <span class="concept-icon"><i data-lucide="lock-keyhole" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Lock · Atomic · Race</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS · DB</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
 
-        <div class="lane">
-          <div class="lane-title">
-            <strong>Native · Kernel</strong>
-            <span>더 깊게 내려가고 싶다면</span>
-          </div>
-          <div class="node-row">
-            <button class="node native" data-concept="native">
-              <small>Native</small><b>C · Pointer · ABI</b>
-            </button>
-            <span class="connector">→</span>
-            <button class="node native" data-concept="link">
-              <small>Native</small><b>Compile · Link · ELF</b>
-            </button>
-            <span class="connector">→</span>
-            <button class="node native" data-concept="kernel">
-              <small>Kernel</small><b>Scheduler · MM · VFS</b>
-            </button>
-          </div>
+          <article class="stage">
+            <div class="stage-index">04</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>프로그램이 읽고 쓰는 법</h3>
+                  <p>파일·파이프·디스크 I/O가 어디서 연결되는지 봅니다.</p>
+                </div>
+                <span class="stage-domain">OS · LINUX · STORAGE</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="fd">
+                  <span class="concept-icon"><i data-lucide="hash" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">File Descriptor</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS · Linux</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="fs">
+                  <span class="concept-icon"><i data-lucide="folder-tree" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">File System · VFS</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">OS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="pagecache">
+                  <span class="concept-icon"><i data-lucide="layers" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Page Cache · fsync</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Linux · DB</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage">
+            <div class="stage-index">05</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>서버가 서로 통신하는 법</h3>
+                  <p>주소 찾기부터 TCP 연결, HTTP 요청까지 한 흐름으로 봅니다.</p>
+                </div>
+                <span class="stage-domain">NETWORK · OS</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="ip">
+                  <span class="concept-icon"><i data-lucide="map" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">IP · Routing</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Network</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="dns">
+                  <span class="concept-icon"><i data-lucide="book-key" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">DNS</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Network</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="tcp">
+                  <span class="concept-icon"><i data-lucide="plug-zap" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">TCP · Socket</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Network · OS</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="http">
+                  <span class="concept-icon"><i data-lucide="globe-lock" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">HTTP · TLS</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Network</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="epoll">
+                  <span class="concept-icon"><i data-lucide="radio-tower" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">epoll · Event Loop</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Linux</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage">
+            <div class="stage-index">06</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>Linux에서 직접 다루는 법</h3>
+                  <p>원리를 CLI·관찰 도구·컨테이너 기반으로 연결합니다.</p>
+                </div>
+                <span class="stage-domain">LINUX · CONTAINER</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="shell">
+                  <span class="concept-icon"><i data-lucide="terminal" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Shell · Pipe</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Linux</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="observe">
+                  <span class="concept-icon"><i data-lucide="scan-search" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Observability</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">Linux</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="container">
+                  <span class="concept-icon"><i data-lucide="container" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Namespace · cgroup</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Linux</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage">
+            <div class="stage-index">07</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>런타임과 DB에 연결하기</h3>
+                  <p>기본지식이 JVM·DB에서 어떻게 보이는지 연결합니다.</p>
+                </div>
+                <span class="stage-domain">RUNTIME · DATABASE</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="jvm">
+                  <span class="concept-icon"><i data-lucide="coffee" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">JVM ↔ OS</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Runtime</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="mvcc">
+                  <span class="concept-icon"><i data-lucide="list-tree" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Index · Transaction · MVCC</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">DB</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="wal">
+                  <span class="concept-icon"><i data-lucide="database-backup" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Buffer Pool · WAL</span></span>
+                    <span class="concept-meta"><span class="badge core">핵심</span><span class="badge domain">DB · OS</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage">
+            <div class="stage-index">08</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>여러 서버로 확장하기</h3>
+                  <p>한 머신의 지식을 실패·복제·일관성 문제로 확장합니다.</p>
+                </div>
+                <span class="stage-domain">DISTRIBUTED</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="distributed">
+                  <span class="concept-icon"><i data-lucide="waypoints" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Replication · Consistency · Consensus</span></span>
+                    <span class="concept-meta"><span class="badge connect">연결</span><span class="badge domain">Distributed</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <article class="stage">
+            <div class="stage-index">09</div>
+            <div class="stage-card">
+              <header class="stage-head">
+                <div>
+                  <h3>더 아래로 내려가기</h3>
+                  <p>네이티브 실행 모델과 Linux 커널 내부가 궁금할 때 보는 길입니다.</p>
+                </div>
+                <span class="stage-domain">NATIVE · KERNEL</span>
+              </header>
+              <div class="concepts">
+                <button class="concept" data-id="native">
+                  <span class="concept-icon"><i data-lucide="braces" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">C · Pointer · ABI</span></span>
+                    <span class="concept-meta"><span class="badge deep">심화</span><span class="badge domain">Native</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="elf">
+                  <span class="concept-icon"><i data-lucide="package-open" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Compile · Link · ELF</span></span>
+                    <span class="concept-meta"><span class="badge deep">심화</span><span class="badge domain">Native</span></span>
+                  </span>
+                </button>
+                <button class="concept" data-id="kernel">
+                  <span class="concept-icon"><i data-lucide="microchip" class="icon"></i></span>
+                  <span class="concept-main">
+                    <span class="concept-top"><span class="concept-title">Scheduler · MM · VFS</span></span>
+                    <span class="concept-meta"><span class="badge deep">심화</span><span class="badge domain">Kernel</span></span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </article>
         </div>
       </section>
 
-      <section class="panel application">
+      <section class="panel applications">
         <div class="section-head">
-          <div>
-            <h2>기본지식이 실제 기술로 연결되는 과정</h2>
-            <p>“왜 이걸 공부하지?”를 잊지 않도록 대표 연결만 보여줍니다.</p>
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="git-merge" class="icon icon-lg"></i></div>
+            <div>
+              <h2>왜 배우는지 연결해서 보기</h2>
+              <p>대표 기술이 어떤 기본지식의 조합인지 빠르게 확인합니다.</p>
+            </div>
           </div>
         </div>
-
-        <div class="flow-grid">
-          <article class="flow-card">
-            <strong>Docker는 무엇으로 만들어질까?</strong>
-            <p>컨테이너를 Linux 기능으로 바라보는 흐름</p>
-            <div class="flow">
-              <span>Process</span><i>→</i><span>Namespace</span><i>→</i><span>cgroup</span><i>→</i><span>Docker</span>
-            </div>
+        <div class="app-grid">
+          <article class="app-card">
+            <div class="app-card-head"><i data-lucide="container" class="icon"></i>Docker</div>
+            <p>컨테이너는 새로운 OS가 아니라 Linux 기능의 조합입니다.</p>
+            <div class="flow"><span>Process</span><span class="arrow">→</span><span>Namespace</span><span class="arrow">→</span><span>cgroup</span><span class="arrow">→</span><span>Docker</span></div>
           </article>
-          <article class="flow-card">
-            <strong>서버는 많은 연결을 어떻게 받을까?</strong>
-            <p>고성능 서버의 기반을 따라가는 흐름</p>
-            <div class="flow">
-              <span>Socket</span><i>→</i><span>epoll</span><i>→</i><span>Event Loop</span><i>→</i><span>Nginx</span>
-            </div>
+          <article class="app-card">
+            <div class="app-card-head"><i data-lucide="network" class="icon"></i>고성능 서버</div>
+            <p>많은 연결을 처리하는 구조를 OS I/O에서 따라갑니다.</p>
+            <div class="flow"><span>FD</span><span class="arrow">→</span><span>Socket</span><span class="arrow">→</span><span>epoll</span><span class="arrow">→</span><span>Event Loop</span></div>
           </article>
-          <article class="flow-card">
-            <strong>DB는 데이터를 어떻게 지킬까?</strong>
-            <p>메모리와 디스크 사이를 이해하는 흐름</p>
-            <div class="flow">
-              <span>File System</span><i>→</i><span>Page Cache</span><i>→</i><span>fsync</span><i>→</i><span>WAL</span>
-            </div>
+          <article class="app-card">
+            <div class="app-card-head"><i data-lucide="database" class="icon"></i>Database</div>
+            <p>데이터를 빠르고 안전하게 저장하는 이유를 연결합니다.</p>
+            <div class="flow"><span>File System</span><span class="arrow">→</span><span>Page Cache</span><span class="arrow">→</span><span>fsync</span><span class="arrow">→</span><span>WAL</span></div>
           </article>
         </div>
       </section>
     </section>
 
-    <aside class="panel detail" aria-live="polite">
-      <div class="detail-head">
-        <div class="detail-eyebrow" id="detailDomain">OS · MEMORY</div>
-        <h2 id="detailTitle">Virtual Memory</h2>
-      </div>
+    <aside class="panel detail" id="detail" aria-live="polite">
+      <header class="detail-head">
+        <div class="detail-head-row">
+          <div class="detail-icon"><i data-lucide="memory-stick" class="icon icon-lg" id="detailIcon"></i></div>
+          <div>
+            <div class="detail-eyebrow" id="detailEyebrow">STEP 02 · OS / CS</div>
+            <h2 id="detailTitle">Virtual Memory</h2>
+          </div>
+          <button class="detail-close" id="detailClose" type="button" aria-label="닫기"><i data-lucide="x" class="icon"></i></button>
+        </div>
+        <p class="detail-summary" id="detailSummary">프로그램마다 자기만의 메모리가 있는 것처럼 보이게 하는 OS의 핵심 기능입니다.</p>
+      </header>
       <div class="detail-body">
-        <p class="summary" id="detailSummary">
-          프로그램마다 자기만의 메모리가 있는 것처럼 보이게 하는 OS의 핵심 기능입니다.
-        </p>
-
         <section class="detail-section">
-          <h3>먼저 보면 좋음</h3>
-          <div class="tag-list" id="detailBefore">
-            <span class="tag">Process</span>
-            <span class="tag">Memory 기초</span>
+          <h3 class="detail-label"><i data-lucide="route" class="icon icon-sm"></i>추천 위치</h3>
+          <div class="route" id="detailRoute">
+            <span class="route-node">Process</span><span>→</span><span class="route-node">Virtual Memory</span><span>→</span><span class="route-node">Page Cache</span>
           </div>
         </section>
 
         <section class="detail-section">
-          <h3>여기서 공부할 것</h3>
-          <ul class="learn-list" id="detailLearn">
-            <li>Virtual / Physical Address</li>
-            <li>Page · Page Table</li>
-            <li>Page Fault</li>
-            <li>MMU · TLB</li>
+          <h3 class="detail-label"><i data-lucide="list-checks" class="icon icon-sm"></i>여기서 볼 키워드</h3>
+          <div class="keyword-list" id="detailKeywords">
+            <span class="keyword">Virtual / Physical Address</span>
+            <span class="keyword">Page Table</span>
+            <span class="keyword">Page Fault</span>
+            <span class="keyword">MMU · TLB</span>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h3 class="detail-label"><i data-lucide="link" class="icon icon-sm"></i>알게 되면 연결되는 것</h3>
+          <ul class="outcome-list" id="detailOutcomes">
+            <li>JVM Heap과 RSS 차이</li>
+            <li>Docker Memory Limit과 OOM</li>
+            <li>mmap과 Page Cache 관계</li>
           </ul>
         </section>
 
-        <section class="detail-section">
-          <h3>이걸 알면 이해되는 것</h3>
-          <div class="tag-list" id="detailOutcome">
-            <span class="tag">Docker Memory</span>
-            <span class="tag">JVM RSS</span>
-            <span class="tag">OOM</span>
-            <span class="tag">mmap</span>
-          </div>
-        </section>
-
-        <div class="ai-box">
-          <strong>실제 학습은 AI · 책 · 강의에서</strong>
-          <p>로드맵은 학습 위치까지만 알려줍니다. 필요한 주제로 바로 넘깁니다.</p>
-          <div class="ai-actions">
-            <button class="primary-btn" type="button">AI 학습 프롬프트</button>
-            <button class="ghost-btn" type="button">책에서 찾을 키워드</button>
+        <div class="study-actions">
+          <strong><i data-lucide="sparkles" class="icon"></i>실제 학습은 밖에서 진행</strong>
+          <p>로드맵은 위치와 키워드까지만 제공합니다. AI·책·강의로 바로 이어가세요.</p>
+          <div class="action-row">
+            <button class="action-btn" type="button"><i data-lucide="copy" class="icon icon-sm"></i>AI 프롬프트</button>
+            <button class="action-btn" type="button"><i data-lucide="book-open" class="icon icon-sm"></i>책 키워드</button>
           </div>
         </div>
       </div>
     </aside>
   </main>
 
+  <div class="detail-backdrop" id="detailBackdrop"></div>
+
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script>
     (() => {
-      const concepts = {
+      const details = {
+        data: {
+          step: 'STEP 01 · CS', icon: 'binary', title: 'Bit · Byte · Encoding',
+          summary: '컴퓨터가 숫자·문자·파일·네트워크 데이터를 어떤 단위로 저장하고 해석하는지 보는 출발점입니다.',
+          route: ['Bit / Byte', 'Encoding', 'Memory'],
+          keywords: ['2진수 · 16진수', 'Byte', 'Character Encoding', 'Endianness 맛보기'],
+          outcomes: ['메모리와 파일이 byte로 보이는 이유', '문자 인코딩이 깨지는 이유', '네이티브 데이터 구조의 바탕']
+        },
+        cpu: {
+          step: 'STEP 01 · CS', icon: 'cpu', title: 'CPU · Cache · Memory',
+          summary: 'CPU와 메모리의 속도 차이, 캐시가 필요한 이유, 프로그램 성능이 하드웨어와 연결되는 지점을 봅니다.',
+          route: ['Bit / Byte', 'CPU · Cache', 'Process'],
+          keywords: ['CPU · Register', 'L1/L2/L3 Cache', 'Locality', 'Memory Latency'],
+          outcomes: ['자료구조에 따라 성능이 달라지는 이유', 'JVM·DB에서 메모리 접근이 중요한 이유']
+        },
+        process: {
+          step: 'STEP 02 · OS', icon: 'app-window', title: 'Process',
+          summary: '실행 중인 프로그램을 OS가 관리하는 기본 단위입니다.',
+          route: ['Program', 'Process', 'Thread / Virtual Memory'],
+          keywords: ['PID', 'Process State', 'fork / exec', '/proc'],
+          outcomes: ['Docker 안에서도 결국 프로세스가 실행됨', 'daemon·worker 구조의 바탕']
+        },
+        syscall: {
+          step: 'STEP 02 · OS / CS', icon: 'shield-check', title: 'Interrupt · Syscall',
+          summary: '일반 프로그램이 파일·네트워크 같은 커널 기능을 안전하게 요청하는 경계입니다.',
+          route: ['Process', 'User / Kernel Mode', 'System Call'],
+          keywords: ['User / Kernel Mode', 'Interrupt / Exception', 'System Call', 'strace'],
+          outcomes: ['파일 I/O가 커널을 거치는 이유', 'strace에 호출이 보이는 이유']
+        },
         vm: {
-          domain: 'OS · MEMORY',
-          title: 'Virtual Memory',
+          step: 'STEP 02 · OS / CS', icon: 'memory-stick', title: 'Virtual Memory',
           summary: '프로그램마다 자기만의 메모리가 있는 것처럼 보이게 하는 OS의 핵심 기능입니다.',
-          before: ['Process', 'Memory 기초'],
-          learn: ['Virtual / Physical Address', 'Page · Page Table', 'Page Fault', 'MMU · TLB'],
-          outcome: ['Docker Memory', 'JVM RSS', 'OOM', 'mmap']
+          route: ['Process', 'Virtual Memory', 'Page Cache / cgroup'],
+          keywords: ['Virtual / Physical Address', 'Page Table', 'Page Fault', 'MMU · TLB'],
+          outcomes: ['JVM Heap과 RSS 차이', 'Docker Memory Limit과 OOM', 'mmap과 Page Cache 관계']
         },
-        tcp: {
-          domain: 'NETWORK',
-          title: 'TCP · Socket',
-          summary: '프로그램끼리 네트워크 연결을 만들고 데이터를 주고받는 기본 구조입니다.',
-          before: ['IP · Routing', 'File Descriptor'],
-          learn: ['TCP 연결', 'Socket', 'Port', 'Timeout · Backlog'],
-          outcome: ['HTTP', 'DB Connection', 'Nginx', 'Docker Network']
+        thread: {
+          step: 'STEP 03 · OS', icon: 'split', title: 'Thread · Context Switch',
+          summary: '한 프로세스 안에서 여러 실행 흐름이 돌아가고 CPU가 작업을 바꾸는 방식을 봅니다.',
+          route: ['Process', 'Thread', 'Synchronization'],
+          keywords: ['Thread', 'Scheduling', 'Context Switch', 'CPU-bound / I/O-bound'],
+          outcomes: ['Thread Pool', 'Event Loop와 일반 Thread 차이', 'Thread가 많다고 항상 빠르지 않은 이유']
         },
-        cgroup: {
-          domain: 'LINUX · CONTAINER',
-          title: 'Namespace · cgroup',
-          summary: '프로세스를 격리하고 CPU·메모리 같은 자원 사용량을 제한하는 Linux 기능입니다.',
-          before: ['Process', 'Virtual Memory'],
-          learn: ['Namespace 종류', 'cgroup v2', 'CPU / Memory 제한', 'Resource 계측'],
-          outcome: ['Docker', 'Kubernetes', 'Container OOM', 'CPU Limit']
+        sync: {
+          step: 'STEP 03 · OS / DB', icon: 'lock-keyhole', title: 'Lock · Atomic · Race',
+          summary: '여러 작업이 같은 데이터를 동시에 바꿀 때 생기는 문제와 해결 방향입니다.',
+          route: ['Thread', 'Race Condition', 'Lock / Atomic'],
+          keywords: ['Critical Section', 'Mutex', 'Deadlock', 'Atomic / CAS'],
+          outcomes: ['Java synchronized', 'DB Lock과 Deadlock', 'Lock Contention']
         },
         fd: {
-          domain: 'OS · LINUX',
-          title: 'File Descriptor',
-          summary: 'Linux가 파일·소켓·파이프 같은 입출력 대상을 작은 번호로 다루는 방식입니다.',
-          before: ['Process', 'System Call'],
-          learn: ['stdin / stdout / stderr', 'open · read · write', 'Redirection', 'Pipe'],
-          outcome: ['Shell Pipeline', 'Socket', 'epoll', 'lsof']
+          step: 'STEP 04 · OS / LINUX', icon: 'hash', title: 'File Descriptor',
+          summary: 'Linux가 파일·소켓·파이프 같은 입출력 대상을 작은 번호로 다루는 공통 방식입니다.',
+          route: ['Syscall', 'File Descriptor', 'File / Socket / Pipe'],
+          keywords: ['stdin / stdout / stderr', 'open · read · write', 'Redirection', 'Pipe'],
+          outcomes: ['Shell Pipeline', 'Socket', 'epoll', 'lsof']
+        },
+        fs: {
+          step: 'STEP 04 · OS / STORAGE', icon: 'folder-tree', title: 'File System · VFS',
+          summary: '파일 이름이 실제 저장장치 데이터와 연결되고 Linux가 여러 파일시스템을 공통 방식으로 다루는 구조입니다.',
+          route: ['File Descriptor', 'File System', 'Page Cache'],
+          keywords: ['inode', 'directory entry', 'mount', 'VFS'],
+          outcomes: ['Docker Volume', 'DB Data File', 'mount와 inode 문제']
+        },
+        pagecache: {
+          step: 'STEP 04 · LINUX / DB', icon: 'layers', title: 'Page Cache · fsync',
+          summary: '파일에 쓴 데이터가 바로 디스크로 가지 않고 메모리를 거치는 이유를 봅니다.',
+          route: ['File System', 'Page Cache', 'WAL / Durability'],
+          keywords: ['Buffered I/O', 'Dirty Page', 'Writeback', 'fsync'],
+          outcomes: ['DB WAL이 필요한 이유', '쓰기 완료와 디스크 저장이 다른 이유']
+        },
+        ip: {
+          step: 'STEP 05 · NETWORK', icon: 'map', title: 'IP · Routing',
+          summary: '데이터가 어느 주소로 가고 여러 네트워크를 지나 어떤 경로를 선택하는지 보는 출발점입니다.',
+          route: ['IP Address', 'Routing', 'DNS / TCP'],
+          keywords: ['IP Address', 'Subnet', 'Gateway', 'Routing Table'],
+          outcomes: ['같은 네트워크와 다른 네트워크의 차이', 'Docker·Cloud Network의 바탕']
+        },
+        dns: {
+          step: 'STEP 05 · NETWORK', icon: 'book-key', title: 'DNS',
+          summary: '사람이 쓰는 도메인 이름을 실제 통신에 필요한 IP 주소로 바꾸는 과정입니다.',
+          route: ['IP / Routing', 'DNS', 'TCP / HTTP'],
+          keywords: ['Resolver', 'DNS Record', 'Cache', 'Name Resolution'],
+          outcomes: ['도메인 장애 원인', '서비스 이름과 실제 서버 주소의 관계']
+        },
+        tcp: {
+          step: 'STEP 05 · NETWORK / OS', icon: 'plug-zap', title: 'TCP · Socket',
+          summary: '프로그램끼리 네트워크 연결을 만들고 데이터를 주고받는 기본 구조입니다.',
+          route: ['IP / DNS', 'TCP · Socket', 'HTTP / epoll'],
+          keywords: ['3-way Handshake', 'Socket', 'Port', 'Timeout · Backlog'],
+          outcomes: ['HTTP 서버', 'DB Connection Pool', 'Nginx', 'Docker Port Mapping']
+        },
+        http: {
+          step: 'STEP 05 · NETWORK', icon: 'globe-lock', title: 'HTTP · TLS',
+          summary: '웹과 API가 요청·응답을 주고받고 HTTPS가 통신을 보호하는 기본 구조입니다.',
+          route: ['DNS / TCP', 'HTTP · TLS', 'API / Reverse Proxy'],
+          keywords: ['Request / Response', 'Method / Status', 'Header', 'TLS / Certificate'],
+          outcomes: ['REST API', 'HTTPS', 'Reverse Proxy', '인증서 오류']
+        },
+        epoll: {
+          step: 'STEP 05 · LINUX / NETWORK', icon: 'radio-tower', title: 'epoll · Event Loop',
+          summary: '한 스레드가 많은 소켓의 준비 상태를 효율적으로 감시하는 Linux 방식입니다.',
+          route: ['File Descriptor', 'Socket', 'epoll / Event Loop'],
+          keywords: ['Blocking / Non-blocking', 'Readiness', 'epoll', 'Event Loop'],
+          outcomes: ['Nginx', 'Netty', 'Node.js', '고성능 서버 구조']
+        },
+        shell: {
+          step: 'STEP 06 · LINUX', icon: 'terminal', title: 'Shell · Pipe',
+          summary: '작은 명령의 입력과 출력을 이어서 로그 분석이나 반복 작업을 빠르게 처리하는 방식입니다.',
+          route: ['File Descriptor', 'Pipe', 'Shell Pipeline'],
+          keywords: ['stdin / stdout', 'Redirection', 'grep', 'sort · uniq · awk · xargs'],
+          outcomes: ['로그 필터링', '집계', '간단한 자동화', '운영 작업 효율']
+        },
+        observe: {
+          step: 'STEP 06 · LINUX', icon: 'scan-search', title: 'Observability',
+          summary: '느리다·메모리가 많다 같은 증상에서 CPU·메모리·네트워크·디스크 중 원인을 좁히는 관점입니다.',
+          route: ['Process', 'System Metrics', 'Subsystem'],
+          keywords: ['ps / top', 'vmstat', 'ss', 'iostat', 'strace'],
+          outcomes: ['장애 대응', '성능 문제 원인 좁히기', 'Docker Troubleshooting']
+        },
+        container: {
+          step: 'STEP 06 · LINUX', icon: 'container', title: 'Namespace · cgroup',
+          summary: '프로세스를 격리하고 CPU·메모리 같은 자원 사용을 제한하는 Linux 기능입니다.',
+          route: ['Process / VM', 'Namespace · cgroup', 'Docker'],
+          keywords: ['PID / Mount / Network Namespace', 'cgroup v2', 'CPU Quota', 'Memory Limit'],
+          outcomes: ['Docker', 'Kubernetes', 'Container OOM', 'CPU Limit']
+        },
+        jvm: {
+          step: 'STEP 07 · RUNTIME', icon: 'coffee', title: 'JVM ↔ OS',
+          summary: 'JVM도 결국 OS의 프로세스·스레드·메모리·파일·소켓 위에서 실행된다는 연결입니다.',
+          route: ['OS Basics', 'JVM ↔ OS', 'Application Performance'],
+          keywords: ['Heap / RSS', 'Native Memory', 'OS Thread', 'FD / Socket'],
+          outcomes: ['JVM OOM', 'Thread Dump', 'Native Memory', 'GC와 OS 관계']
+        },
+        mvcc: {
+          step: 'STEP 07 · DATABASE', icon: 'list-tree', title: 'Index · Transaction · MVCC',
+          summary: 'DB가 빠르게 찾고 여러 작업이 동시에 실행되어도 데이터가 꼬이지 않게 하는 핵심 구조입니다.',
+          route: ['Lock / Storage', 'Index · Transaction', 'MVCC'],
+          keywords: ['B-Tree', 'ACID', 'Isolation Level', 'Lock / MVCC'],
+          outcomes: ['Query Tuning', 'Deadlock', 'Long Transaction', 'Execution Plan']
+        },
+        wal: {
+          step: 'STEP 07 · DATABASE / OS', icon: 'database-backup', title: 'Buffer Pool · WAL',
+          summary: 'DB가 메모리와 로그를 함께 사용해 빠르면서도 장애 후 복구 가능하게 만드는 구조입니다.',
+          route: ['Page Cache', 'Buffer Pool · WAL', 'Recovery'],
+          keywords: ['Buffer Pool', 'WAL', 'Checkpoint', 'Durability'],
+          outcomes: ['Crash Recovery', 'fsync 지연', 'DB 저장 구조']
+        },
+        distributed: {
+          step: 'STEP 08 · DISTRIBUTED', icon: 'waypoints', title: 'Distributed Systems',
+          summary: '한 서버의 지식을 여러 서버 환경의 실패·복제·일관성 문제로 확장합니다.',
+          route: ['Network / DB', 'Distributed', 'Replication / Consensus'],
+          keywords: ['Partial Failure', 'Replication', 'Consistency', 'Quorum / Consensus'],
+          outcomes: ['Kafka', 'Redis Cluster', 'DB Replication', 'Timeout · Retry · Idempotency']
+        },
+        native: {
+          step: 'STEP 09 · NATIVE', icon: 'braces', title: 'C · Pointer · ABI',
+          summary: '커널 소스와 네이티브 프로그램을 읽기 위한 C 메모리 모델과 호출 규약의 핵심만 봅니다.',
+          route: ['Memory Basics', 'C · ABI', 'Compile / Link'],
+          keywords: ['Pointer', 'Struct Layout', 'Stack / Heap', 'Calling Convention / ABI'],
+          outcomes: ['JNI', 'System Call ABI', 'Native Profiling', 'Kernel Source']
+        },
+        elf: {
+          step: 'STEP 09 · NATIVE', icon: 'package-open', title: 'Compile · Link · ELF',
+          summary: '작성한 코드가 실행 파일이 되고 라이브러리와 연결되어 프로세스로 시작되는 흐름입니다.',
+          route: ['C / ABI', 'Compile · Link · ELF', 'Process'],
+          keywords: ['Object File', 'Link', 'Shared Library', 'ELF / Loader / Symbol'],
+          outcomes: ['undefined symbol', '공유 라이브러리 문제', '실행 파일 내부 구조']
+        },
+        kernel: {
+          step: 'STEP 09 · KERNEL', icon: 'microchip', title: 'Scheduler · MM · VFS',
+          summary: '프로세스·메모리·파일·네트워크 개념을 Linux 커널 내부 구현까지 내려가서 보는 심화 영역입니다.',
+          route: ['OS / Linux Basics', 'Kernel Internals', 'Source Reading'],
+          keywords: ['Scheduler', 'Memory Management', 'VFS', 'Network Stack'],
+          outcomes: ['Latency Spike', 'Container OOM 내부', 'Filesystem / Network Kernel Path']
         }
       };
 
-      const fallback = {
-        domain: 'ROADMAP',
-        title: '학습 위치 안내',
-        summary: '이 목업에서는 대표 개념 몇 개만 우측 패널과 연결했습니다. 실제 구현에서는 concepts.json 데이터를 사용합니다.',
-        before: ['연결된 선행 개념'],
-        learn: ['핵심 학습 키워드', '찾아볼 주제'],
-        outcome: ['연결 기술', '다음 학습 위치']
-      };
-
-      const domain = document.getElementById('detailDomain');
+      const detail = document.getElementById('detail');
+      const backdrop = document.getElementById('detailBackdrop');
+      const close = document.getElementById('detailClose');
+      const eyebrow = document.getElementById('detailEyebrow');
       const title = document.getElementById('detailTitle');
       const summary = document.getElementById('detailSummary');
-      const before = document.getElementById('detailBefore');
-      const learn = document.getElementById('detailLearn');
-      const outcome = document.getElementById('detailOutcome');
-      const search = document.getElementById('conceptSearch');
+      const route = document.getElementById('detailRoute');
+      const keywords = document.getElementById('detailKeywords');
+      const outcomes = document.getElementById('detailOutcomes');
+      const iconHost = document.querySelector('.detail-icon');
 
       function renderDetail(data) {
-        domain.textContent = data.domain;
+        eyebrow.textContent = data.step;
         title.textContent = data.title;
         summary.textContent = data.summary;
-        before.innerHTML = data.before.map(x => '<span class="tag">' + x + '</span>').join('');
-        learn.innerHTML = data.learn.map(x => '<li>' + x + '</li>').join('');
-        outcome.innerHTML = data.outcome.map(x => '<span class="tag">' + x + '</span>').join('');
+        route.innerHTML = data.route.map((x, i) =>
+          '<span class="route-node">' + x + '</span>' + (i < data.route.length - 1 ? '<span>→</span>' : '')
+        ).join('');
+        keywords.innerHTML = data.keywords.map(x => '<span class="keyword">' + x + '</span>').join('');
+        outcomes.innerHTML = data.outcomes.map(x => '<li>' + x + '</li>').join('');
+        iconHost.innerHTML = '<i data-lucide="' + data.icon + '" class="icon icon-lg"></i>';
+        if (window.lucide) window.lucide.createIcons();
       }
 
-      document.querySelectorAll('.node').forEach(node => {
-        node.addEventListener('click', () => {
-          document.querySelectorAll('.node').forEach(x => x.classList.remove('active'));
-          node.classList.add('active');
-          renderDetail(concepts[node.dataset.concept] || {
-            ...fallback,
-            title: node.querySelector('b')?.textContent || fallback.title
-          });
+      function openDetail() {
+        if (window.matchMedia('(max-width: 60rem)').matches) {
+          document.body.classList.add('detail-open');
+        }
+      }
+
+      function closeDetail() {
+        document.body.classList.remove('detail-open');
+      }
+
+      document.querySelectorAll('.concept').forEach(button => {
+        button.addEventListener('click', () => {
+          document.querySelectorAll('.concept').forEach(x => x.classList.remove('active'));
+          button.classList.add('active');
+          renderDetail(details[button.dataset.id] || details.vm);
+          openDetail();
         });
       });
 
+      close.addEventListener('click', closeDetail);
+      backdrop.addEventListener('click', closeDetail);
+
       document.addEventListener('keydown', event => {
-        if (event.key === '/' && !/input|textarea|select/i.test(document.activeElement.tagName)) {
+        if (event.key === 'Escape') closeDetail();
+        if (event.key === '/' && !/input|select|textarea/i.test(document.activeElement.tagName)) {
           event.preventDefault();
-          search.focus();
+          document.getElementById('search').focus();
         }
       });
+
+      if (window.lucide) window.lucide.createIcons();
     })();
   </script>
 </body>
