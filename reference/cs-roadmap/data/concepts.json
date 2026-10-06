@@ -3006,7 +3006,7 @@
       "kind": "required",
       "summary": "행·열·테이블과 관계를 사용해 데이터를 표현하고 SQL로 다루는 기본입니다.",
       "prerequisites": [
-        "data-structures"
+        "array-dynamic-array"
       ],
       "learn": [
         "table/row/column",
