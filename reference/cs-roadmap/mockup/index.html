@@ -2097,6 +2097,7 @@
       const learningModalTitle = document.getElementById('learningModalTitle');
       const learningModalBody = document.getElementById('learningModalBody');
       let activeDetail = details.vm;
+      let activeConceptId = null;
       const catalogSection = document.getElementById('curriculumCatalog');
       const catalogSearch = document.getElementById('catalogSearch');
       const catalogArea = document.getElementById('catalogArea');
@@ -2121,6 +2122,7 @@
 
       function renderDetail(data) {
         activeDetail = data;
+        activeConceptId = data.conceptId || null;
         eyebrow.textContent = data.step;
         title.textContent = data.title;
         summary.textContent = data.summary;
@@ -2153,6 +2155,7 @@
         }).slice(0,3);
         const routeParts=[...prereqTitles, c.titleEn || c.titleKo].slice(-3);
         return {
+          conceptId:c.id,
           area:c.area,
           subarea:c.subarea || '',
           step:(areaMeta(c.area).label || c.area) + ' · ' + (c.subarea || ''),
@@ -2254,6 +2257,7 @@
         catalogGrid.querySelectorAll('[data-concept-id]').forEach(btn=>btn.addEventListener('click',()=>{
           const c=curriculumConcepts.find(x=>x.id===btn.dataset.conceptId);
           if(!c)return;
+          activeConceptId = c.id;
           renderDetail(conceptToDetail(c));
           openDetail();
         }));
@@ -2429,6 +2433,7 @@
         if(found && typeof found==='object' && found.concept){
           const c=curriculumConcepts.find(x=>x.id===found.concept);
           if(c){
+            activeConceptId = c.id;
             catalogSearch.value=query;
             catalogArea.value='';
             updateCatalogSubareas();
@@ -2556,7 +2561,17 @@
 
         if (type === 'prompt') {
           const keywordText = activeDetail.keywords.join(', ');
-          const isDataStructure = activeDetail.area === 'data-structures';
+          const selectedConcept =
+            (activeConceptId && curriculumConcepts.find(c => c.id === activeConceptId)) ||
+            curriculumConcepts.find(c =>
+              c.titleEn === activeDetail.title ||
+              c.titleKo === activeDetail.title
+            ) ||
+            null;
+          const isDataStructure =
+            selectedConcept?.area === 'data-structures' ||
+            activeDetail.area === 'data-structures' ||
+            /자료구조|data structure/i.test(activeDetail.step || '');
           learningModalKicker.textContent = isDataStructure ? '자료구조 시각화 학습 프롬프트' : 'AI 학습 프롬프트';
           learningModalTitle.textContent = activeDetail.title + ' 학습 시작';
 
