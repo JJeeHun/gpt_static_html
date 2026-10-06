@@ -894,28 +894,24 @@
 
 
     .deployment-meta {
-      position: fixed;
-      left: max(.8rem, env(safe-area-inset-left));
-      bottom: max(.8rem, env(safe-area-inset-bottom));
-      z-index: 70;
-      max-width: min(24rem, calc(100vw - 1.6rem));
-      display: flex;
+      min-width: 0;
+      max-width: 22rem;
+      display: inline-flex;
       align-items: center;
-      gap: .42rem;
-      padding: .5rem .65rem;
+      gap: .38rem;
+      padding: .34rem .5rem;
       border: 1px solid var(--line);
-      border-radius: .7rem;
-      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      border-radius: .6rem;
+      background: var(--surface);
       color: var(--muted);
-      box-shadow: var(--shadow-soft);
-      backdrop-filter: blur(.8rem);
-      font-size: .68rem;
+      font-size: .66rem;
       line-height: 1;
+      white-space: nowrap;
     }
     .deployment-meta[hidden] { display: none !important; }
     .deployment-meta strong {
       color: var(--text-soft);
-      font-size: .68rem;
+      font-size: .64rem;
       letter-spacing: .05em;
     }
     .deployment-meta .deployment-branch {
@@ -923,26 +919,26 @@
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      color: var(--text-soft);
+      color: var(--muted);
       font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-      font-size: .66rem;
+      font-size: .62rem;
     }
     .deployment-meta code {
       flex: 0 0 auto;
-      color: var(--muted);
-      font-size: .64rem;
+      color: var(--muted-soft);
+      font-size: .6rem;
     }
     .deployment-dot {
-      width: .42rem;
-      height: .42rem;
+      width: .38rem;
+      height: .38rem;
       flex: 0 0 auto;
       border-radius: 50%;
       background: var(--primary);
-      box-shadow: 0 0 0 .18rem var(--primary-soft);
+      box-shadow: 0 0 0 .14rem var(--primary-soft);
     }
     .deployment-stage .deployment-dot {
       background: var(--connect);
-      box-shadow: 0 0 0 .18rem var(--connect-soft);
+      box-shadow: 0 0 0 .14rem var(--connect-soft);
     }
     .deployment-dev .deployment-dot,
     .deployment-feature .deployment-dot {
@@ -1030,6 +1026,12 @@
       .detail-close { display: grid; }
     }
 
+    @media (max-width: 34rem) {
+      .deployment-meta .deployment-branch,
+      .deployment-meta code { display: none; }
+      .deployment-meta { padding-inline: .42rem; }
+    }
+
     @media (max-width: 42rem) {
       :root { --header-h: 3.65rem; }
       .topbar-inner { padding: 0 .9rem; }
@@ -1075,6 +1077,7 @@
         <span class="brand-mark"><i data-lucide="route" class="icon icon-lg"></i></span>
         <span>Foundation Roadmap <small>Prototype</small></span>
       </div>
+      <div id="deploymentMeta" class="deployment-meta" hidden></div>
       <div class="top-actions">
         <button class="quiet-btn" id="themeToggle" type="button" aria-label="다크 모드로 전환" title="테마 전환">
           <i data-lucide="moon" class="icon icon-sm" id="themeIcon"></i>
@@ -1573,7 +1576,6 @@
     </aside>
   </main>
 
-  <div id="deploymentMeta" class="deployment-meta" hidden></div>
   <div class="detail-backdrop" id="detailBackdrop"></div>
 
   <div class="learning-modal" id="learningModal" aria-hidden="true">
