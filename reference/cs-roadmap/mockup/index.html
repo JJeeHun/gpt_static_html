@@ -4,6 +4,13 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Foundation Roadmap · UI Prototype</title>
+  <script>
+    (() => {
+      const saved = localStorage.getItem('cs-roadmap-theme');
+      const theme = saved || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <style>
     :root {
       color-scheme: light;
@@ -37,6 +44,64 @@
       --radius-lg: 1.15rem;
       --content: 96rem;
       --header-h: 4.15rem;
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --bg: #0b1018;
+      --surface: #111827;
+      --surface-soft: #151d2b;
+      --surface-hover: #1b2535;
+      --text: #edf2f7;
+      --text-soft: #c7d0dc;
+      --muted: #93a0b2;
+      --muted-soft: #6f7c8e;
+      --line: #263244;
+      --line-strong: #35445a;
+      --primary: #7c9cff;
+      --primary-soft: #172442;
+      --primary-line: #2d477c;
+      --core: #67d7a8;
+      --core-soft: #122b23;
+      --core-line: #275744;
+      --connect: #f0c66a;
+      --connect-soft: #302710;
+      --connect-line: #64511f;
+      --deep: #c3a6ff;
+      --deep-soft: #291f3d;
+      --deep-line: #4d3a71;
+      --danger: #ff8a80;
+      --shadow: 0 1rem 2.5rem rgba(0, 0, 0, .28);
+      --shadow-soft: 0 .35rem 1.2rem rgba(0, 0, 0, .22);
+    }
+
+    :root[data-theme="dark"] .topbar {
+      background: rgba(11, 16, 24, .9);
+      border-bottom-color: rgba(38, 50, 68, .92);
+    }
+    :root[data-theme="dark"] .stage-head,
+    :root[data-theme="dark"] .detail-head {
+      background: linear-gradient(180deg, var(--surface-soft), var(--surface));
+    }
+    :root[data-theme="dark"] .detail-icon,
+    :root[data-theme="dark"] .action-btn {
+      background: var(--surface);
+    }
+    :root[data-theme="dark"] .search-submit,
+    :root[data-theme="dark"] .stage-index {
+      color: #fff;
+    }
+    :root[data-theme="dark"] .concept.active .concept-icon {
+      background: var(--surface);
+    }
+    :root[data-theme="dark"] .study-actions {
+      color: var(--text-soft);
+    }
+    :root[data-theme="dark"] .study-actions p {
+      color: var(--text-soft);
+    }
+    :root[data-theme="dark"] .detail-backdrop {
+      background: rgba(0, 0, 0, .55);
     }
 
     * { box-sizing: border-box; }
@@ -804,6 +869,10 @@
         <span>Foundation Roadmap <small>Prototype</small></span>
       </div>
       <div class="top-actions">
+        <button class="quiet-btn" id="themeToggle" type="button" aria-label="다크 모드로 전환" title="테마 전환">
+          <i data-lucide="moon" class="icon icon-sm" id="themeIcon"></i>
+          <span id="themeLabel">Dark</span>
+        </button>
         <button class="quiet-btn" type="button">
           <i data-lucide="search" class="icon icon-sm"></i>
           <span>검색</span>
@@ -1301,6 +1370,36 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script>
     (() => {
+      const themeToggle = document.getElementById('themeToggle');
+      const themeIcon = document.getElementById('themeIcon');
+      const themeLabel = document.getElementById('themeLabel');
+
+      function currentTheme() {
+        return document.documentElement.dataset.theme === 'dark' ? 'dark' : 'light';
+      }
+
+      function syncThemeButton() {
+        const isDark = currentTheme() === 'dark';
+        themeToggle.setAttribute('aria-label', isDark ? '라이트 모드로 전환' : '다크 모드로 전환');
+        themeLabel.textContent = isDark ? 'Light' : 'Dark';
+        themeIcon.setAttribute('data-lucide', isDark ? 'sun' : 'moon');
+        if (window.lucide) window.lucide.createIcons();
+      }
+
+      themeToggle.addEventListener('click', () => {
+        const next = currentTheme() === 'dark' ? 'light' : 'dark';
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem('cs-roadmap-theme', next);
+        syncThemeButton();
+      });
+
+      const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+      systemTheme.addEventListener?.('change', event => {
+        if (localStorage.getItem('cs-roadmap-theme')) return;
+        document.documentElement.dataset.theme = event.matches ? 'dark' : 'light';
+        syncThemeButton();
+      });
+
       const details = {
         data: {
           step: 'STEP 01 · CS', icon: 'binary', title: 'Bit · Byte · Encoding',
@@ -1534,6 +1633,7 @@
       });
 
       if (window.lucide) window.lucide.createIcons();
+      syncThemeButton();
     })();
   </script>
 </body>
