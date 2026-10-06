@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "description": "순서대로 완독하기 위한 커리큘럼이 아니라, 현재 관심 분야에서 다음 학습 위치를 찾기 위한 큰 흐름",
+  "tracks": [
+    {
+      "id": "computer-foundation",
+      "title": "컴퓨터 기본",
+      "goal": "프로그램이 데이터와 CPU·메모리 위에서 어떻게 실행되는지 큰 그림을 잡습니다.",
+      "nodes": [
+        "data-representation",
+        "cpu-cache",
+        "interrupt-syscall"
+      ]
+    },
+    {
+      "id": "os-core",
+      "title": "OS 핵심",
+      "goal": "프로그램 실행, 메모리, 동시성, 파일 I/O의 기본 원리를 연결합니다.",
+      "nodes": [
+        "process",
+        "thread",
+        "sync",
+        "virtual-memory",
+        "file-descriptor-io",
+        "filesystem",
+        "page-cache"
+      ]
+    },
+    {
+      "id": "linux-practical",
+      "title": "Linux",
+      "goal": "OS 개념이 Linux에서 어떻게 보이고 실제 작업으로 이어지는지 확인합니다.",
+      "nodes": [
+        "linux-shell-pipeline",
+        "observability",
+        "namespace",
+        "cgroup"
+      ]
+    },
+    {
+      "id": "network-core",
+      "title": "Network",
+      "goal": "주소를 찾고 연결을 만들고 애플리케이션 데이터가 오가는 흐름을 이해합니다.",
+      "nodes": [
+        "ip-routing",
+        "dns",
+        "socket-tcp",
+        "http-tls",
+        "epoll"
+      ]
+    },
+    {
+      "id": "storage-database",
+      "title": "Storage · Database",
+      "goal": "데이터를 저장하고 빠르게 찾으며 장애 후에도 지키는 원리를 이해합니다.",
+      "nodes": [
+        "storage-raid",
+        "filesystem",
+        "page-cache",
+        "db-index-mvcc",
+        "db-buffer-wal"
+      ]
+    },
+    {
+      "id": "container-runtime",
+      "title": "Container · Runtime",
+      "goal": "Docker와 JVM 같은 기술을 OS 기본지식과 연결해서 봅니다.",
+      "nodes": [
+        "process",
+        "virtual-memory",
+        "namespace",
+        "cgroup",
+        "docker-fs-net",
+        "jvm-os"
+      ]
+    },
+    {
+      "id": "distributed",
+      "title": "분산 시스템",
+      "goal": "한 서버의 기본지식을 여러 서버 환경으로 확장합니다.",
+      "nodes": [
+        "ip-routing",
+        "dns",
+        "socket-tcp",
+        "http-tls",
+        "db-index-mvcc",
+        "distributed"
+      ]
+    },
+    {
+      "id": "native-kernel",
+      "title": "Native · Kernel",
+      "goal": "고수준 코드 아래의 메모리·실행 파일·커널 구현까지 내려갑니다.",
+      "nodes": [
+        "data-representation",
+        "cpu-cache",
+        "native-c-abi",
+        "compile-link-loader",
+        "interrupt-syscall",
+        "kernel-sched",
+        "kernel-mm",
+        "kernel-vfs-net"
+      ]
+    }
+  ]
+}
