@@ -104,6 +104,14 @@
     :root[data-theme="dark"] .detail-backdrop {
       background: rgba(0, 0, 0, .55);
     }
+    :root[data-theme="dark"] .stage-index {
+      background: var(--bg);
+      color: var(--text);
+      border-color: var(--surface);
+      box-shadow:
+        0 0 0 .08rem var(--primary-line),
+        0 0 .9rem rgba(124, 156, 255, .12);
+    }
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
@@ -884,6 +892,63 @@
       font-weight: 800;
     }
 
+
+    .deployment-meta {
+      position: fixed;
+      left: max(.8rem, env(safe-area-inset-left));
+      bottom: max(.8rem, env(safe-area-inset-bottom));
+      z-index: 70;
+      max-width: min(24rem, calc(100vw - 1.6rem));
+      display: flex;
+      align-items: center;
+      gap: .42rem;
+      padding: .5rem .65rem;
+      border: 1px solid var(--line);
+      border-radius: .7rem;
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      color: var(--muted);
+      box-shadow: var(--shadow-soft);
+      backdrop-filter: blur(.8rem);
+      font-size: .68rem;
+      line-height: 1;
+    }
+    .deployment-meta[hidden] { display: none !important; }
+    .deployment-meta strong {
+      color: var(--text-soft);
+      font-size: .68rem;
+      letter-spacing: .05em;
+    }
+    .deployment-meta .deployment-branch {
+      min-width: 0;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      color: var(--text-soft);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .66rem;
+    }
+    .deployment-meta code {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: .64rem;
+    }
+    .deployment-dot {
+      width: .42rem;
+      height: .42rem;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 .18rem var(--primary-soft);
+    }
+    .deployment-stage .deployment-dot {
+      background: var(--connect);
+      box-shadow: 0 0 0 .18rem var(--connect-soft);
+    }
+    .deployment-dev .deployment-dot,
+    .deployment-feature .deployment-dot {
+      background: var(--primary);
+    }
+
     .mobile-filter {
       display: none;
       gap: .35rem;
@@ -1508,6 +1573,7 @@
     </aside>
   </main>
 
+  <div id="deploymentMeta" class="deployment-meta" hidden></div>
   <div class="detail-backdrop" id="detailBackdrop"></div>
 
   <div class="learning-modal" id="learningModal" aria-hidden="true">
@@ -1530,6 +1596,44 @@
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script>
     (() => {
+      const deploymentMeta = document.getElementById('deploymentMeta');
+
+      async function renderDeploymentMeta() {
+        if (!deploymentMeta) return;
+        try {
+          const response = await fetch('./build-info.json', {cache: 'no-store'});
+          if (!response.ok) return;
+          const info = await response.json();
+          const branch = String(info.branch || '');
+          const mode = String(info.environment || '').toLowerCase();
+
+          if (!branch || branch === 'main' || mode === 'prod' || mode === 'production') return;
+
+          const label =
+            mode === 'stage' ? 'STAGE' :
+            mode === 'dev' ? 'DEV' :
+            mode === 'feature' || branch.startsWith('feature/') ? 'FEATURE' :
+            branch.toUpperCase();
+
+          const commit = String(info.commit || '').slice(0, 7);
+          const shortBranch = branch.startsWith('feature/') ? branch.slice('feature/'.length) : branch;
+
+          deploymentMeta.className = 'deployment-meta deployment-' + (mode || 'feature');
+          deploymentMeta.innerHTML =
+            '<span class="deployment-dot"></span>' +
+            '<strong>' + label + '</strong>' +
+            '<span class="deployment-branch">' + shortBranch + '</span>' +
+            (commit ? '<code>' + commit + '</code>' : '');
+
+          deploymentMeta.title =
+            'Branch: ' + branch +
+            (commit ? '\nCommit: ' + commit : '') +
+            (info.deployedAt ? '\nDeployed: ' + info.deployedAt : '');
+
+          deploymentMeta.hidden = false;
+        } catch {}
+      }
+
       const themeToggle = document.getElementById('themeToggle');
       const themeIcon = document.getElementById('themeIcon');
       const themeLabel = document.getElementById('themeLabel');
@@ -2081,6 +2185,7 @@ ${keywordText}
 
       if (window.lucide) window.lucide.createIcons();
       syncThemeButton();
+      renderDeploymentMeta();
     })();
   </script>
 </body>
