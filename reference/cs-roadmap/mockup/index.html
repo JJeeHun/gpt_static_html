@@ -2175,13 +2175,26 @@
       function catalogMatchesQuery(c,q) {
         if(!q) return true;
         const n=normalizeSearch(q);
+
+        const exactArea=curriculumTaxonomy.find(a=>
+          normalizeSearch(a.label)===n || (a.aliases||[]).some(x=>normalizeSearch(x)===n)
+        );
+        if(exactArea) return c.area===exactArea.id;
+
+        const exactSubareas=[...new Set(curriculumTaxonomy.flatMap(a=>a.subareas||[]))]
+          .filter(x=>normalizeSearch(x)===n);
+        if(exactSubareas.length) return exactSubareas.includes(c.subarea);
+
         const area=areaMeta(c.area);
         const hay=[
           c.titleKo,c.titleEn,c.summary,c.course,c.subarea,area.label,
           ...(area.aliases||[]),...(c.aliases||[]),...(c.learn||[]),...(c.outcomes||[])
         ].join(' ').toLowerCase();
+
         if(hay.includes(n)) return true;
-        return curriculumSearchEntries.some(e=>normalizeSearch(e.term).includes(n) && (e.conceptIds||[]).includes(c.id));
+        return curriculumSearchEntries.some(e=>
+          normalizeSearch(e.term).includes(n) && (e.conceptIds||[]).includes(c.id)
+        );
       }
 
       function filteredCatalog() {
