@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "description": "기본 개념을 실제 기술과 작업으로 연결하는 대표 응용 흐름",
   "paths": [
     {
@@ -123,6 +123,37 @@
       ],
       "result": [
         "CPU·메모리·네트워크·디스크 중 어느 영역이 문제인지 좁혀 가는 순서"
+      ]
+    },
+    {
+      "id": "domain-to-http",
+      "question": "브라우저나 API가 도메인 주소로 서버와 통신할 때 무엇이 이어질까?",
+      "flow": [
+        "dns",
+        "ip-routing",
+        "socket-tcp",
+        "http-tls"
+      ],
+      "result": [
+        "도메인이 IP로 바뀌는 과정",
+        "서버까지 연결이 만들어지는 과정",
+        "HTTP와 HTTPS가 어느 위치에 있는지"
+      ]
+    },
+    {
+      "id": "source-to-native-process",
+      "question": "작성한 코드가 실제 Linux 프로세스로 실행되기까지 무엇을 알아야 할까?",
+      "flow": [
+        "data-representation",
+        "native-c-abi",
+        "compile-link-loader",
+        "interrupt-syscall",
+        "process"
+      ],
+      "result": [
+        "소스 코드와 실행 파일의 차이",
+        "라이브러리와 symbol 연결",
+        "실행된 프로그램이 커널 기능을 사용하는 지점"
       ]
     }
   ]
