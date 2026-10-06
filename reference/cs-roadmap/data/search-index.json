@@ -1,0 +1,11240 @@
+{
+  "schemaVersion": 1,
+  "generatedFrom": "concepts.json + taxonomy.json",
+  "entries": [
+    {
+      "term": "/proc",
+      "conceptIds": [
+        "proc-process-tools"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "/proc · Process Tools",
+      "conceptIds": [
+        "proc-process-tools"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "/proc/<pid>",
+      "conceptIds": [
+        "proc-process-tools"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "/proc와 프로세스 관찰",
+      "conceptIds": [
+        "proc-process-tools"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "1NF/2NF/3NF",
+      "conceptIds": [
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "2진수",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "2진수·16진수",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "3-way handshake",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "가비지 컬렉션",
+      "conceptIds": [
+        "garbage-collection"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "GC"
+      ]
+    },
+    {
+      "term": "가상 메모리",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "가상 주소와 실제 주소",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "계층",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "공간복잡도",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "공유 메모리",
+      "conceptIds": [
+        "thread",
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process",
+        "Memory"
+      ]
+    },
+    {
+      "term": "관계형",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "관계형 모델과 SQL",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "교착상태",
+      "conceptIds": [
+        "deadlock"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "권한",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "권한 경계",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "그래프",
+      "conceptIds": [
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "그래프 구조",
+      "conceptIds": [
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "그래프 탐색",
+      "conceptIds": [
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "그리디",
+      "conceptIds": [
+        "greedy"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "기초",
+      "conceptIds": [
+        "data-representation",
+        "boolean-logic",
+        "data-size-units",
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현",
+        "논리·단위",
+        "직렬화"
+      ]
+    },
+    {
+      "term": "기초 계층",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "네이티브",
+      "conceptIds": [
+        "native-c-abi",
+        "compile-link-loader",
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI",
+        "Toolchain",
+        "Memory"
+      ]
+    },
+    {
+      "term": "네트워크",
+      "conceptIds": [
+        "socket-tcp",
+        "ip-routing",
+        "dns",
+        "http-tls",
+        "network-layer-model",
+        "ethernet-arp",
+        "udp",
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport",
+        "IP",
+        "Name Resolution",
+        "Application",
+        "기초 계층",
+        "Link"
+      ]
+    },
+    {
+      "term": "네트워크 계층 모델",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "논리·단위",
+      "conceptIds": [
+        "boolean-logic",
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "데이터 크기와 단위",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "데이터 표현",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "데이터 표현·비트·바이트·인코딩",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "데이터베이스",
+      "conceptIds": [
+        "db-buffer-wal",
+        "db-index-mvcc",
+        "relational-model-sql",
+        "normalization",
+        "index-internals",
+        "query-optimizer",
+        "replication-db"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage",
+        "Transaction",
+        "Relational",
+        "Index",
+        "Query",
+        "Replication"
+      ]
+    },
+    {
+      "term": "동기화",
+      "conceptIds": [
+        "sync"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "동기화·락·원자 연산",
+      "conceptIds": [
+        "sync"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "동적 계획법",
+      "conceptIds": [
+        "dynamic-programming"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "드라이버",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "라우팅",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "런타임",
+      "conceptIds": [
+        "jvm-os",
+        "stack-heap-runtime",
+        "garbage-collection",
+        "jit-runtime",
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM",
+        "Memory",
+        "GC",
+        "JIT",
+        "Language Model"
+      ]
+    },
+    {
+      "term": "런타임 메모리",
+      "conceptIds": [
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "런타임의 Stack과 Heap",
+      "conceptIds": [
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "레지스터",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "레지스터와 어셈블리 기초",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "리눅스",
+      "conceptIds": [
+        "epoll",
+        "linux-shell-pipeline",
+        "observability",
+        "users-permissions",
+        "proc-process-tools",
+        "systemd-service",
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability",
+        "Shell",
+        "Permission",
+        "Process",
+        "Service"
+      ]
+    },
+    {
+      "term": "리버스 프록시와 로드 밸런서",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "메모리 배치와 정렬",
+      "conceptIds": [
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "메모리 지연 시간",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "메시지 큐",
+      "conceptIds": [
+        "message-queue"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Queue"
+      ]
+    },
+    {
+      "term": "명령어",
+      "conceptIds": [
+        "instruction-cycle-isa"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Instruction"
+      ]
+    },
+    {
+      "term": "명령어와 ISA",
+      "conceptIds": [
+        "instruction-cycle-isa"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Instruction"
+      ]
+    },
+    {
+      "term": "문자 인코딩",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "문제 해결",
+      "conceptIds": [
+        "recursion-divide-conquer",
+        "greedy",
+        "dynamic-programming"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "바이트",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "배열",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "배열과 동적 배열",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "백업",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "백업과 복구",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "백엔드",
+      "conceptIds": [
+        "server-execution-model",
+        "thread-pool",
+        "connection-pool",
+        "cache-strategy",
+        "reverse-proxy-load-balancer",
+        "message-queue",
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model",
+        "Pool",
+        "Cache",
+        "Proxy",
+        "Queue",
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "백엔드 시스템",
+      "conceptIds": [
+        "server-execution-model",
+        "thread-pool",
+        "connection-pool",
+        "cache-strategy",
+        "reverse-proxy-load-balancer",
+        "message-queue",
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model",
+        "Pool",
+        "Cache",
+        "Proxy",
+        "Queue",
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "보안",
+      "conceptIds": [
+        "crypto-hash-encryption",
+        "authentication-authorization",
+        "session-token",
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto",
+        "Identity",
+        "Session",
+        "Permission"
+      ]
+    },
+    {
+      "term": "보안 기초",
+      "conceptIds": [
+        "crypto-hash-encryption",
+        "authentication-authorization",
+        "session-token",
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto",
+        "Identity",
+        "Session",
+        "Permission"
+      ]
+    },
+    {
+      "term": "복잡도",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "복제",
+      "conceptIds": [
+        "replication-db"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "부분 실패",
+      "conceptIds": [
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "분기예측",
+      "conceptIds": [
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "분산",
+      "conceptIds": [
+        "distributed",
+        "distributed-time-failure",
+        "replication-distributed",
+        "partition-consistency",
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure",
+        "Replication",
+        "Consistency",
+        "Consensus"
+      ]
+    },
+    {
+      "term": "분산 복제",
+      "conceptIds": [
+        "replication-distributed"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "분산 시스템",
+      "conceptIds": [
+        "distributed",
+        "distributed-time-failure",
+        "replication-distributed",
+        "partition-consistency",
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure",
+        "Replication",
+        "Consistency",
+        "Consensus"
+      ]
+    },
+    {
+      "term": "분산 시스템 기초",
+      "conceptIds": [
+        "distributed"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "분산 시스템의 시간과 부분 실패",
+      "conceptIds": [
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "분산시스템",
+      "conceptIds": [
+        "distributed",
+        "distributed-time-failure",
+        "replication-distributed",
+        "partition-consistency",
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure",
+        "Replication",
+        "Consistency",
+        "Consensus"
+      ]
+    },
+    {
+      "term": "분할정복",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "불리언 논리와 비트 연산",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "블록 장치와 I/O",
+      "conceptIds": [
+        "block-device-io"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "비트 연산",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "사용자 모드와 커널 모드",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "사용자·그룹·권한",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "서버 실행 모델",
+      "conceptIds": [
+        "server-execution-model"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model"
+      ]
+    },
+    {
+      "term": "서비스와 systemd",
+      "conceptIds": [
+        "systemd-service"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Service"
+      ]
+    },
+    {
+      "term": "선형 구조",
+      "conceptIds": [
+        "array-dynamic-array",
+        "linked-list",
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "세션과 토큰",
+      "conceptIds": [
+        "session-token"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Session"
+      ]
+    },
+    {
+      "term": "소켓",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "소켓과 TCP",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "소켓도 FD라는 점",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "스레드",
+      "conceptIds": [
+        "thread"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "스레드 풀",
+      "conceptIds": [
+        "thread-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "스레드와 컨텍스트 스위칭",
+      "conceptIds": [
+        "thread"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "스케줄링",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "스케줄링 기초",
+      "conceptIds": [
+        "thread"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "스택",
+      "conceptIds": [
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "스택과 큐",
+      "conceptIds": [
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "스토리지",
+      "conceptIds": [
+        "page-cache",
+        "storage-raid",
+        "block-device-io",
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability",
+        "Device",
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "시간·공간 복잡도",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "시간복잡도",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "시그널",
+      "conceptIds": [
+        "signal"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "시스템 프로그래밍",
+      "conceptIds": [
+        "native-c-abi",
+        "compile-link-loader",
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI",
+        "Toolchain",
+        "Memory"
+      ]
+    },
+    {
+      "term": "알고리즘",
+      "conceptIds": [
+        "complexity-big-o",
+        "sorting",
+        "binary-search",
+        "recursion-divide-conquer",
+        "greedy",
+        "dynamic-programming",
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도",
+        "탐색·정렬",
+        "문제 해결",
+        "Graph"
+      ]
+    },
+    {
+      "term": "암호화",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "애플리케이션 캐시",
+      "conceptIds": [
+        "cache-strategy"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Cache"
+      ]
+    },
+    {
+      "term": "어셈블리",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "언어 메모리 모델",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "연결 리스트",
+      "conceptIds": [
+        "linked-list"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "요청 제한",
+      "conceptIds": [
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "우선순위 큐",
+      "conceptIds": [
+        "heap-priority-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "운영체제",
+      "conceptIds": [
+        "interrupt-syscall",
+        "process",
+        "thread",
+        "virtual-memory",
+        "sync",
+        "file-descriptor-io",
+        "filesystem",
+        "scheduler-basics",
+        "ipc",
+        "signal",
+        "deadlock",
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O",
+        "Process",
+        "Memory",
+        "Concurrency",
+        "Scheduling",
+        "IPC"
+      ]
+    },
+    {
+      "term": "운영체제·저장장치",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "운영체제·커널",
+      "conceptIds": [
+        "kernel-sched",
+        "kernel-mm",
+        "kernel-vfs-net",
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler",
+        "Memory",
+        "VFS",
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "이름 해석 흐름",
+      "conceptIds": [
+        "dns"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Name Resolution"
+      ]
+    },
+    {
+      "term": "이진 탐색",
+      "conceptIds": [
+        "binary-search"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "인가",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "인덱스",
+      "conceptIds": [
+        "index-internals"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Index"
+      ]
+    },
+    {
+      "term": "인덱스 구조",
+      "conceptIds": [
+        "index-internals"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Index"
+      ]
+    },
+    {
+      "term": "인덱스·트랜잭션·MVCC",
+      "conceptIds": [
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction"
+      ]
+    },
+    {
+      "term": "인증",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "인증과 인가",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "인터럽트·예외·시스템 콜",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "자료구조",
+      "conceptIds": [
+        "array-dynamic-array",
+        "linked-list",
+        "stack-queue",
+        "hash-table",
+        "tree-bst",
+        "heap-priority-queue",
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조",
+        "Hash",
+        "Tree",
+        "Graph"
+      ]
+    },
+    {
+      "term": "장치 I/O와 DMA",
+      "conceptIds": [
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "I/O"
+      ]
+    },
+    {
+      "term": "재귀",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "재귀와 분할 정복",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "저장장치",
+      "conceptIds": [
+        "storage-raid",
+        "page-cache",
+        "block-device-io",
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device",
+        "Cache & Durability",
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "저장장치·SSD·RAID",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "정규화",
+      "conceptIds": [
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "정규화와 데이터 모델링",
+      "conceptIds": [
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "정렬",
+      "conceptIds": [
+        "sorting"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "정렬 알고리즘",
+      "conceptIds": [
+        "sorting"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "정수와 문자 표현",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "증상 → 지표 → subsystem",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "지역성(locality)",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "직렬화",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "직렬화와 데이터 형식",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "최소 권한",
+      "conceptIds": [
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "최소 권한과 Capability",
+      "conceptIds": [
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "캐시",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "커널",
+      "conceptIds": [
+        "kernel-sched",
+        "kernel-mm",
+        "kernel-vfs-net",
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler",
+        "Memory",
+        "VFS",
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "커널 모드",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "커널 인터럽트와 장치 드라이버",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "커넥션 풀",
+      "conceptIds": [
+        "connection-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "컨테이너",
+      "conceptIds": [
+        "namespace",
+        "cgroup",
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Isolation",
+        "Resource",
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "컴파일·링크·실행 파일",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "컴퓨터 구조",
+      "conceptIds": [
+        "cpu-cache",
+        "instruction-cycle-isa",
+        "registers-assembly",
+        "cpu-pipeline-branch",
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory",
+        "Instruction",
+        "CPU",
+        "I/O"
+      ]
+    },
+    {
+      "term": "컴퓨터 기초",
+      "conceptIds": [
+        "data-representation",
+        "boolean-logic",
+        "data-size-units",
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현",
+        "논리·단위",
+        "직렬화"
+      ]
+    },
+    {
+      "term": "컴퓨터 네트워크",
+      "conceptIds": [
+        "socket-tcp",
+        "ip-routing",
+        "dns",
+        "http-tls",
+        "network-layer-model",
+        "ethernet-arp",
+        "udp",
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport",
+        "IP",
+        "Name Resolution",
+        "Application",
+        "기초 계층",
+        "Link"
+      ]
+    },
+    {
+      "term": "컴퓨터 저장장치",
+      "conceptIds": [
+        "storage-raid",
+        "block-device-io",
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device",
+        "Block I/O",
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "컴퓨터구조",
+      "conceptIds": [
+        "cpu-cache",
+        "instruction-cycle-isa",
+        "registers-assembly",
+        "cpu-pipeline-branch",
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory",
+        "Instruction",
+        "CPU",
+        "I/O"
+      ]
+    },
+    {
+      "term": "쿼리 옵티마이저와 실행 계획",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "탐색·정렬",
+      "conceptIds": [
+        "sorting",
+        "binary-search"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "트리",
+      "conceptIds": [
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "트리와 이진 탐색 트리",
+      "conceptIds": [
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "파이프",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "파이프라인",
+      "conceptIds": [
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "파일 디스크립터",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "파일 디스크립터와 표준 입출력",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "파일 시스템",
+      "conceptIds": [
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "파일 시스템과 VFS",
+      "conceptIds": [
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "파티션과 일관성",
+      "conceptIds": [
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consistency"
+      ]
+    },
+    {
+      "term": "페이지 캐시",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "페이지 캐시·버퍼드 I/O·fsync",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "프로그래밍 언어·런타임",
+      "conceptIds": [
+        "jvm-os",
+        "stack-heap-runtime",
+        "garbage-collection",
+        "jit-runtime",
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM",
+        "Memory",
+        "GC",
+        "JIT",
+        "Language Model"
+      ]
+    },
+    {
+      "term": "프로그램과 프로세스 차이",
+      "conceptIds": [
+        "process"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "프로세스",
+      "conceptIds": [
+        "process"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "프로세스 간 통신",
+      "conceptIds": [
+        "ipc"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "프로세스 상태",
+      "conceptIds": [
+        "process"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "합의와 조정",
+      "conceptIds": [
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consensus"
+      ]
+    },
+    {
+      "term": "해시",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "해시 테이블",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "해시·암호화 기초",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "혼잡 제어",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "힙과 우선순위 큐",
+      "conceptIds": [
+        "heap-priority-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "abi",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "ACID",
+      "conceptIds": [
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction"
+      ]
+    },
+    {
+      "term": "ack",
+      "conceptIds": [
+        "message-queue"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Queue"
+      ]
+    },
+    {
+      "term": "adjacency",
+      "conceptIds": [
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "adjacency list",
+      "conceptIds": [
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "aes",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "algorithm",
+      "conceptIds": [
+        "complexity-big-o",
+        "sorting",
+        "binary-search",
+        "recursion-divide-conquer",
+        "greedy",
+        "dynamic-programming",
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도",
+        "탐색·정렬",
+        "문제 해결",
+        "Graph"
+      ]
+    },
+    {
+      "term": "algorithms",
+      "conceptIds": [
+        "complexity-big-o",
+        "sorting",
+        "binary-search",
+        "recursion-divide-conquer",
+        "greedy",
+        "dynamic-programming",
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도",
+        "탐색·정렬",
+        "문제 해결",
+        "Graph"
+      ]
+    },
+    {
+      "term": "alignment",
+      "conceptIds": [
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "allocator",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "AND / OR / NOT",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "append",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "Application",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "Application Cache Strategy",
+      "conceptIds": [
+        "cache-strategy"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Cache"
+      ]
+    },
+    {
+      "term": "application layer",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "architecture",
+      "conceptIds": [
+        "cpu-cache",
+        "instruction-cycle-isa",
+        "registers-assembly",
+        "cpu-pipeline-branch",
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory",
+        "Instruction",
+        "CPU",
+        "I/O"
+      ]
+    },
+    {
+      "term": "arp",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "array",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "Array · Dynamic Array",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "arraylist",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "assembly",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "assembly instruction",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "asymmetric encryption",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "async",
+      "conceptIds": [
+        "server-execution-model"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model"
+      ]
+    },
+    {
+      "term": "atomic",
+      "conceptIds": [
+        "sync"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "authentication",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "Authentication · Authorization",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "authn",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "authorization",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "authz",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "availability",
+      "conceptIds": [
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consistency"
+      ]
+    },
+    {
+      "term": "awk",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "b-tree",
+      "conceptIds": [
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction"
+      ]
+    },
+    {
+      "term": "B-Tree 계열 인덱스",
+      "conceptIds": [
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction"
+      ]
+    },
+    {
+      "term": "b+tree",
+      "conceptIds": [
+        "index-internals"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Index"
+      ]
+    },
+    {
+      "term": "backend",
+      "conceptIds": [
+        "server-execution-model",
+        "thread-pool",
+        "connection-pool",
+        "cache-strategy",
+        "reverse-proxy-load-balancer",
+        "message-queue",
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model",
+        "Pool",
+        "Cache",
+        "Proxy",
+        "Queue",
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "backlog",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "backpressure",
+      "conceptIds": [
+        "message-queue"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Queue"
+      ]
+    },
+    {
+      "term": "backup",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "Backup · Recovery",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "bandwidth 단위",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "base case",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "bfs",
+      "conceptIds": [
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "BFS · DFS · Graph Traversal",
+      "conceptIds": [
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "big o",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "binary",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "binary format",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "Binary Search",
+      "conceptIds": [
+        "binary-search"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "binary search tree",
+      "conceptIds": [
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "bit",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "bit mask",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "bit vs byte",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "bit와 byte",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "bitwise",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "block",
+      "conceptIds": [
+        "block-device-io"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "block device",
+      "conceptIds": [
+        "block-device-io"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "Block Device · Block I/O",
+      "conceptIds": [
+        "block-device-io"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "block I/O",
+      "conceptIds": [
+        "storage-raid",
+        "block-device-io"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device",
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "block io",
+      "conceptIds": [
+        "block-device-io"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "blocking과 non-blocking I/O",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "boolean",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "Boolean Logic · Bitwise Operations",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "borrow/return",
+      "conceptIds": [
+        "connection-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "bottom half 개념",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "boundary search",
+      "conceptIds": [
+        "binary-search"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "bpf",
+      "conceptIds": [
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "BPF map",
+      "conceptIds": [
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "branch prediction",
+      "conceptIds": [
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "bridge",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "bst",
+      "conceptIds": [
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "BST property",
+      "conceptIds": [
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "bucket",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "buddy",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "buddy/slab 개념",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "buffer pool",
+      "conceptIds": [
+        "db-buffer-wal"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "buffered I/O",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "byte",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "C · Pointer · ABI · Native Toolchain",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "C & ABI",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "C pointer와 struct",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "C·포인터·ABI·네이티브 도구",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "ca",
+      "conceptIds": [
+        "cpu-cache",
+        "instruction-cycle-isa",
+        "registers-assembly",
+        "cpu-pipeline-branch",
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory",
+        "Instruction",
+        "CPU",
+        "I/O"
+      ]
+    },
+    {
+      "term": "cache",
+      "conceptIds": [
+        "cpu-cache",
+        "dns",
+        "cache-strategy"
+      ],
+      "areas": [
+        "architecture",
+        "network",
+        "backend"
+      ],
+      "subareas": [
+        "Memory",
+        "Name Resolution",
+        "Cache"
+      ]
+    },
+    {
+      "term": "Cache & Durability",
+      "conceptIds": [
+        "page-cache",
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "cache hit/miss",
+      "conceptIds": [
+        "cpu-cache",
+        "cache-strategy"
+      ],
+      "areas": [
+        "architecture",
+        "backend"
+      ],
+      "subareas": [
+        "Memory",
+        "Cache"
+      ]
+    },
+    {
+      "term": "cache invalidation",
+      "conceptIds": [
+        "cache-strategy"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Cache"
+      ]
+    },
+    {
+      "term": "call stack",
+      "conceptIds": [
+        "recursion-divide-conquer",
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "algorithms",
+        "runtime"
+      ],
+      "subareas": [
+        "문제 해결",
+        "Memory"
+      ]
+    },
+    {
+      "term": "calling convention",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "calling convention / ABI",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "cap",
+      "conceptIds": [
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consistency"
+      ]
+    },
+    {
+      "term": "capabilities",
+      "conceptIds": [
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "capability",
+      "conceptIds": [
+        "docker-fs-net",
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "container",
+        "security"
+      ],
+      "subareas": [
+        "Filesystem",
+        "Permission"
+      ]
+    },
+    {
+      "term": "cardinality",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "certificate",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "cgroup",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "cgroup hierarchy",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "cgroup v2",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "Cgroup v2 · Resource Control",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "Cgroup v2와 자원 제한",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "checkpoint",
+      "conceptIds": [
+        "db-buffer-wal"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "chmod",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "choice property",
+      "conceptIds": [
+        "greedy"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "chown",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "circular wait",
+      "conceptIds": [
+        "deadlock"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "clock",
+      "conceptIds": [
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "clock skew",
+      "conceptIds": [
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "clustered/nonclustered",
+      "conceptIds": [
+        "index-internals"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Index"
+      ]
+    },
+    {
+      "term": "collision",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "combine",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "comparison sort",
+      "conceptIds": [
+        "sorting"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "compile",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "Compile · Link · Loader · Executable",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "complexity",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "composite index",
+      "conceptIds": [
+        "index-internals"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Index"
+      ]
+    },
+    {
+      "term": "computer architecture",
+      "conceptIds": [
+        "cpu-cache",
+        "instruction-cycle-isa",
+        "registers-assembly",
+        "cpu-pipeline-branch",
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory",
+        "Instruction",
+        "CPU",
+        "I/O"
+      ]
+    },
+    {
+      "term": "computer basics",
+      "conceptIds": [
+        "data-representation",
+        "boolean-logic",
+        "data-size-units",
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현",
+        "논리·단위",
+        "직렬화"
+      ]
+    },
+    {
+      "term": "Concurrency",
+      "conceptIds": [
+        "sync",
+        "deadlock"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "congestion control",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "congestion window",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "connection 재사용",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "Connection Pool",
+      "conceptIds": [
+        "connection-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "connectionless",
+      "conceptIds": [
+        "udp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "consensus",
+      "conceptIds": [
+        "distributed",
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure",
+        "Consensus"
+      ]
+    },
+    {
+      "term": "Consensus · Coordination",
+      "conceptIds": [
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consensus"
+      ]
+    },
+    {
+      "term": "consistency",
+      "conceptIds": [
+        "distributed",
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure",
+        "Consistency"
+      ]
+    },
+    {
+      "term": "container",
+      "conceptIds": [
+        "namespace",
+        "cgroup",
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Isolation",
+        "Resource",
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "container runtime",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "context switch",
+      "conceptIds": [
+        "thread"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "context transition",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "contiguous memory",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "controller",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "cookie",
+      "conceptIds": [
+        "session-token"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Session"
+      ]
+    },
+    {
+      "term": "copy-on-write",
+      "conceptIds": [
+        "virtual-memory",
+        "docker-fs-net",
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os",
+        "container"
+      ],
+      "subareas": [
+        "Memory",
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "cost",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "counterexample",
+      "conceptIds": [
+        "greedy"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "CPU",
+      "conceptIds": [
+        "registers-assembly",
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "CPU · Cache · Memory Hierarchy",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "CPU 스케줄링 기초",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "CPU 파이프라인과 분기 예측",
+      "conceptIds": [
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "cpu cache",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "CPU Pipeline · Branch Prediction",
+      "conceptIds": [
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "cpu quota",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "cpu scheduling",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "CPU Scheduling Basics",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "CPU-bound와 I/O-bound",
+      "conceptIds": [
+        "thread"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "CPU·레지스터의 역할",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "CPU와 캐시",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "credential",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "critical section",
+      "conceptIds": [
+        "sync"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "Crypto",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "cs basics",
+      "conceptIds": [
+        "data-representation",
+        "boolean-logic",
+        "data-size-units",
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현",
+        "논리·단위",
+        "직렬화"
+      ]
+    },
+    {
+      "term": "cwnd",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "Data Representation · Bit · Byte · Encoding",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "Data Size · Units",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "data structure",
+      "conceptIds": [
+        "array-dynamic-array",
+        "linked-list",
+        "stack-queue",
+        "hash-table",
+        "tree-bst",
+        "heap-priority-queue",
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조",
+        "Hash",
+        "Tree",
+        "Graph"
+      ]
+    },
+    {
+      "term": "data-structures",
+      "conceptIds": [
+        "array-dynamic-array",
+        "linked-list",
+        "stack-queue",
+        "hash-table",
+        "tree-bst",
+        "heap-priority-queue",
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조",
+        "Hash",
+        "Tree",
+        "Graph"
+      ]
+    },
+    {
+      "term": "database",
+      "conceptIds": [
+        "db-buffer-wal",
+        "db-index-mvcc",
+        "relational-model-sql",
+        "normalization",
+        "index-internals",
+        "query-optimizer",
+        "replication-db"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage",
+        "Transaction",
+        "Relational",
+        "Index",
+        "Query",
+        "Replication"
+      ]
+    },
+    {
+      "term": "Database Replication",
+      "conceptIds": [
+        "replication-db"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "datagram",
+      "conceptIds": [
+        "udp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "db",
+      "conceptIds": [
+        "db-buffer-wal",
+        "db-index-mvcc",
+        "relational-model-sql",
+        "normalization",
+        "index-internals",
+        "query-optimizer",
+        "replication-db"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage",
+        "Transaction",
+        "Relational",
+        "Index",
+        "Query",
+        "Replication"
+      ]
+    },
+    {
+      "term": "DB 버퍼 풀·WAL·내구성",
+      "conceptIds": [
+        "db-buffer-wal"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "DB 복제",
+      "conceptIds": [
+        "replication-db"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "DB Buffer Pool · WAL · Durability",
+      "conceptIds": [
+        "db-buffer-wal"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "DB page",
+      "conceptIds": [
+        "db-buffer-wal"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "deadlock",
+      "conceptIds": [
+        "sync",
+        "deadlock"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "denormalization",
+      "conceptIds": [
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "dentry / inode",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "deoptimization",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "depth/height",
+      "conceptIds": [
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "deque",
+      "conceptIds": [
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "Device",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "device controller",
+      "conceptIds": [
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "I/O"
+      ]
+    },
+    {
+      "term": "device driver",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "Device I/O · DMA",
+      "conceptIds": [
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "I/O"
+      ]
+    },
+    {
+      "term": "device io",
+      "conceptIds": [
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "I/O"
+      ]
+    },
+    {
+      "term": "device queue",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "dfs",
+      "conceptIds": [
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "direct memory access",
+      "conceptIds": [
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "I/O"
+      ]
+    },
+    {
+      "term": "directed/undirected",
+      "conceptIds": [
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "dirty page",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "disk 확인",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "distributed",
+      "conceptIds": [
+        "distributed",
+        "distributed-time-failure",
+        "replication-distributed",
+        "partition-consistency",
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure",
+        "Replication",
+        "Consistency",
+        "Consensus"
+      ]
+    },
+    {
+      "term": "Distributed Replication",
+      "conceptIds": [
+        "replication-distributed"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "distributed system",
+      "conceptIds": [
+        "distributed"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "Distributed Systems Fundamentals",
+      "conceptIds": [
+        "distributed"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "divide",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "divide conquer",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "dma",
+      "conceptIds": [
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "I/O"
+      ]
+    },
+    {
+      "term": "dns",
+      "conceptIds": [
+        "dns"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Name Resolution"
+      ]
+    },
+    {
+      "term": "DNS · Name Resolution",
+      "conceptIds": [
+        "dns"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Name Resolution"
+      ]
+    },
+    {
+      "term": "dns record",
+      "conceptIds": [
+        "dns"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Name Resolution"
+      ]
+    },
+    {
+      "term": "DNS와 이름 해석",
+      "conceptIds": [
+        "dns"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Name Resolution"
+      ]
+    },
+    {
+      "term": "docker",
+      "conceptIds": [
+        "docker-fs-net",
+        "namespace",
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem",
+        "Isolation",
+        "Resource"
+      ]
+    },
+    {
+      "term": "Docker Filesystem · Network · Security",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "Docker의 격리·파일·네트워크",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "domain과 IP 차이",
+      "conceptIds": [
+        "dns"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Name Resolution"
+      ]
+    },
+    {
+      "term": "dp",
+      "conceptIds": [
+        "dynamic-programming"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "driver",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "ds",
+      "conceptIds": [
+        "array-dynamic-array",
+        "linked-list",
+        "stack-queue",
+        "hash-table",
+        "tree-bst",
+        "heap-priority-queue",
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조",
+        "Hash",
+        "Tree",
+        "Graph"
+      ]
+    },
+    {
+      "term": "durability",
+      "conceptIds": [
+        "page-cache",
+        "db-buffer-wal"
+      ],
+      "areas": [
+        "storage",
+        "database"
+      ],
+      "subareas": [
+        "Cache & Durability",
+        "Storage"
+      ]
+    },
+    {
+      "term": "dynamic array",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "Dynamic Programming",
+      "conceptIds": [
+        "dynamic-programming"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "ebpf",
+      "conceptIds": [
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "eBPF 기초",
+      "conceptIds": [
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "eBPF Basics",
+      "conceptIds": [
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "eevdf",
+      "conceptIds": [
+        "kernel-sched"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler"
+      ]
+    },
+    {
+      "term": "EEVDF 개념",
+      "conceptIds": [
+        "kernel-sched"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler"
+      ]
+    },
+    {
+      "term": "elf",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "encoding",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "encryption",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "endianness",
+      "conceptIds": [
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "endianness는 무엇인지 정도",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "endianness와 encoding 연결",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "enqueue/dequeue",
+      "conceptIds": [
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "epoll",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "epoll 내부",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "ethernet",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "Ethernet · MAC · ARP",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "Ethernet frame",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "Ethernet·MAC·ARP",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "event loop",
+      "conceptIds": [
+        "epoll",
+        "server-execution-model"
+      ],
+      "areas": [
+        "linux",
+        "backend"
+      ],
+      "subareas": [
+        "Observability",
+        "Server Model"
+      ]
+    },
+    {
+      "term": "event loop server",
+      "conceptIds": [
+        "server-execution-model"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model"
+      ]
+    },
+    {
+      "term": "eventual consistency",
+      "conceptIds": [
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consistency"
+      ]
+    },
+    {
+      "term": "eviction",
+      "conceptIds": [
+        "cache-strategy"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Cache"
+      ]
+    },
+    {
+      "term": "exception",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "exec",
+      "conceptIds": [
+        "process"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "execution plan",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "executor",
+      "conceptIds": [
+        "thread-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "expiration",
+      "conceptIds": [
+        "session-token"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Session"
+      ]
+    },
+    {
+      "term": "explain",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "failover",
+      "conceptIds": [
+        "replication-db",
+        "replication-distributed"
+      ],
+      "areas": [
+        "database",
+        "distributed"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "Failure",
+      "conceptIds": [
+        "distributed",
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "fairness",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "fd",
+      "conceptIds": [
+        "file-descriptor-io",
+        "jvm-os"
+      ],
+      "areas": [
+        "os",
+        "runtime"
+      ],
+      "subareas": [
+        "File & I/O",
+        "JVM"
+      ]
+    },
+    {
+      "term": "fetch/decode/execute",
+      "conceptIds": [
+        "instruction-cycle-isa"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Instruction"
+      ]
+    },
+    {
+      "term": "FIFO",
+      "conceptIds": [
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "File & I/O",
+      "conceptIds": [
+        "interrupt-syscall",
+        "file-descriptor-io",
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "file descriptor",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "File Descriptor · Standard I/O",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "file object",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "file system",
+      "conceptIds": [
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "File System · VFS",
+      "conceptIds": [
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "file과 directory",
+      "conceptIds": [
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "filesystem",
+      "conceptIds": [
+        "filesystem",
+        "docker-fs-net"
+      ],
+      "areas": [
+        "os",
+        "container"
+      ],
+      "subareas": [
+        "File & I/O",
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "flag",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "flow control",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "foreign key",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "fork",
+      "conceptIds": [
+        "process"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "fork / exec",
+      "conceptIds": [
+        "process"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "foundations",
+      "conceptIds": [
+        "data-representation",
+        "boolean-logic",
+        "data-size-units",
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현",
+        "논리·단위",
+        "직렬화"
+      ]
+    },
+    {
+      "term": "frame",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "fsync",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "full/incremental",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "functional dependency",
+      "conceptIds": [
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "Garbage Collection",
+      "conceptIds": [
+        "garbage-collection"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "GC"
+      ]
+    },
+    {
+      "term": "gateway",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "gbps",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "gc",
+      "conceptIds": [
+        "jvm-os",
+        "garbage-collection"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM",
+        "GC"
+      ]
+    },
+    {
+      "term": "GC pause와 scheduler",
+      "conceptIds": [
+        "jvm-os"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM"
+      ]
+    },
+    {
+      "term": "gdb / objdump 기초",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "general register",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "generational",
+      "conceptIds": [
+        "garbage-collection"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "GC"
+      ]
+    },
+    {
+      "term": "gid",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "Graph",
+      "conceptIds": [
+        "graph-structure",
+        "graph-traversal"
+      ],
+      "areas": [
+        "data-structures",
+        "algorithms"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "Graph Data Structure",
+      "conceptIds": [
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "graph traversal",
+      "conceptIds": [
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "greedy",
+      "conceptIds": [
+        "greedy"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "Greedy Algorithm",
+      "conceptIds": [
+        "greedy"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "grep",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "handler",
+      "conceptIds": [
+        "signal"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "handshake",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "happens before",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "happens-before",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "Hash",
+      "conceptIds": [
+        "hash-table",
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "data-structures",
+        "security"
+      ],
+      "subareas": [
+        "Hash",
+        "Crypto"
+      ]
+    },
+    {
+      "term": "Hash · Encryption Basics",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "hash function",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "hash map",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "Hash Table",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "hashtable",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "hazard",
+      "conceptIds": [
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "hdd",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "HDD와 SSD 차이",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "header",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "health check",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "heap",
+      "conceptIds": [
+        "jvm-os",
+        "heap-priority-queue",
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "runtime",
+        "data-structures"
+      ],
+      "subareas": [
+        "JVM",
+        "Tree",
+        "Memory"
+      ]
+    },
+    {
+      "term": "Heap · Priority Queue",
+      "conceptIds": [
+        "heap-priority-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "heap object",
+      "conceptIds": [
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "heap과 RSS 차이",
+      "conceptIds": [
+        "jvm-os"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM"
+      ]
+    },
+    {
+      "term": "heapify",
+      "conceptIds": [
+        "heap-priority-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "hex",
+      "conceptIds": [
+        "data-representation"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "데이터 표현"
+      ]
+    },
+    {
+      "term": "hikari",
+      "conceptIds": [
+        "connection-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "hold and wait",
+      "conceptIds": [
+        "deadlock"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "hot code",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "http",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "HTTP · TLS",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "HTTP request/response",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "HTTP와 TLS 기본",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "https",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "I/O",
+      "conceptIds": [
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "I/O"
+      ]
+    },
+    {
+      "term": "I/O 멀티플렉싱과 epoll",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "I/O control",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "I/O Multiplexing · epoll",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "Identity",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "image layer",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "index",
+      "conceptIds": [
+        "db-index-mvcc",
+        "index-internals"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction",
+        "Index"
+      ]
+    },
+    {
+      "term": "Index · Transaction · MVCC",
+      "conceptIds": [
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction"
+      ]
+    },
+    {
+      "term": "index access",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "Index Structures · B+Tree",
+      "conceptIds": [
+        "index-internals"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Index"
+      ]
+    },
+    {
+      "term": "inode",
+      "conceptIds": [
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "insert/delete",
+      "conceptIds": [
+        "linked-list"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "Instruction",
+      "conceptIds": [
+        "instruction-cycle-isa"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Instruction"
+      ]
+    },
+    {
+      "term": "instruction cycle",
+      "conceptIds": [
+        "instruction-cycle-isa"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Instruction"
+      ]
+    },
+    {
+      "term": "Instruction Cycle · ISA",
+      "conceptIds": [
+        "instruction-cycle-isa"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Instruction"
+      ]
+    },
+    {
+      "term": "inter process communication",
+      "conceptIds": [
+        "ipc"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "internet layer",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "interrupt",
+      "conceptIds": [
+        "interrupt-syscall",
+        "dma-device-io",
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "os",
+        "architecture",
+        "kernel"
+      ],
+      "subareas": [
+        "File & I/O",
+        "I/O",
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "Interrupt · Exception · System Call",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "interrupt와 exception",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "iops",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "iostat",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "IP",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "IP · Subnet · Routing",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "IP address",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "IP·서브넷·라우팅",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "IP와 TCP 기초",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "IPC",
+      "conceptIds": [
+        "namespace",
+        "ipc",
+        "signal"
+      ],
+      "areas": [
+        "container",
+        "os"
+      ],
+      "subareas": [
+        "Isolation",
+        "IPC"
+      ]
+    },
+    {
+      "term": "IPC · Inter-Process Communication",
+      "conceptIds": [
+        "ipc"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "irq",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "isa",
+      "conceptIds": [
+        "instruction-cycle-isa"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Instruction"
+      ]
+    },
+    {
+      "term": "Isolation",
+      "conceptIds": [
+        "namespace",
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "container",
+        "database"
+      ],
+      "subareas": [
+        "Isolation",
+        "Transaction"
+      ]
+    },
+    {
+      "term": "isolation level",
+      "conceptIds": [
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction"
+      ]
+    },
+    {
+      "term": "Java thread와 OS thread",
+      "conceptIds": [
+        "jvm-os"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM"
+      ]
+    },
+    {
+      "term": "JIT",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "JIT 컴파일",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "JIT Compilation",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "jmm",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "join",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "join order",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "journalctl",
+      "conceptIds": [
+        "systemd-service"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Service"
+      ]
+    },
+    {
+      "term": "json",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "jstack",
+      "conceptIds": [
+        "jvm-os"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM"
+      ]
+    },
+    {
+      "term": "just in time",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "JVM",
+      "conceptIds": [
+        "jvm-os",
+        "stack-heap-runtime",
+        "garbage-collection",
+        "jit-runtime",
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM",
+        "Memory",
+        "GC",
+        "JIT",
+        "Language Model"
+      ]
+    },
+    {
+      "term": "JVM ↔ OS",
+      "conceptIds": [
+        "jvm-os"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM"
+      ]
+    },
+    {
+      "term": "JVM과 OS 연결",
+      "conceptIds": [
+        "jvm-os"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM"
+      ]
+    },
+    {
+      "term": "jwt",
+      "conceptIds": [
+        "session-token"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Session"
+      ]
+    },
+    {
+      "term": "kafka",
+      "conceptIds": [
+        "message-queue"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Queue"
+      ]
+    },
+    {
+      "term": "KB / KiB",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "kernel",
+      "conceptIds": [
+        "kernel-sched",
+        "kernel-mm",
+        "kernel-vfs-net",
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler",
+        "Memory",
+        "VFS",
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "kernel interrupt",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "Kernel Interrupt · Device Driver",
+      "conceptIds": [
+        "interrupt-driver-kernel"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Interrupt"
+      ]
+    },
+    {
+      "term": "kernel memory",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "Kernel Memory Management",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "kernel scheduler",
+      "conceptIds": [
+        "kernel-sched"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler"
+      ]
+    },
+    {
+      "term": "Kernel Scheduler Internals",
+      "conceptIds": [
+        "kernel-sched"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler"
+      ]
+    },
+    {
+      "term": "kernel vfs",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "Kernel VFS · Network Stack",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "key",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "kib",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "L1/L2/L3 캐시",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "l4",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "L4/L7",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "l7",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "Language Memory Model",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "Language Model",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "latency와 throughput",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "leader election",
+      "conceptIds": [
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consensus"
+      ]
+    },
+    {
+      "term": "leader follower",
+      "conceptIds": [
+        "replication-distributed"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "leader/follower",
+      "conceptIds": [
+        "replication-distributed"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "leak",
+      "conceptIds": [
+        "connection-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "leaky bucket",
+      "conceptIds": [
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "least privilege",
+      "conceptIds": [
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "Least Privilege · Capability",
+      "conceptIds": [
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "lifetime",
+      "conceptIds": [
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "LIFO",
+      "conceptIds": [
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "link",
+      "conceptIds": [
+        "compile-link-loader",
+        "ethernet-arp"
+      ],
+      "areas": [
+        "native",
+        "network"
+      ],
+      "subareas": [
+        "Toolchain",
+        "Link"
+      ]
+    },
+    {
+      "term": "link layer",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "Linked List",
+      "conceptIds": [
+        "linked-list"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "linux",
+      "conceptIds": [
+        "epoll",
+        "linux-shell-pipeline",
+        "observability",
+        "users-permissions",
+        "proc-process-tools",
+        "systemd-service",
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability",
+        "Shell",
+        "Permission",
+        "Process",
+        "Service"
+      ]
+    },
+    {
+      "term": "Linux 관찰과 문제 추적",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "Linux 셸·파이프·텍스트 처리",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "Linux 시스템",
+      "conceptIds": [
+        "epoll",
+        "linux-shell-pipeline",
+        "observability",
+        "users-permissions",
+        "proc-process-tools",
+        "systemd-service",
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability",
+        "Shell",
+        "Permission",
+        "Process",
+        "Service"
+      ]
+    },
+    {
+      "term": "Linux 커널 메모리 관리",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "Linux 커널 스케줄러",
+      "conceptIds": [
+        "kernel-sched"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler"
+      ]
+    },
+    {
+      "term": "Linux 커널 VFS·네트워크 스택",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "Linux capability",
+      "conceptIds": [
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "Linux Namespace",
+      "conceptIds": [
+        "namespace"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Isolation"
+      ]
+    },
+    {
+      "term": "Linux Observability",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "load balancer",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "load balancing",
+      "conceptIds": [
+        "kernel-sched",
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "kernel",
+        "backend"
+      ],
+      "subareas": [
+        "Scheduler",
+        "Proxy"
+      ]
+    },
+    {
+      "term": "load factor",
+      "conceptIds": [
+        "hash-table"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Hash"
+      ]
+    },
+    {
+      "term": "loader",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "local optimum",
+      "conceptIds": [
+        "greedy"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "locality",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "lock",
+      "conceptIds": [
+        "sync",
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "os",
+        "database"
+      ],
+      "subareas": [
+        "Concurrency",
+        "Transaction"
+      ]
+    },
+    {
+      "term": "log replication",
+      "conceptIds": [
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consensus"
+      ]
+    },
+    {
+      "term": "loss/reorder",
+      "conceptIds": [
+        "udp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "low/high",
+      "conceptIds": [
+        "binary-search"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "lsof",
+      "conceptIds": [
+        "proc-process-tools"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "mac",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "MAC address",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "mark sweep",
+      "conceptIds": [
+        "garbage-collection"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "GC"
+      ]
+    },
+    {
+      "term": "mark/sweep",
+      "conceptIds": [
+        "garbage-collection"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "GC"
+      ]
+    },
+    {
+      "term": "MB / MiB",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "memoization",
+      "conceptIds": [
+        "dynamic-programming"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "Memory",
+      "conceptIds": [
+        "cpu-cache",
+        "virtual-memory",
+        "kernel-mm",
+        "mmap-shared-memory",
+        "stack-heap-runtime",
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "architecture",
+        "os",
+        "kernel",
+        "runtime",
+        "native"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "memory 확인",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "memory buffer",
+      "conceptIds": [
+        "dma-device-io"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "I/O"
+      ]
+    },
+    {
+      "term": "memory hierarchy",
+      "conceptIds": [
+        "cpu-cache"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "memory layout",
+      "conceptIds": [
+        "native-c-abi",
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI",
+        "Memory"
+      ]
+    },
+    {
+      "term": "Memory Layout · Alignment",
+      "conceptIds": [
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "memory mapped file",
+      "conceptIds": [
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "memory model",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "memory.max",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "merge sort",
+      "conceptIds": [
+        "sorting"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "message queue",
+      "conceptIds": [
+        "ipc",
+        "message-queue"
+      ],
+      "areas": [
+        "os",
+        "backend"
+      ],
+      "subareas": [
+        "IPC",
+        "Queue"
+      ]
+    },
+    {
+      "term": "metadata",
+      "conceptIds": [
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "method와 status",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "mib",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "min/max heap",
+      "conceptIds": [
+        "heap-priority-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "mmap",
+      "conceptIds": [
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "mmap · Shared Memory",
+      "conceptIds": [
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "mmap과 공유 메모리",
+      "conceptIds": [
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "MMU와 TLB",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "mount",
+      "conceptIds": [
+        "filesystem"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "mount namespace",
+      "conceptIds": [
+        "namespace"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Isolation"
+      ]
+    },
+    {
+      "term": "mutex",
+      "conceptIds": [
+        "sync"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "mutual exclusion",
+      "conceptIds": [
+        "deadlock"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "mvcc",
+      "conceptIds": [
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction"
+      ]
+    },
+    {
+      "term": "Name Resolution",
+      "conceptIds": [
+        "dns"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Name Resolution"
+      ]
+    },
+    {
+      "term": "namespace",
+      "conceptIds": [
+        "namespace"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Isolation"
+      ]
+    },
+    {
+      "term": "nat",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "NAT는 무엇인지 정도",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "native",
+      "conceptIds": [
+        "native-c-abi",
+        "compile-link-loader",
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI",
+        "Toolchain",
+        "Memory"
+      ]
+    },
+    {
+      "term": "native memory",
+      "conceptIds": [
+        "jvm-os"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM"
+      ]
+    },
+    {
+      "term": "network",
+      "conceptIds": [
+        "socket-tcp",
+        "ip-routing",
+        "dns",
+        "http-tls",
+        "network-layer-model",
+        "ethernet-arp",
+        "udp",
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport",
+        "IP",
+        "Name Resolution",
+        "Application",
+        "기초 계층",
+        "Link"
+      ]
+    },
+    {
+      "term": "network delay",
+      "conceptIds": [
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "network layer",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "network namespace",
+      "conceptIds": [
+        "namespace"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Isolation"
+      ]
+    },
+    {
+      "term": "network partition",
+      "conceptIds": [
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consistency"
+      ]
+    },
+    {
+      "term": "network stack",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "networking",
+      "conceptIds": [
+        "socket-tcp",
+        "ip-routing",
+        "dns",
+        "http-tls",
+        "network-layer-model",
+        "ethernet-arp",
+        "udp",
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport",
+        "IP",
+        "Name Resolution",
+        "Application",
+        "기초 계층",
+        "Link"
+      ]
+    },
+    {
+      "term": "nginx",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "node",
+      "conceptIds": [
+        "linked-list"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "node/edge",
+      "conceptIds": [
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "nonblocking",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "normalization",
+      "conceptIds": [
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "Normalization · Data Modeling",
+      "conceptIds": [
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "O(1)",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "O(log n)",
+      "conceptIds": [
+        "complexity-big-o",
+        "binary-search"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도",
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "O(n log n)",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "O(n)",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "object file",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "Observability",
+      "conceptIds": [
+        "epoll",
+        "observability",
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "oom",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "OOM path",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "opcode",
+      "conceptIds": [
+        "instruction-cycle-isa"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "Instruction"
+      ]
+    },
+    {
+      "term": "open/read/write/close",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "operating system",
+      "conceptIds": [
+        "interrupt-syscall",
+        "process",
+        "thread",
+        "virtual-memory",
+        "sync",
+        "file-descriptor-io",
+        "filesystem",
+        "scheduler-basics",
+        "ipc",
+        "signal",
+        "deadlock",
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O",
+        "Process",
+        "Memory",
+        "Concurrency",
+        "Scheduling",
+        "IPC"
+      ]
+    },
+    {
+      "term": "optimization",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "optimizer",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "ordering",
+      "conceptIds": [
+        "language-memory-model",
+        "message-queue"
+      ],
+      "areas": [
+        "runtime",
+        "backend"
+      ],
+      "subareas": [
+        "Language Model",
+        "Queue"
+      ]
+    },
+    {
+      "term": "os",
+      "conceptIds": [
+        "interrupt-syscall",
+        "process",
+        "thread",
+        "virtual-memory",
+        "sync",
+        "file-descriptor-io",
+        "filesystem",
+        "scheduler-basics",
+        "ipc",
+        "signal",
+        "deadlock",
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O",
+        "Process",
+        "Memory",
+        "Concurrency",
+        "Scheduling",
+        "IPC"
+      ]
+    },
+    {
+      "term": "osi",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "overlay filesystem",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "overlayfs",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "owner/group",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "packet loss",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "packet path",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "padding",
+      "conceptIds": [
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "page cache",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "Page Cache · Buffered I/O · fsync",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "page fault",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "page fault path",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "page table",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "page와 page table",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "partial failure",
+      "conceptIds": [
+        "distributed",
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "partition",
+      "conceptIds": [
+        "distributed"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "Partition · Consistency",
+      "conceptIds": [
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consistency"
+      ]
+    },
+    {
+      "term": "pause",
+      "conceptIds": [
+        "garbage-collection"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "GC"
+      ]
+    },
+    {
+      "term": "paxos",
+      "conceptIds": [
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consensus"
+      ]
+    },
+    {
+      "term": "per-CPU scheduling",
+      "conceptIds": [
+        "kernel-sched"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler"
+      ]
+    },
+    {
+      "term": "perf",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "permission",
+      "conceptIds": [
+        "filesystem",
+        "users-permissions",
+        "authentication-authorization",
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "os",
+        "linux",
+        "security"
+      ],
+      "subareas": [
+        "File & I/O",
+        "Permission",
+        "Identity"
+      ]
+    },
+    {
+      "term": "pid",
+      "conceptIds": [
+        "process"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "pid namespace",
+      "conceptIds": [
+        "namespace"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Isolation"
+      ]
+    },
+    {
+      "term": "pipe",
+      "conceptIds": [
+        "linux-shell-pipeline",
+        "ipc"
+      ],
+      "areas": [
+        "linux",
+        "os"
+      ],
+      "subareas": [
+        "Shell",
+        "IPC"
+      ]
+    },
+    {
+      "term": "pipe(|)",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "pipeline",
+      "conceptIds": [
+        "linux-shell-pipeline",
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "linux",
+        "architecture"
+      ],
+      "subareas": [
+        "Shell",
+        "CPU"
+      ]
+    },
+    {
+      "term": "pointer",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "pointer/reference",
+      "conceptIds": [
+        "linked-list"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "poll",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "Pool",
+      "conceptIds": [
+        "thread-pool",
+        "connection-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "pool exhaustion",
+      "conceptIds": [
+        "connection-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "pool size",
+      "conceptIds": [
+        "thread-pool",
+        "connection-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "port",
+      "conceptIds": [
+        "socket-tcp",
+        "udp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "preemption",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "prevention",
+      "conceptIds": [
+        "deadlock"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "primary key",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "primary/replica",
+      "conceptIds": [
+        "replication-db"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "priority queue",
+      "conceptIds": [
+        "heap-priority-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "probe",
+      "conceptIds": [
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "Process",
+      "conceptIds": [
+        "process",
+        "thread",
+        "proc-process-tools"
+      ],
+      "areas": [
+        "os",
+        "linux"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "process 확인",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "process model",
+      "conceptIds": [
+        "server-execution-model"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model"
+      ]
+    },
+    {
+      "term": "process와 thread 차이",
+      "conceptIds": [
+        "thread"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "procfs",
+      "conceptIds": [
+        "proc-process-tools"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "producer consumer",
+      "conceptIds": [
+        "message-queue"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Queue"
+      ]
+    },
+    {
+      "term": "producer/consumer",
+      "conceptIds": [
+        "message-queue"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Queue"
+      ]
+    },
+    {
+      "term": "profiling",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "program counter",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "protobuf",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "Proxy",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "ps",
+      "conceptIds": [
+        "proc-process-tools"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "push/pop",
+      "conceptIds": [
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "Query",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "Query Optimizer · Execution Plan",
+      "conceptIds": [
+        "query-optimizer"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Query"
+      ]
+    },
+    {
+      "term": "queue",
+      "conceptIds": [
+        "stack-queue",
+        "block-device-io",
+        "thread-pool",
+        "message-queue"
+      ],
+      "areas": [
+        "data-structures",
+        "storage",
+        "backend"
+      ],
+      "subareas": [
+        "선형 구조",
+        "Block I/O",
+        "Pool",
+        "Queue"
+      ]
+    },
+    {
+      "term": "queue/stack",
+      "conceptIds": [
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "quick sort",
+      "conceptIds": [
+        "sorting"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "quorum",
+      "conceptIds": [
+        "distributed",
+        "partition-consistency",
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure",
+        "Consistency",
+        "Consensus"
+      ]
+    },
+    {
+      "term": "quota",
+      "conceptIds": [
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "rabbitmq",
+      "conceptIds": [
+        "message-queue"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Queue"
+      ]
+    },
+    {
+      "term": "race condition",
+      "conceptIds": [
+        "sync"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "raft",
+      "conceptIds": [
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consensus"
+      ]
+    },
+    {
+      "term": "raid",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "RAID 0/1/5/6/10",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "rate limit",
+      "conceptIds": [
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "Rate Limiting",
+      "conceptIds": [
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "reachability",
+      "conceptIds": [
+        "garbage-collection"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "GC"
+      ]
+    },
+    {
+      "term": "read/write request",
+      "conceptIds": [
+        "block-device-io"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "readiness",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "ready queue",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "receive window",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "reclaim",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "recursion",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "Recursion · Divide and Conquer",
+      "conceptIds": [
+        "recursion-divide-conquer"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "redirection",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "redirection의 원리",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "redo",
+      "conceptIds": [
+        "db-buffer-wal"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "register",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "Registers · Assembly Basics",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "Relational",
+      "conceptIds": [
+        "relational-model-sql",
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "relational model",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "Relational Model · SQL",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "replica",
+      "conceptIds": [
+        "replication-db"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "replication",
+      "conceptIds": [
+        "distributed",
+        "replication-db",
+        "replication-distributed"
+      ],
+      "areas": [
+        "distributed",
+        "database"
+      ],
+      "subareas": [
+        "Failure",
+        "Replication"
+      ]
+    },
+    {
+      "term": "replication lag",
+      "conceptIds": [
+        "replication-db",
+        "replication-distributed"
+      ],
+      "areas": [
+        "database",
+        "distributed"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "request model",
+      "conceptIds": [
+        "server-execution-model"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model"
+      ]
+    },
+    {
+      "term": "request response",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "resize",
+      "conceptIds": [
+        "array-dynamic-array"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "resolver",
+      "conceptIds": [
+        "dns"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Name Resolution"
+      ]
+    },
+    {
+      "term": "Resource",
+      "conceptIds": [
+        "cgroup"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Resource"
+      ]
+    },
+    {
+      "term": "restore",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "restore test",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "retry",
+      "conceptIds": [
+        "message-queue"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Queue"
+      ]
+    },
+    {
+      "term": "reverse proxy",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "Reverse Proxy · Load Balancer",
+      "conceptIds": [
+        "reverse-proxy-load-balancer"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Proxy"
+      ]
+    },
+    {
+      "term": "role",
+      "conceptIds": [
+        "authentication-authorization"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Identity"
+      ]
+    },
+    {
+      "term": "root",
+      "conceptIds": [
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "routing",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "routing table",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "rpo",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "RPO/RTO",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "rsa",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "rss",
+      "conceptIds": [
+        "jvm-os"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM"
+      ]
+    },
+    {
+      "term": "rto",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "rtt",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "runqueue",
+      "conceptIds": [
+        "kernel-sched"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler"
+      ]
+    },
+    {
+      "term": "runtime",
+      "conceptIds": [
+        "jvm-os",
+        "stack-heap-runtime",
+        "garbage-collection",
+        "jit-runtime",
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JVM",
+        "Memory",
+        "GC",
+        "JIT",
+        "Language Model"
+      ]
+    },
+    {
+      "term": "Runtime Stack · Heap",
+      "conceptIds": [
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "rwx",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "sandbox",
+      "conceptIds": [
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "saturation",
+      "conceptIds": [
+        "thread-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "Scheduler",
+      "conceptIds": [
+        "kernel-sched",
+        "scheduler-basics"
+      ],
+      "areas": [
+        "kernel",
+        "os"
+      ],
+      "subareas": [
+        "Scheduler",
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "Scheduling",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "scheduling example",
+      "conceptIds": [
+        "greedy"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "schema",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "schema design",
+      "conceptIds": [
+        "normalization"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "sector",
+      "conceptIds": [
+        "block-device-io"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "security",
+      "conceptIds": [
+        "crypto-hash-encryption",
+        "authentication-authorization",
+        "session-token",
+        "least-privilege-capability"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto",
+        "Identity",
+        "Session",
+        "Permission"
+      ]
+    },
+    {
+      "term": "select",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "select / poll",
+      "conceptIds": [
+        "epoll"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "SELECT/JOIN",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "selectivity",
+      "conceptIds": [
+        "index-internals"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Index"
+      ]
+    },
+    {
+      "term": "semaphore",
+      "conceptIds": [
+        "sync"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "serialization",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "Serialization · Data Format",
+      "conceptIds": [
+        "serialization-format"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "직렬화"
+      ]
+    },
+    {
+      "term": "server",
+      "conceptIds": [
+        "server-execution-model",
+        "thread-pool",
+        "connection-pool",
+        "cache-strategy",
+        "reverse-proxy-load-balancer",
+        "message-queue",
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model",
+        "Pool",
+        "Cache",
+        "Proxy",
+        "Queue",
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "Server Execution Model",
+      "conceptIds": [
+        "server-execution-model"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model"
+      ]
+    },
+    {
+      "term": "Server Model",
+      "conceptIds": [
+        "server-execution-model"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model"
+      ]
+    },
+    {
+      "term": "Service",
+      "conceptIds": [
+        "systemd-service"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Service"
+      ]
+    },
+    {
+      "term": "Service · systemd",
+      "conceptIds": [
+        "systemd-service"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Service"
+      ]
+    },
+    {
+      "term": "Session",
+      "conceptIds": [
+        "session-token"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Session"
+      ]
+    },
+    {
+      "term": "Session · Token",
+      "conceptIds": [
+        "session-token"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Session"
+      ]
+    },
+    {
+      "term": "session id",
+      "conceptIds": [
+        "session-token"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Session"
+      ]
+    },
+    {
+      "term": "shared library",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "shared memory",
+      "conceptIds": [
+        "ipc",
+        "mmap-shared-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC",
+        "Memory"
+      ]
+    },
+    {
+      "term": "Shell",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "Shell · Pipe · Text Processing",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "shift",
+      "conceptIds": [
+        "boolean-logic"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "sigkill",
+      "conceptIds": [
+        "signal"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "Signal",
+      "conceptIds": [
+        "signal"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "signal mask",
+      "conceptIds": [
+        "signal"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "sigterm",
+      "conceptIds": [
+        "signal"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "slab",
+      "conceptIds": [
+        "kernel-mm"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "snapshot",
+      "conceptIds": [
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "socket",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "Socket · TCP",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "socket 확인",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "socket internals",
+      "conceptIds": [
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "VFS"
+      ]
+    },
+    {
+      "term": "socket IPC",
+      "conceptIds": [
+        "ipc"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "IPC"
+      ]
+    },
+    {
+      "term": "sort",
+      "conceptIds": [
+        "linux-shell-pipeline",
+        "sorting"
+      ],
+      "areas": [
+        "linux",
+        "algorithms"
+      ],
+      "subareas": [
+        "Shell",
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "sorted condition",
+      "conceptIds": [
+        "binary-search"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "sorting",
+      "conceptIds": [
+        "sorting"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "Sorting Algorithms",
+      "conceptIds": [
+        "sorting"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "space complexity",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "speculation",
+      "conceptIds": [
+        "cpu-pipeline-branch"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "sql",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "ssd",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "stable sort",
+      "conceptIds": [
+        "sorting"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "탐색·정렬"
+      ]
+    },
+    {
+      "term": "stack",
+      "conceptIds": [
+        "stack-queue",
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "data-structures",
+        "runtime"
+      ],
+      "subareas": [
+        "선형 구조",
+        "Memory"
+      ]
+    },
+    {
+      "term": "Stack · Queue",
+      "conceptIds": [
+        "stack-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조"
+      ]
+    },
+    {
+      "term": "stack / heap",
+      "conceptIds": [
+        "native-c-abi"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI"
+      ]
+    },
+    {
+      "term": "stack frame",
+      "conceptIds": [
+        "stack-heap-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "stack pointer",
+      "conceptIds": [
+        "registers-assembly"
+      ],
+      "areas": [
+        "architecture"
+      ],
+      "subareas": [
+        "CPU"
+      ]
+    },
+    {
+      "term": "state",
+      "conceptIds": [
+        "dynamic-programming"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "static/dynamic library",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "stderr",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "stdin",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "stdin·stdout·stderr",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "stdin/stdout/stderr",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "stdout",
+      "conceptIds": [
+        "file-descriptor-io"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "storage",
+      "conceptIds": [
+        "page-cache",
+        "storage-raid",
+        "db-buffer-wal",
+        "block-device-io",
+        "backup-recovery"
+      ],
+      "areas": [
+        "storage",
+        "database"
+      ],
+      "subareas": [
+        "Cache & Durability",
+        "Device",
+        "Storage",
+        "Block I/O"
+      ]
+    },
+    {
+      "term": "Storage · SSD · Block I/O · RAID",
+      "conceptIds": [
+        "storage-raid"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Device"
+      ]
+    },
+    {
+      "term": "strace",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "strong consistency",
+      "conceptIds": [
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consistency"
+      ]
+    },
+    {
+      "term": "strong/eventual consistency",
+      "conceptIds": [
+        "partition-consistency"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consistency"
+      ]
+    },
+    {
+      "term": "struct layout",
+      "conceptIds": [
+        "native-c-abi",
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI",
+        "Memory"
+      ]
+    },
+    {
+      "term": "subnet",
+      "conceptIds": [
+        "ip-routing"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "IP"
+      ]
+    },
+    {
+      "term": "sudo",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "swap",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "switch",
+      "conceptIds": [
+        "ethernet-arp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Link"
+      ]
+    },
+    {
+      "term": "symbol",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "symmetric encryption",
+      "conceptIds": [
+        "crypto-hash-encryption"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Crypto"
+      ]
+    },
+    {
+      "term": "sync/async",
+      "conceptIds": [
+        "replication-db",
+        "replication-distributed"
+      ],
+      "areas": [
+        "database",
+        "distributed"
+      ],
+      "subareas": [
+        "Replication"
+      ]
+    },
+    {
+      "term": "Synchronization · Lock · Atomic",
+      "conceptIds": [
+        "sync"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Concurrency"
+      ]
+    },
+    {
+      "term": "syscall",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "system call",
+      "conceptIds": [
+        "interrupt-syscall"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "File & I/O"
+      ]
+    },
+    {
+      "term": "system programming",
+      "conceptIds": [
+        "native-c-abi",
+        "compile-link-loader",
+        "memory-layout-alignment"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "C & ABI",
+        "Toolchain",
+        "Memory"
+      ]
+    },
+    {
+      "term": "systemctl",
+      "conceptIds": [
+        "systemd-service"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Service"
+      ]
+    },
+    {
+      "term": "systemd",
+      "conceptIds": [
+        "systemd-service"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Service"
+      ]
+    },
+    {
+      "term": "table/row/column",
+      "conceptIds": [
+        "relational-model-sql"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Relational"
+      ]
+    },
+    {
+      "term": "tabulation",
+      "conceptIds": [
+        "dynamic-programming"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "task scheduling",
+      "conceptIds": [
+        "kernel-sched"
+      ],
+      "areas": [
+        "kernel"
+      ],
+      "subareas": [
+        "Scheduler"
+      ]
+    },
+    {
+      "term": "tcp",
+      "conceptIds": [
+        "socket-tcp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "TCP 흐름·혼잡 제어",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "TCP Flow · Congestion Control",
+      "conceptIds": [
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "tcp ip model",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "TCP/IP · Layer Model",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "term",
+      "conceptIds": [
+        "consensus-coordination"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Consensus"
+      ]
+    },
+    {
+      "term": "thread",
+      "conceptIds": [
+        "thread"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "Thread · Context Switching",
+      "conceptIds": [
+        "thread"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    },
+    {
+      "term": "thread per request",
+      "conceptIds": [
+        "server-execution-model"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Server Model"
+      ]
+    },
+    {
+      "term": "Thread Pool",
+      "conceptIds": [
+        "thread-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "throttling",
+      "conceptIds": [
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "throughput unit",
+      "conceptIds": [
+        "data-size-units"
+      ],
+      "areas": [
+        "foundations"
+      ],
+      "subareas": [
+        "논리·단위"
+      ]
+    },
+    {
+      "term": "Time · Partial Failure",
+      "conceptIds": [
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "distributed"
+      ],
+      "subareas": [
+        "Failure"
+      ]
+    },
+    {
+      "term": "Time · Space Complexity · Big-O",
+      "conceptIds": [
+        "complexity-big-o"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "복잡도"
+      ]
+    },
+    {
+      "term": "time slice",
+      "conceptIds": [
+        "scheduler-basics"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Scheduling"
+      ]
+    },
+    {
+      "term": "timeout",
+      "conceptIds": [
+        "connection-pool",
+        "distributed-time-failure"
+      ],
+      "areas": [
+        "backend",
+        "distributed"
+      ],
+      "subareas": [
+        "Pool",
+        "Failure"
+      ]
+    },
+    {
+      "term": "tlb",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "tls",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "TLS와 인증서의 역할",
+      "conceptIds": [
+        "http-tls"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Application"
+      ]
+    },
+    {
+      "term": "token",
+      "conceptIds": [
+        "session-token"
+      ],
+      "areas": [
+        "security"
+      ],
+      "subareas": [
+        "Session"
+      ]
+    },
+    {
+      "term": "token bucket",
+      "conceptIds": [
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "Toolchain",
+      "conceptIds": [
+        "compile-link-loader"
+      ],
+      "areas": [
+        "native"
+      ],
+      "subareas": [
+        "Toolchain"
+      ]
+    },
+    {
+      "term": "top",
+      "conceptIds": [
+        "observability",
+        "proc-process-tools"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability",
+        "Process"
+      ]
+    },
+    {
+      "term": "top-k",
+      "conceptIds": [
+        "heap-priority-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "tracepoint",
+      "conceptIds": [
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "Traffic Control",
+      "conceptIds": [
+        "rate-limiting"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Traffic Control"
+      ]
+    },
+    {
+      "term": "Transaction",
+      "conceptIds": [
+        "db-index-mvcc"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Transaction"
+      ]
+    },
+    {
+      "term": "transition",
+      "conceptIds": [
+        "dynamic-programming"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "문제 해결"
+      ]
+    },
+    {
+      "term": "Transport",
+      "conceptIds": [
+        "socket-tcp",
+        "udp",
+        "tcp-flow-congestion"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "transport layer",
+      "conceptIds": [
+        "network-layer-model"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "기초 계층"
+      ]
+    },
+    {
+      "term": "traversal",
+      "conceptIds": [
+        "linked-list",
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "선형 구조",
+        "Tree"
+      ]
+    },
+    {
+      "term": "Tree",
+      "conceptIds": [
+        "tree-bst",
+        "heap-priority-queue"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "Tree · Binary Search Tree",
+      "conceptIds": [
+        "tree-bst"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Tree"
+      ]
+    },
+    {
+      "term": "ttl",
+      "conceptIds": [
+        "cache-strategy"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Cache"
+      ]
+    },
+    {
+      "term": "UDP",
+      "conceptIds": [
+        "udp"
+      ],
+      "areas": [
+        "network"
+      ],
+      "subareas": [
+        "Transport"
+      ]
+    },
+    {
+      "term": "uid",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "uid/gid",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "unit",
+      "conceptIds": [
+        "systemd-service"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Service"
+      ]
+    },
+    {
+      "term": "user/kernel tracing",
+      "conceptIds": [
+        "ebpf-basics"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "Users · Groups · Permissions",
+      "conceptIds": [
+        "users-permissions"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Permission"
+      ]
+    },
+    {
+      "term": "UTS",
+      "conceptIds": [
+        "namespace"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Isolation"
+      ]
+    },
+    {
+      "term": "vertex/edge",
+      "conceptIds": [
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "veth",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "veth / bridge",
+      "conceptIds": [
+        "docker-fs-net"
+      ],
+      "areas": [
+        "container"
+      ],
+      "subareas": [
+        "Filesystem"
+      ]
+    },
+    {
+      "term": "vfs",
+      "conceptIds": [
+        "filesystem",
+        "kernel-vfs-net"
+      ],
+      "areas": [
+        "os",
+        "kernel"
+      ],
+      "subareas": [
+        "File & I/O",
+        "VFS"
+      ]
+    },
+    {
+      "term": "Virtual Memory",
+      "conceptIds": [
+        "virtual-memory"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Memory"
+      ]
+    },
+    {
+      "term": "visibility",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "visited",
+      "conceptIds": [
+        "graph-traversal"
+      ],
+      "areas": [
+        "algorithms"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "vmstat",
+      "conceptIds": [
+        "observability"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Observability"
+      ]
+    },
+    {
+      "term": "volatile",
+      "conceptIds": [
+        "language-memory-model"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "Language Model"
+      ]
+    },
+    {
+      "term": "wal",
+      "conceptIds": [
+        "db-buffer-wal"
+      ],
+      "areas": [
+        "database"
+      ],
+      "subareas": [
+        "Storage"
+      ]
+    },
+    {
+      "term": "warmup",
+      "conceptIds": [
+        "jit-runtime"
+      ],
+      "areas": [
+        "runtime"
+      ],
+      "subareas": [
+        "JIT"
+      ]
+    },
+    {
+      "term": "weighted graph",
+      "conceptIds": [
+        "graph-structure"
+      ],
+      "areas": [
+        "data-structures"
+      ],
+      "subareas": [
+        "Graph"
+      ]
+    },
+    {
+      "term": "worker",
+      "conceptIds": [
+        "thread-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "worker pool",
+      "conceptIds": [
+        "thread-pool"
+      ],
+      "areas": [
+        "backend"
+      ],
+      "subareas": [
+        "Pool"
+      ]
+    },
+    {
+      "term": "writeback",
+      "conceptIds": [
+        "page-cache"
+      ],
+      "areas": [
+        "storage"
+      ],
+      "subareas": [
+        "Cache & Durability"
+      ]
+    },
+    {
+      "term": "xargs",
+      "conceptIds": [
+        "linux-shell-pipeline"
+      ],
+      "areas": [
+        "linux"
+      ],
+      "subareas": [
+        "Shell"
+      ]
+    },
+    {
+      "term": "zombie / orphan",
+      "conceptIds": [
+        "process"
+      ],
+      "areas": [
+        "os"
+      ],
+      "subareas": [
+        "Process"
+      ]
+    }
+  ]
+}
