@@ -7302,6 +7302,67 @@
       ],
       "importance": "connect",
       "summary": "평균 속도보다 정해진 시간 안에 반드시 끝나는 것이 중요한 시스템의 스케줄링을 봅니다."
+    },
+    {
+      "id": "capstone-system-project",
+      "titleKo": "종합 시스템 설계 프로젝트",
+      "titleEn": "Capstone System Project",
+      "domains": [
+        "소프트웨어공학",
+        "백엔드",
+        "시스템"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "여러 전공 지식을 실제 문제 하나에 통합해 요구사항부터 설계·구현·테스트·운영까지 경험합니다.",
+      "prerequisites": [
+        "software-architecture-design",
+        "testing-strategy"
+      ],
+      "learn": [
+        "문제 정의",
+        "요구사항과 범위",
+        "아키텍처 설계",
+        "구현과 테스트",
+        "배포·운영",
+        "문서와 발표"
+      ],
+      "outcomes": [
+        "전공 지식 통합",
+        "설계 의사결정",
+        "팀 프로젝트 경험"
+      ],
+      "practice": [
+        "작은 서비스나 시스템을 설계부터 운영까지 완성"
+      ],
+      "next": [],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 2,
+        "backend": 1,
+        "database": 2,
+        "network": 2,
+        "linux": 2,
+        "kernel": 2
+      },
+      "area": "backend",
+      "subarea": "Capstone",
+      "course": "캡스톤·종합 프로젝트",
+      "importance": "core",
+      "aliases": [
+        "capstone",
+        "졸업 프로젝트",
+        "종합 설계",
+        "캡스톤"
+      ],
+      "courseIds": [
+        "capstone"
+      ],
+      "typicalYears": [
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": []
     }
   ]
 }
