@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 2,
-  "description": "CS·시스템·백엔드 기본지식을 학교 커리큘럼 수준으로 탐색하기 위한 분류 체계",
+  "schemaVersion": 3,
+  "description": "학부 졸업 수준의 CS 영역·세부영역 분류 체계",
   "areas": [
     {
       "id": "foundations",
@@ -10,7 +10,17 @@
         "데이터 표현",
         "논리·단위",
         "직렬화",
-        "성능 기초"
+        "성능 기초",
+        "논리·집합",
+        "증명",
+        "경우의 수",
+        "그래프",
+        "계산 모델",
+        "형식 언어",
+        "계산 가능성",
+        "계산 복잡도",
+        "확률·통계",
+        "Machine Learning"
       ],
       "aliases": [
         "CS 기초",
@@ -60,7 +70,9 @@
         "CPU",
         "Memory",
         "Instruction",
-        "I/O"
+        "I/O",
+        "Graphics",
+        "Embedded"
       ],
       "aliases": [
         "컴퓨터구조",
@@ -175,7 +187,9 @@
         "Cache",
         "Proxy",
         "Queue",
-        "Traffic Control"
+        "Traffic Control",
+        "Software Engineering",
+        "HCI"
       ],
       "aliases": [
         "백엔드",
