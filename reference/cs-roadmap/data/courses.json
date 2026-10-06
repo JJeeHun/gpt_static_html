@@ -1,0 +1,796 @@
+{
+  "schemaVersion": 1,
+  "description": "일반적인 컴퓨터공학/CS 학부 과목 지도",
+  "courses": [
+    {
+      "id": "programming-foundations",
+      "title": "프로그래밍 기초",
+      "titleEn": "Programming Fundamentals",
+      "typicalYears": [
+        1
+      ],
+      "category": "core",
+      "area": "foundations",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "변수·제어흐름",
+        "함수·모듈",
+        "자료 표현",
+        "메모리와 실행",
+        "디버깅"
+      ],
+      "aliases": [
+        "프로그래밍",
+        "Programming"
+      ]
+    },
+    {
+      "id": "discrete-mathematics",
+      "title": "이산수학",
+      "titleEn": "Discrete Mathematics",
+      "typicalYears": [
+        1,
+        2
+      ],
+      "category": "core",
+      "area": "foundations",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
+      ],
+      "mathPolicy": "recommended-before",
+      "modules": [
+        "논리와 증명",
+        "집합·관계·함수",
+        "경우의 수",
+        "그래프와 트리",
+        "귀납·재귀"
+      ],
+      "aliases": [
+        "이산 수학",
+        "Discrete Math"
+      ]
+    },
+    {
+      "id": "data-structures",
+      "title": "자료구조",
+      "titleEn": "Data Structures",
+      "typicalYears": [
+        1,
+        2
+      ],
+      "category": "core",
+      "area": "data-structures",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "배열·리스트",
+        "Stack·Queue",
+        "Hash",
+        "Tree·Heap",
+        "Graph"
+      ],
+      "aliases": [
+        "자료 구조",
+        "Data Structure"
+      ]
+    },
+    {
+      "id": "computer-organization",
+      "title": "컴퓨터 구성 기초",
+      "titleEn": "Computer Organization",
+      "typicalYears": [
+        1,
+        2
+      ],
+      "category": "core",
+      "area": "architecture",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "데이터 표현",
+        "논리·명령어",
+        "CPU·Register",
+        "Memory hierarchy",
+        "I/O"
+      ],
+      "aliases": [
+        "컴퓨터 구조 기초",
+        "Computer Organization"
+      ]
+    },
+    {
+      "id": "algorithms",
+      "title": "알고리즘",
+      "titleEn": "Algorithms",
+      "typicalYears": [
+        2
+      ],
+      "category": "core",
+      "area": "algorithms",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "복잡도",
+        "정렬·탐색",
+        "분할정복",
+        "Greedy·DP",
+        "Graph algorithms"
+      ],
+      "aliases": [
+        "Algorithm"
+      ]
+    },
+    {
+      "id": "computer-architecture",
+      "title": "컴퓨터 구조",
+      "titleEn": "Computer Architecture",
+      "typicalYears": [
+        2
+      ],
+      "category": "core",
+      "area": "architecture",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "ISA",
+        "Pipeline",
+        "Cache",
+        "Memory hierarchy",
+        "I/O·DMA"
+      ],
+      "aliases": [
+        "Architecture"
+      ]
+    },
+    {
+      "id": "operating-systems",
+      "title": "운영체제",
+      "titleEn": "Operating Systems",
+      "typicalYears": [
+        2,
+        3
+      ],
+      "category": "core",
+      "area": "os",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Process·Thread",
+        "Scheduling",
+        "Synchronization",
+        "Virtual Memory",
+        "File·I/O",
+        "IPC"
+      ],
+      "aliases": [
+        "OS",
+        "운영 체제"
+      ]
+    },
+    {
+      "id": "databases",
+      "title": "데이터베이스",
+      "titleEn": "Database Systems",
+      "typicalYears": [
+        2,
+        3
+      ],
+      "category": "core",
+      "area": "database",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Relational model",
+        "SQL",
+        "Index",
+        "Transaction",
+        "Query processing",
+        "Storage"
+      ],
+      "aliases": [
+        "DB",
+        "Database"
+      ]
+    },
+    {
+      "id": "computer-networks",
+      "title": "컴퓨터 네트워크",
+      "titleEn": "Computer Networks",
+      "typicalYears": [
+        2,
+        3
+      ],
+      "category": "core",
+      "area": "network",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Layer model",
+        "Ethernet·ARP",
+        "IP·Routing",
+        "TCP·UDP",
+        "DNS",
+        "HTTP·TLS"
+      ],
+      "aliases": [
+        "네트워크",
+        "Network"
+      ]
+    },
+    {
+      "id": "software-engineering",
+      "title": "소프트웨어공학",
+      "titleEn": "Software Engineering",
+      "typicalYears": [
+        2,
+        3
+      ],
+      "category": "core",
+      "area": "backend",
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "요구사항",
+        "설계",
+        "버전 관리",
+        "테스트",
+        "CI/CD",
+        "협업"
+      ],
+      "aliases": [
+        "소프트웨어 공학",
+        "SE"
+      ]
+    },
+    {
+      "id": "programming-languages",
+      "title": "프로그래밍 언어론",
+      "titleEn": "Programming Languages",
+      "typicalYears": [
+        2,
+        3
+      ],
+      "category": "core",
+      "area": "runtime",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Syntax·Semantics",
+        "Type system",
+        "Scope·Closure",
+        "Functional",
+        "Object model",
+        "Runtime"
+      ],
+      "aliases": [
+        "PL",
+        "Programming Language"
+      ]
+    },
+    {
+      "id": "probability-statistics-cs",
+      "title": "CS를 위한 확률·통계",
+      "titleEn": "Probability & Statistics for CS",
+      "typicalYears": [
+        2,
+        3
+      ],
+      "category": "support",
+      "area": "foundations",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m4-combinatorics",
+        "m6-probability",
+        "m7-statistics"
+      ],
+      "mathPolicy": "later",
+      "modules": [
+        "확률",
+        "조건부 확률",
+        "기대값",
+        "분포",
+        "통계 기초"
+      ],
+      "aliases": [
+        "확률 통계",
+        "Probability"
+      ]
+    },
+    {
+      "id": "systems-programming",
+      "title": "시스템 프로그래밍",
+      "titleEn": "Systems Programming",
+      "typicalYears": [
+        3
+      ],
+      "category": "core",
+      "area": "linux",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "C·ABI",
+        "Process",
+        "File I/O",
+        "Memory mapping",
+        "Socket",
+        "Toolchain"
+      ],
+      "aliases": [
+        "System Programming",
+        "Linux 시스템 프로그래밍"
+      ]
+    },
+    {
+      "id": "compilers",
+      "title": "컴파일러",
+      "titleEn": "Compilers",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "core",
+      "area": "native",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m5-graph-theory",
+        "m10-proof-induction"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Lexing",
+        "Parsing",
+        "AST",
+        "Semantic analysis",
+        "IR·Optimization",
+        "Code generation"
+      ],
+      "aliases": [
+        "Compiler"
+      ]
+    },
+    {
+      "id": "theory-computation",
+      "title": "계산이론",
+      "titleEn": "Theory of Computation",
+      "typicalYears": [
+        3
+      ],
+      "category": "core",
+      "area": "foundations",
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
+      ],
+      "mathPolicy": "recommended-before",
+      "modules": [
+        "Automata",
+        "Regular language",
+        "CFG",
+        "Turing machine",
+        "Computability",
+        "Complexity"
+      ],
+      "aliases": [
+        "오토마타",
+        "Theory",
+        "Automata"
+      ]
+    },
+    {
+      "id": "distributed-systems",
+      "title": "분산 시스템",
+      "titleEn": "Distributed Systems",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "core",
+      "area": "distributed",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m6-probability"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Partial failure",
+        "Replication",
+        "Partition",
+        "Consistency",
+        "Consensus",
+        "Coordination"
+      ],
+      "aliases": [
+        "분산시스템",
+        "Distributed"
+      ]
+    },
+    {
+      "id": "information-security",
+      "title": "정보보안",
+      "titleEn": "Information Security",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "core",
+      "area": "security",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m11-modular-number"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Threat model",
+        "Crypto",
+        "Authentication",
+        "Authorization",
+        "Web security",
+        "Secure coding"
+      ],
+      "aliases": [
+        "보안",
+        "Security"
+      ]
+    },
+    {
+      "id": "backend-systems",
+      "title": "백엔드 시스템",
+      "titleEn": "Backend Systems",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "applied",
+      "area": "backend",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Server model",
+        "Pool",
+        "Cache",
+        "Proxy·LB",
+        "Queue",
+        "Rate limiting"
+      ],
+      "aliases": [
+        "Backend",
+        "서버 시스템"
+      ]
+    },
+    {
+      "id": "parallel-concurrent",
+      "title": "병렬·동시성",
+      "titleEn": "Parallel & Concurrent Computing",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "core",
+      "area": "os",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m3-logic-sets"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Concurrency model",
+        "Memory model",
+        "Async",
+        "Parallel patterns",
+        "Multicore"
+      ],
+      "aliases": [
+        "병렬 컴퓨팅",
+        "Concurrent"
+      ]
+    },
+    {
+      "id": "advanced-databases",
+      "title": "고급 데이터베이스",
+      "titleEn": "Advanced Databases",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "advanced",
+      "area": "database",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m6-probability"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Storage engine",
+        "Optimizer",
+        "Recovery",
+        "Replication",
+        "Distributed DB"
+      ],
+      "aliases": [
+        "DB Internals",
+        "Database Internals"
+      ]
+    },
+    {
+      "id": "cloud-computing",
+      "title": "클라우드·컨테이너",
+      "titleEn": "Cloud Computing & Containers",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "applied",
+      "area": "container",
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Virtualization",
+        "Container",
+        "Orchestration",
+        "Service discovery",
+        "Cloud networking",
+        "Reliability"
+      ],
+      "aliases": [
+        "Cloud",
+        "Kubernetes",
+        "Container"
+      ]
+    },
+    {
+      "id": "advanced-os-kernel",
+      "title": "고급 운영체제·커널",
+      "titleEn": "Advanced OS & Kernel",
+      "typicalYears": [
+        4
+      ],
+      "category": "advanced",
+      "area": "kernel",
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Scheduler",
+        "Kernel memory",
+        "VFS",
+        "Network stack",
+        "Interrupt·Driver"
+      ],
+      "aliases": [
+        "Kernel",
+        "Linux Kernel"
+      ]
+    },
+    {
+      "id": "performance-engineering",
+      "title": "성능 공학",
+      "titleEn": "Performance Engineering",
+      "typicalYears": [
+        4
+      ],
+      "category": "advanced",
+      "area": "linux",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m6-probability",
+        "m7-statistics"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Latency·Throughput",
+        "CPU profiling",
+        "Memory",
+        "I/O",
+        "Network",
+        "Benchmarking"
+      ],
+      "aliases": [
+        "Performance",
+        "Profiling"
+      ]
+    },
+    {
+      "id": "machine-learning",
+      "title": "머신러닝",
+      "titleEn": "Machine Learning",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "elective",
+      "area": "foundations",
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m6-probability",
+        "m7-statistics",
+        "m8-linear-algebra",
+        "m9-calculus"
+      ],
+      "mathPolicy": "recommended-before",
+      "modules": [
+        "Supervised learning",
+        "Loss·Optimization",
+        "Generalization",
+        "Evaluation",
+        "Neural network basics"
+      ],
+      "aliases": [
+        "ML",
+        "AI 기초"
+      ]
+    },
+    {
+      "id": "computer-graphics",
+      "title": "컴퓨터 그래픽스",
+      "titleEn": "Computer Graphics",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "elective",
+      "area": "architecture",
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m8-linear-algebra",
+        "m9-calculus"
+      ],
+      "mathPolicy": "recommended-before",
+      "modules": [
+        "Coordinate",
+        "Transformation",
+        "Rasterization",
+        "Lighting",
+        "Shader pipeline"
+      ],
+      "aliases": [
+        "Graphics",
+        "그래픽스"
+      ]
+    },
+    {
+      "id": "hci",
+      "title": "HCI·사용자 인터페이스",
+      "titleEn": "Human-Computer Interaction",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "elective",
+      "area": "backend",
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Human factors",
+        "Interaction design",
+        "Usability",
+        "Accessibility",
+        "Evaluation"
+      ],
+      "aliases": [
+        "HCI",
+        "UX"
+      ]
+    },
+    {
+      "id": "embedded-systems",
+      "title": "임베디드·실시간 시스템",
+      "titleEn": "Embedded & Real-Time Systems",
+      "typicalYears": [
+        3,
+        4
+      ],
+      "category": "elective",
+      "area": "architecture",
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
+      ],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "Microcontroller",
+        "Interrupt",
+        "Memory-mapped I/O",
+        "RT scheduling",
+        "Device interface"
+      ],
+      "aliases": [
+        "Embedded",
+        "RTOS"
+      ]
+    },
+    {
+      "id": "capstone",
+      "title": "캡스톤·종합 프로젝트",
+      "titleEn": "Capstone Project",
+      "typicalYears": [
+        4
+      ],
+      "category": "capstone",
+      "area": "backend",
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "mathPolicy": "just-in-time",
+      "modules": [
+        "문제 정의",
+        "설계",
+        "구현",
+        "테스트",
+        "운영",
+        "문서·발표"
+      ],
+      "aliases": [
+        "졸업 프로젝트",
+        "Capstone"
+      ]
+    }
+  ]
+}
