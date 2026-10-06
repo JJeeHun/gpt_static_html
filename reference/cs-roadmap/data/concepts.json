@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 3,
-  "description": "학교 CS 커리큘럼 수준의 범위를 실무·Linux·Backend·Native까지 연결해 탐색하기 위한 로드맵 개념 데이터",
+  "schemaVersion": 4,
+  "description": "컴퓨터공학 학부 졸업 수준의 전체 지식을 학년·과목·수학 선수지식과 함께 탐색하기 위한 개념 데이터",
   "levels": {
     "A": "핵심. 실무 문제를 이해하려면 먼저 보는 단계",
     "B": "심화. 커널·네이티브 내부까지 내려갈 때 보는 단계"
@@ -58,6 +58,18 @@
         "memory hierarchy",
         "locality",
         "캐시"
+      ],
+      "courseIds": [
+        "computer-architecture",
+        "performance-engineering"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -112,6 +124,19 @@
         "interrupt",
         "exception",
         "커널 모드"
+      ],
+      "courseIds": [
+        "operating-systems",
+        "systems-programming"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -171,6 +196,18 @@
         "fork",
         "exec",
         "프로세스"
+      ],
+      "courseIds": [
+        "operating-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -228,6 +265,19 @@
         "thread",
         "context switch",
         "스레드"
+      ],
+      "courseIds": [
+        "operating-systems",
+        "parallel-concurrent"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -293,6 +343,18 @@
         "tlb",
         "swap",
         "가상 메모리"
+      ],
+      "courseIds": [
+        "operating-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -355,6 +417,19 @@
         "race condition",
         "deadlock",
         "동기화"
+      ],
+      "courseIds": [
+        "operating-systems",
+        "parallel-concurrent"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -417,6 +492,18 @@
         "stdout",
         "stderr",
         "파일 디스크립터"
+      ],
+      "courseIds": [
+        "operating-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -479,6 +566,18 @@
         "vfs",
         "mount",
         "파일 시스템"
+      ],
+      "courseIds": [
+        "operating-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -537,6 +636,20 @@
         "writeback",
         "dirty page",
         "페이지 캐시"
+      ],
+      "courseIds": [
+        "operating-systems",
+        "advanced-databases",
+        "performance-engineering"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -593,6 +706,18 @@
         "iops",
         "storage",
         "저장장치"
+      ],
+      "courseIds": [
+        "computer-architecture",
+        "advanced-databases"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -659,6 +784,18 @@
         "handshake",
         "backlog",
         "소켓"
+      ],
+      "courseIds": [
+        "computer-networks"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -719,6 +856,17 @@
         "poll",
         "nonblocking",
         "event loop"
+      ],
+      "courseIds": [
+        "systems-programming",
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -785,6 +933,16 @@
         "xargs",
         "pipeline",
         "파이프"
+      ],
+      "courseIds": [
+        "systems-programming"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -845,7 +1003,17 @@
         "pid namespace",
         "mount namespace",
         "network namespace"
-      ]
+      ],
+      "courseIds": [
+        "cloud-computing",
+        "operating-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": []
     },
     {
       "id": "cgroup",
@@ -905,7 +1073,17 @@
         "cgroup v2",
         "memory.max",
         "cpu quota"
-      ]
+      ],
+      "courseIds": [
+        "cloud-computing",
+        "operating-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": []
     },
     {
       "id": "docker-fs-net",
@@ -968,7 +1146,17 @@
         "veth",
         "bridge",
         "container runtime"
-      ]
+      ],
+      "courseIds": [
+        "cloud-computing",
+        "computer-networks"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": []
     },
     {
       "id": "db-buffer-wal",
@@ -1027,6 +1215,18 @@
         "checkpoint",
         "redo",
         "durability"
+      ],
+      "courseIds": [
+        "databases",
+        "advanced-databases"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -1086,6 +1286,18 @@
         "isolation",
         "lock",
         "b-tree"
+      ],
+      "courseIds": [
+        "databases",
+        "advanced-databases"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -1148,6 +1360,18 @@
         "native memory",
         "jstack",
         "gc"
+      ],
+      "courseIds": [
+        "programming-languages",
+        "performance-engineering"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -1207,6 +1431,17 @@
         "iostat",
         "strace",
         "perf"
+      ],
+      "courseIds": [
+        "systems-programming",
+        "performance-engineering"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1266,6 +1501,19 @@
         "consistency",
         "quorum",
         "consensus"
+      ],
+      "courseIds": [
+        "distributed-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m6-probability"
       ]
     },
     {
@@ -1321,6 +1569,16 @@
         "runqueue",
         "eevdf",
         "scheduler"
+      ],
+      "courseIds": [
+        "advanced-os-kernel"
+      ],
+      "typicalYears": [
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1379,6 +1637,16 @@
         "slab",
         "reclaim",
         "oom"
+      ],
+      "courseIds": [
+        "advanced-os-kernel"
+      ],
+      "typicalYears": [
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1435,6 +1703,16 @@
         "network stack",
         "packet path",
         "vfs"
+      ],
+      "courseIds": [
+        "advanced-os-kernel"
+      ],
+      "typicalYears": [
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1493,6 +1771,17 @@
         "abi",
         "calling convention",
         "struct layout"
+      ],
+      "courseIds": [
+        "systems-programming",
+        "compilers"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1550,6 +1839,17 @@
         "encoding",
         "바이트",
         "2진수"
+      ],
+      "courseIds": [
+        "programming-foundations",
+        "computer-organization"
+      ],
+      "typicalYears": [
+        1
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1606,6 +1906,18 @@
         "gateway",
         "nat",
         "라우팅"
+      ],
+      "courseIds": [
+        "computer-networks"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -1662,6 +1974,18 @@
         "resolver",
         "dns record",
         "name resolution"
+      ],
+      "courseIds": [
+        "computer-networks"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -1722,6 +2046,18 @@
         "tls",
         "certificate",
         "request response"
+      ],
+      "courseIds": [
+        "computer-networks"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -1785,6 +2121,17 @@
         "loader",
         "symbol",
         "shared library"
+      ],
+      "courseIds": [
+        "systems-programming",
+        "compilers"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1819,6 +2166,17 @@
         "bitwise",
         "비트 연산",
         "bit mask"
+      ],
+      "courseIds": [
+        "programming-foundations",
+        "discrete-mathematics"
+      ],
+      "typicalYears": [
+        1
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1853,6 +2211,16 @@
         "mib",
         "gbps",
         "throughput unit"
+      ],
+      "courseIds": [
+        "programming-foundations"
+      ],
+      "typicalYears": [
+        1
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1887,6 +2255,16 @@
         "json",
         "protobuf",
         "binary format"
+      ],
+      "courseIds": [
+        "programming-foundations"
+      ],
+      "typicalYears": [
+        1
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -1921,6 +2299,18 @@
         "dynamic array",
         "배열",
         "arraylist"
+      ],
+      "courseIds": [
+        "data-structures"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -1952,6 +2342,18 @@
       "aliases": [
         "linked list",
         "연결 리스트"
+      ],
+      "courseIds": [
+        "data-structures"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -1987,6 +2389,18 @@
         "deque",
         "스택",
         "큐"
+      ],
+      "courseIds": [
+        "data-structures"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2021,6 +2435,18 @@
         "hashtable",
         "hash table",
         "해시"
+      ],
+      "courseIds": [
+        "data-structures"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2054,6 +2480,18 @@
         "bst",
         "binary search tree",
         "트리"
+      ],
+      "courseIds": [
+        "data-structures"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2087,6 +2525,18 @@
         "heap",
         "priority queue",
         "우선순위 큐"
+      ],
+      "courseIds": [
+        "data-structures"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2120,6 +2570,18 @@
         "graph",
         "그래프",
         "adjacency"
+      ],
+      "courseIds": [
+        "data-structures"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2154,6 +2616,21 @@
         "complexity",
         "시간복잡도",
         "공간복잡도"
+      ],
+      "courseIds": [
+        "algorithms"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
       ]
     },
     {
@@ -2187,6 +2664,21 @@
         "sorting",
         "sort",
         "정렬"
+      ],
+      "courseIds": [
+        "algorithms"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
       ]
     },
     {
@@ -2218,6 +2710,21 @@
       "aliases": [
         "binary search",
         "이진 탐색"
+      ],
+      "courseIds": [
+        "algorithms"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
       ]
     },
     {
@@ -2253,6 +2760,21 @@
         "divide conquer",
         "재귀",
         "분할정복"
+      ],
+      "courseIds": [
+        "algorithms"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
       ]
     },
     {
@@ -2284,6 +2806,21 @@
       "aliases": [
         "greedy",
         "그리디"
+      ],
+      "courseIds": [
+        "algorithms"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
       ]
     },
     {
@@ -2316,6 +2853,21 @@
         "dynamic programming",
         "dp",
         "동적 계획법"
+      ],
+      "courseIds": [
+        "algorithms"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
       ]
     },
     {
@@ -2351,6 +2903,21 @@
         "dfs",
         "graph traversal",
         "그래프 탐색"
+      ],
+      "courseIds": [
+        "algorithms"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m5-graph-theory",
+        "m10-proof-induction"
       ]
     },
     {
@@ -2385,6 +2952,17 @@
         "instruction cycle",
         "opcode",
         "명령어"
+      ],
+      "courseIds": [
+        "computer-architecture"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2419,6 +2997,17 @@
         "assembly",
         "레지스터",
         "어셈블리"
+      ],
+      "courseIds": [
+        "computer-architecture"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2453,6 +3042,17 @@
         "branch prediction",
         "파이프라인",
         "분기예측"
+      ],
+      "courseIds": [
+        "computer-architecture"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2485,6 +3085,17 @@
         "dma",
         "device io",
         "direct memory access"
+      ],
+      "courseIds": [
+        "computer-architecture"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2520,6 +3131,18 @@
         "scheduler",
         "cpu scheduling",
         "스케줄링"
+      ],
+      "courseIds": [
+        "operating-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -2553,6 +3176,18 @@
         "ipc",
         "inter process communication",
         "프로세스 간 통신"
+      ],
+      "courseIds": [
+        "operating-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -2587,6 +3222,18 @@
         "sigterm",
         "sigkill",
         "시그널"
+      ],
+      "courseIds": [
+        "operating-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -2618,6 +3265,19 @@
       "aliases": [
         "deadlock",
         "교착상태"
+      ],
+      "courseIds": [
+        "operating-systems",
+        "parallel-concurrent"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -2652,6 +3312,18 @@
         "mmap",
         "shared memory",
         "공유 메모리"
+      ],
+      "courseIds": [
+        "operating-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m3-logic-sets"
       ]
     },
     {
@@ -2687,6 +3359,16 @@
         "gid",
         "permission",
         "권한"
+      ],
+      "courseIds": [
+        "systems-programming"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -2720,6 +3402,16 @@
         "/proc",
         "ps",
         "top"
+      ],
+      "courseIds": [
+        "systems-programming"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -2755,6 +3447,16 @@
         "systemctl",
         "journalctl",
         "service"
+      ],
+      "courseIds": [
+        "systems-programming"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -2789,6 +3491,19 @@
         "ebpf",
         "bpf",
         "tracepoint"
+      ],
+      "courseIds": [
+        "performance-engineering",
+        "advanced-os-kernel"
+      ],
+      "typicalYears": [
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m6-probability",
+        "m7-statistics"
       ]
     },
     {
@@ -2822,6 +3537,18 @@
         "tcp ip model",
         "network layer",
         "계층"
+      ],
+      "courseIds": [
+        "computer-networks"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2855,6 +3582,18 @@
         "mac",
         "arp",
         "frame"
+      ],
+      "courseIds": [
+        "computer-networks"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2888,6 +3627,18 @@
       "aliases": [
         "udp",
         "datagram"
+      ],
+      "courseIds": [
+        "computer-networks"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2924,6 +3675,18 @@
         "cwnd",
         "rtt",
         "혼잡 제어"
+      ],
+      "courseIds": [
+        "computer-networks"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2957,6 +3720,18 @@
         "block device",
         "block io",
         "sector"
+      ],
+      "courseIds": [
+        "computer-architecture",
+        "advanced-databases"
+      ],
+      "typicalYears": [
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m1-algebra-functions"
       ]
     },
     {
@@ -2992,6 +3767,18 @@
         "rpo",
         "rto",
         "백업"
+      ],
+      "courseIds": [
+        "advanced-databases"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m6-probability"
       ]
     },
     {
@@ -3026,6 +3813,17 @@
         "relational model",
         "join",
         "관계형"
+      ],
+      "courseIds": [
+        "databases"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -3058,6 +3856,17 @@
         "normalization",
         "정규화",
         "denormalization"
+      ],
+      "courseIds": [
+        "databases"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -3093,6 +3902,18 @@
         "composite index",
         "selectivity",
         "인덱스"
+      ],
+      "courseIds": [
+        "databases",
+        "advanced-databases"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -3127,6 +3948,18 @@
         "execution plan",
         "explain",
         "cardinality"
+      ],
+      "courseIds": [
+        "databases",
+        "advanced-databases"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -3162,6 +3995,19 @@
         "replica",
         "replication lag",
         "복제"
+      ],
+      "courseIds": [
+        "advanced-databases",
+        "distributed-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m6-probability"
       ]
     },
     {
@@ -3197,6 +4043,17 @@
         "heap",
         "stack frame",
         "런타임 메모리"
+      ],
+      "courseIds": [
+        "programming-languages"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -3230,6 +4087,17 @@
         "gc",
         "garbage collection",
         "mark sweep"
+      ],
+      "courseIds": [
+        "programming-languages"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -3264,6 +4132,17 @@
         "jit",
         "just in time",
         "warmup"
+      ],
+      "courseIds": [
+        "programming-languages"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -3298,6 +4177,18 @@
         "happens before",
         "volatile",
         "jmm"
+      ],
+      "courseIds": [
+        "programming-languages",
+        "parallel-concurrent"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
       ]
     },
     {
@@ -3333,6 +4224,18 @@
         "server model",
         "request model",
         "event loop server"
+      ],
+      "courseIds": [
+        "backend-systems",
+        "parallel-concurrent"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -3367,6 +4270,17 @@
         "thread pool",
         "executor",
         "worker pool"
+      ],
+      "courseIds": [
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -3399,6 +4313,17 @@
         "connection pool",
         "hikari",
         "pool exhaustion"
+      ],
+      "courseIds": [
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -3434,6 +4359,17 @@
         "ttl",
         "eviction",
         "cache invalidation"
+      ],
+      "courseIds": [
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -3470,6 +4406,17 @@
         "nginx",
         "l4",
         "l7"
+      ],
+      "courseIds": [
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -3505,6 +4452,17 @@
         "kafka",
         "rabbitmq",
         "producer consumer"
+      ],
+      "courseIds": [
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -3539,6 +4497,17 @@
         "rate limit",
         "token bucket",
         "throttling"
+      ],
+      "courseIds": [
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -3574,6 +4543,19 @@
         "clock skew",
         "timeout",
         "부분 실패"
+      ],
+      "courseIds": [
+        "distributed-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m6-probability"
       ]
     },
     {
@@ -3607,6 +4589,19 @@
         "distributed replication",
         "leader follower",
         "replication"
+      ],
+      "courseIds": [
+        "distributed-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m6-probability"
       ]
     },
     {
@@ -3640,6 +4635,19 @@
         "eventual consistency",
         "strong consistency",
         "cap"
+      ],
+      "courseIds": [
+        "distributed-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m6-probability"
       ]
     },
     {
@@ -3673,6 +4681,19 @@
         "raft",
         "paxos",
         "leader election"
+      ],
+      "courseIds": [
+        "distributed-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m6-probability"
       ]
     },
     {
@@ -3708,6 +4729,19 @@
         "aes",
         "rsa",
         "암호화"
+      ],
+      "courseIds": [
+        "information-security"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m11-modular-number"
       ]
     },
     {
@@ -3744,6 +4778,20 @@
         "authz",
         "인증",
         "인가"
+      ],
+      "courseIds": [
+        "information-security",
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m11-modular-number"
       ]
     },
     {
@@ -3778,6 +4826,20 @@
         "cookie",
         "jwt",
         "token"
+      ],
+      "courseIds": [
+        "information-security",
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m11-modular-number"
       ]
     },
     {
@@ -3812,6 +4874,20 @@
         "capability",
         "capabilities",
         "최소 권한"
+      ],
+      "courseIds": [
+        "information-security",
+        "cloud-computing"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m4-combinatorics",
+        "m11-modular-number"
       ]
     },
     {
@@ -3846,6 +4922,17 @@
         "alignment",
         "padding",
         "memory layout"
+      ],
+      "courseIds": [
+        "systems-programming",
+        "compilers"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
     },
     {
@@ -3880,7 +4967,2341 @@
         "device driver",
         "kernel interrupt",
         "드라이버"
+      ],
+      "courseIds": [
+        "advanced-os-kernel"
+      ],
+      "typicalYears": [
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
       ]
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "명제",
+        "AND / OR / NOT",
+        "implication",
+        "truth table",
+        "논리적 동치"
+      ],
+      "outcomes": [
+        "조건식 이해",
+        "보안 정책",
+        "계산이론"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "proposition",
+        "truth table",
+        "명제"
+      ],
+      "id": "propositional-logic",
+      "titleKo": "명제 논리",
+      "titleEn": "Propositional Logic",
+      "area": "foundations",
+      "subarea": "논리·집합",
+      "course": "이산수학",
+      "courseIds": [
+        "discrete-mathematics"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "참·거짓인 문장을 AND·OR·NOT과 조건문으로 조합하고 추론하는 기초입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "set",
+        "subset",
+        "relation",
+        "function",
+        "equivalence relation"
+      ],
+      "outcomes": [
+        "DB 관계 모델",
+        "그래프",
+        "타입 시스템"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "sets",
+        "relations",
+        "functions",
+        "집합",
+        "관계"
+      ],
+      "id": "sets-relations-functions",
+      "titleKo": "집합·관계·함수",
+      "titleEn": "Sets · Relations · Functions",
+      "area": "foundations",
+      "subarea": "논리·집합",
+      "course": "이산수학",
+      "courseIds": [
+        "discrete-mathematics"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "대상을 모으고 관계를 정의하고 한 집합에서 다른 집합으로 대응시키는 수학적 언어입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "direct proof",
+        "contradiction",
+        "induction",
+        "base case",
+        "inductive step"
+      ],
+      "outcomes": [
+        "알고리즘 정확성",
+        "재귀 이해",
+        "계산이론"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "induction",
+        "proof",
+        "귀납법"
+      ],
+      "id": "proof-induction",
+      "titleKo": "증명과 수학적 귀납법",
+      "titleEn": "Proof · Mathematical Induction",
+      "area": "foundations",
+      "subarea": "증명",
+      "course": "이산수학",
+      "courseIds": [
+        "discrete-mathematics"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m10-proof-induction"
+      ],
+      "importance": "connect",
+      "summary": "어떤 주장이 항상 맞는지 논리적으로 설명하고 반복 구조를 귀납적으로 증명합니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "product rule",
+        "permutation",
+        "combination",
+        "pigeonhole principle"
+      ],
+      "outcomes": [
+        "복잡도",
+        "확률",
+        "해시 충돌"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "combinatorics",
+        "permutation",
+        "combination",
+        "조합론"
+      ],
+      "id": "combinatorics-counting",
+      "titleKo": "경우의 수와 조합론",
+      "titleEn": "Counting · Combinatorics",
+      "area": "foundations",
+      "subarea": "경우의 수",
+      "course": "이산수학",
+      "courseIds": [
+        "discrete-mathematics",
+        "probability-statistics-cs"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m4-combinatorics"
+      ],
+      "importance": "connect",
+      "summary": "가능한 경우를 체계적으로 세는 방법을 배웁니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "recurrence",
+        "base case",
+        "iteration",
+        "Master theorem 맛보기"
+      ],
+      "outcomes": [
+        "분할정복 복잡도",
+        "재귀 알고리즘"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "recurrence",
+        "점화식"
+      ],
+      "id": "recurrence-relations",
+      "titleKo": "점화식",
+      "titleEn": "Recurrence Relations",
+      "area": "foundations",
+      "subarea": "증명",
+      "course": "이산수학",
+      "courseIds": [
+        "discrete-mathematics",
+        "algorithms"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions",
+        "m2-exponents-logs",
+        "m10-proof-induction"
+      ],
+      "importance": "connect",
+      "summary": "현재 값을 이전 단계 값으로 정의해 재귀 알고리즘의 비용을 표현합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "vertex / edge",
+        "path",
+        "connected",
+        "tree",
+        "cycle"
+      ],
+      "outcomes": [
+        "그래프 알고리즘",
+        "네트워크",
+        "분산 시스템"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "graph theory",
+        "그래프 이론"
+      ],
+      "id": "graph-theory-math",
+      "titleKo": "그래프 이론 기초",
+      "titleEn": "Graph Theory Foundations",
+      "area": "foundations",
+      "subarea": "그래프",
+      "course": "이산수학",
+      "courseIds": [
+        "discrete-mathematics",
+        "algorithms"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m5-graph-theory"
+      ],
+      "importance": "core",
+      "summary": "정점과 간선으로 관계를 표현하고 경로·연결성·트리의 성질을 수학적으로 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "state",
+        "transition",
+        "DFA",
+        "NFA",
+        "accept state"
+      ],
+      "outcomes": [
+        "정규식",
+        "lexer",
+        "프로토콜 상태 머신"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "dfa",
+        "nfa",
+        "automata",
+        "오토마타"
+      ],
+      "id": "finite-automata",
+      "titleKo": "유한 오토마타",
+      "titleEn": "Finite Automata",
+      "area": "foundations",
+      "subarea": "계산 모델",
+      "course": "계산이론",
+      "courseIds": [
+        "theory-computation"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m10-proof-induction"
+      ],
+      "importance": "core",
+      "summary": "유한한 상태를 이동하며 문자열을 인식하는 가장 기본적인 계산 모델입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "regular language",
+        "regular expression",
+        "closure",
+        "automata equivalence"
+      ],
+      "outcomes": [
+        "lexer",
+        "문자열 검증"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "regular language",
+        "regex theory",
+        "정규 언어"
+      ],
+      "id": "regular-languages",
+      "titleKo": "정규 언어와 정규식",
+      "titleEn": "Regular Languages · Regular Expressions",
+      "area": "foundations",
+      "subarea": "계산 모델",
+      "course": "계산이론",
+      "courseIds": [
+        "theory-computation",
+        "compilers"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "유한 오토마타가 인식할 수 있는 문자열 집합과 정규식의 이론적 기반입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "CFG",
+        "production",
+        "parse tree",
+        "PDA",
+        "ambiguity"
+      ],
+      "outcomes": [
+        "parser",
+        "프로그래밍 언어 문법"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "context free grammar",
+        "cfg",
+        "pda"
+      ],
+      "id": "cfg-pda",
+      "titleKo": "문맥 자유 문법과 Pushdown Automata",
+      "titleEn": "Context-Free Grammar · PDA",
+      "area": "foundations",
+      "subarea": "형식 언어",
+      "course": "계산이론",
+      "courseIds": [
+        "theory-computation",
+        "compilers"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "중첩 구조를 표현하는 문법과 스택을 사용하는 계산 모델을 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "Turing machine",
+        "decidable",
+        "recognizable",
+        "halting problem"
+      ],
+      "outcomes": [
+        "계산 한계",
+        "언어·컴파일러 이론"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "turing machine",
+        "computability",
+        "halting problem"
+      ],
+      "id": "turing-computability",
+      "titleKo": "튜링 머신과 계산 가능성",
+      "titleEn": "Turing Machine · Computability",
+      "area": "foundations",
+      "subarea": "계산 가능성",
+      "course": "계산이론",
+      "courseIds": [
+        "theory-computation"
+      ],
+      "typicalYears": [
+        3
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m3-logic-sets",
+        "m10-proof-induction"
+      ],
+      "importance": "connect",
+      "summary": "컴퓨터로 풀 수 있는 문제의 범위와 계산이라는 개념의 한계를 봅니다."
+    },
+    {
+      "level": "B",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "P",
+        "NP",
+        "NP-hard",
+        "NP-complete",
+        "reduction"
+      ],
+      "outcomes": [
+        "어려운 문제 판단",
+        "근사·휴리스틱의 필요성"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "p np",
+        "np complete",
+        "complexity class"
+      ],
+      "id": "complexity-classes",
+      "titleKo": "복잡도 클래스",
+      "titleEn": "Complexity Classes · P · NP",
+      "area": "foundations",
+      "subarea": "계산 복잡도",
+      "course": "계산이론",
+      "courseIds": [
+        "theory-computation",
+        "algorithms"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m2-exponents-logs",
+        "m10-proof-induction"
+      ],
+      "importance": "deep",
+      "summary": "문제를 푸는 데 필요한 자원의 크기에 따라 문제를 분류합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "syntax",
+        "semantics",
+        "evaluation",
+        "grammar"
+      ],
+      "outcomes": [
+        "언어 설계",
+        "컴파일러",
+        "인터프리터"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "semantics",
+        "syntax",
+        "의미론"
+      ],
+      "id": "syntax-semantics",
+      "titleKo": "문법과 의미론",
+      "titleEn": "Syntax · Semantics",
+      "area": "runtime",
+      "subarea": "Language Model",
+      "course": "프로그래밍 언어론",
+      "courseIds": [
+        "programming-languages"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "프로그램 코드의 모양과 그 코드가 실제로 뜻하는 동작을 구분합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "static / dynamic",
+        "type checking",
+        "generic",
+        "subtyping"
+      ],
+      "outcomes": [
+        "Java·TypeScript 타입",
+        "컴파일 오류",
+        "API 설계"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "type system",
+        "type checking",
+        "타입 시스템"
+      ],
+      "id": "type-systems",
+      "titleKo": "타입 시스템",
+      "titleEn": "Type Systems",
+      "area": "runtime",
+      "subarea": "Language Model",
+      "course": "프로그래밍 언어론",
+      "courseIds": [
+        "programming-languages",
+        "compilers"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "값과 연산에 규칙을 붙여 잘못된 프로그램을 미리 막는 체계입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "lexical scope",
+        "environment",
+        "closure",
+        "capture"
+      ],
+      "outcomes": [
+        "JavaScript closure",
+        "lambda",
+        "callback"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "scope",
+        "closure",
+        "스코프",
+        "클로저"
+      ],
+      "id": "scope-closure",
+      "titleKo": "스코프와 클로저",
+      "titleEn": "Scope · Closure",
+      "area": "runtime",
+      "subarea": "Language Model",
+      "course": "프로그래밍 언어론",
+      "courseIds": [
+        "programming-languages"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "이름이 어디에서 보이는지와 함수가 주변 변수를 기억하는 방식을 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "pure function",
+        "immutability",
+        "higher-order function",
+        "recursion"
+      ],
+      "outcomes": [
+        "stream API",
+        "병렬 처리",
+        "상태 관리"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "functional programming",
+        "함수형"
+      ],
+      "id": "functional-paradigm",
+      "titleKo": "함수형 프로그래밍 기초",
+      "titleEn": "Functional Programming Basics",
+      "area": "runtime",
+      "subarea": "Language Model",
+      "course": "프로그래밍 언어론",
+      "courseIds": [
+        "programming-languages"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "connect",
+      "summary": "값 변경을 줄이고 함수를 조합해서 프로그램을 구성하는 관점을 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "object",
+        "class",
+        "vtable 개념",
+        "dynamic dispatch",
+        "inheritance"
+      ],
+      "outcomes": [
+        "OOP runtime",
+        "JVM method call"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "dynamic dispatch",
+        "vtable",
+        "object model"
+      ],
+      "id": "object-model-dispatch",
+      "titleKo": "객체 모델과 동적 디스패치",
+      "titleEn": "Object Model · Dynamic Dispatch",
+      "area": "runtime",
+      "subarea": "Language Model",
+      "course": "프로그래밍 언어론",
+      "courseIds": [
+        "programming-languages"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "connect",
+      "summary": "객체의 타입과 메서드 호출이 런타임에서 어떻게 결정되는지 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "token",
+        "lexer",
+        "regular expression",
+        "scanner"
+      ],
+      "outcomes": [
+        "compiler front-end",
+        "syntax highlighting"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "lexer",
+        "lexing",
+        "tokenizer"
+      ],
+      "id": "compiler-lexing",
+      "titleKo": "어휘 분석",
+      "titleEn": "Lexical Analysis",
+      "area": "native",
+      "subarea": "Toolchain",
+      "course": "컴파일러",
+      "courseIds": [
+        "compilers"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "소스 코드 문자를 identifier·number 같은 토큰으로 나눕니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "grammar",
+        "parser",
+        "parse tree",
+        "LL/LR 맛보기"
+      ],
+      "outcomes": [
+        "AST",
+        "syntax error"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "parser",
+        "parsing",
+        "구문 분석"
+      ],
+      "id": "compiler-parsing",
+      "titleKo": "구문 분석",
+      "titleEn": "Parsing",
+      "area": "native",
+      "subarea": "Toolchain",
+      "course": "컴파일러",
+      "courseIds": [
+        "compilers"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "토큰 열이 문법에 맞는 구조인지 분석해 트리를 만듭니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "AST",
+        "symbol table",
+        "name resolution",
+        "type check"
+      ],
+      "outcomes": [
+        "compiler error",
+        "IDE analysis"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "ast",
+        "semantic analysis",
+        "symbol table"
+      ],
+      "id": "compiler-ast-semantic",
+      "titleKo": "AST와 의미 분석",
+      "titleEn": "AST · Semantic Analysis",
+      "area": "native",
+      "subarea": "Toolchain",
+      "course": "컴파일러",
+      "courseIds": [
+        "compilers"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m3-logic-sets"
+      ],
+      "importance": "core",
+      "summary": "문법 트리를 프로그램 의미에 필요한 구조로 정리하고 이름·타입을 검사합니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "IR",
+        "basic block",
+        "control-flow graph",
+        "SSA 맛보기"
+      ],
+      "outcomes": [
+        "LLVM IR",
+        "JIT"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "intermediate representation",
+        "llvm ir",
+        "ssa"
+      ],
+      "id": "compiler-ir",
+      "titleKo": "중간 표현 IR",
+      "titleEn": "Intermediate Representation · IR",
+      "area": "native",
+      "subarea": "Toolchain",
+      "course": "컴파일러",
+      "courseIds": [
+        "compilers"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m5-graph-theory"
+      ],
+      "importance": "connect",
+      "summary": "소스 언어와 기계어 사이에서 최적화하기 쉬운 중간 코드 형태를 사용합니다."
+    },
+    {
+      "level": "B",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "constant folding",
+        "dead code",
+        "inlining",
+        "data-flow analysis"
+      ],
+      "outcomes": [
+        "JIT 최적화",
+        "performance"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "compiler optimization",
+        "inlining",
+        "dead code"
+      ],
+      "id": "compiler-optimization",
+      "titleKo": "컴파일러 최적화",
+      "titleEn": "Compiler Optimization",
+      "area": "native",
+      "subarea": "Toolchain",
+      "course": "컴파일러",
+      "courseIds": [
+        "compilers"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m5-graph-theory"
+      ],
+      "importance": "deep",
+      "summary": "프로그램 결과는 유지하면서 더 빠르거나 작은 코드로 바꾸는 기법입니다."
+    },
+    {
+      "level": "B",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "instruction selection",
+        "register allocation",
+        "calling convention",
+        "machine code"
+      ],
+      "outcomes": [
+        "assembly",
+        "ABI",
+        "native performance"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "code generation",
+        "register allocation"
+      ],
+      "id": "compiler-codegen",
+      "titleKo": "코드 생성과 레지스터 할당",
+      "titleEn": "Code Generation · Register Allocation",
+      "area": "native",
+      "subarea": "Toolchain",
+      "course": "컴파일러",
+      "courseIds": [
+        "compilers"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m5-graph-theory"
+      ],
+      "importance": "deep",
+      "summary": "IR을 실제 CPU 명령으로 바꾸고 제한된 레지스터를 배분합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "functional requirement",
+        "non-functional requirement",
+        "use case",
+        "domain model"
+      ],
+      "outcomes": [
+        "프로젝트 범위",
+        "설계 의사결정"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "requirements",
+        "요구사항"
+      ],
+      "id": "requirements-modeling",
+      "titleKo": "요구사항과 모델링",
+      "titleEn": "Requirements · Modeling",
+      "area": "backend",
+      "subarea": "Software Engineering",
+      "course": "소프트웨어공학",
+      "courseIds": [
+        "software-engineering"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "무엇을 왜 만들어야 하는지 요구사항을 정리하고 시스템 경계를 모델링합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "commit",
+        "branch",
+        "merge",
+        "pull request",
+        "code review"
+      ],
+      "outcomes": [
+        "Git 협업",
+        "release 관리"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "git",
+        "version control",
+        "pull request"
+      ],
+      "id": "version-control-collaboration",
+      "titleKo": "버전 관리와 협업",
+      "titleEn": "Version Control · Collaboration",
+      "area": "backend",
+      "subarea": "Software Engineering",
+      "course": "소프트웨어공학",
+      "courseIds": [
+        "software-engineering"
+      ],
+      "typicalYears": [
+        1,
+        2
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "코드 변경 이력을 보존하고 여러 사람이 안전하게 합치는 방법을 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "unit test",
+        "integration test",
+        "test double",
+        "regression",
+        "coverage"
+      ],
+      "outcomes": [
+        "안전한 변경",
+        "CI",
+        "리팩터링"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "unit test",
+        "integration test",
+        "testing",
+        "테스트"
+      ],
+      "id": "testing-strategy",
+      "titleKo": "테스트 전략",
+      "titleEn": "Software Testing",
+      "area": "backend",
+      "subarea": "Software Engineering",
+      "course": "소프트웨어공학",
+      "courseIds": [
+        "software-engineering"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "코드가 기대대로 동작하는지 단위·통합·시스템 수준으로 확인합니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "module",
+        "dependency",
+        "cohesion",
+        "coupling",
+        "layer"
+      ],
+      "outcomes": [
+        "서비스 구조",
+        "모놀리스·마이크로서비스 판단"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "software architecture",
+        "coupling",
+        "cohesion"
+      ],
+      "id": "software-architecture-design",
+      "titleKo": "소프트웨어 아키텍처와 설계",
+      "titleEn": "Software Architecture · Design",
+      "area": "backend",
+      "subarea": "Software Engineering",
+      "course": "소프트웨어공학",
+      "courseIds": [
+        "software-engineering",
+        "backend-systems"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "connect",
+      "summary": "시스템을 책임과 경계로 나누고 변경하기 쉬운 구조를 설계합니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "CI",
+        "build",
+        "test pipeline",
+        "artifact",
+        "deployment"
+      ],
+      "outcomes": [
+        "자동 배포",
+        "release pipeline"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "ci cd",
+        "continuous integration",
+        "continuous delivery"
+      ],
+      "id": "ci-cd",
+      "titleKo": "CI/CD",
+      "titleEn": "Continuous Integration · Delivery",
+      "area": "backend",
+      "subarea": "Software Engineering",
+      "course": "소프트웨어공학",
+      "courseIds": [
+        "software-engineering",
+        "cloud-computing"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "connect",
+      "summary": "변경을 자동으로 빌드·테스트하고 안전하게 배포하는 흐름입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "code smell",
+        "refactoring",
+        "review",
+        "maintainability"
+      ],
+      "outcomes": [
+        "코드 품질",
+        "협업"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "refactoring",
+        "code review",
+        "리팩터링"
+      ],
+      "id": "refactoring-code-review",
+      "titleKo": "리팩터링과 코드 리뷰",
+      "titleEn": "Refactoring · Code Review",
+      "area": "backend",
+      "subarea": "Software Engineering",
+      "course": "소프트웨어공학",
+      "courseIds": [
+        "software-engineering"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "connect",
+      "summary": "동작을 유지하면서 구조를 개선하고 다른 사람의 변경을 검토하는 방법입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "parallelism",
+        "speedup",
+        "Amdahl's law 맛보기",
+        "work partition"
+      ],
+      "outcomes": [
+        "parallel stream",
+        "worker pool",
+        "성능 한계"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "multicore",
+        "parallelism",
+        "병렬성"
+      ],
+      "id": "multicore-parallelism",
+      "titleKo": "멀티코어와 병렬성",
+      "titleEn": "Multicore · Parallelism",
+      "area": "os",
+      "subarea": "Concurrency",
+      "course": "병렬·동시성",
+      "courseIds": [
+        "parallel-concurrent"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions"
+      ],
+      "importance": "core",
+      "summary": "여러 CPU 코어에서 일을 동시에 실행할 때 얻는 이점과 한계를 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "async",
+        "future/promise",
+        "callback",
+        "task queue"
+      ],
+      "outcomes": [
+        "비동기 서버",
+        "Java CompletableFuture",
+        "JavaScript Promise"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "future",
+        "promise",
+        "async",
+        "비동기"
+      ],
+      "id": "async-futures",
+      "titleKo": "비동기와 Future",
+      "titleEn": "Async · Future · Promise",
+      "area": "os",
+      "subarea": "Concurrency",
+      "course": "병렬·동시성",
+      "courseIds": [
+        "parallel-concurrent",
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "작업 완료를 기다리는 동안 다른 일을 하고 나중에 결과를 받는 실행 모델입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "fork-join",
+        "map-reduce",
+        "pipeline",
+        "work stealing"
+      ],
+      "outcomes": [
+        "parallel framework",
+        "distributed processing"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "fork join",
+        "map reduce",
+        "work stealing"
+      ],
+      "id": "parallel-patterns",
+      "titleKo": "병렬 처리 패턴",
+      "titleEn": "Parallel Patterns",
+      "area": "os",
+      "subarea": "Concurrency",
+      "course": "병렬·동시성",
+      "courseIds": [
+        "parallel-concurrent"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions"
+      ],
+      "importance": "connect",
+      "summary": "map/reduce, pipeline, fork-join처럼 병렬 작업을 나누고 합치는 대표 구조입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "hypervisor",
+        "VM",
+        "hardware virtualization",
+        "guest OS"
+      ],
+      "outcomes": [
+        "cloud VM",
+        "container와 VM 차이"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "virtual machine",
+        "hypervisor",
+        "vm",
+        "가상화"
+      ],
+      "id": "virtualization",
+      "titleKo": "가상화",
+      "titleEn": "Virtualization",
+      "area": "container",
+      "subarea": "Isolation",
+      "course": "클라우드·컨테이너",
+      "courseIds": [
+        "cloud-computing"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "하나의 물리 머신에서 여러 가상 머신이 독립된 하드웨어처럼 실행되는 원리입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "Pod",
+        "scheduler",
+        "controller",
+        "desired state",
+        "Kubernetes"
+      ],
+      "outcomes": [
+        "Kubernetes",
+        "autoscaling",
+        "self-healing"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "kubernetes",
+        "k8s",
+        "orchestration"
+      ],
+      "id": "kubernetes-orchestration",
+      "titleKo": "컨테이너 오케스트레이션",
+      "titleEn": "Container Orchestration · Kubernetes",
+      "area": "container",
+      "subarea": "Resource",
+      "course": "클라우드·컨테이너",
+      "courseIds": [
+        "cloud-computing"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "connect",
+      "summary": "여러 머신에서 컨테이너를 배치하고 복구하고 확장하는 제어 시스템을 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "service registry",
+        "DNS discovery",
+        "health check",
+        "dynamic endpoint"
+      ],
+      "outcomes": [
+        "Kubernetes Service",
+        "microservice networking"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "service discovery",
+        "서비스 디스커버리"
+      ],
+      "id": "service-discovery",
+      "titleKo": "서비스 디스커버리",
+      "titleEn": "Service Discovery",
+      "area": "distributed",
+      "subarea": "Coordination",
+      "course": "클라우드·컨테이너",
+      "courseIds": [
+        "cloud-computing",
+        "distributed-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "connect",
+      "summary": "동적으로 바뀌는 서비스 인스턴스의 주소를 찾아 연결하는 방법입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "availability",
+        "SLI",
+        "SLO",
+        "error budget",
+        "reliability"
+      ],
+      "outcomes": [
+        "운영 목표",
+        "장애 우선순위"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "slo",
+        "sli",
+        "error budget",
+        "reliability"
+      ],
+      "id": "slo-reliability",
+      "titleKo": "신뢰성과 SLI·SLO",
+      "titleEn": "Reliability · SLI · SLO",
+      "area": "backend",
+      "subarea": "Traffic Control",
+      "course": "클라우드·컨테이너",
+      "courseIds": [
+        "cloud-computing",
+        "performance-engineering"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m7-statistics"
+      ],
+      "importance": "connect",
+      "summary": "서비스가 얼마나 안정적으로 목표 품질을 제공하는지 수치로 정의합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "asset",
+        "threat",
+        "attack surface",
+        "trust boundary"
+      ],
+      "outcomes": [
+        "보안 설계",
+        "권한 모델"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "threat model",
+        "attack surface",
+        "위협 모델"
+      ],
+      "id": "threat-modeling",
+      "titleKo": "위협 모델링",
+      "titleEn": "Threat Modeling",
+      "area": "security",
+      "subarea": "Identity",
+      "course": "정보보안",
+      "courseIds": [
+        "information-security"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "무엇을 보호하고 누가 어떤 방식으로 공격할 수 있는지 먼저 정리하는 보안 사고법입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "XSS",
+        "CSRF",
+        "SQL injection",
+        "same-origin",
+        "CORS"
+      ],
+      "outcomes": [
+        "안전한 API",
+        "웹 취약점 방어"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "xss",
+        "csrf",
+        "sql injection",
+        "cors",
+        "웹 보안"
+      ],
+      "id": "web-security-basics",
+      "titleKo": "웹 보안 기초",
+      "titleEn": "Web Security Basics",
+      "area": "security",
+      "subarea": "Session",
+      "course": "정보보안",
+      "courseIds": [
+        "information-security",
+        "backend-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "웹 애플리케이션에서 자주 생기는 입력·세션·브라우저 보안 문제를 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "signature",
+        "public/private key",
+        "certificate",
+        "CA",
+        "PKI"
+      ],
+      "outcomes": [
+        "TLS 인증서",
+        "코드 서명",
+        "JWT 서명"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "digital signature",
+        "pki",
+        "certificate authority"
+      ],
+      "id": "digital-signature-pki",
+      "titleKo": "전자서명과 PKI",
+      "titleEn": "Digital Signature · PKI",
+      "area": "security",
+      "subarea": "Crypto",
+      "course": "정보보안",
+      "courseIds": [
+        "information-security"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m11-modular-number"
+      ],
+      "importance": "connect",
+      "summary": "개인키로 서명하고 공개키와 인증서 체계로 신뢰를 연결하는 원리입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "expectation",
+        "variance",
+        "standard deviation"
+      ],
+      "outcomes": [
+        "랜덤 알고리즘",
+        "latency 분포",
+        "ML"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "expected value",
+        "variance",
+        "기대값",
+        "분산"
+      ],
+      "id": "expectation-variance",
+      "titleKo": "기대값과 분산",
+      "titleEn": "Expectation · Variance",
+      "area": "foundations",
+      "subarea": "확률·통계",
+      "course": "CS를 위한 확률·통계",
+      "courseIds": [
+        "probability-statistics-cs"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m6-probability"
+      ],
+      "importance": "core",
+      "summary": "무작위 값의 평균적인 크기와 얼마나 퍼져 있는지를 수치로 표현합니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "distribution",
+        "sample",
+        "normal distribution",
+        "percentile"
+      ],
+      "outcomes": [
+        "성능 측정",
+        "A/B test",
+        "ML 데이터"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "distribution",
+        "sampling",
+        "percentile"
+      ],
+      "id": "distributions-sampling",
+      "titleKo": "확률분포와 샘플링",
+      "titleEn": "Probability Distributions · Sampling",
+      "area": "foundations",
+      "subarea": "확률·통계",
+      "course": "CS를 위한 확률·통계",
+      "courseIds": [
+        "probability-statistics-cs"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m6-probability",
+        "m7-statistics"
+      ],
+      "importance": "connect",
+      "summary": "값이 어떤 확률로 나타나는지 분포로 표현하고 일부 표본으로 전체를 추정합니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "hypothesis",
+        "control",
+        "confidence",
+        "A/B test 맛보기"
+      ],
+      "outcomes": [
+        "성능 실험",
+        "제품 실험"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "hypothesis test",
+        "ab test",
+        "가설 검정"
+      ],
+      "id": "experiment-hypothesis",
+      "titleKo": "실험과 가설 검정 기초",
+      "titleEn": "Experiment · Hypothesis Testing Basics",
+      "area": "foundations",
+      "subarea": "확률·통계",
+      "course": "CS를 위한 확률·통계",
+      "courseIds": [
+        "probability-statistics-cs",
+        "performance-engineering"
+      ],
+      "typicalYears": [
+        2,
+        3
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m7-statistics"
+      ],
+      "importance": "connect",
+      "summary": "측정 차이가 우연인지 의미 있는 변화인지 판단하는 기본 사고법입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "feature",
+        "label",
+        "training",
+        "inference",
+        "classification/regression"
+      ],
+      "outcomes": [
+        "추천·분류·예측 모델"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "supervised learning",
+        "classification",
+        "regression"
+      ],
+      "id": "supervised-learning",
+      "titleKo": "지도 학습",
+      "titleEn": "Supervised Learning",
+      "area": "foundations",
+      "subarea": "Machine Learning",
+      "course": "머신러닝",
+      "courseIds": [
+        "machine-learning"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m6-probability",
+        "m8-linear-algebra"
+      ],
+      "importance": "core",
+      "summary": "정답이 붙은 데이터로 입력과 출력의 관계를 학습하는 기본 ML 방식입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "loss",
+        "gradient",
+        "gradient descent",
+        "learning rate"
+      ],
+      "outcomes": [
+        "모델 학습",
+        "neural network"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "gradient descent",
+        "loss function",
+        "경사하강법"
+      ],
+      "id": "loss-gradient-optimization",
+      "titleKo": "손실 함수와 경사 기반 최적화",
+      "titleEn": "Loss · Gradient Optimization",
+      "area": "foundations",
+      "subarea": "Machine Learning",
+      "course": "머신러닝",
+      "courseIds": [
+        "machine-learning"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m8-linear-algebra",
+        "m9-calculus"
+      ],
+      "importance": "core",
+      "summary": "모델의 틀린 정도를 수치화하고 그 값을 줄이는 방향으로 파라미터를 조정합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "train/validation",
+        "overfitting",
+        "regularization",
+        "bias/variance 맛보기"
+      ],
+      "outcomes": [
+        "모델 평가",
+        "데이터 분할"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "overfitting",
+        "generalization",
+        "regularization"
+      ],
+      "id": "overfitting-regularization",
+      "titleKo": "과적합과 일반화",
+      "titleEn": "Overfitting · Generalization",
+      "area": "foundations",
+      "subarea": "Machine Learning",
+      "course": "머신러닝",
+      "courseIds": [
+        "machine-learning"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m6-probability",
+        "m7-statistics"
+      ],
+      "importance": "core",
+      "summary": "훈련 데이터만 외우지 않고 처음 보는 데이터에도 잘 맞도록 만드는 문제를 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "accuracy",
+        "precision",
+        "recall",
+        "F1",
+        "ROC 맛보기"
+      ],
+      "outcomes": [
+        "분류 모델 평가",
+        "불균형 데이터 판단"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "precision",
+        "recall",
+        "f1",
+        "accuracy"
+      ],
+      "id": "ml-evaluation",
+      "titleKo": "ML 평가 지표",
+      "titleEn": "ML Evaluation Metrics",
+      "area": "foundations",
+      "subarea": "Machine Learning",
+      "course": "머신러닝",
+      "courseIds": [
+        "machine-learning"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m0-arithmetic-units",
+        "m7-statistics"
+      ],
+      "importance": "core",
+      "summary": "문제에 맞는 지표로 모델이 실제로 좋은지 판단합니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "neuron",
+        "layer",
+        "activation",
+        "forward",
+        "backpropagation 맛보기"
+      ],
+      "outcomes": [
+        "딥러닝 입문"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "neural network",
+        "backpropagation",
+        "신경망"
+      ],
+      "id": "neural-network-basics",
+      "titleKo": "신경망 기초",
+      "titleEn": "Neural Network Basics",
+      "area": "foundations",
+      "subarea": "Machine Learning",
+      "course": "머신러닝",
+      "courseIds": [
+        "machine-learning"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m8-linear-algebra",
+        "m9-calculus"
+      ],
+      "importance": "connect",
+      "summary": "여러 층의 선형 변환과 비선형 함수를 조합해 복잡한 패턴을 학습합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "vector",
+        "matrix",
+        "translation",
+        "rotation",
+        "projection"
+      ],
+      "outcomes": [
+        "3D 렌더링",
+        "게임 그래픽"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "transformation matrix",
+        "projection",
+        "좌표 변환"
+      ],
+      "id": "graphics-coordinate-transform",
+      "titleKo": "좌표와 변환",
+      "titleEn": "Coordinates · Transformations",
+      "area": "architecture",
+      "subarea": "Graphics",
+      "course": "컴퓨터 그래픽스",
+      "courseIds": [
+        "computer-graphics"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m8-linear-algebra"
+      ],
+      "importance": "core",
+      "summary": "점과 물체를 이동·회전·확대하고 좌표계를 바꾸는 수학적 방법입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "triangle",
+        "viewport",
+        "fragment",
+        "depth buffer"
+      ],
+      "outcomes": [
+        "GPU pipeline",
+        "게임 렌더링"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "rasterization",
+        "depth buffer"
+      ],
+      "id": "graphics-rasterization",
+      "titleKo": "래스터라이제이션",
+      "titleEn": "Rasterization",
+      "area": "architecture",
+      "subarea": "Graphics",
+      "course": "컴퓨터 그래픽스",
+      "courseIds": [
+        "computer-graphics"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m8-linear-algebra"
+      ],
+      "importance": "core",
+      "summary": "삼각형 같은 기하 정보를 화면 픽셀로 바꾸는 렌더링 단계입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "normal",
+        "light",
+        "diffuse",
+        "specular",
+        "shading"
+      ],
+      "outcomes": [
+        "실시간 렌더링"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "lighting",
+        "shading",
+        "normal vector"
+      ],
+      "id": "graphics-lighting",
+      "titleKo": "조명과 셰이딩",
+      "titleEn": "Lighting · Shading",
+      "area": "architecture",
+      "subarea": "Graphics",
+      "course": "컴퓨터 그래픽스",
+      "courseIds": [
+        "computer-graphics"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m8-linear-algebra"
+      ],
+      "importance": "connect",
+      "summary": "빛과 표면 방향을 사용해 물체의 밝기와 색을 계산합니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "vertex shader",
+        "fragment shader",
+        "GPU parallelism",
+        "pipeline"
+      ],
+      "outcomes": [
+        "WebGL",
+        "게임 엔진"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "shader",
+        "gpu pipeline",
+        "vertex shader"
+      ],
+      "id": "shader-pipeline",
+      "titleKo": "GPU와 셰이더 파이프라인",
+      "titleEn": "GPU · Shader Pipeline",
+      "area": "architecture",
+      "subarea": "Graphics",
+      "course": "컴퓨터 그래픽스",
+      "courseIds": [
+        "computer-graphics"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "high",
+      "mathPrerequisites": [
+        "m8-linear-algebra"
+      ],
+      "importance": "connect",
+      "summary": "GPU가 vertex와 fragment를 병렬로 처리하며 화면을 만드는 흐름입니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "learnability",
+        "feedback",
+        "consistency",
+        "error prevention"
+      ],
+      "outcomes": [
+        "UI 설계",
+        "개발자 도구 UX"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "usability",
+        "human factors",
+        "사용성"
+      ],
+      "id": "hci-usability",
+      "titleKo": "사용성과 인간 요소",
+      "titleEn": "Usability · Human Factors",
+      "area": "backend",
+      "subarea": "HCI",
+      "course": "HCI·사용자 인터페이스",
+      "courseIds": [
+        "hci"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "사용자가 시스템을 얼마나 쉽게 이해하고 실수 없이 사용할 수 있는지 봅니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "semantic UI",
+        "keyboard",
+        "screen reader",
+        "contrast"
+      ],
+      "outcomes": [
+        "웹 접근성",
+        "포용적 UI"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "accessibility",
+        "a11y",
+        "접근성"
+      ],
+      "id": "hci-accessibility",
+      "titleKo": "접근성",
+      "titleEn": "Accessibility",
+      "area": "backend",
+      "subarea": "HCI",
+      "course": "HCI·사용자 인터페이스",
+      "courseIds": [
+        "hci"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "core",
+      "summary": "다양한 신체·인지 조건에서도 제품을 사용할 수 있도록 만드는 원칙입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "usability test",
+        "task",
+        "observation",
+        "prototype"
+      ],
+      "outcomes": [
+        "제품 개선",
+        "UX 검증"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "usability testing",
+        "user evaluation"
+      ],
+      "id": "hci-evaluation",
+      "titleKo": "사용자 평가",
+      "titleEn": "User Evaluation",
+      "area": "backend",
+      "subarea": "HCI",
+      "course": "HCI·사용자 인터페이스",
+      "courseIds": [
+        "hci"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "connect",
+      "summary": "실제 사용자가 어디에서 어려움을 겪는지 관찰하고 설계를 개선합니다."
+    },
+    {
+      "level": "A",
+      "kind": "required",
+      "prerequisites": [],
+      "learn": [
+        "MCU",
+        "GPIO",
+        "timer",
+        "UART/SPI/I2C 맛보기"
+      ],
+      "outcomes": [
+        "임베디드 장치",
+        "센서 제어"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "microcontroller",
+        "gpio",
+        "uart",
+        "spi",
+        "i2c"
+      ],
+      "id": "microcontroller-io",
+      "titleKo": "마이크로컨트롤러와 주변장치",
+      "titleEn": "Microcontroller · Peripheral I/O",
+      "area": "architecture",
+      "subarea": "Embedded",
+      "course": "임베디드·실시간 시스템",
+      "courseIds": [
+        "embedded-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [
+        "m0-arithmetic-units"
+      ],
+      "importance": "core",
+      "summary": "작은 CPU가 메모리와 GPIO·timer·serial 같은 주변장치를 직접 제어하는 구조입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "device register",
+        "address",
+        "volatile",
+        "peripheral"
+      ],
+      "outcomes": [
+        "드라이버",
+        "MCU 제어"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "mmio",
+        "memory mapped io"
+      ],
+      "id": "memory-mapped-io",
+      "titleKo": "Memory-Mapped I/O",
+      "titleEn": "Memory-Mapped I/O",
+      "area": "architecture",
+      "subarea": "Embedded",
+      "course": "임베디드·실시간 시스템",
+      "courseIds": [
+        "embedded-systems"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "low",
+      "mathPrerequisites": [],
+      "importance": "connect",
+      "summary": "장치의 제어 레지스터를 메모리 주소처럼 읽고 쓰는 방식입니다."
+    },
+    {
+      "level": "A",
+      "kind": "single",
+      "prerequisites": [],
+      "learn": [
+        "deadline",
+        "periodic task",
+        "priority",
+        "real-time"
+      ],
+      "outcomes": [
+        "RTOS",
+        "제어 시스템"
+      ],
+      "practice": [],
+      "next": [],
+      "aliases": [
+        "real time scheduling",
+        "rtos",
+        "deadline scheduling"
+      ],
+      "id": "real-time-scheduling",
+      "titleKo": "실시간 스케줄링",
+      "titleEn": "Real-Time Scheduling",
+      "area": "os",
+      "subarea": "Scheduling",
+      "course": "임베디드·실시간 시스템",
+      "courseIds": [
+        "embedded-systems",
+        "advanced-os-kernel"
+      ],
+      "typicalYears": [
+        3,
+        4
+      ],
+      "mathLevel": "medium",
+      "mathPrerequisites": [
+        "m1-algebra-functions"
+      ],
+      "importance": "connect",
+      "summary": "평균 속도보다 정해진 시간 안에 반드시 끝나는 것이 중요한 시스템의 스케줄링을 봅니다."
     }
   ]
 }
