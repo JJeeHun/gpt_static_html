@@ -590,6 +590,182 @@
     }
 
 
+
+    .curriculum-map,
+    .math-map {
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+    .curriculum-note {
+      margin: -.25rem .2rem .9rem;
+      padding: .7rem .8rem;
+      border: 1px solid var(--line);
+      border-radius: .75rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      font-size: .72rem;
+    }
+    .curriculum-note strong { color: var(--text-soft); }
+    .year-tabs {
+      display: flex;
+      gap: .35rem;
+      flex-wrap: wrap;
+      margin-bottom: .8rem;
+    }
+    .year-tab {
+      min-height: 2.1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: .35rem;
+      border: 1px solid var(--line);
+      border-radius: 99rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      padding: .4rem .62rem;
+      font-size: .7rem;
+      font-weight: 800;
+    }
+    .year-tab.active,
+    .year-tab:hover {
+      border-color: var(--primary-line);
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: .55rem;
+    }
+    .course-card {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .55rem;
+      border: 1px solid var(--line);
+      border-radius: .85rem;
+      background: var(--surface);
+      color: var(--text);
+      padding: .8rem;
+      text-align: left;
+    }
+    .course-card:hover {
+      border-color: var(--primary-line);
+      background: var(--surface-hover);
+    }
+    .course-card-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: .6rem;
+    }
+    .course-card h3 {
+      margin: 0;
+      font-size: .82rem;
+      line-height: 1.35;
+    }
+    .course-card small {
+      display: block;
+      margin-top: .15rem;
+      color: var(--muted);
+      font-size: .64rem;
+    }
+    .course-modules {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .28rem;
+    }
+    .course-module {
+      border-radius: .45rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      padding: .25rem .38rem;
+      font-size: .62rem;
+    }
+    .course-meta {
+      display: flex;
+      gap: .3rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .academic-year-badge,
+    .math-level-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .25rem;
+      border: 1px solid var(--line);
+      border-radius: 99rem;
+      padding: .25rem .42rem;
+      font-size: .62rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+    .academic-year-badge { color: var(--primary); border-color: var(--primary-line); background: var(--primary-soft); }
+    .math-level-badge.low { color: var(--core); border-color: var(--core-line); background: var(--core-soft); }
+    .math-level-badge.medium { color: var(--connect); border-color: var(--connect-line); background: var(--connect-soft); }
+    .math-level-badge.high { color: var(--deep); border-color: var(--deep-line); background: var(--deep-soft); }
+
+    .math-intro {
+      display: flex;
+      align-items: flex-start;
+      gap: .6rem;
+      margin: -.25rem .2rem .9rem;
+      padding: .75rem .8rem;
+      border: 1px solid var(--core-line);
+      border-radius: .8rem;
+      background: var(--core-soft);
+      color: var(--text-soft);
+      font-size: .72rem;
+    }
+    .math-intro strong { color: var(--core); }
+    .math-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: .5rem;
+    }
+    .math-card {
+      min-width: 0;
+      display: grid;
+      grid-template-columns: auto minmax(0,1fr);
+      gap: .55rem;
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+      background: var(--surface);
+      color: var(--text);
+      padding: .7rem;
+      text-align: left;
+    }
+    .math-card:hover { border-color: var(--primary-line); background: var(--surface-hover); }
+    .math-code {
+      min-width: 2.15rem;
+      height: 2.15rem;
+      display: grid;
+      place-items: center;
+      border-radius: .62rem;
+      background: var(--surface-soft);
+      color: var(--primary);
+      font-size: .68rem;
+      font-weight: 900;
+    }
+    .math-card strong { display: block; font-size: .75rem; }
+    .math-card p { margin: .18rem 0 .35rem; color: var(--muted); font-size: .64rem; line-height: 1.45; }
+    .math-priority {
+      color: var(--muted-soft);
+      font-size: .6rem;
+      font-weight: 800;
+    }
+
+    .detail-academic {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+    }
+    .detail-math-copy {
+      margin: .45rem 0 0;
+      color: var(--muted);
+      font-size: .68rem;
+      line-height: 1.5;
+    }
+
     .catalog {
       margin-top: 1rem;
       padding: 1rem;
@@ -1153,6 +1329,7 @@
     .detail-backdrop { display: none; }
 
     @media (max-width: 78rem) {
+      .course-grid, .math-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .catalog-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
       .catalog-toolbar { grid-template-columns: 1fr 1fr 1fr; }
       .catalog-search { grid-column: 1 / -1; }
@@ -1216,7 +1393,8 @@
     }
 
     @media (max-width: 42rem) {
-      .catalog { padding: .8rem; }
+      .curriculum-map, .math-map, .catalog { padding: .8rem; }
+      .course-grid, .math-grid { grid-template-columns: 1fr; }
       .catalog-toolbar { grid-template-columns: 1fr; }
       .catalog-search { grid-column: auto; }
       .catalog-grid { grid-template-columns: 1fr; }
@@ -1312,6 +1490,8 @@
           <button class="sample" type="button" data-query="TCP">TCP</button>
           <button class="sample" type="button" data-query="Linux pipe">Linux pipe</button>
           <button class="sample" type="button" data-query="DB WAL">DB WAL</button>
+          <button class="sample" type="button" data-query="2학년 OS">2학년 OS</button>
+          <button class="sample" type="button" data-query="선형대수 필요">선형대수 필요</button>
         </div>
         <div class="search-feedback" id="searchFeedback" aria-live="polite"></div>
       </div>
@@ -1333,6 +1513,9 @@
     <aside class="panel side">
       <div class="side-head">빠른 이동</div>
       <button class="side-btn active" data-target="roadmapStart"><i data-lucide="route" class="icon"></i>추천 학습 순서</button>
+      <button class="side-btn" data-target="academicCurriculum"><i data-lucide="graduation-cap" class="icon"></i>전공 커리큘럼</button>
+      <button class="side-btn" data-target="mathRoadmap"><i data-lucide="sigma" class="icon"></i>필요 수학</button>
+      <button class="side-btn" data-target="curriculumCatalog"><i data-lucide="library-big" class="icon"></i>전체 개념</button>
       <button class="side-btn" data-target="stage-01"><i data-lucide="cpu" class="icon"></i>컴퓨터 기본</button>
       <button class="side-btn" data-target="stage-02"><i data-lucide="layers-3" class="icon"></i>OS 핵심</button>
       <button class="side-btn" data-target="stage-06"><i data-lucide="terminal" class="icon"></i>Linux</button>
@@ -1684,22 +1867,80 @@
       </section>
 
 
+
+      <section class="panel curriculum-map" id="academicCurriculum">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="graduation-cap" class="icon icon-lg"></i></div>
+            <div>
+              <h2>컴공 전공 커리큘럼</h2>
+              <p>대학교에서 보통 어느 학년에 어떤 과목을 배우는지 먼저 전체 지도를 봅니다.</p>
+            </div>
+          </div>
+          <span class="guide-pill" id="courseCountBadge"><i data-lucide="book-copy" class="icon icon-sm"></i>과목 불러오는 중</span>
+        </div>
+        <div class="curriculum-note">
+          <strong>학년은 위치 정보입니다.</strong>
+          실제 학습은 1학년부터 순서대로 끝낼 필요 없이 필요한 과목과 Concept를 자유롭게 오가면 됩니다. 학교마다 과목 배치 시점은 달라질 수 있습니다.
+        </div>
+        <div class="year-tabs" id="academicYearTabs">
+          <button class="year-tab active" type="button" data-academic-year="">전체</button>
+          <button class="year-tab" type="button" data-academic-year="1">1학년</button>
+          <button class="year-tab" type="button" data-academic-year="2">2학년</button>
+          <button class="year-tab" type="button" data-academic-year="3">3학년</button>
+          <button class="year-tab" type="button" data-academic-year="4">4학년</button>
+        </div>
+        <div class="course-grid" id="courseGrid"></div>
+      </section>
+
+      <section class="panel math-map" id="mathRoadmap">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="sigma" class="icon icon-lg"></i></div>
+            <div>
+              <h2>필요 수학 지도</h2>
+              <p>수학을 먼저 전부 끝내는 대신 CS에서 필요해질 때 해당 범위만 보충합니다.</p>
+            </div>
+          </div>
+          <span class="guide-pill"><i data-lucide="route" class="icon icon-sm"></i>Just-in-time Math</span>
+        </div>
+        <div class="math-intro">
+          <i data-lucide="info" class="icon"></i>
+          <div><strong>수학 때문에 CS를 미루지 않습니다.</strong><br>예: OS는 바로 공부하고, 알고리즘에서 log가 나오면 M2 지수·로그를 잠깐 공부한 뒤 다시 돌아옵니다.</div>
+        </div>
+        <div class="math-grid" id="mathGrid"></div>
+      </section>
+
       <section class="panel catalog" id="curriculumCatalog">
         <div class="section-head">
           <div class="section-title-wrap">
             <div class="section-icon"><i data-lucide="library-big" class="icon icon-lg"></i></div>
             <div>
-              <h2>전체 커리큘럼 탐색</h2>
-              <p>학교 CS 커리큘럼 수준의 범위를 영역과 세부 주제로 좁혀서 봅니다.</p>
+              <h2>전체 개념 탐색</h2>
+              <p>학년·과목·분야·세부 주제·수학 요구도까지 조합해서 필요한 내용을 바로 찾습니다.</p>
             </div>
           </div>
           <span class="guide-pill" id="catalogCountBadge"><i data-lucide="database" class="icon icon-sm"></i>데이터 불러오는 중</span>
         </div>
 
         <div class="catalog-toolbar">
-          <input class="catalog-search" id="catalogSearch" type="search" placeholder="OS, Memory, TLB, TCP, JWT..." aria-label="전체 커리큘럼 검색" />
+          <input class="catalog-search" id="catalogSearch" type="search" placeholder="2학년 OS, TLB, 컴파일러, 선형대수 필요..." aria-label="전체 커리큘럼 검색" />
+          <select class="catalog-select" id="catalogYear" aria-label="학년 선택">
+            <option value="">전체 학년</option>
+            <option value="1">1학년</option>
+            <option value="2">2학년</option>
+            <option value="3">3학년</option>
+            <option value="4">4학년</option>
+          </select>
+          <select class="catalog-select" id="catalogCourse" aria-label="과목 선택"><option value="">전체 과목</option></select>
           <select class="catalog-select" id="catalogArea" aria-label="영역 선택"><option value="">전체 영역</option></select>
           <select class="catalog-select" id="catalogSubarea" aria-label="세부 영역 선택"><option value="">전체 세부 영역</option></select>
+          <select class="catalog-select" id="catalogMathLevel" aria-label="수학 요구도 선택">
+            <option value="">전체 수학 요구도</option>
+            <option value="low">낮음 · 바로 시작</option>
+            <option value="medium">중간 · 필요할 때 보충</option>
+            <option value="high">높음 · 선수 수학 권장</option>
+          </select>
           <select class="catalog-select" id="catalogImportance" aria-label="중요도 선택">
             <option value="">전체 중요도</option>
             <option value="core">핵심</option>
@@ -1772,6 +2013,15 @@
         <p class="detail-summary" id="detailSummary">프로그램마다 자기만의 메모리가 있는 것처럼 보이게 하는 OS의 핵심 기능입니다.</p>
       </header>
       <div class="detail-body">
+        <section class="detail-section" id="detailAcademicSection" hidden>
+          <h3 class="detail-label"><i data-lucide="graduation-cap" class="icon icon-sm"></i>전공 커리큘럼 위치</h3>
+          <div class="detail-academic" id="detailAcademic"></div>
+        </section>
+        <section class="detail-section" id="detailMathSection" hidden>
+          <h3 class="detail-label"><i data-lucide="sigma" class="icon icon-sm"></i>필요 수학</h3>
+          <div class="detail-academic" id="detailMathBadges"></div>
+          <p class="detail-math-copy" id="detailMathCopy"></p>
+        </section>
         <section class="detail-section">
           <h3 class="detail-label"><i data-lucide="route" class="icon icon-sm"></i>추천 위치</h3>
           <div class="route" id="detailRoute">
@@ -2087,6 +2337,11 @@
       const route = document.getElementById('detailRoute');
       const keywords = document.getElementById('detailKeywords');
       const outcomes = document.getElementById('detailOutcomes');
+      const detailAcademicSection = document.getElementById('detailAcademicSection');
+      const detailAcademic = document.getElementById('detailAcademic');
+      const detailMathSection = document.getElementById('detailMathSection');
+      const detailMathBadges = document.getElementById('detailMathBadges');
+      const detailMathCopy = document.getElementById('detailMathCopy');
       const iconHost = document.querySelector('.detail-icon');
       const promptButton = document.getElementById('promptButton');
       const bookButton = document.getElementById('bookButton');
@@ -2098,10 +2353,17 @@
       const learningModalBody = document.getElementById('learningModalBody');
       let activeDetail = details.vm;
       let activeConceptId = null;
+      const academicSection = document.getElementById('academicCurriculum');
+      const courseGrid = document.getElementById('courseGrid');
+      const courseCountBadge = document.getElementById('courseCountBadge');
+      const mathGrid = document.getElementById('mathGrid');
       const catalogSection = document.getElementById('curriculumCatalog');
       const catalogSearch = document.getElementById('catalogSearch');
+      const catalogYear = document.getElementById('catalogYear');
+      const catalogCourse = document.getElementById('catalogCourse');
       const catalogArea = document.getElementById('catalogArea');
       const catalogSubarea = document.getElementById('catalogSubarea');
+      const catalogMathLevel = document.getElementById('catalogMathLevel');
       const catalogImportance = document.getElementById('catalogImportance');
       const catalogReset = document.getElementById('catalogReset');
       const catalogGrid = document.getElementById('catalogGrid');
@@ -2110,7 +2372,10 @@
       const catalogCountBadge = document.getElementById('catalogCountBadge');
       let curriculumConcepts = [];
       let curriculumTaxonomy = [];
+      let curriculumCourses = [];
+      let curriculumMathTopics = [];
       let curriculumSearchEntries = [];
+      let academicYearFilter = '';
       let catalogPage = 1;
       const catalogPageSize = 12;
 
@@ -2131,6 +2396,34 @@
         ).join('');
         keywords.innerHTML = data.keywords.map(x => '<span class="keyword">' + x + '</span>').join('');
         outcomes.innerHTML = data.outcomes.map(x => '<li>' + x + '</li>').join('');
+
+        const courses=(data.courseIds||[]).map(courseMeta).filter(Boolean);
+        if(courses.length || (data.typicalYears||[]).length){
+          detailAcademicSection.hidden=false;
+          detailAcademic.innerHTML=
+            '<span class="academic-year-badge">'+yearLabel(data.typicalYears)+'</span>'+
+            courses.slice(0,3).map(c=>'<span class="badge domain">'+c.title+'</span>').join('');
+        }else{
+          detailAcademicSection.hidden=true;
+          detailAcademic.innerHTML='';
+        }
+
+        const mathRows=(data.mathPrerequisites||[]).map(mathMeta).filter(Boolean);
+        if(data.mathLevel || mathRows.length){
+          detailMathSection.hidden=false;
+          detailMathBadges.innerHTML=
+            '<span class="math-level-badge '+(data.mathLevel||'low')+'">'+mathLevelLabel(data.mathLevel||'low')+'</span>'+
+            mathRows.map(m=>'<span class="badge domain">'+m.code+' · '+m.title+'</span>').join('');
+          detailMathCopy.textContent=
+            (data.mathLevel==='high' ? '관련 수학을 먼저 또는 함께 공부하는 편이 좋습니다.' :
+             data.mathLevel==='medium' ? '막히는 수학이 나올 때 해당 항목만 보충해도 됩니다.' :
+             '수학 때문에 이 주제 학습을 미룰 필요는 없습니다.');
+        }else{
+          detailMathSection.hidden=true;
+          detailMathBadges.innerHTML='';
+          detailMathCopy.textContent='';
+        }
+
         iconHost.innerHTML = '<i data-lucide="' + data.icon + '" class="icon icon-lg"></i>';
         if (window.lucide) window.lucide.createIcons();
       }
@@ -2146,6 +2439,72 @@
 
       function areaMeta(id) {
         return curriculumTaxonomy.find(x => x.id === id) || {id,label:id,subareas:[],aliases:[]};
+      }
+
+      function courseMeta(id) {
+        return curriculumCourses.find(x => x.id === id) || null;
+      }
+
+      function mathMeta(id) {
+        return curriculumMathTopics.find(x => x.id === id) || null;
+      }
+
+      function yearLabel(years) {
+        const list=[...new Set((years||[]).map(Number).filter(Boolean))].sort((a,b)=>a-b);
+        if(!list.length) return '학년 정보 없음';
+        if(list.length===1) return list[0]+'학년';
+        return list[0]+'~'+list[list.length-1]+'학년';
+      }
+
+      function mathLevelLabel(level) {
+        return level==='high' ? '수학 높음' : level==='medium' ? '수학 중간' : '수학 낮음';
+      }
+
+      function renderCourseMap() {
+        if(!courseGrid) return;
+        const rows=curriculumCourses
+          .filter(c=>!academicYearFilter || (c.typicalYears||[]).includes(Number(academicYearFilter)))
+          .sort((a,b)=>(Math.min(...(a.typicalYears||[9]))-Math.min(...(b.typicalYears||[9]))) || a.title.localeCompare(b.title,'ko'));
+
+        courseCountBadge.innerHTML='<i data-lucide="book-copy" class="icon icon-sm"></i>'+curriculumCourses.length+'개 과목';
+        courseGrid.innerHTML=rows.map(c=>{
+          const conceptCount=curriculumConcepts.filter(x=>(x.courseIds||[]).includes(c.id)).length;
+          const modules=(c.modules||[]).slice(0,5).map(x=>'<span class="course-module">'+x+'</span>').join('');
+          return '<button class="course-card" type="button" data-course-id="'+c.id+'">'+
+            '<span class="course-card-head"><span><h3>'+c.title+'</h3><small>'+c.titleEn+'</small></span>'+
+            '<span class="academic-year-badge">'+yearLabel(c.typicalYears)+'</span></span>'+
+            '<span class="course-modules">'+modules+'</span>'+
+            '<span class="course-meta"><span class="math-level-badge '+c.mathLevel+'">'+mathLevelLabel(c.mathLevel)+'</span>'+
+            '<span class="badge domain">'+conceptCount+'개 개념</span></span>'+
+          '</button>';
+        }).join('');
+
+        document.querySelectorAll('[data-academic-year]').forEach(btn=>
+          btn.classList.toggle('active',(btn.dataset.academicYear||'')===academicYearFilter)
+        );
+        courseGrid.querySelectorAll('[data-course-id]').forEach(btn=>btn.addEventListener('click',()=>{
+          setCatalogCourse(btn.dataset.courseId||'');
+        }));
+        if(window.lucide) window.lucide.createIcons();
+      }
+
+      function renderMathMap() {
+        if(!mathGrid) return;
+        const priorityLabel={now:'지금 확인',early:'초반에 보충','when-needed':'필요할 때',later:'나중에 필요'};
+        mathGrid.innerHTML=curriculumMathTopics.map(m=>
+          '<button class="math-card" type="button" data-math-topic="'+m.id+'">'+
+            '<span class="math-code">'+m.code+'</span>'+
+            '<span><strong>'+m.title+'</strong><p>'+m.summary+'</p><span class="math-priority">'+(priorityLabel[m.priority]||'필요할 때')+' · '+m.schoolLevel+'</span></span>'+
+          '</button>'
+        ).join('');
+        mathGrid.querySelectorAll('[data-math-topic]').forEach(btn=>btn.addEventListener('click',()=>{
+          const m=mathMeta(btn.dataset.mathTopic);
+          if(!m)return;
+          catalogSearch.value=m.title;
+          catalogPage=1;
+          renderCatalog();
+          catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
+        }));
       }
 
       function conceptToDetail(c) {
@@ -2164,7 +2523,11 @@
           summary:c.summary || '',
           route:routeParts.length ? routeParts : [c.titleEn || c.titleKo],
           keywords:(c.learn || []).slice(0,6),
-          outcomes:(c.outcomes || []).slice(0,4)
+          outcomes:(c.outcomes || []).slice(0,4),
+          courseIds:c.courseIds || [],
+          typicalYears:c.typicalYears || [],
+          mathLevel:c.mathLevel || 'low',
+          mathPrerequisites:c.mathPrerequisites || []
         };
       }
 
@@ -2205,8 +2568,11 @@
       function filteredCatalog() {
         const q=catalogSearch.value.trim();
         return curriculumConcepts.filter(c=>{
+          if(catalogYear.value && !(c.typicalYears||[]).includes(Number(catalogYear.value))) return false;
+          if(catalogCourse.value && !(c.courseIds||[]).includes(catalogCourse.value)) return false;
           if(catalogArea.value && c.area!==catalogArea.value) return false;
           if(catalogSubarea.value && c.subarea!==catalogSubarea.value) return false;
+          if(catalogMathLevel.value && c.mathLevel!==catalogMathLevel.value) return false;
           if(catalogImportance.value && c.importance!==catalogImportance.value) return false;
           return catalogMatchesQuery(c,q);
         }).sort((a,b)=>{
@@ -2224,7 +2590,7 @@
         const start=(catalogPage-1)*catalogPageSize;
         const pageRows=rows.slice(start,start+catalogPageSize);
 
-        catalogCountBadge.innerHTML='<i data-lucide="database" class="icon icon-sm"></i>'+curriculumConcepts.length+'개 개념';
+        catalogCountBadge.innerHTML='<i data-lucide="database" class="icon icon-sm"></i>'+curriculumConcepts.length+'개 개념 · '+curriculumCourses.length+'개 과목';
         catalogStatus.innerHTML='<strong>'+rows.length+'개</strong> 결과 · '+catalogPage+' / '+totalPages+' 페이지';
 
         if(!pageRows.length){
@@ -2240,7 +2606,11 @@
                 '<span class="catalog-card-title"><strong>'+c.titleKo+'</strong><small>'+c.titleEn+'</small></span>'+
               '</span>'+
               '<p>'+c.summary+'</p>'+
-              '<span class="catalog-card-meta"><span class="badge '+importance+'">'+label+'</span><span class="badge domain">'+area.label+'</span><span class="badge domain">'+c.subarea+'</span></span>'+
+              '<span class="catalog-card-meta"><span class="badge '+importance+'">'+label+'</span>'+
+              '<span class="academic-year-badge">'+yearLabel(c.typicalYears)+'</span>'+
+              '<span class="math-level-badge '+(c.mathLevel||'low')+'">'+mathLevelLabel(c.mathLevel||'low')+'</span>'+
+              '<span class="badge domain">'+((courseMeta((c.courseIds||[])[0])||{}).title||area.label)+'</span>'+
+              '<span class="badge domain">'+c.subarea+'</span></span>'+
             '</button>';
           }).join('');
         }
@@ -2275,23 +2645,55 @@
 
       async function loadCurriculumData() {
         try {
-          const [conceptRes,taxRes,indexRes]=await Promise.all([
+          const [conceptRes,taxRes,indexRes,courseRes,mathRes]=await Promise.all([
             fetch('./data/concepts.json',{cache:'no-store'}),
             fetch('./data/taxonomy.json',{cache:'no-store'}),
-            fetch('./data/search-index.json',{cache:'no-store'})
+            fetch('./data/search-index.json',{cache:'no-store'}),
+            fetch('./data/courses.json',{cache:'no-store'}),
+            fetch('./data/math-topics.json',{cache:'no-store'})
           ]);
-          if(!conceptRes.ok||!taxRes.ok||!indexRes.ok) throw new Error('data load failed');
-          const [conceptData,taxData,indexData]=await Promise.all([conceptRes.json(),taxRes.json(),indexRes.json()]);
+          if(!conceptRes.ok||!taxRes.ok||!indexRes.ok||!courseRes.ok||!mathRes.ok) throw new Error('data load failed');
+          const [conceptData,taxData,indexData,courseData,mathData]=await Promise.all([
+            conceptRes.json(),taxRes.json(),indexRes.json(),courseRes.json(),mathRes.json()
+          ]);
           curriculumConcepts=conceptData.concepts||[];
           curriculumTaxonomy=taxData.areas||[];
+          curriculumCourses=courseData.courses||[];
+          curriculumMathTopics=mathData.topics||[];
           curriculumSearchEntries=indexData.entries||[];
           catalogArea.innerHTML='<option value="">전체 영역</option>'+curriculumTaxonomy.map(a=>'<option value="'+a.id+'">'+a.label+'</option>').join('');
+          catalogCourse.innerHTML='<option value="">전체 과목</option>'+curriculumCourses
+            .slice().sort((a,b)=>(Math.min(...(a.typicalYears||[9]))-Math.min(...(b.typicalYears||[9])))||a.title.localeCompare(b.title,'ko'))
+            .map(c=>'<option value="'+c.id+'">'+yearLabel(c.typicalYears)+' · '+c.title+'</option>').join('');
           updateCatalogSubareas();
+          renderCourseMap();
+          renderMathMap();
           renderCatalog();
         } catch(error) {
           catalogStatus.textContent='커리큘럼 데이터를 불러오지 못했습니다.';
           catalogGrid.innerHTML='<div class="catalog-empty">데이터를 불러오지 못했습니다. 새로고침 후 다시 확인해주세요.</div>';
         }
+      }
+
+      function setCatalogCourse(courseId,{scroll=true}={}) {
+        catalogCourse.value=courseId||'';
+        catalogPage=1;
+        renderCatalog();
+        if(scroll) catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+
+      function setCatalogYear(year,{scroll=true}={}) {
+        catalogYear.value=year ? String(year) : '';
+        catalogPage=1;
+        renderCatalog();
+        if(scroll) catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+
+      function setCatalogMathLevel(level,{scroll=true}={}) {
+        catalogMathLevel.value=level||'';
+        catalogPage=1;
+        renderCatalog();
+        if(scroll) catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
       }
 
       function setCatalogArea(areaId,{scroll=true}={}) {
@@ -2302,15 +2704,22 @@
         if(scroll) catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
       }
 
+      catalogYear.addEventListener('change',()=>{catalogPage=1;renderCatalog();});
+      catalogCourse.addEventListener('change',()=>{catalogPage=1;renderCatalog();});
       catalogArea.addEventListener('change',()=>{catalogPage=1;updateCatalogSubareas();renderCatalog();});
       catalogSubarea.addEventListener('change',()=>{catalogPage=1;renderCatalog();});
+      catalogMathLevel.addEventListener('change',()=>{catalogPage=1;renderCatalog();});
       catalogImportance.addEventListener('change',()=>{catalogPage=1;renderCatalog();});
       catalogSearch.addEventListener('input',()=>{catalogPage=1;renderCatalog();});
       catalogReset.addEventListener('click',()=>{
-        catalogSearch.value=''; catalogArea.value=''; catalogImportance.value=''; catalogPage=1;
+        catalogSearch.value=''; catalogYear.value=''; catalogCourse.value=''; catalogArea.value=''; catalogMathLevel.value=''; catalogImportance.value=''; catalogPage=1;
         updateCatalogSubareas(); catalogSubarea.value=''; renderCatalog();
       });
       document.querySelectorAll('.catalog-chip').forEach(chip=>chip.addEventListener('click',()=>setCatalogArea(chip.dataset.area||'')));
+      document.querySelectorAll('[data-academic-year]').forEach(btn=>btn.addEventListener('click',()=>{
+        academicYearFilter=btn.dataset.academicYear||'';
+        renderCourseMap();
+      }));
 
       const searchAliases = {
         '가상메모리': 'vm',
@@ -2345,9 +2754,45 @@
         return value.trim().toLowerCase().replace(/\s+/g, ' ');
       }
 
+      function curriculumQueryFilters(query) {
+        const normalized=normalizeSearch(query);
+        const yearMatch=normalized.match(/(?:대학교\s*|컴공\s*)?([1-4])학년/);
+        const year=yearMatch ? Number(yearMatch[1]) : null;
+
+        const course=curriculumCourses.find(c=>
+          [c.title,c.titleEn,...(c.aliases||[])].some(name=>{
+            const n=normalizeSearch(name);
+            return n && (normalized===n || normalized.includes(n));
+          })
+        ) || null;
+
+        const mathTopic=curriculumMathTopics.find(m=>
+          normalized===normalizeSearch(m.title) ||
+          normalized===normalizeSearch(m.title+' 필요') ||
+          normalized===normalizeSearch(m.code)
+        ) || null;
+
+        let mathLevel=null;
+        if(/수학\s*(낮음|거의 없음|부담 낮음)/.test(normalized)) mathLevel='low';
+        else if(/수학\s*(중간|병행)/.test(normalized)) mathLevel='medium';
+        else if(/수학\s*(높음|선수학습|선수 학습)/.test(normalized)) mathLevel='high';
+
+        if(year || course || mathTopic || mathLevel) return {
+          year,
+          course:course?.id||null,
+          mathTopic:mathTopic?.id||null,
+          mathLevel
+        };
+        return null;
+      }
+
       function findConceptId(query) {
         const normalized = normalizeSearch(query);
         if (!normalized) return null;
+
+        const filters=curriculumQueryFilters(query);
+        if(filters) return {filters};
+
         if (searchAliases[normalized]) return searchAliases[normalized];
 
         const exactArea=curriculumTaxonomy.find(a=>
@@ -2423,6 +2868,30 @@
           searchInput.focus();
           return;
         }
+        if(found && typeof found==='object' && found.filters){
+          const filters=found.filters;
+          catalogSearch.value='';
+          catalogYear.value=filters.year ? String(filters.year) : '';
+          catalogCourse.value=filters.course || '';
+          catalogMathLevel.value=filters.mathLevel || '';
+          catalogArea.value='';
+          updateCatalogSubareas();
+          if(filters.mathTopic){
+            const m=mathMeta(filters.mathTopic);
+            catalogSearch.value=m?.title||'';
+          }
+          catalogPage=1;
+          renderCatalog();
+          catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
+          const parts=[];
+          if(filters.year) parts.push(filters.year+'학년');
+          if(filters.course) parts.push(courseMeta(filters.course)?.title||'과목');
+          if(filters.mathLevel) parts.push(mathLevelLabel(filters.mathLevel));
+          if(filters.mathTopic) parts.push(mathMeta(filters.mathTopic)?.title||'수학');
+          searchFeedback.textContent='필터 적용: '+parts.join(' · ');
+          searchFeedback.className='search-feedback success';
+          return;
+        }
         if(found && typeof found==='object' && found.area){
           catalogSearch.value='';
           setCatalogArea(found.area);
@@ -2435,6 +2904,9 @@
           if(c){
             activeConceptId = c.id;
             catalogSearch.value=query;
+            catalogYear.value='';
+            catalogCourse.value='';
+            catalogMathLevel.value='';
             catalogArea.value='';
             updateCatalogSubareas();
             catalogPage=1;
