@@ -17,7 +17,6 @@
     errorState: document.getElementById("errorState"),
     resetFilters: document.getElementById("resetFilters"),
     themeToggle: document.getElementById("themeToggle"),
-    themeIcon: document.getElementById("themeIcon"),
     branchBadge: document.getElementById("branchBadge")
   };
 
@@ -401,7 +400,9 @@
       nextTheme === "light" ? "라이트 테마로 변경" : "다크 테마로 변경"
     );
 
-    elements.themeIcon.dataset.lucide = nextTheme === "light" ? "sun" : "moon";
+    elements.themeToggle.replaceChildren(
+      makeIcon(nextTheme === "light" ? "sun" : "moon")
+    );
     refreshIcons();
   };
 
