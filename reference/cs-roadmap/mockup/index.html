@@ -37,6 +37,9 @@
       --deep-soft: #f5efff;
       --deep-line: #d9c8f5;
       --danger: #b42318;
+      --on-primary: #ffffff;
+      --contrast-bg: #162033;
+      --contrast-text: #ffffff;
       --shadow: 0 1rem 2.5rem rgba(16, 24, 40, .07);
       --shadow-soft: 0 .35rem 1.2rem rgba(16, 24, 40, .05);
       --radius-sm: .65rem;
@@ -55,7 +58,7 @@
       --text: #edf2f7;
       --text-soft: #c7d0dc;
       --muted: #93a0b2;
-      --muted-soft: #6f7c8e;
+      --muted-soft: #8592a6;
       --line: #263244;
       --line-strong: #35445a;
       --primary: #7c9cff;
@@ -71,6 +74,9 @@
       --deep-soft: #291f3d;
       --deep-line: #4d3a71;
       --danger: #ff8a80;
+      --on-primary: #07111f;
+      --contrast-bg: #edf2f7;
+      --contrast-text: #0b1018;
       --shadow: 0 1rem 2.5rem rgba(0, 0, 0, .28);
       --shadow-soft: 0 .35rem 1.2rem rgba(0, 0, 0, .22);
     }
@@ -82,17 +88,6 @@
     :root[data-theme="dark"] .stage-head,
     :root[data-theme="dark"] .detail-head {
       background: linear-gradient(180deg, var(--surface-soft), var(--surface));
-    }
-    :root[data-theme="dark"] .detail-icon,
-    :root[data-theme="dark"] .action-btn {
-      background: var(--surface);
-    }
-    :root[data-theme="dark"] .search-submit,
-    :root[data-theme="dark"] .stage-index {
-      color: #fff;
-    }
-    :root[data-theme="dark"] .concept.active .concept-icon {
-      background: var(--surface);
     }
     :root[data-theme="dark"] .study-actions {
       color: var(--text-soft);
@@ -158,8 +153,8 @@
       display: grid;
       place-items: center;
       border-radius: .65rem;
-      background: var(--text);
-      color: #fff;
+      background: var(--contrast-bg);
+      color: var(--contrast-text);
     }
     .brand small {
       color: var(--muted);
@@ -273,7 +268,7 @@
       border: 0;
       border-radius: .7rem;
       background: var(--primary);
-      color: #fff;
+      color: var(--on-primary);
       padding: .6rem .8rem;
       font-size: .78rem;
       font-weight: 800;
@@ -480,7 +475,7 @@
       gap: .8rem;
       justify-content: space-between;
       align-items: flex-start;
-      background: linear-gradient(180deg, #fff, var(--surface-soft));
+      background: linear-gradient(180deg, var(--surface), var(--surface-soft));
       border-bottom: 1px solid var(--line);
     }
     .stage-head h3 {
@@ -541,7 +536,7 @@
       color: var(--muted);
       flex: 0 0 auto;
     }
-    .concept.active .concept-icon { background: #fff; color: var(--primary); }
+    .concept.active .concept-icon { background: var(--surface); color: var(--primary); }
     .concept-main { min-width: 0; flex: 1; }
     .concept-top {
       display: flex;
@@ -612,7 +607,7 @@
     .detail-head {
       padding: 1rem;
       border-bottom: 1px solid var(--line);
-      background: linear-gradient(180deg, var(--primary-soft), #fff);
+      background: linear-gradient(180deg, var(--primary-soft), var(--surface));
     }
     .detail-head-row {
       display: flex;
@@ -625,7 +620,7 @@
       display: grid;
       place-items: center;
       border-radius: .8rem;
-      background: #fff;
+      background: var(--surface);
       color: var(--primary);
       border: 1px solid var(--primary-line);
       flex: 0 0 auto;
@@ -653,7 +648,7 @@
       height: 2rem;
       border: 1px solid var(--line);
       border-radius: .65rem;
-      background: #fff;
+      background: var(--surface);
       color: var(--muted);
       place-items: center;
     }
@@ -735,10 +730,137 @@
       gap: .35rem;
       border: 1px solid var(--core-line);
       border-radius: .65rem;
-      background: #fff;
+      background: var(--surface);
       color: var(--core);
       padding: .45rem .5rem;
       font-size: .68rem;
+      font-weight: 800;
+    }
+
+
+    .learning-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: none;
+      place-items: center;
+      padding: 1rem;
+    }
+    .learning-modal.open { display: grid; }
+    .learning-modal-backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(7, 12, 20, .62);
+      backdrop-filter: blur(.18rem);
+    }
+    .learning-modal-card {
+      position: relative;
+      z-index: 1;
+      width: min(42rem, 100%);
+      max-height: min(82vh, 46rem);
+      overflow: auto;
+      border: 1px solid var(--line);
+      border-radius: 1rem;
+      background: var(--surface);
+      color: var(--text);
+      box-shadow: 0 1.5rem 4rem rgba(0,0,0,.28);
+    }
+    .learning-modal-head {
+      position: sticky;
+      top: 0;
+      z-index: 2;
+      display: flex;
+      align-items: flex-start;
+      gap: .8rem;
+      padding: 1rem;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+    .learning-modal-title-wrap { min-width: 0; flex: 1; }
+    .learning-modal-kicker {
+      color: var(--primary);
+      font-size: .66rem;
+      font-weight: 900;
+      letter-spacing: .04em;
+    }
+    .learning-modal-head h2 {
+      margin: .18rem 0 0;
+      font-size: 1.05rem;
+      letter-spacing: -.02em;
+    }
+    .modal-close {
+      width: 2.2rem;
+      height: 2.2rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: .65rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+    }
+    .learning-modal-body { padding: 1rem; }
+    .prompt-box {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+      background: var(--surface-soft);
+      color: var(--text-soft);
+      padding: .85rem;
+      white-space: pre-wrap;
+      word-break: keep-all;
+      font: inherit;
+      font-size: .78rem;
+      line-height: 1.65;
+    }
+    .modal-note {
+      margin: 0 0 .8rem;
+      color: var(--muted);
+      font-size: .74rem;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: .45rem;
+      margin-top: .8rem;
+    }
+    .modal-primary {
+      min-height: 2.35rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .4rem;
+      border: 0;
+      border-radius: .7rem;
+      background: var(--primary);
+      color: var(--on-primary);
+      padding: .55rem .8rem;
+      font-size: .74rem;
+      font-weight: 850;
+    }
+    .book-guide-list {
+      display: grid;
+      gap: .65rem;
+    }
+    .book-guide-item {
+      border: 1px solid var(--line);
+      border-radius: .8rem;
+      background: var(--surface-soft);
+      padding: .8rem;
+    }
+    .book-guide-item strong {
+      display: block;
+      font-size: .8rem;
+    }
+    .book-guide-item p {
+      margin: .3rem 0 0;
+      color: var(--muted);
+      font-size: .72rem;
+    }
+    .copy-feedback {
+      min-height: 1.2rem;
+      margin-top: .55rem;
+      color: var(--core);
+      font-size: .7rem;
       font-weight: 800;
     }
 
@@ -1357,8 +1479,8 @@
           <strong><i data-lucide="sparkles" class="icon"></i>실제 학습은 밖에서 진행</strong>
           <p>로드맵은 위치와 키워드까지만 제공합니다. AI·책·강의로 바로 이어가세요.</p>
           <div class="action-row">
-            <button class="action-btn" type="button"><i data-lucide="copy" class="icon icon-sm"></i>AI 프롬프트</button>
-            <button class="action-btn" type="button"><i data-lucide="book-open" class="icon icon-sm"></i>책 키워드</button>
+            <button class="action-btn" id="promptButton" type="button"><i data-lucide="copy" class="icon icon-sm"></i>AI 프롬프트</button>
+            <button class="action-btn" id="bookButton" type="button"><i data-lucide="book-open" class="icon icon-sm"></i>책 키워드</button>
           </div>
         </div>
       </div>
@@ -1366,6 +1488,23 @@
   </main>
 
   <div class="detail-backdrop" id="detailBackdrop"></div>
+
+  <div class="learning-modal" id="learningModal" aria-hidden="true">
+    <div class="learning-modal-backdrop" id="learningModalBackdrop"></div>
+    <section class="learning-modal-card" role="dialog" aria-modal="true" aria-labelledby="learningModalTitle">
+      <header class="learning-modal-head">
+        <div class="learning-modal-title-wrap">
+          <div class="learning-modal-kicker" id="learningModalKicker">AI 학습 프롬프트</div>
+          <h2 id="learningModalTitle">Virtual Memory 학습 시작</h2>
+        </div>
+        <button class="modal-close" id="learningModalClose" type="button" aria-label="닫기">
+          <i data-lucide="x" class="icon"></i>
+        </button>
+      </header>
+      <div class="learning-modal-body" id="learningModalBody"></div>
+    </section>
+  </div>
+
 
   <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js"></script>
   <script>
@@ -1588,8 +1727,18 @@
       const keywords = document.getElementById('detailKeywords');
       const outcomes = document.getElementById('detailOutcomes');
       const iconHost = document.querySelector('.detail-icon');
+      const promptButton = document.getElementById('promptButton');
+      const bookButton = document.getElementById('bookButton');
+      const learningModal = document.getElementById('learningModal');
+      const learningModalBackdrop = document.getElementById('learningModalBackdrop');
+      const learningModalClose = document.getElementById('learningModalClose');
+      const learningModalKicker = document.getElementById('learningModalKicker');
+      const learningModalTitle = document.getElementById('learningModalTitle');
+      const learningModalBody = document.getElementById('learningModalBody');
+      let activeDetail = details.vm;
 
       function renderDetail(data) {
+        activeDetail = data;
         eyebrow.textContent = data.step;
         title.textContent = data.title;
         summary.textContent = data.summary;
@@ -1601,6 +1750,123 @@
         iconHost.innerHTML = '<i data-lucide="' + data.icon + '" class="icon icon-lg"></i>';
         if (window.lucide) window.lucide.createIcons();
       }
+
+
+      const bookGroups = [
+        {
+          match: /NETWORK|TCP|DNS|HTTP/i,
+          books: [
+            ['윤성우의 열혈 TCP/IP 소켓 프로그래밍', 'TCP/IP, Socket, Client/Server, I/O 관련 목차를 찾아봅니다.'],
+            ['컴퓨터 네트워킹 하향식 접근', 'Application, Transport, Network 계층의 해당 주제를 찾아봅니다.']
+          ]
+        },
+        {
+          match: /DATABASE|DB/i,
+          books: [
+            ['Real MySQL 8.0', 'Index, Transaction, Lock, InnoDB, Execution Plan 관련 목차를 찾아봅니다.'],
+            ['데이터 중심 애플리케이션 설계', '저장, 복제, 트랜잭션, 일관성으로 확장할 때 봅니다.']
+          ]
+        },
+        {
+          match: /NATIVE|KERNEL/i,
+          books: [
+            ['컴퓨터 시스템: 프로그래머의 관점', 'Memory, Linking, Exceptional Control Flow, Virtual Memory를 찾아봅니다.'],
+            ['리눅스 시스템 프로그래밍', 'Process, File I/O, Memory Mapping, epoll, System Call 관련 목차를 찾아봅니다.']
+          ]
+        },
+        {
+          match: /LINUX|CONTAINER/i,
+          books: [
+            ['리눅스 시스템 프로그래밍', 'Process, File Descriptor, Pipe, Memory, System Call 관련 목차를 찾아봅니다.'],
+            ['혼자 공부하는 컴퓨터 구조+운영체제', '프로세스, 메모리, 파일 시스템의 큰 그림을 먼저 잡을 때 봅니다.']
+          ]
+        },
+        {
+          match: /OS|CS|MEMORY/i,
+          books: [
+            ['혼자 공부하는 컴퓨터 구조+운영체제', '현재 키워드와 같은 이름의 절을 먼저 찾아봅니다.'],
+            ['쉽게 배우는 운영체제', 'Process, Scheduling, Memory, Synchronization, File System 관련 목차를 찾아봅니다.']
+          ]
+        },
+        {
+          match: /DISTRIBUTED/i,
+          books: [
+            ['데이터 중심 애플리케이션 설계', 'Replication, Partition, Transaction, Consistency 관련 목차를 찾아봅니다.']
+          ]
+        }
+      ];
+
+      function openLearningModal(type) {
+        learningModal.classList.add('open');
+        learningModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        if (type === 'prompt') {
+          const keywordText = activeDetail.keywords.join(', ');
+          learningModalKicker.textContent = 'AI 학습 프롬프트';
+          learningModalTitle.textContent = activeDetail.title + ' 학습 시작';
+          const prompt = `나는 지금 "${activeDetail.title}"을 공부하려고 해.
+나는 이 주제를 거의 모르는 초보라고 생각해줘.
+
+로드맵에서 먼저 보라고 한 키워드는:
+${keywordText}
+
+다음 방식으로 가르쳐줘.
+
+1. 먼저 전체 그림을 3~5줄로 아주 쉽게 설명
+2. 위 키워드를 이해하기 좋은 순서로 정리
+3. 각 키워드가 왜 필요한지 짧게 설명
+4. 지금 꼭 알아야 하는 것과 나중에 봐도 되는 것을 구분
+5. 실제 개발에서 어디에 연결되는지 예시
+6. 이해했는지 확인할 짧은 질문 3개
+
+초등학생도 이해할 수 있는 쉬운 단어를 사용해줘.
+전문 용어는 처음 나올 때 한 줄로 뜻을 설명해줘.
+긴 문단은 쓰지 말고 짧게 정리해줘.
+한 번에 너무 깊게 들어가지 말고, 내가 질문하면 다음 단계로 이어가줘.`;
+
+          learningModalBody.innerHTML =
+            '<p class="modal-note">복사해서 ChatGPT나 사용하는 AI에 그대로 붙여넣으면 됩니다.</p>' +
+            '<pre class="prompt-box" id="generatedPrompt"></pre>' +
+            '<div class="copy-feedback" id="copyFeedback"></div>' +
+            '<div class="modal-actions"><button class="modal-primary" id="copyPromptButton" type="button"><i data-lucide="copy" class="icon icon-sm"></i>프롬프트 복사</button></div>';
+          document.getElementById('generatedPrompt').textContent = prompt;
+          document.getElementById('copyPromptButton').addEventListener('click', async () => {
+            try {
+              await navigator.clipboard.writeText(prompt);
+              document.getElementById('copyFeedback').textContent = '복사했습니다.';
+            } catch {
+              document.getElementById('copyFeedback').textContent = '자동 복사가 막혔습니다. 위 내용을 직접 선택해서 복사해주세요.';
+            }
+          });
+        } else {
+          learningModalKicker.textContent = '책 · 강의에서 찾을 위치';
+          learningModalTitle.textContent = activeDetail.title + ' 학습 키워드';
+          const group = bookGroups.find(item => item.match.test(activeDetail.step)) || bookGroups[4];
+          const keywordHtml = activeDetail.keywords.map(x => '<span class="keyword">' + x + '</span>').join('');
+          const bookHtml = group.books.map(([name, desc]) =>
+            '<div class="book-guide-item"><strong>' + name + '</strong><p>' + desc + '</p></div>'
+          ).join('');
+          learningModalBody.innerHTML =
+            '<p class="modal-note">책을 처음부터 읽기보다 아래 단어를 목차·색인·강의 검색에서 먼저 찾습니다.</p>' +
+            '<h3 class="detail-label"><i data-lucide="search" class="icon icon-sm"></i>찾을 키워드</h3>' +
+            '<div class="keyword-list">' + keywordHtml + '</div>' +
+            '<h3 class="detail-label" style="margin-top:1rem"><i data-lucide="book-open" class="icon icon-sm"></i>우선 찾아볼 책</h3>' +
+            '<div class="book-guide-list">' + bookHtml + '</div>';
+        }
+        if (window.lucide) window.lucide.createIcons();
+      }
+
+      function closeLearningModal() {
+        learningModal.classList.remove('open');
+        learningModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      promptButton.addEventListener('click', () => openLearningModal('prompt'));
+      bookButton.addEventListener('click', () => openLearningModal('book'));
+      learningModalClose.addEventListener('click', closeLearningModal);
+      learningModalBackdrop.addEventListener('click', closeLearningModal);
 
       function openDetail() {
         if (window.matchMedia('(max-width: 60rem)').matches) {
@@ -1625,7 +1891,10 @@
       backdrop.addEventListener('click', closeDetail);
 
       document.addEventListener('keydown', event => {
-        if (event.key === 'Escape') closeDetail();
+        if (event.key === 'Escape') {
+          closeDetail();
+          closeLearningModal();
+        }
         if (event.key === '/' && !/input|select|textarea/i.test(document.activeElement.tagName)) {
           event.preventDefault();
           document.getElementById('search').focus();
