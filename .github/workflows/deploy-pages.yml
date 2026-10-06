@@ -3,7 +3,10 @@ name: Deploy GitHub Pages
 on:
   push:
     branches:
+      - "feature/**"
+      - dev
       - stage
+      - main
   workflow_dispatch:
 
 permissions:
@@ -17,7 +20,10 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy-stage]')
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      contains(github.event.head_commit.message, '[deploy-pages]') ||
+      contains(github.event.head_commit.message, '[deploy-stage]')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -40,7 +46,7 @@ jobs:
           SHORT_SHA="${GITHUB_SHA::7}"
           DEPLOYED_AT="$(date -u +'%Y-%m-%dT%H:%M:%SZ')"
 
-          cat > src/cli/build-info.json <<EOF
+          cat > src/build-info.json <<EOF
           {
             "branch": "$GITHUB_REF_NAME",
             "environment": "$MODE",
@@ -49,6 +55,10 @@ jobs:
             "deployedAt": "$DEPLOYED_AT"
           }
           EOF
+
+          if [ -d src/cli ]; then
+            cp src/build-info.json src/cli/build-info.json
+          fi
 
       - name: Configure Pages
         uses: actions/configure-pages@v6
