@@ -1,5 +1,5 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "description": "CS·시스템·백엔드 기본지식을 학교 커리큘럼 수준으로 탐색하기 위한 분류 체계",
   "areas": [
     {
@@ -13,9 +13,10 @@
         "성능 기초"
       ],
       "aliases": [
-        "기초",
+        "CS 기초",
         "computer basics",
-        "cs basics"
+        "fundamentals",
+        "기초"
       ]
     },
     {
@@ -29,9 +30,10 @@
         "Graph"
       ],
       "aliases": [
-        "자료구조",
+        "자료 구조",
         "data structure",
-        "ds"
+        "data structures",
+        "DS"
       ]
     },
     {
@@ -45,8 +47,9 @@
         "Graph"
       ],
       "aliases": [
-        "알고리즘",
-        "algorithm"
+        "algorithm",
+        "algorithms",
+        "알고리즘"
       ]
     },
     {
@@ -62,7 +65,7 @@
       "aliases": [
         "컴퓨터구조",
         "computer architecture",
-        "ca"
+        "architecture"
       ]
     },
     {
@@ -78,7 +81,6 @@
         "IPC"
       ],
       "aliases": [
-        "os",
         "운영체제",
         "operating system"
       ]
@@ -96,7 +98,6 @@
         "Container"
       ],
       "aliases": [
-        "linux",
         "리눅스"
       ]
     },
@@ -113,7 +114,6 @@
         "Application"
       ],
       "aliases": [
-        "network",
         "네트워크",
         "networking"
       ]
@@ -128,7 +128,6 @@
         "Cache & Durability"
       ],
       "aliases": [
-        "storage",
         "저장장치",
         "스토리지"
       ]
@@ -146,8 +145,7 @@
         "Replication"
       ],
       "aliases": [
-        "db",
-        "database",
+        "DB",
         "데이터베이스"
       ]
     },
@@ -163,9 +161,8 @@
         "Language Model"
       ],
       "aliases": [
-        "runtime",
         "런타임",
-        "jvm"
+        "language runtime"
       ]
     },
     {
@@ -181,7 +178,6 @@
         "Traffic Control"
       ],
       "aliases": [
-        "backend",
         "백엔드",
         "server"
       ]
@@ -198,9 +194,8 @@
         "Security"
       ],
       "aliases": [
-        "container",
-        "docker",
-        "컨테이너"
+        "컨테이너",
+        "Docker"
       ]
     },
     {
@@ -216,9 +211,9 @@
         "Coordination"
       ],
       "aliases": [
-        "distributed",
         "분산",
-        "분산시스템"
+        "분산시스템",
+        "distributed systems"
       ]
     },
     {
@@ -232,8 +227,8 @@
         "Permission"
       ],
       "aliases": [
-        "security",
-        "보안"
+        "보안",
+        "security"
       ]
     },
     {
@@ -247,9 +242,8 @@
         "Debugging"
       ],
       "aliases": [
-        "native",
         "네이티브",
-        "system programming"
+        "native programming"
       ]
     },
     {
@@ -264,8 +258,8 @@
         "Interrupt"
       ],
       "aliases": [
-        "kernel",
-        "커널"
+        "커널",
+        "linux kernel"
       ]
     }
   ]
