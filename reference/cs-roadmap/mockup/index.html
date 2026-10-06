@@ -279,6 +279,16 @@
       flex-wrap: wrap;
       margin-top: .65rem;
     }
+    .search-feedback {
+      min-height: 1.1rem;
+      margin-top: .55rem;
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 700;
+    }
+    .search-feedback.success { color: var(--core); }
+    .search-feedback.error { color: var(--danger); }
+
     .sample {
       border: 0;
       border-radius: 99rem;
@@ -468,6 +478,10 @@
       border-radius: .95rem;
       background: var(--surface);
       overflow: hidden;
+    }
+    .stage-card.nav-flash {
+      border-color: var(--primary-line);
+      box-shadow: 0 0 0 .16rem rgba(49, 94, 251, .12);
     }
     .stage-head {
       padding: .75rem .85rem .65rem;
@@ -995,11 +1009,11 @@
           <i data-lucide="moon" class="icon icon-sm" id="themeIcon"></i>
           <span id="themeLabel">Dark</span>
         </button>
-        <button class="quiet-btn" type="button">
+        <button class="quiet-btn" id="topSearchButton" type="button">
           <i data-lucide="search" class="icon icon-sm"></i>
           <span>검색</span>
         </button>
-        <button class="quiet-btn" type="button">
+        <button class="quiet-btn" id="learningResourcesButton" type="button">
           <i data-lucide="book-open" class="icon icon-sm"></i>
           <span>학습 자료</span>
         </button>
@@ -1029,14 +1043,15 @@
             <i data-lucide="search" class="icon"></i>
             <input id="search" type="search" placeholder="가상 메모리, TCP, cgroup, WAL, syscall..." />
           </div>
-          <button class="search-submit" type="button">학습 위치 찾기</button>
+          <button class="search-submit" id="searchSubmit" type="button">학습 위치 찾기</button>
         </div>
         <div class="search-samples">
-          <button class="sample" type="button">Docker 메모리</button>
-          <button class="sample" type="button">TCP</button>
-          <button class="sample" type="button">Linux pipe</button>
-          <button class="sample" type="button">DB WAL</button>
+          <button class="sample" type="button" data-query="Docker 메모리">Docker 메모리</button>
+          <button class="sample" type="button" data-query="TCP">TCP</button>
+          <button class="sample" type="button" data-query="Linux pipe">Linux pipe</button>
+          <button class="sample" type="button" data-query="DB WAL">DB WAL</button>
         </div>
+        <div class="search-feedback" id="searchFeedback" aria-live="polite"></div>
       </div>
     </div>
   </section>
@@ -1055,14 +1070,14 @@
   <main class="layout">
     <aside class="panel side">
       <div class="side-head">빠른 이동</div>
-      <button class="side-btn active"><i data-lucide="route" class="icon"></i>추천 학습 순서</button>
-      <button class="side-btn"><i data-lucide="cpu" class="icon"></i>컴퓨터 기본</button>
-      <button class="side-btn"><i data-lucide="layers-3" class="icon"></i>OS 핵심</button>
-      <button class="side-btn"><i data-lucide="terminal" class="icon"></i>Linux</button>
-      <button class="side-btn"><i data-lucide="network" class="icon"></i>Network</button>
-      <button class="side-btn"><i data-lucide="database" class="icon"></i>Storage · DB</button>
-      <button class="side-btn"><i data-lucide="container" class="icon"></i>Container</button>
-      <button class="side-btn"><i data-lucide="code-2" class="icon"></i>Native · Kernel</button>
+      <button class="side-btn active" data-target="roadmapStart"><i data-lucide="route" class="icon"></i>추천 학습 순서</button>
+      <button class="side-btn" data-target="stage-01"><i data-lucide="cpu" class="icon"></i>컴퓨터 기본</button>
+      <button class="side-btn" data-target="stage-02"><i data-lucide="layers-3" class="icon"></i>OS 핵심</button>
+      <button class="side-btn" data-target="stage-06"><i data-lucide="terminal" class="icon"></i>Linux</button>
+      <button class="side-btn" data-target="stage-05"><i data-lucide="network" class="icon"></i>Network</button>
+      <button class="side-btn" data-target="stage-07"><i data-lucide="database" class="icon"></i>Storage · DB</button>
+      <button class="side-btn" data-target="stage-06"><i data-lucide="container" class="icon"></i>Container</button>
+      <button class="side-btn" data-target="stage-09"><i data-lucide="code-2" class="icon"></i>Native · Kernel</button>
       <div class="side-divider"></div>
       <div class="side-note">
         <strong>이 페이지의 역할</strong>
@@ -1073,15 +1088,15 @@
 
     <section class="main-col">
       <div class="mobile-filter">
-        <button class="active"><i data-lucide="route" class="icon icon-sm"></i>추천 순서</button>
-        <button>OS</button>
-        <button>Linux</button>
-        <button>Network</button>
-        <button>DB</button>
-        <button>Native</button>
+        <button class="active" data-target="roadmapStart"><i data-lucide="route" class="icon icon-sm"></i>추천 순서</button>
+        <button data-target="stage-02">OS</button>
+        <button data-target="stage-06">Linux</button>
+        <button data-target="stage-05">Network</button>
+        <button data-target="stage-07">DB</button>
+        <button data-target="stage-09">Native</button>
       </div>
 
-      <section class="panel roadmap">
+      <section class="panel roadmap" id="roadmapStart">
         <div class="section-head">
           <div class="section-title-wrap">
             <div class="section-icon"><i data-lucide="milestone" class="icon icon-lg"></i></div>
@@ -1094,7 +1109,7 @@
         </div>
 
         <div class="timeline">
-          <article class="stage">
+          <article class="stage" id="stage-01">
             <div class="stage-index">01</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1123,7 +1138,7 @@
             </div>
           </article>
 
-          <article class="stage">
+          <article class="stage" id="stage-02">
             <div class="stage-index">02</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1159,7 +1174,7 @@
             </div>
           </article>
 
-          <article class="stage">
+          <article class="stage" id="stage-03">
             <div class="stage-index">03</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1188,7 +1203,7 @@
             </div>
           </article>
 
-          <article class="stage">
+          <article class="stage" id="stage-04">
             <div class="stage-index">04</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1224,7 +1239,7 @@
             </div>
           </article>
 
-          <article class="stage">
+          <article class="stage" id="stage-05">
             <div class="stage-index">05</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1274,7 +1289,7 @@
             </div>
           </article>
 
-          <article class="stage">
+          <article class="stage" id="stage-06">
             <div class="stage-index">06</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1310,7 +1325,7 @@
             </div>
           </article>
 
-          <article class="stage">
+          <article class="stage" id="stage-07">
             <div class="stage-index">07</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1346,7 +1361,7 @@
             </div>
           </article>
 
-          <article class="stage">
+          <article class="stage" id="stage-08">
             <div class="stage-index">08</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1368,7 +1383,7 @@
             </div>
           </article>
 
-          <article class="stage">
+          <article class="stage" id="stage-09">
             <div class="stage-index">09</div>
             <div class="stage-card">
               <header class="stage-head">
@@ -1736,6 +1751,11 @@
       const learningModalTitle = document.getElementById('learningModalTitle');
       const learningModalBody = document.getElementById('learningModalBody');
       let activeDetail = details.vm;
+      const topSearchButton = document.getElementById('topSearchButton');
+      const learningResourcesButton = document.getElementById('learningResourcesButton');
+      const searchInput = document.getElementById('search');
+      const searchSubmit = document.getElementById('searchSubmit');
+      const searchFeedback = document.getElementById('searchFeedback');
 
       function renderDetail(data) {
         activeDetail = data;
@@ -1751,6 +1771,161 @@
         if (window.lucide) window.lucide.createIcons();
       }
 
+
+
+      const searchAliases = {
+        '가상메모리': 'vm',
+        '가상 메모리': 'vm',
+        'memory': 'vm',
+        'docker 메모리': 'vm',
+        'docker memory': 'vm',
+        'docker': 'container',
+        'cgroup': 'container',
+        'namespace': 'container',
+        'tcp': 'tcp',
+        'socket': 'tcp',
+        'linux pipe': 'shell',
+        'pipe': 'shell',
+        '파이프': 'shell',
+        'wal': 'wal',
+        'db wal': 'wal',
+        'syscall': 'syscall',
+        'system call': 'syscall',
+        'dns': 'dns',
+        'http': 'http',
+        'tls': 'http',
+        'epoll': 'epoll',
+        'thread': 'thread',
+        'process': 'process',
+        'file descriptor': 'fd',
+        'fd': 'fd',
+        'jvm': 'jvm'
+      };
+
+      function normalizeSearch(value) {
+        return value.trim().toLowerCase().replace(/\s+/g, ' ');
+      }
+
+      function findConceptId(query) {
+        const normalized = normalizeSearch(query);
+        if (!normalized) return null;
+        if (searchAliases[normalized]) return searchAliases[normalized];
+
+        const tokens = normalized.split(' ').filter(Boolean);
+        let best = null;
+        let bestScore = 0;
+
+        for (const [id, data] of Object.entries(details)) {
+          const haystack = [
+            data.title,
+            data.summary,
+            ...(data.route || []),
+            ...(data.keywords || []),
+            ...(data.outcomes || [])
+          ].join(' ').toLowerCase();
+
+          const score = tokens.reduce((sum, token) => sum + (haystack.includes(token) ? 1 : 0), 0);
+          if (score > bestScore) {
+            best = id;
+            bestScore = score;
+          }
+        }
+        return bestScore > 0 ? best : null;
+      }
+
+      function activateConcept(id, {scroll = true, feedback = true} = {}) {
+        const button = document.querySelector('.concept[data-id="' + id + '"]');
+        const data = details[id];
+        if (!button || !data) return false;
+
+        document.querySelectorAll('.concept').forEach(x => x.classList.remove('active'));
+        button.classList.add('active');
+        renderDetail(data);
+
+        if (scroll) {
+          button.scrollIntoView({behavior: 'smooth', block: 'center'});
+        }
+        openDetail();
+
+        if (feedback) {
+          searchFeedback.textContent = '"' + data.title + '" 위치로 이동했습니다.';
+          searchFeedback.className = 'search-feedback success';
+        }
+        return true;
+      }
+
+      function runSearch(rawQuery) {
+        const query = rawQuery ?? searchInput.value;
+        const id = findConceptId(query);
+        if (!normalizeSearch(query)) {
+          searchFeedback.textContent = '찾고 싶은 개념이나 기술을 입력해주세요.';
+          searchFeedback.className = 'search-feedback error';
+          searchInput.focus();
+          return;
+        }
+        if (!id || !activateConcept(id)) {
+          searchFeedback.textContent = '"' + query + '"와 연결된 개념을 아직 찾지 못했습니다.';
+          searchFeedback.className = 'search-feedback error';
+          return;
+        }
+      }
+
+      function focusSearch() {
+        document.querySelector('.search-card')?.scrollIntoView({behavior: 'smooth', block: 'center'});
+        window.setTimeout(() => searchInput.focus({preventScroll: true}), 350);
+      }
+
+      function moveToTarget(targetId, sourceButton) {
+        const target = document.getElementById(targetId);
+        if (!target) return;
+
+        document.querySelectorAll('.side-btn').forEach(x => x.classList.remove('active'));
+        document.querySelectorAll('.mobile-filter button').forEach(x => x.classList.remove('active'));
+        if (sourceButton) sourceButton.classList.add('active');
+
+        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+        const card = target.classList.contains('stage') ? target.querySelector('.stage-card') : null;
+        if (card) {
+          card.classList.add('nav-flash');
+          window.setTimeout(() => card.classList.remove('nav-flash'), 1200);
+        }
+      }
+
+      topSearchButton.addEventListener('click', focusSearch);
+      searchSubmit.addEventListener('click', () => runSearch());
+      searchInput.addEventListener('keydown', event => {
+        if (event.key === 'Enter') runSearch();
+      });
+      document.querySelectorAll('.sample[data-query]').forEach(button => {
+        button.addEventListener('click', () => {
+          const query = button.dataset.query || '';
+          searchInput.value = query;
+          runSearch(query);
+        });
+      });
+      document.querySelectorAll('[data-target]').forEach(button => {
+        button.addEventListener('click', () => moveToTarget(button.dataset.target, button));
+      });
+
+      function openLearningResources() {
+        learningModal.classList.add('open');
+        learningModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        learningModalKicker.textContent = '학습 자료';
+        learningModalTitle.textContent = '책을 완독하지 않아도 됩니다';
+        learningModalBody.innerHTML =
+          '<p class="modal-note">지금 궁금한 개념과 연결된 부분만 먼저 찾는 방식으로 사용합니다.</p>' +
+          '<div class="book-guide-list">' +
+            '<div class="book-guide-item"><strong>CS · OS 큰 그림</strong><p>혼자 공부하는 컴퓨터 구조+운영체제 · 쉽게 배우는 운영체제</p></div>' +
+            '<div class="book-guide-item"><strong>Linux · Native</strong><p>리눅스 시스템 프로그래밍 · 컴퓨터 시스템: 프로그래머의 관점</p></div>' +
+            '<div class="book-guide-item"><strong>Network</strong><p>윤성우의 열혈 TCP/IP 소켓 프로그래밍 · 컴퓨터 네트워킹 하향식 접근</p></div>' +
+            '<div class="book-guide-item"><strong>Database · Distributed</strong><p>Real MySQL 8.0 · 데이터 중심 애플리케이션 설계</p></div>' +
+          '</div>' +
+          '<p class="modal-note" style="margin-top:.8rem">개념을 선택한 뒤 우측의 ‘책 키워드’를 누르면 해당 개념에서 먼저 찾아볼 목차 키워드를 보여줍니다.</p>';
+        if (window.lucide) window.lucide.createIcons();
+      }
+
+      learningResourcesButton.addEventListener('click', openLearningResources);
 
       const bookGroups = [
         {
@@ -1880,10 +2055,7 @@ ${keywordText}
 
       document.querySelectorAll('.concept').forEach(button => {
         button.addEventListener('click', () => {
-          document.querySelectorAll('.concept').forEach(x => x.classList.remove('active'));
-          button.classList.add('active');
-          renderDetail(details[button.dataset.id] || details.vm);
-          openDetail();
+          activateConcept(button.dataset.id, {scroll: false, feedback: false});
         });
       });
 
@@ -1897,7 +2069,7 @@ ${keywordText}
         }
         if (event.key === '/' && !/input|select|textarea/i.test(document.activeElement.tagName)) {
           event.preventDefault();
-          document.getElementById('search').focus();
+          focusSearch();
         }
       });
 
