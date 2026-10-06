@@ -11,6 +11,11 @@
         "논리·단위",
         "직렬화",
         "성능 기초"
+      ],
+      "aliases": [
+        "기초",
+        "computer basics",
+        "cs basics"
       ]
     },
     {
@@ -22,6 +27,11 @@
         "Hash",
         "Tree",
         "Graph"
+      ],
+      "aliases": [
+        "자료구조",
+        "data structure",
+        "ds"
       ]
     },
     {
@@ -33,6 +43,10 @@
         "탐색·정렬",
         "문제 해결",
         "Graph"
+      ],
+      "aliases": [
+        "알고리즘",
+        "algorithm"
       ]
     },
     {
@@ -44,6 +58,11 @@
         "Memory",
         "Instruction",
         "I/O"
+      ],
+      "aliases": [
+        "컴퓨터구조",
+        "computer architecture",
+        "ca"
       ]
     },
     {
@@ -57,6 +76,11 @@
         "Memory",
         "File & I/O",
         "IPC"
+      ],
+      "aliases": [
+        "os",
+        "운영체제",
+        "operating system"
       ]
     },
     {
@@ -70,6 +94,10 @@
         "Service",
         "Observability",
         "Container"
+      ],
+      "aliases": [
+        "linux",
+        "리눅스"
       ]
     },
     {
@@ -83,6 +111,11 @@
         "Transport",
         "Name Resolution",
         "Application"
+      ],
+      "aliases": [
+        "network",
+        "네트워크",
+        "networking"
       ]
     },
     {
@@ -93,6 +126,11 @@
         "Device",
         "Block I/O",
         "Cache & Durability"
+      ],
+      "aliases": [
+        "storage",
+        "저장장치",
+        "스토리지"
       ]
     },
     {
@@ -106,6 +144,11 @@
         "Query",
         "Storage",
         "Replication"
+      ],
+      "aliases": [
+        "db",
+        "database",
+        "데이터베이스"
       ]
     },
     {
@@ -118,6 +161,11 @@
         "JIT",
         "JVM",
         "Language Model"
+      ],
+      "aliases": [
+        "runtime",
+        "런타임",
+        "jvm"
       ]
     },
     {
@@ -131,6 +179,11 @@
         "Proxy",
         "Queue",
         "Traffic Control"
+      ],
+      "aliases": [
+        "backend",
+        "백엔드",
+        "server"
       ]
     },
     {
@@ -143,6 +196,11 @@
         "Filesystem",
         "Network",
         "Security"
+      ],
+      "aliases": [
+        "container",
+        "docker",
+        "컨테이너"
       ]
     },
     {
@@ -156,6 +214,11 @@
         "Consistency",
         "Consensus",
         "Coordination"
+      ],
+      "aliases": [
+        "distributed",
+        "분산",
+        "분산시스템"
       ]
     },
     {
@@ -167,6 +230,10 @@
         "Identity",
         "Session",
         "Permission"
+      ],
+      "aliases": [
+        "security",
+        "보안"
       ]
     },
     {
@@ -178,6 +245,11 @@
         "Memory",
         "Toolchain",
         "Debugging"
+      ],
+      "aliases": [
+        "native",
+        "네이티브",
+        "system programming"
       ]
     },
     {
@@ -190,6 +262,10 @@
         "VFS",
         "Network",
         "Interrupt"
+      ],
+      "aliases": [
+        "kernel",
+        "커널"
       ]
     }
   ]
