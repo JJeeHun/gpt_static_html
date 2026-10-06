@@ -589,6 +589,185 @@
       flex-wrap: wrap;
     }
 
+
+    .catalog {
+      margin-top: 1rem;
+      padding: 1rem;
+    }
+    .catalog-toolbar {
+      display: grid;
+      grid-template-columns: minmax(14rem, 1.4fr) repeat(3, minmax(8.5rem, .7fr)) auto;
+      gap: .5rem;
+      align-items: center;
+      margin-bottom: .75rem;
+    }
+    .catalog-search,
+    .catalog-select {
+      min-width: 0;
+      min-height: 2.5rem;
+      border: 1px solid var(--line);
+      border-radius: .7rem;
+      background: var(--surface-soft);
+      color: var(--text);
+      padding: .55rem .7rem;
+      outline: 0;
+    }
+    .catalog-search:focus,
+    .catalog-select:focus {
+      border-color: var(--primary);
+      box-shadow: 0 0 0 .16rem var(--primary-soft);
+    }
+    .catalog-reset {
+      min-height: 2.5rem;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .35rem;
+      border: 1px solid var(--line);
+      border-radius: .7rem;
+      background: var(--surface);
+      color: var(--muted);
+      padding: .5rem .7rem;
+      font-size: .72rem;
+      font-weight: 800;
+    }
+    .catalog-quick {
+      display: flex;
+      gap: .35rem;
+      flex-wrap: wrap;
+      margin-bottom: .8rem;
+    }
+    .catalog-chip {
+      border: 1px solid var(--line);
+      border-radius: 99rem;
+      background: var(--surface-soft);
+      color: var(--muted);
+      padding: .38rem .58rem;
+      font-size: .68rem;
+      font-weight: 750;
+    }
+    .catalog-chip:hover,
+    .catalog-chip.active {
+      border-color: var(--primary-line);
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+    .catalog-status {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: .7rem;
+      margin-bottom: .7rem;
+      color: var(--muted);
+      font-size: .72rem;
+    }
+    .catalog-status strong { color: var(--text-soft); }
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: .55rem;
+    }
+    .catalog-card {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: .55rem;
+      border: 1px solid var(--line);
+      border-radius: .85rem;
+      background: var(--surface);
+      color: var(--text);
+      padding: .8rem;
+      text-align: left;
+    }
+    .catalog-card:hover {
+      border-color: var(--primary-line);
+      background: var(--surface-hover);
+    }
+    .catalog-card-head {
+      display: flex;
+      align-items: flex-start;
+      gap: .55rem;
+    }
+    .catalog-card-icon {
+      width: 2rem;
+      height: 2rem;
+      display: grid;
+      place-items: center;
+      flex: 0 0 auto;
+      border-radius: .62rem;
+      background: var(--surface-soft);
+      color: var(--primary);
+    }
+    .catalog-card-title {
+      min-width: 0;
+      flex: 1;
+    }
+    .catalog-card-title strong {
+      display: block;
+      font-size: .78rem;
+      line-height: 1.35;
+    }
+    .catalog-card-title small {
+      display: block;
+      margin-top: .15rem;
+      color: var(--muted);
+      font-size: .64rem;
+    }
+    .catalog-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .69rem;
+      line-height: 1.5;
+    }
+    .catalog-card-meta {
+      display: flex;
+      gap: .3rem;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .catalog-empty {
+      grid-column: 1 / -1;
+      padding: 2rem 1rem;
+      text-align: center;
+      border: 1px dashed var(--line);
+      border-radius: .85rem;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+    .catalog-pager {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .3rem;
+      flex-wrap: wrap;
+      margin-top: .9rem;
+    }
+    .page-btn {
+      min-width: 2.1rem;
+      height: 2.1rem;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: .6rem;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 800;
+    }
+    .page-btn:hover:not(:disabled) {
+      border-color: var(--primary-line);
+      color: var(--primary);
+    }
+    .page-btn.active {
+      border-color: var(--primary-line);
+      background: var(--primary-soft);
+      color: var(--primary);
+    }
+    .page-btn:disabled {
+      opacity: .45;
+      cursor: default;
+    }
+
     .applications {
       margin-top: 1rem;
       padding: 1rem;
@@ -974,6 +1153,10 @@
     .detail-backdrop { display: none; }
 
     @media (max-width: 78rem) {
+      .catalog-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+      .catalog-toolbar { grid-template-columns: 1fr 1fr 1fr; }
+      .catalog-search { grid-column: 1 / -1; }
+      .catalog-reset { width: 100%; }
       .layout { grid-template-columns: 12rem minmax(0, 1fr); }
       .detail {
         grid-column: 1 / -1;
@@ -1033,6 +1216,11 @@
     }
 
     @media (max-width: 42rem) {
+      .catalog { padding: .8rem; }
+      .catalog-toolbar { grid-template-columns: 1fr; }
+      .catalog-search { grid-column: auto; }
+      .catalog-grid { grid-template-columns: 1fr; }
+      .catalog-status { align-items: flex-start; flex-direction: column; }
       :root { --header-h: 3.65rem; }
       .topbar-inner { padding: 0 .9rem; }
       .brand small { display: none; }
@@ -1495,6 +1683,52 @@
         </div>
       </section>
 
+
+      <section class="panel catalog" id="curriculumCatalog">
+        <div class="section-head">
+          <div class="section-title-wrap">
+            <div class="section-icon"><i data-lucide="library-big" class="icon icon-lg"></i></div>
+            <div>
+              <h2>전체 커리큘럼 탐색</h2>
+              <p>학교 CS 커리큘럼 수준의 범위를 영역과 세부 주제로 좁혀서 봅니다.</p>
+            </div>
+          </div>
+          <span class="guide-pill" id="catalogCountBadge"><i data-lucide="database" class="icon icon-sm"></i>데이터 불러오는 중</span>
+        </div>
+
+        <div class="catalog-toolbar">
+          <input class="catalog-search" id="catalogSearch" type="search" placeholder="OS, Memory, TLB, TCP, JWT..." aria-label="전체 커리큘럼 검색" />
+          <select class="catalog-select" id="catalogArea" aria-label="영역 선택"><option value="">전체 영역</option></select>
+          <select class="catalog-select" id="catalogSubarea" aria-label="세부 영역 선택"><option value="">전체 세부 영역</option></select>
+          <select class="catalog-select" id="catalogImportance" aria-label="중요도 선택">
+            <option value="">전체 중요도</option>
+            <option value="core">핵심</option>
+            <option value="connect">연결</option>
+            <option value="deep">심화</option>
+          </select>
+          <button class="catalog-reset" id="catalogReset" type="button"><i data-lucide="rotate-ccw" class="icon icon-sm"></i>초기화</button>
+        </div>
+
+        <div class="catalog-quick" id="catalogQuick">
+          <button class="catalog-chip" type="button" data-area="">전체</button>
+          <button class="catalog-chip" type="button" data-area="os">OS</button>
+          <button class="catalog-chip" type="button" data-area="linux">Linux</button>
+          <button class="catalog-chip" type="button" data-area="network">Network</button>
+          <button class="catalog-chip" type="button" data-area="database">Database</button>
+          <button class="catalog-chip" type="button" data-area="data-structures">자료구조</button>
+          <button class="catalog-chip" type="button" data-area="algorithms">알고리즘</button>
+          <button class="catalog-chip" type="button" data-area="native">Native</button>
+        </div>
+
+        <div class="catalog-status">
+          <span id="catalogStatus">데이터를 불러오는 중입니다.</span>
+          <span>한 페이지에 12개</span>
+        </div>
+
+        <div class="catalog-grid" id="catalogGrid"></div>
+        <nav class="catalog-pager" id="catalogPager" aria-label="커리큘럼 페이지"></nav>
+      </section>
+
       <section class="panel applications">
         <div class="section-head">
           <div class="section-title-wrap">
@@ -1863,6 +2097,22 @@
       const learningModalTitle = document.getElementById('learningModalTitle');
       const learningModalBody = document.getElementById('learningModalBody');
       let activeDetail = details.vm;
+      const catalogSection = document.getElementById('curriculumCatalog');
+      const catalogSearch = document.getElementById('catalogSearch');
+      const catalogArea = document.getElementById('catalogArea');
+      const catalogSubarea = document.getElementById('catalogSubarea');
+      const catalogImportance = document.getElementById('catalogImportance');
+      const catalogReset = document.getElementById('catalogReset');
+      const catalogGrid = document.getElementById('catalogGrid');
+      const catalogPager = document.getElementById('catalogPager');
+      const catalogStatus = document.getElementById('catalogStatus');
+      const catalogCountBadge = document.getElementById('catalogCountBadge');
+      let curriculumConcepts = [];
+      let curriculumTaxonomy = [];
+      let curriculumSearchEntries = [];
+      let catalogPage = 1;
+      const catalogPageSize = 12;
+
       const topSearchButton = document.getElementById('topSearchButton');
       const learningResourcesButton = document.getElementById('learningResourcesButton');
       const searchInput = document.getElementById('search');
@@ -1884,6 +2134,164 @@
       }
 
 
+
+
+      const areaIcons = {
+        foundations:'binary','data-structures':'braces','algorithms':'route',architecture:'cpu',os:'layers-3',
+        linux:'terminal',network:'network',storage:'hard-drive',database:'database',runtime:'box',
+        backend:'server',container:'container',distributed:'waypoints',security:'shield-check',native:'code-2',kernel:'microchip'
+      };
+
+      function areaMeta(id) {
+        return curriculumTaxonomy.find(x => x.id === id) || {id,label:id,subareas:[],aliases:[]};
+      }
+
+      function conceptToDetail(c) {
+        const prereqTitles=(c.prerequisites||[]).map(id=>{
+          const found=curriculumConcepts.find(x=>x.id===id);
+          return found ? (found.titleEn || found.titleKo) : id;
+        }).slice(0,3);
+        const routeParts=[...prereqTitles, c.titleEn || c.titleKo].slice(-3);
+        return {
+          step:(areaMeta(c.area).label || c.area) + ' · ' + (c.subarea || ''),
+          icon:areaIcons[c.area] || 'book-open',
+          title:c.titleEn || c.titleKo,
+          summary:c.summary || '',
+          route:routeParts.length ? routeParts : [c.titleEn || c.titleKo],
+          keywords:(c.learn || []).slice(0,6),
+          outcomes:(c.outcomes || []).slice(0,4)
+        };
+      }
+
+      function updateCatalogSubareas() {
+        const selected=catalogArea.value;
+        const area=areaMeta(selected);
+        const current=catalogSubarea.value;
+        const list=selected ? (area.subareas || []) : [...new Set(curriculumConcepts.map(c=>c.subarea).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'ko'));
+        catalogSubarea.innerHTML='<option value="">전체 세부 영역</option>'+list.map(x=>'<option value="'+x+'">'+x+'</option>').join('');
+        if(list.includes(current)) catalogSubarea.value=current;
+      }
+
+      function catalogMatchesQuery(c,q) {
+        if(!q) return true;
+        const n=normalizeSearch(q);
+        const area=areaMeta(c.area);
+        const hay=[
+          c.titleKo,c.titleEn,c.summary,c.course,c.subarea,area.label,
+          ...(area.aliases||[]),...(c.aliases||[]),...(c.learn||[]),...(c.outcomes||[])
+        ].join(' ').toLowerCase();
+        if(hay.includes(n)) return true;
+        return curriculumSearchEntries.some(e=>normalizeSearch(e.term).includes(n) && (e.conceptIds||[]).includes(c.id));
+      }
+
+      function filteredCatalog() {
+        const q=catalogSearch.value.trim();
+        return curriculumConcepts.filter(c=>{
+          if(catalogArea.value && c.area!==catalogArea.value) return false;
+          if(catalogSubarea.value && c.subarea!==catalogSubarea.value) return false;
+          if(catalogImportance.value && c.importance!==catalogImportance.value) return false;
+          return catalogMatchesQuery(c,q);
+        }).sort((a,b)=>{
+          const rank={core:0,connect:1,deep:2};
+          return (rank[a.importance]??3)-(rank[b.importance]??3) ||
+            areaMeta(a.area).label.localeCompare(areaMeta(b.area).label,'ko') ||
+            (a.titleKo||a.titleEn).localeCompare(b.titleKo||b.titleEn,'ko');
+        });
+      }
+
+      function renderCatalog() {
+        const rows=filteredCatalog();
+        const totalPages=Math.max(1,Math.ceil(rows.length/catalogPageSize));
+        if(catalogPage>totalPages) catalogPage=totalPages;
+        const start=(catalogPage-1)*catalogPageSize;
+        const pageRows=rows.slice(start,start+catalogPageSize);
+
+        catalogCountBadge.innerHTML='<i data-lucide="database" class="icon icon-sm"></i>'+curriculumConcepts.length+'개 개념';
+        catalogStatus.innerHTML='<strong>'+rows.length+'개</strong> 결과 · '+catalogPage+' / '+totalPages+' 페이지';
+
+        if(!pageRows.length){
+          catalogGrid.innerHTML='<div class="catalog-empty">조건에 맞는 개념이 없습니다. 영역이나 검색어를 바꿔보세요.</div>';
+        }else{
+          catalogGrid.innerHTML=pageRows.map(c=>{
+            const area=areaMeta(c.area);
+            const importance=c.importance||'connect';
+            const label=importance==='core'?'핵심':importance==='deep'?'심화':'연결';
+            return '<button class="catalog-card" type="button" data-concept-id="'+c.id+'">'+
+              '<span class="catalog-card-head">'+
+                '<span class="catalog-card-icon"><i data-lucide="'+(areaIcons[c.area]||'book-open')+'" class="icon"></i></span>'+
+                '<span class="catalog-card-title"><strong>'+c.titleKo+'</strong><small>'+c.titleEn+'</small></span>'+
+              '</span>'+
+              '<p>'+c.summary+'</p>'+
+              '<span class="catalog-card-meta"><span class="badge '+importance+'">'+label+'</span><span class="badge domain">'+area.label+'</span><span class="badge domain">'+c.subarea+'</span></span>'+
+            '</button>';
+          }).join('');
+        }
+
+        const pages=[];
+        const lo=Math.max(1,catalogPage-2), hi=Math.min(totalPages,catalogPage+2);
+        pages.push('<button class="page-btn" data-page="'+(catalogPage-1)+'" '+(catalogPage===1?'disabled':'')+' aria-label="이전 페이지">‹</button>');
+        if(lo>1) pages.push('<button class="page-btn" data-page="1">1</button>'+(lo>2?'<span class="page-btn" aria-hidden="true">…</span>':''));
+        for(let p=lo;p<=hi;p++) pages.push('<button class="page-btn '+(p===catalogPage?'active':'')+'" data-page="'+p+'">'+p+'</button>');
+        if(hi<totalPages) pages.push((hi<totalPages-1?'<span class="page-btn" aria-hidden="true">…</span>':'')+'<button class="page-btn" data-page="'+totalPages+'">'+totalPages+'</button>');
+        pages.push('<button class="page-btn" data-page="'+(catalogPage+1)+'" '+(catalogPage===totalPages?'disabled':'')+' aria-label="다음 페이지">›</button>');
+        catalogPager.innerHTML=pages.join('');
+
+        catalogGrid.querySelectorAll('[data-concept-id]').forEach(btn=>btn.addEventListener('click',()=>{
+          const c=curriculumConcepts.find(x=>x.id===btn.dataset.conceptId);
+          if(!c)return;
+          renderDetail(conceptToDetail(c));
+          openDetail();
+        }));
+        catalogPager.querySelectorAll('[data-page]').forEach(btn=>btn.addEventListener('click',()=>{
+          const page=Number(btn.dataset.page);
+          if(!Number.isFinite(page)||page<1||page>totalPages)return;
+          catalogPage=page;
+          renderCatalog();
+          catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
+        }));
+
+        document.querySelectorAll('.catalog-chip').forEach(chip=>chip.classList.toggle('active',chip.dataset.area===catalogArea.value));
+        if(window.lucide) window.lucide.createIcons();
+      }
+
+      async function loadCurriculumData() {
+        try {
+          const [conceptRes,taxRes,indexRes]=await Promise.all([
+            fetch('./data/concepts.json',{cache:'no-store'}),
+            fetch('./data/taxonomy.json',{cache:'no-store'}),
+            fetch('./data/search-index.json',{cache:'no-store'})
+          ]);
+          if(!conceptRes.ok||!taxRes.ok||!indexRes.ok) throw new Error('data load failed');
+          const [conceptData,taxData,indexData]=await Promise.all([conceptRes.json(),taxRes.json(),indexRes.json()]);
+          curriculumConcepts=conceptData.concepts||[];
+          curriculumTaxonomy=taxData.areas||[];
+          curriculumSearchEntries=indexData.entries||[];
+          catalogArea.innerHTML='<option value="">전체 영역</option>'+curriculumTaxonomy.map(a=>'<option value="'+a.id+'">'+a.label+'</option>').join('');
+          updateCatalogSubareas();
+          renderCatalog();
+        } catch(error) {
+          catalogStatus.textContent='커리큘럼 데이터를 불러오지 못했습니다.';
+          catalogGrid.innerHTML='<div class="catalog-empty">데이터를 불러오지 못했습니다. 새로고침 후 다시 확인해주세요.</div>';
+        }
+      }
+
+      function setCatalogArea(areaId,{scroll=true}={}) {
+        catalogArea.value=areaId||'';
+        catalogPage=1;
+        updateCatalogSubareas();
+        renderCatalog();
+        if(scroll) catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
+      }
+
+      catalogArea.addEventListener('change',()=>{catalogPage=1;updateCatalogSubareas();renderCatalog();});
+      catalogSubarea.addEventListener('change',()=>{catalogPage=1;renderCatalog();});
+      catalogImportance.addEventListener('change',()=>{catalogPage=1;renderCatalog();});
+      catalogSearch.addEventListener('input',()=>{catalogPage=1;renderCatalog();});
+      catalogReset.addEventListener('click',()=>{
+        catalogSearch.value=''; catalogArea.value=''; catalogImportance.value=''; catalogPage=1;
+        updateCatalogSubareas(); catalogSubarea.value=''; renderCatalog();
+      });
+      document.querySelectorAll('.catalog-chip').forEach(chip=>chip.addEventListener('click',()=>setCatalogArea(chip.dataset.area||'')));
 
       const searchAliases = {
         '가상메모리': 'vm',
@@ -1923,6 +2331,22 @@
         if (!normalized) return null;
         if (searchAliases[normalized]) return searchAliases[normalized];
 
+        const exactArea=curriculumTaxonomy.find(a=>
+          normalizeSearch(a.label)===normalized || (a.aliases||[]).some(x=>normalizeSearch(x)===normalized)
+        );
+        if(exactArea) return {area:exactArea.id};
+
+        if(curriculumConcepts.length){
+          const exact=curriculumConcepts.find(c=>
+            normalizeSearch(c.titleKo)===normalized ||
+            normalizeSearch(c.titleEn)===normalized ||
+            (c.aliases||[]).some(x=>normalizeSearch(x)===normalized)
+          );
+          if(exact) return {concept:exact.id};
+          const indexed=curriculumSearchEntries.find(e=>normalizeSearch(e.term)===normalized);
+          if(indexed?.conceptIds?.length) return {concept:indexed.conceptIds[0]};
+        }
+
         const tokens = normalized.split(' ').filter(Boolean);
         let best = null;
         let bestScore = 0;
@@ -1942,7 +2366,12 @@
             bestScore = score;
           }
         }
-        return bestScore > 0 ? best : null;
+        if(bestScore > 0) return best;
+        if(curriculumConcepts.length){
+          const fuzzy=curriculumConcepts.find(c=>catalogMatchesQuery(c,query));
+          if(fuzzy) return {concept:fuzzy.id};
+        }
+        return null;
       }
 
       function activateConcept(id, {scroll = true, feedback = true} = {}) {
@@ -1968,18 +2397,40 @@
 
       function runSearch(rawQuery) {
         const query = rawQuery ?? searchInput.value;
-        const id = findConceptId(query);
+        const found = findConceptId(query);
         if (!normalizeSearch(query)) {
           searchFeedback.textContent = '찾고 싶은 개념이나 기술을 입력해주세요.';
           searchFeedback.className = 'search-feedback error';
           searchInput.focus();
           return;
         }
-        if (!id || !activateConcept(id)) {
-          searchFeedback.textContent = '"' + query + '"와 연결된 개념을 아직 찾지 못했습니다.';
-          searchFeedback.className = 'search-feedback error';
+        if(found && typeof found==='object' && found.area){
+          catalogSearch.value='';
+          setCatalogArea(found.area);
+          searchFeedback.textContent='"'+query+'" 영역 전체를 표시했습니다.';
+          searchFeedback.className='search-feedback success';
           return;
         }
+        if(found && typeof found==='object' && found.concept){
+          const c=curriculumConcepts.find(x=>x.id===found.concept);
+          if(c){
+            catalogSearch.value=query;
+            catalogArea.value='';
+            updateCatalogSubareas();
+            catalogPage=1;
+            renderCatalog();
+            renderDetail(conceptToDetail(c));
+            catalogSection.scrollIntoView({behavior:'smooth',block:'start'});
+            openDetail();
+            searchFeedback.textContent='"'+c.titleKo+'"를 찾았습니다.';
+            searchFeedback.className='search-feedback success';
+            return;
+          }
+        }
+        if(typeof found==='string' && activateConcept(found)) return;
+        searchFeedback.textContent = '"' + query + '"와 연결된 개념을 아직 찾지 못했습니다.';
+        searchFeedback.className = 'search-feedback error';
+        return;
       }
 
       function focusSearch() {
@@ -2188,6 +2639,7 @@ ${keywordText}
       if (window.lucide) window.lucide.createIcons();
       syncThemeButton();
       renderDeploymentMeta();
+      loadCurriculumData();
     })();
   </script>
 </body>
