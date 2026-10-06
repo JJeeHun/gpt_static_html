@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 1,
+  "description": "CS·시스템·백엔드 기본지식을 학교 커리큘럼 수준으로 탐색하기 위한 분류 체계",
+  "areas": [
+    {
+      "id": "foundations",
+      "label": "컴퓨터 기초",
+      "icon": "binary",
+      "subareas": [
+        "데이터 표현",
+        "논리·단위",
+        "직렬화",
+        "성능 기초"
+      ]
+    },
+    {
+      "id": "data-structures",
+      "label": "자료구조",
+      "icon": "braces",
+      "subareas": [
+        "선형 구조",
+        "Hash",
+        "Tree",
+        "Graph"
+      ]
+    },
+    {
+      "id": "algorithms",
+      "label": "알고리즘",
+      "icon": "route",
+      "subareas": [
+        "복잡도",
+        "탐색·정렬",
+        "문제 해결",
+        "Graph"
+      ]
+    },
+    {
+      "id": "architecture",
+      "label": "컴퓨터 구조",
+      "icon": "cpu",
+      "subareas": [
+        "CPU",
+        "Memory",
+        "Instruction",
+        "I/O"
+      ]
+    },
+    {
+      "id": "os",
+      "label": "OS",
+      "icon": "layers-3",
+      "subareas": [
+        "Process",
+        "Scheduling",
+        "Concurrency",
+        "Memory",
+        "File & I/O",
+        "IPC"
+      ]
+    },
+    {
+      "id": "linux",
+      "label": "Linux",
+      "icon": "terminal",
+      "subareas": [
+        "Shell",
+        "Process",
+        "Permission",
+        "Service",
+        "Observability",
+        "Container"
+      ]
+    },
+    {
+      "id": "network",
+      "label": "Network",
+      "icon": "network",
+      "subareas": [
+        "기초 계층",
+        "Link",
+        "IP",
+        "Transport",
+        "Name Resolution",
+        "Application"
+      ]
+    },
+    {
+      "id": "storage",
+      "label": "Storage",
+      "icon": "hard-drive",
+      "subareas": [
+        "Device",
+        "Block I/O",
+        "Cache & Durability"
+      ]
+    },
+    {
+      "id": "database",
+      "label": "Database",
+      "icon": "database",
+      "subareas": [
+        "Relational",
+        "Index",
+        "Transaction",
+        "Query",
+        "Storage",
+        "Replication"
+      ]
+    },
+    {
+      "id": "runtime",
+      "label": "Runtime",
+      "icon": "box",
+      "subareas": [
+        "Memory",
+        "GC",
+        "JIT",
+        "JVM",
+        "Language Model"
+      ]
+    },
+    {
+      "id": "backend",
+      "label": "Backend",
+      "icon": "server",
+      "subareas": [
+        "Server Model",
+        "Pool",
+        "Cache",
+        "Proxy",
+        "Queue",
+        "Traffic Control"
+      ]
+    },
+    {
+      "id": "container",
+      "label": "Container",
+      "icon": "container",
+      "subareas": [
+        "Isolation",
+        "Resource",
+        "Filesystem",
+        "Network",
+        "Security"
+      ]
+    },
+    {
+      "id": "distributed",
+      "label": "Distributed",
+      "icon": "waypoints",
+      "subareas": [
+        "Failure",
+        "Replication",
+        "Partition",
+        "Consistency",
+        "Consensus",
+        "Coordination"
+      ]
+    },
+    {
+      "id": "security",
+      "label": "Security",
+      "icon": "shield-check",
+      "subareas": [
+        "Crypto",
+        "Identity",
+        "Session",
+        "Permission"
+      ]
+    },
+    {
+      "id": "native",
+      "label": "Native",
+      "icon": "code-2",
+      "subareas": [
+        "C & ABI",
+        "Memory",
+        "Toolchain",
+        "Debugging"
+      ]
+    },
+    {
+      "id": "kernel",
+      "label": "Kernel",
+      "icon": "microchip",
+      "subareas": [
+        "Scheduler",
+        "Memory",
+        "VFS",
+        "Network",
+        "Interrupt"
+      ]
+    }
+  ]
+}
