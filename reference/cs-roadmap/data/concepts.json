@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "description": "CS·OS·Linux·Network·Database 기본 지식을 짧고 연결된 흐름으로 학습하기 위한 개념 데이터",
+  "schemaVersion": 2,
+  "description": "IT·개발에서 네이티브 수준까지 이어지는 핵심 기본지식의 위치와 연결을 안내하는 로드맵 개념 데이터",
   "levels": {
     "A": "핵심. 실무 문제를 이해하려면 먼저 보는 단계",
     "B": "심화. 커널·네이티브 내부까지 내려갈 때 보는 단계"
@@ -495,6 +495,7 @@
       "kind": "required",
       "summary": "두 프로그램이 네트워크로 연결되고 데이터를 주고받는 기본 구조입니다.",
       "prerequisites": [
+        "ip-routing",
         "file-descriptor-io"
       ],
       "learn": [
@@ -521,7 +522,8 @@
       "next": [
         "epoll",
         "distributed",
-        "kernel-vfs-net"
+        "kernel-vfs-net",
+        "http-tls"
       ],
       "priorityByGoal": {
         "all": 0,
@@ -993,6 +995,7 @@
       "kind": "required",
       "summary": "한 대의 컴퓨터를 넘어서 여러 서버가 함께 일할 때 생기는 실패와 데이터 일관성 문제를 배웁니다.",
       "prerequisites": [
+        "http-tls",
         "socket-tcp",
         "db-index-mvcc"
       ],
@@ -1177,17 +1180,16 @@
       "kind": "required",
       "summary": "커널 소스와 시스템 프로그램을 읽기 위해 필요한 C와 실행 파일 구조만 집중해서 배웁니다.",
       "prerequisites": [
+        "data-representation",
         "cpu-cache",
         "interrupt-syscall"
       ],
       "learn": [
-        "pointer",
-        "struct와 memory layout",
+        "C pointer와 struct",
         "stack / heap",
-        "compile / link",
-        "ELF",
+        "memory layout",
         "calling convention / ABI",
-        "gdb / objdump"
+        "gdb / objdump 기초"
       ],
       "outcomes": [
         "JNI",
@@ -1199,7 +1201,243 @@
         "작은 C 프로그램 작성",
         "readelf / nm / objdump / gdb 사용"
       ],
-      "next": [],
+      "next": [
+        "compile-link-loader"
+      ],
+      "priorityByGoal": {
+        "all": 2,
+        "docker": 2,
+        "backend": 2,
+        "database": 2,
+        "network": 2,
+        "linux": 1,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "data-representation",
+      "titleKo": "데이터 표현·비트·바이트·인코딩",
+      "titleEn": "Data Representation · Bit · Byte · Encoding",
+      "domains": [
+        "컴퓨터 구조",
+        "프로그래밍"
+      ],
+      "level": "A",
+      "kind": "single",
+      "origin": "added",
+      "summary": "컴퓨터가 숫자·문자·데이터를 결국 비트와 바이트로 저장하고 해석하는 기본 방식입니다.",
+      "prerequisites": [],
+      "learn": [
+        "bit와 byte",
+        "2진수·16진수",
+        "정수와 문자 표현",
+        "문자 인코딩",
+        "endianness는 무엇인지 정도"
+      ],
+      "outcomes": [
+        "메모리·파일·네트워크 데이터가 왜 byte 단위로 보이는지",
+        "인코딩 깨짐",
+        "바이너리 데이터와 네이티브 메모리 구조"
+      ],
+      "practice": [
+        "텍스트와 바이너리 파일의 byte 차이 확인",
+        "16진수 표현을 간단히 읽어보기"
+      ],
+      "next": [
+        "cpu-cache",
+        "virtual-memory",
+        "native-c-abi"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 2,
+        "backend": 1,
+        "database": 1,
+        "network": 1,
+        "linux": 1,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "ip-routing",
+      "titleKo": "IP·서브넷·라우팅",
+      "titleEn": "IP · Subnet · Routing",
+      "domains": [
+        "Network",
+        "Linux"
+      ],
+      "level": "A",
+      "kind": "required",
+      "origin": "added",
+      "summary": "데이터가 어떤 주소를 목적지로 삼고 여러 네트워크를 지나 어디로 갈지 정하는 기본 구조입니다.",
+      "prerequisites": [],
+      "learn": [
+        "IP address",
+        "subnet",
+        "gateway",
+        "routing table",
+        "NAT는 무엇인지 정도"
+      ],
+      "outcomes": [
+        "같은 네트워크와 다른 네트워크의 차이",
+        "서버가 인터넷으로 나가는 경로",
+        "Docker·클라우드 네트워크의 기본"
+      ],
+      "practice": [
+        "ip addr로 주소 확인",
+        "ip route로 라우팅 테이블 확인"
+      ],
+      "next": [
+        "dns",
+        "socket-tcp",
+        "docker-fs-net"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 1,
+        "backend": 0,
+        "database": 1,
+        "network": 0,
+        "linux": 1,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "dns",
+      "titleKo": "DNS와 이름 해석",
+      "titleEn": "DNS · Name Resolution",
+      "domains": [
+        "Network",
+        "Linux",
+        "백엔드"
+      ],
+      "level": "A",
+      "kind": "required",
+      "origin": "added",
+      "summary": "사람이 쓰는 도메인 이름을 실제 통신에 필요한 IP 주소로 바꾸는 과정입니다.",
+      "prerequisites": [
+        "ip-routing"
+      ],
+      "learn": [
+        "domain과 IP 차이",
+        "resolver",
+        "DNS record",
+        "cache",
+        "이름 해석 흐름"
+      ],
+      "outcomes": [
+        "도메인은 되는데 IP는 되는 문제",
+        "DNS 장애",
+        "서비스 주소와 실제 서버 주소의 관계"
+      ],
+      "practice": [
+        "dig 또는 nslookup으로 이름 해석 확인",
+        "getent hosts로 OS 해석 결과 확인"
+      ],
+      "next": [
+        "socket-tcp",
+        "http-tls"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 1,
+        "backend": 0,
+        "database": 1,
+        "network": 0,
+        "linux": 1,
+        "kernel": 2
+      }
+    },
+    {
+      "id": "http-tls",
+      "titleKo": "HTTP와 TLS 기본",
+      "titleEn": "HTTP · TLS",
+      "domains": [
+        "Network",
+        "백엔드",
+        "보안"
+      ],
+      "level": "A",
+      "kind": "required",
+      "origin": "added",
+      "summary": "웹과 API가 요청·응답을 주고받는 규칙과, 그 통신을 안전하게 보호하는 기본 방식입니다.",
+      "prerequisites": [
+        "dns",
+        "socket-tcp"
+      ],
+      "learn": [
+        "HTTP request/response",
+        "method와 status",
+        "header",
+        "connection 재사용",
+        "TLS와 인증서의 역할"
+      ],
+      "outcomes": [
+        "REST API",
+        "reverse proxy",
+        "HTTPS",
+        "인증서 오류",
+        "브라우저와 서버 사이의 기본 흐름"
+      ],
+      "practice": [
+        "curl -v로 요청·응답 확인",
+        "브라우저 개발자 도구에서 Network 탭 보기"
+      ],
+      "next": [
+        "distributed",
+        "observability"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 1,
+        "backend": 0,
+        "database": 2,
+        "network": 0,
+        "linux": 1,
+        "kernel": 2
+      }
+    },
+    {
+      "id": "compile-link-loader",
+      "titleKo": "컴파일·링크·실행 파일",
+      "titleEn": "Compile · Link · Loader · Executable",
+      "domains": [
+        "Native",
+        "Linux",
+        "컴퓨터 구조"
+      ],
+      "level": "B",
+      "kind": "required",
+      "origin": "added",
+      "summary": "작성한 코드가 실행 파일이 되고, 필요한 라이브러리와 연결되어 실제 프로세스로 시작되는 흐름입니다.",
+      "prerequisites": [
+        "data-representation",
+        "native-c-abi"
+      ],
+      "learn": [
+        "compile",
+        "object file",
+        "link",
+        "static/dynamic library",
+        "ELF",
+        "loader와 symbol"
+      ],
+      "outcomes": [
+        "undefined symbol",
+        "공유 라이브러리 문제",
+        "실행 파일 내부 구조",
+        "JNI·네이티브 라이브러리 연결"
+      ],
+      "practice": [
+        "작은 C 프로그램을 object와 executable로 나눠 만들기",
+        "readelf·nm·ldd로 실행 파일 살펴보기"
+      ],
+      "next": [
+        "interrupt-syscall",
+        "kernel-sched",
+        "kernel-mm",
+        "kernel-vfs-net"
+      ],
       "priorityByGoal": {
         "all": 2,
         "docker": 2,
