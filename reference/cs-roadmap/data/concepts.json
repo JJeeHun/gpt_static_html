@@ -1,0 +1,1214 @@
+{
+  "schemaVersion": 1,
+  "description": "CS·OS·Linux·Network·Database 기본 지식을 짧고 연결된 흐름으로 학습하기 위한 개념 데이터",
+  "levels": {
+    "A": "핵심. 실무 문제를 이해하려면 먼저 보는 단계",
+    "B": "심화. 커널·네이티브 내부까지 내려갈 때 보는 단계"
+  },
+  "concepts": [
+    {
+      "id": "cpu-cache",
+      "titleKo": "CPU와 캐시",
+      "titleEn": "CPU · Cache · Memory Hierarchy",
+      "domains": [
+        "컴퓨터 구조",
+        "백엔드"
+      ],
+      "level": "A",
+      "kind": "expand",
+      "summary": "CPU는 매우 빠르고 메모리는 상대적으로 느립니다. 이 속도 차이를 줄이기 위해 캐시를 씁니다.",
+      "prerequisites": [],
+      "learn": [
+        "CPU·레지스터의 역할",
+        "L1/L2/L3 캐시",
+        "cache hit/miss",
+        "지역성(locality)",
+        "메모리 지연 시간"
+      ],
+      "outcomes": [
+        "자료구조에 따라 성능이 달라지는 이유",
+        "JVM·DB 성능에서 메모리 접근이 중요한 이유",
+        "false sharing 같은 동시성 문제의 바탕"
+      ],
+      "practice": [
+        "작은 벤치마크로 순차 접근과 무작위 접근 비교",
+        "perf stat / perf record가 무엇을 보는 도구인지 익히기"
+      ],
+      "next": [
+        "thread",
+        "virtual-memory",
+        "sync"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 2,
+        "backend": 0,
+        "database": 1,
+        "network": 2,
+        "linux": 1,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "interrupt-syscall",
+      "titleKo": "인터럽트·예외·시스템 콜",
+      "titleEn": "Interrupt · Exception · System Call",
+      "domains": [
+        "컴퓨터 구조",
+        "OS",
+        "Linux"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "일반 프로그램이 커널의 도움을 요청할 때 CPU가 안전하게 권한을 바꾸는 과정입니다.",
+      "prerequisites": [],
+      "learn": [
+        "사용자 모드와 커널 모드",
+        "interrupt와 exception",
+        "system call",
+        "권한 경계",
+        "context transition"
+      ],
+      "outcomes": [
+        "파일·소켓을 사용할 때 커널이 왜 필요한지",
+        "strace에 시스템 콜이 보이는 이유",
+        "Docker·JVM도 결국 커널 기능을 호출한다는 점"
+      ],
+      "practice": [
+        "strace -f로 openat/read/write 관찰"
+      ],
+      "next": [
+        "process",
+        "file-descriptor-io",
+        "observability"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 1,
+        "backend": 0,
+        "database": 1,
+        "network": 1,
+        "linux": 0,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "process",
+      "titleKo": "프로세스",
+      "titleEn": "Process",
+      "domains": [
+        "OS",
+        "Linux",
+        "Docker"
+      ],
+      "level": "A",
+      "kind": "single",
+      "summary": "실행 중인 프로그램 하나를 OS가 관리하는 기본 단위입니다.",
+      "prerequisites": [],
+      "learn": [
+        "프로그램과 프로세스 차이",
+        "PID",
+        "프로세스 상태",
+        "fork / exec",
+        "zombie / orphan",
+        "프로세스별 자원"
+      ],
+      "outcomes": [
+        "Docker 컨테이너 안에서도 결국 프로세스가 실행된다는 점",
+        "daemon·worker 구조",
+        "프로세스 격리의 출발점"
+      ],
+      "practice": [
+        "ps, pstree, pgrep 사용",
+        "/proc/<pid> 살펴보기",
+        "fork/exec를 strace로 관찰"
+      ],
+      "next": [
+        "thread",
+        "virtual-memory",
+        "namespace",
+        "cgroup",
+        "linux-shell-pipeline"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 0,
+        "backend": 0,
+        "database": 1,
+        "network": 1,
+        "linux": 0,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "thread",
+      "titleKo": "스레드와 컨텍스트 스위칭",
+      "titleEn": "Thread · Context Switching",
+      "domains": [
+        "OS",
+        "동시성",
+        "백엔드",
+        "Linux"
+      ],
+      "level": "A",
+      "kind": "expand",
+      "summary": "한 프로세스 안에서 여러 작업 흐름을 실행하는 방법과 작업을 바꾸는 비용을 배웁니다.",
+      "prerequisites": [
+        "process"
+      ],
+      "learn": [
+        "process와 thread 차이",
+        "스케줄링 기초",
+        "context switch",
+        "CPU-bound와 I/O-bound",
+        "공유 메모리"
+      ],
+      "outcomes": [
+        "Java thread pool",
+        "Netty event loop와 일반 thread 모델 차이",
+        "thread가 많다고 항상 빠르지 않은 이유"
+      ],
+      "practice": [
+        "top -H, ps -L로 thread 확인",
+        "thread 수를 늘리며 context switch 변화 관찰"
+      ],
+      "next": [
+        "sync",
+        "epoll",
+        "jvm-os",
+        "kernel-sched"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 1,
+        "backend": 0,
+        "database": 1,
+        "network": 1,
+        "linux": 1,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "virtual-memory",
+      "titleKo": "가상 메모리",
+      "titleEn": "Virtual Memory",
+      "domains": [
+        "OS",
+        "컴퓨터 구조",
+        "Linux",
+        "백엔드",
+        "Database",
+        "Docker"
+      ],
+      "level": "A",
+      "kind": "expand",
+      "summary": "프로그램마다 자기만의 큰 메모리가 있는 것처럼 보이게 하는 OS의 방법입니다.",
+      "prerequisites": [
+        "process"
+      ],
+      "learn": [
+        "가상 주소와 실제 주소",
+        "page와 page table",
+        "page fault",
+        "MMU와 TLB",
+        "copy-on-write",
+        "swap"
+      ],
+      "outcomes": [
+        "JVM heap과 RSS가 다른 이유",
+        "Docker memory limit와 OOM",
+        "mmap",
+        "page cache와 메모리 사용량의 관계"
+      ],
+      "practice": [
+        "/proc/<pid>/maps 확인",
+        "pmap -x 사용",
+        "vmstat로 메모리 상태 관찰"
+      ],
+      "next": [
+        "page-cache",
+        "cgroup",
+        "jvm-os",
+        "kernel-mm"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 0,
+        "backend": 0,
+        "database": 0,
+        "network": 2,
+        "linux": 0,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "sync",
+      "titleKo": "동기화·락·원자 연산",
+      "titleEn": "Synchronization · Lock · Atomic",
+      "domains": [
+        "OS",
+        "동시성",
+        "컴퓨터 구조",
+        "백엔드",
+        "Database"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "여러 작업이 같은 데이터를 동시에 바꿀 때 생기는 문제와 해결 방법을 배웁니다.",
+      "prerequisites": [
+        "thread"
+      ],
+      "learn": [
+        "race condition",
+        "critical section",
+        "mutex",
+        "semaphore",
+        "deadlock",
+        "atomic / CAS"
+      ],
+      "outcomes": [
+        "Java synchronized",
+        "DB lock과 deadlock",
+        "lock contention",
+        "lock-free 개념의 필요성"
+      ],
+      "practice": [
+        "간단한 race condition 재현",
+        "jstack으로 blocked thread 확인"
+      ],
+      "next": [
+        "db-index-mvcc",
+        "jvm-os"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 2,
+        "backend": 0,
+        "database": 0,
+        "network": 2,
+        "linux": 1,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "file-descriptor-io",
+      "titleKo": "파일 디스크립터와 표준 입출력",
+      "titleEn": "File Descriptor · Standard I/O",
+      "domains": [
+        "OS",
+        "Linux",
+        "Network"
+      ],
+      "level": "A",
+      "kind": "required",
+      "origin": "added",
+      "summary": "Linux에서는 파일·소켓·파이프 같은 입출력 대상을 작은 번호로 다룹니다. 그 번호가 파일 디스크립터입니다.",
+      "prerequisites": [
+        "process",
+        "interrupt-syscall"
+      ],
+      "learn": [
+        "stdin·stdout·stderr",
+        "file descriptor",
+        "open/read/write/close",
+        "소켓도 FD라는 점",
+        "redirection의 원리"
+      ],
+      "outcomes": [
+        "2>&1 같은 리다이렉션",
+        "pipe가 프로세스를 연결하는 방식",
+        "socket과 file I/O가 비슷하게 다뤄지는 이유"
+      ],
+      "practice": [
+        "ls -l /proc/$$/fd 확인",
+        "echo와 redirection 실험",
+        "lsof로 열린 파일 확인"
+      ],
+      "next": [
+        "linux-shell-pipeline",
+        "socket-tcp",
+        "epoll",
+        "filesystem"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 1,
+        "backend": 0,
+        "database": 1,
+        "network": 0,
+        "linux": 0,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "filesystem",
+      "titleKo": "파일 시스템과 VFS",
+      "titleEn": "File System · VFS",
+      "domains": [
+        "OS",
+        "Storage",
+        "Linux",
+        "Docker",
+        "Database"
+      ],
+      "level": "A",
+      "kind": "expand",
+      "summary": "파일 이름이 실제 저장장치의 데이터와 어떻게 연결되는지 배웁니다.",
+      "prerequisites": [
+        "file-descriptor-io"
+      ],
+      "learn": [
+        "file과 directory",
+        "inode",
+        "metadata",
+        "mount",
+        "permission",
+        "VFS"
+      ],
+      "outcomes": [
+        "Docker volume과 image layer",
+        "DB data file",
+        "로그 파일",
+        "mount 문제가 서비스에 미치는 영향"
+      ],
+      "practice": [
+        "stat, df, du, mount, findmnt, lsof 사용",
+        "inode와 hard link 관찰"
+      ],
+      "next": [
+        "page-cache",
+        "docker-fs-net",
+        "kernel-vfs-net"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 0,
+        "backend": 1,
+        "database": 0,
+        "network": 2,
+        "linux": 0,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "page-cache",
+      "titleKo": "페이지 캐시·버퍼드 I/O·fsync",
+      "titleEn": "Page Cache · Buffered I/O · fsync",
+      "domains": [
+        "OS",
+        "Linux",
+        "Storage",
+        "Database"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "파일에 쓴 데이터가 바로 SSD에 저장되지 않고 메모리를 거치는 이유를 배웁니다.",
+      "prerequisites": [
+        "filesystem",
+        "virtual-memory"
+      ],
+      "learn": [
+        "buffered I/O",
+        "dirty page",
+        "writeback",
+        "fsync",
+        "durability"
+      ],
+      "outcomes": [
+        "DB WAL이 필요한 이유",
+        "로그를 썼는데도 장애 때 사라질 수 있는 이유",
+        "I/O 지연과 flush의 관계"
+      ],
+      "practice": [
+        "sync와 fsync 개념 실험",
+        "iostat / vmstat로 flush 영향 관찰"
+      ],
+      "next": [
+        "db-buffer-wal",
+        "kernel-mm"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 1,
+        "backend": 1,
+        "database": 0,
+        "network": 2,
+        "linux": 0,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "storage-raid",
+      "titleKo": "저장장치·SSD·RAID",
+      "titleEn": "Storage · SSD · Block I/O · RAID",
+      "domains": [
+        "Storage",
+        "컴퓨터 구조",
+        "Database"
+      ],
+      "level": "A",
+      "kind": "single",
+      "summary": "저장장치가 데이터를 읽고 쓰는 방식과 성능·장애 대비 방법을 배웁니다.",
+      "prerequisites": [],
+      "learn": [
+        "HDD와 SSD 차이",
+        "block I/O",
+        "latency와 throughput",
+        "IOPS",
+        "RAID 0/1/5/6/10"
+      ],
+      "outcomes": [
+        "DB storage 성능",
+        "백업과 RAID가 다른 이유",
+        "persistent volume의 바탕"
+      ],
+      "practice": [
+        "lsblk, blkid, iostat 사용",
+        "테스트 환경에서 fio가 무엇을 측정하는지 확인"
+      ],
+      "next": [
+        "filesystem",
+        "page-cache",
+        "db-buffer-wal"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 2,
+        "backend": 2,
+        "database": 0,
+        "network": 2,
+        "linux": 1,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "socket-tcp",
+      "titleKo": "소켓과 TCP",
+      "titleEn": "Socket · TCP",
+      "domains": [
+        "Network",
+        "OS",
+        "Linux",
+        "백엔드"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "두 프로그램이 네트워크로 연결되고 데이터를 주고받는 기본 구조입니다.",
+      "prerequisites": [
+        "file-descriptor-io"
+      ],
+      "learn": [
+        "IP와 TCP 기초",
+        "3-way handshake",
+        "socket",
+        "port",
+        "backlog",
+        "timeout",
+        "TCP 상태"
+      ],
+      "outcomes": [
+        "HTTP 서버",
+        "DB connection pool",
+        "reverse proxy",
+        "Docker port mapping의 바탕"
+      ],
+      "practice": [
+        "ss -lntp",
+        "nc",
+        "curl -v",
+        "tcpdump 기본"
+      ],
+      "next": [
+        "epoll",
+        "distributed",
+        "kernel-vfs-net"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 1,
+        "backend": 0,
+        "database": 1,
+        "network": 0,
+        "linux": 0,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "epoll",
+      "titleKo": "I/O 멀티플렉싱과 epoll",
+      "titleEn": "I/O Multiplexing · epoll",
+      "domains": [
+        "OS",
+        "Linux",
+        "Network",
+        "백엔드"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "한 스레드가 많은 소켓을 효율적으로 지켜보는 방법입니다.",
+      "prerequisites": [
+        "socket-tcp",
+        "file-descriptor-io"
+      ],
+      "learn": [
+        "blocking과 non-blocking I/O",
+        "select / poll",
+        "readiness",
+        "epoll",
+        "event loop",
+        "backpressure 기초"
+      ],
+      "outcomes": [
+        "Netty",
+        "Nginx",
+        "Node.js",
+        "고성능 서버가 적은 thread로 많은 연결을 처리하는 이유"
+      ],
+      "practice": [
+        "strace로 epoll_wait 확인",
+        "작은 selector 서버 작성"
+      ],
+      "next": [
+        "jvm-os",
+        "kernel-vfs-net"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 2,
+        "backend": 0,
+        "database": 2,
+        "network": 0,
+        "linux": 0,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "linux-shell-pipeline",
+      "titleKo": "Linux 셸·파이프·텍스트 처리",
+      "titleEn": "Shell · Pipe · Text Processing",
+      "domains": [
+        "Linux",
+        "운영",
+        "백엔드"
+      ],
+      "level": "A",
+      "kind": "single",
+      "origin": "added",
+      "summary": "작은 명령을 파이프로 이어서 큰 작업을 빠르게 처리하는 Linux의 기본 작업 방식입니다.",
+      "prerequisites": [
+        "process",
+        "file-descriptor-io"
+      ],
+      "learn": [
+        "stdin/stdout/stderr",
+        "redirection",
+        "pipe(|)",
+        "grep",
+        "sort",
+        "uniq",
+        "cut",
+        "awk 기초",
+        "xargs 기초"
+      ],
+      "outcomes": [
+        "로그에서 필요한 줄만 찾기",
+        "중복 제거와 집계",
+        "여러 파일·프로세스 결과 이어 붙이기",
+        "반복 작업을 간단히 자동화하기"
+      ],
+      "practice": [
+        "로그 → grep → sort → uniq -c 파이프라인 만들기",
+        "find 결과를 xargs와 연결하기",
+        "stderr를 별도 파일로 보내보기"
+      ],
+      "next": [
+        "observability",
+        "process"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 1,
+        "backend": 1,
+        "database": 1,
+        "network": 1,
+        "linux": 0,
+        "kernel": 2
+      }
+    },
+    {
+      "id": "namespace",
+      "titleKo": "Linux Namespace",
+      "titleEn": "Linux Namespace",
+      "domains": [
+        "Linux",
+        "Docker",
+        "OS"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "같은 Linux 안에서도 프로세스마다 서로 다른 PID·네트워크·mount 환경을 보게 만드는 격리 기능입니다.",
+      "prerequisites": [
+        "process",
+        "filesystem",
+        "socket-tcp"
+      ],
+      "learn": [
+        "PID namespace",
+        "mount namespace",
+        "network namespace",
+        "UTS",
+        "IPC",
+        "user namespace"
+      ],
+      "outcomes": [
+        "컨테이너가 별도 머신처럼 보이는 이유",
+        "Kubernetes Pod 격리",
+        "sandbox의 기본 원리"
+      ],
+      "practice": [
+        "lsns",
+        "unshare",
+        "nsenter",
+        "/proc/<pid>/ns 확인"
+      ],
+      "next": [
+        "cgroup",
+        "docker-fs-net"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 0,
+        "backend": 2,
+        "database": 2,
+        "network": 1,
+        "linux": 0,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "cgroup",
+      "titleKo": "Cgroup v2와 자원 제한",
+      "titleEn": "Cgroup v2 · Resource Control",
+      "domains": [
+        "Linux",
+        "Docker",
+        "OS"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "프로세스 그룹이 CPU·메모리·I/O를 얼마나 쓸 수 있는지 제한하고 측정하는 기능입니다.",
+      "prerequisites": [
+        "process",
+        "virtual-memory",
+        "thread"
+      ],
+      "learn": [
+        "cgroup hierarchy",
+        "controller",
+        "CPU quota",
+        "memory.max",
+        "I/O control",
+        "pressure"
+      ],
+      "outcomes": [
+        "docker --memory",
+        "docker --cpus",
+        "Kubernetes resources",
+        "container OOM"
+      ],
+      "practice": [
+        "/sys/fs/cgroup 확인",
+        "docker stats와 cgroup 파일 비교"
+      ],
+      "next": [
+        "docker-fs-net",
+        "kernel-mm",
+        "kernel-sched"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 0,
+        "backend": 2,
+        "database": 2,
+        "network": 2,
+        "linux": 0,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "docker-fs-net",
+      "titleKo": "Docker의 격리·파일·네트워크",
+      "titleEn": "Docker Filesystem · Network · Security",
+      "domains": [
+        "Docker",
+        "Linux",
+        "Network",
+        "Storage"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "Docker는 새로운 OS가 아니라 Linux 기능들을 묶어서 컨테이너라는 사용 형태로 제공합니다.",
+      "prerequisites": [
+        "namespace",
+        "cgroup",
+        "filesystem",
+        "socket-tcp"
+      ],
+      "learn": [
+        "image layer",
+        "copy-on-write",
+        "overlay filesystem",
+        "veth / bridge",
+        "capability",
+        "seccomp",
+        "OCI runtime 기초"
+      ],
+      "outcomes": [
+        "Docker image와 container 차이",
+        "volume",
+        "port mapping",
+        "container security의 기본 원리"
+      ],
+      "practice": [
+        "docker inspect",
+        "mount 정보 비교",
+        "container와 host의 namespace 비교"
+      ],
+      "next": [
+        "observability"
+      ],
+      "priorityByGoal": {
+        "all": 2,
+        "docker": 0,
+        "backend": 2,
+        "database": 2,
+        "network": 1,
+        "linux": 1,
+        "kernel": 2
+      }
+    },
+    {
+      "id": "db-buffer-wal",
+      "titleKo": "DB 버퍼 풀·WAL·내구성",
+      "titleEn": "DB Buffer Pool · WAL · Durability",
+      "domains": [
+        "Database",
+        "Storage",
+        "OS",
+        "Linux"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "DB가 메모리와 로그를 함께 써서 빠르면서도 장애 후 복구 가능하게 만드는 구조입니다.",
+      "prerequisites": [
+        "filesystem",
+        "page-cache",
+        "storage-raid"
+      ],
+      "learn": [
+        "DB page",
+        "buffer pool",
+        "WAL",
+        "checkpoint",
+        "redo",
+        "durability"
+      ],
+      "outcomes": [
+        "MySQL InnoDB와 PostgreSQL WAL",
+        "crash recovery",
+        "fsync 지연이 DB 성능에 미치는 영향"
+      ],
+      "practice": [
+        "DB flush 관련 설정과 지표 확인",
+        "iostat와 checkpoint 시점을 함께 보기"
+      ],
+      "next": [
+        "db-index-mvcc"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 2,
+        "backend": 1,
+        "database": 0,
+        "network": 2,
+        "linux": 1,
+        "kernel": 2
+      }
+    },
+    {
+      "id": "db-index-mvcc",
+      "titleKo": "인덱스·트랜잭션·MVCC",
+      "titleEn": "Index · Transaction · MVCC",
+      "domains": [
+        "Database",
+        "동시성"
+      ],
+      "level": "A",
+      "kind": "expand",
+      "summary": "DB가 빠르게 찾고, 여러 작업이 동시에 실행되어도 데이터가 꼬이지 않게 하는 방법입니다.",
+      "prerequisites": [
+        "sync"
+      ],
+      "learn": [
+        "B-Tree 계열 인덱스",
+        "ACID",
+        "isolation level",
+        "lock",
+        "MVCC",
+        "undo",
+        "실행 계획"
+      ],
+      "outcomes": [
+        "query tuning",
+        "deadlock",
+        "long transaction",
+        "replication lag 원인의 일부"
+      ],
+      "practice": [
+        "EXPLAIN 사용",
+        "lock wait / deadlock 재현",
+        "isolation level 비교"
+      ],
+      "next": [
+        "distributed"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 2,
+        "backend": 1,
+        "database": 0,
+        "network": 2,
+        "linux": 2,
+        "kernel": 2
+      }
+    },
+    {
+      "id": "jvm-os",
+      "titleKo": "JVM과 OS 연결",
+      "titleEn": "JVM ↔ OS",
+      "domains": [
+        "백엔드",
+        "OS",
+        "Linux",
+        "컴퓨터 구조"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "JVM도 결국 OS의 프로세스·스레드·메모리·파일 디스크립터·소켓 위에서 실행됩니다.",
+      "prerequisites": [
+        "process",
+        "thread",
+        "virtual-memory",
+        "socket-tcp"
+      ],
+      "learn": [
+        "heap과 RSS 차이",
+        "native memory",
+        "Java thread와 OS thread",
+        "FD",
+        "GC pause와 scheduler",
+        "JIT와 CPU cache"
+      ],
+      "outcomes": [
+        "Spring Boot 메모리 문제",
+        "JVM OOM",
+        "thread dump",
+        "native memory 문제"
+      ],
+      "practice": [
+        "jcmd / jstack / jstat와 ps 비교",
+        "/proc/<pid>/status 확인"
+      ],
+      "next": [
+        "observability"
+      ],
+      "priorityByGoal": {
+        "all": 1,
+        "docker": 1,
+        "backend": 0,
+        "database": 2,
+        "network": 1,
+        "linux": 1,
+        "kernel": 2
+      }
+    },
+    {
+      "id": "observability",
+      "titleKo": "Linux 관찰과 문제 추적",
+      "titleEn": "Linux Observability",
+      "domains": [
+        "Linux",
+        "백엔드",
+        "Docker"
+      ],
+      "level": "A",
+      "kind": "single",
+      "summary": "문제가 보이면 증상만 보지 않고 어떤 OS 영역에서 문제가 생겼는지 좁혀 가는 방법입니다.",
+      "prerequisites": [
+        "process"
+      ],
+      "learn": [
+        "증상 → 지표 → subsystem",
+        "process 확인",
+        "socket 확인",
+        "memory 확인",
+        "disk 확인",
+        "system call 추적"
+      ],
+      "outcomes": [
+        "장애 대응",
+        "성능 튜닝",
+        "Docker troubleshooting",
+        "원인 추적 순서"
+      ],
+      "practice": [
+        "서비스 PID 하나를 정해 CPU·메모리·FD·Socket을 순서대로 추적"
+      ],
+      "next": [
+        "kernel-sched",
+        "kernel-mm",
+        "kernel-vfs-net"
+      ],
+      "priorityByGoal": {
+        "all": 0,
+        "docker": 0,
+        "backend": 0,
+        "database": 1,
+        "network": 1,
+        "linux": 0,
+        "kernel": 1
+      }
+    },
+    {
+      "id": "distributed",
+      "titleKo": "분산 시스템 기초",
+      "titleEn": "Distributed Systems Fundamentals",
+      "domains": [
+        "분산 시스템",
+        "Database",
+        "백엔드",
+        "Network"
+      ],
+      "level": "A",
+      "kind": "required",
+      "summary": "한 대의 컴퓨터를 넘어서 여러 서버가 함께 일할 때 생기는 실패와 데이터 일관성 문제를 배웁니다.",
+      "prerequisites": [
+        "socket-tcp",
+        "db-index-mvcc"
+      ],
+      "learn": [
+        "partial failure",
+        "replication",
+        "consistency",
+        "partition",
+        "quorum",
+        "consensus 기초",
+        "idempotency"
+      ],
+      "outcomes": [
+        "Kafka",
+        "Redis cluster",
+        "DB replication",
+        "microservice timeout·retry 설계"
+      ],
+      "practice": [
+        "timeout/retry/idempotency 시나리오 만들기",
+        "replica lag 상황 생각해보기"
+      ],
+      "next": [],
+      "priorityByGoal": {
+        "all": 2,
+        "docker": 2,
+        "backend": 1,
+        "database": 1,
+        "network": 1,
+        "linux": 2,
+        "kernel": 2
+      }
+    },
+    {
+      "id": "kernel-sched",
+      "titleKo": "Linux 커널 스케줄러",
+      "titleEn": "Kernel Scheduler Internals",
+      "domains": [
+        "Kernel",
+        "Linux",
+        "컴퓨터 구조"
+      ],
+      "level": "B",
+      "kind": "required",
+      "summary": "Linux 커널이 실행 가능한 작업을 어느 CPU에서 언제 실행할지 정하는 내부 구조입니다.",
+      "prerequisites": [
+        "process",
+        "thread"
+      ],
+      "learn": [
+        "runqueue",
+        "task scheduling",
+        "load balancing",
+        "per-CPU scheduling",
+        "EEVDF 개념"
+      ],
+      "outcomes": [
+        "CPU saturation",
+        "latency spike",
+        "container CPU quota의 내부 배경"
+      ],
+      "practice": [
+        "perf sched 개념 익히기",
+        "가능한 환경에서 /proc/sched_debug 관찰"
+      ],
+      "next": [
+        "native-c-abi"
+      ],
+      "priorityByGoal": {
+        "all": 2,
+        "docker": 2,
+        "backend": 2,
+        "database": 2,
+        "network": 2,
+        "linux": 1,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "kernel-mm",
+      "titleKo": "Linux 커널 메모리 관리",
+      "titleEn": "Kernel Memory Management",
+      "domains": [
+        "Kernel",
+        "Linux",
+        "컴퓨터 구조"
+      ],
+      "level": "B",
+      "kind": "required",
+      "summary": "가상 메모리가 Linux 커널 내부에서 실제로 어떻게 구현되는지 깊게 봅니다.",
+      "prerequisites": [
+        "virtual-memory",
+        "cpu-cache",
+        "page-cache"
+      ],
+      "learn": [
+        "buddy/slab 개념",
+        "allocator",
+        "reclaim",
+        "OOM path",
+        "page fault path",
+        "memcg"
+      ],
+      "outcomes": [
+        "container OOM",
+        "memory fragmentation",
+        "JVM/DB RSS 분석을 더 깊게 이해"
+      ],
+      "practice": [
+        "/proc/meminfo와 vmstat 심화",
+        "slabtop 개념 익히기"
+      ],
+      "next": [
+        "native-c-abi"
+      ],
+      "priorityByGoal": {
+        "all": 2,
+        "docker": 1,
+        "backend": 2,
+        "database": 2,
+        "network": 2,
+        "linux": 1,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "kernel-vfs-net",
+      "titleKo": "Linux 커널 VFS·네트워크 스택",
+      "titleEn": "Kernel VFS · Network Stack",
+      "domains": [
+        "Kernel",
+        "Linux",
+        "Network",
+        "Storage"
+      ],
+      "level": "B",
+      "kind": "required",
+      "summary": "파일과 소켓이 커널 안에서 어떤 경로를 거쳐 저장장치와 네트워크로 내려가는지 봅니다.",
+      "prerequisites": [
+        "filesystem",
+        "socket-tcp",
+        "epoll"
+      ],
+      "learn": [
+        "file object",
+        "dentry / inode",
+        "socket internals",
+        "packet path",
+        "epoll 내부"
+      ],
+      "outcomes": [
+        "Nginx/Netty 성능",
+        "Docker networking",
+        "filesystem latency를 커널 관점에서 분석"
+      ],
+      "practice": [
+        "perf / ftrace / eBPF로 경로를 관찰하는 개념 익히기"
+      ],
+      "next": [
+        "native-c-abi"
+      ],
+      "priorityByGoal": {
+        "all": 2,
+        "docker": 2,
+        "backend": 1,
+        "database": 2,
+        "network": 1,
+        "linux": 1,
+        "kernel": 0
+      }
+    },
+    {
+      "id": "native-c-abi",
+      "titleKo": "C·포인터·ABI·네이티브 도구",
+      "titleEn": "C · Pointer · ABI · Native Toolchain",
+      "domains": [
+        "Kernel",
+        "Linux",
+        "컴퓨터 구조"
+      ],
+      "level": "B",
+      "kind": "required",
+      "summary": "커널 소스와 시스템 프로그램을 읽기 위해 필요한 C와 실행 파일 구조만 집중해서 배웁니다.",
+      "prerequisites": [
+        "cpu-cache",
+        "interrupt-syscall"
+      ],
+      "learn": [
+        "pointer",
+        "struct와 memory layout",
+        "stack / heap",
+        "compile / link",
+        "ELF",
+        "calling convention / ABI",
+        "gdb / objdump"
+      ],
+      "outcomes": [
+        "JNI",
+        "system call ABI",
+        "kernel source",
+        "native profiling"
+      ],
+      "practice": [
+        "작은 C 프로그램 작성",
+        "readelf / nm / objdump / gdb 사용"
+      ],
+      "next": [],
+      "priorityByGoal": {
+        "all": 2,
+        "docker": 2,
+        "backend": 2,
+        "database": 2,
+        "network": 2,
+        "linux": 1,
+        "kernel": 0
+      }
+    }
+  ]
+}
