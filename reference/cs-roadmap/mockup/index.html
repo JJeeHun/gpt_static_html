@@ -772,7 +772,7 @@
     }
     .catalog-toolbar {
       display: grid;
-      grid-template-columns: minmax(14rem, 1.4fr) repeat(3, minmax(8.5rem, .7fr)) auto;
+      grid-template-columns: minmax(15rem, 1.5fr) repeat(3, minmax(8.5rem, 1fr));
       gap: .5rem;
       align-items: center;
       margin-bottom: .75rem;
@@ -2543,26 +2543,26 @@
       function catalogMatchesQuery(c,q) {
         if(!q) return true;
         const n=normalizeSearch(q);
-
-        const exactArea=curriculumTaxonomy.find(a=>
-          normalizeSearch(a.label)===n || (a.aliases||[]).some(x=>normalizeSearch(x)===n)
-        );
-        if(exactArea) return c.area===exactArea.id;
-
-        const exactSubareas=[...new Set(curriculumTaxonomy.flatMap(a=>a.subareas||[]))]
-          .filter(x=>normalizeSearch(x)===n);
-        if(exactSubareas.length) return exactSubareas.includes(c.subarea);
-
+        const tokens=n.split(/\s+/).filter(Boolean);
         const area=areaMeta(c.area);
-        const hay=[
+        const courses=(c.courseIds||[]).map(courseMeta).filter(Boolean);
+        const searchable=[
           c.titleKo,c.titleEn,c.summary,c.course,c.subarea,area.label,
-          ...(area.aliases||[]),...(c.aliases||[]),...(c.learn||[]),...(c.outcomes||[])
-        ].join(' ').toLowerCase();
+          ...(area.aliases||[]),...(c.aliases||[]),...(c.learn||[]),...(c.outcomes||[]),
+          ...courses.flatMap(x=>[x.title,x.titleEn,...(x.aliases||[])]),
+          ...((c.typicalYears||[]).flatMap(y=>[y+'학년','대학교 '+y+'학년','컴공 '+y+'학년']))
+        ].filter(Boolean).map(normalizeSearch);
 
-        if(hay.includes(n)) return true;
-        return curriculumSearchEntries.some(e=>
-          normalizeSearch(e.term).includes(n) && (e.conceptIds||[]).includes(c.id)
-        );
+        const tokenMatches=(token)=>{
+          if(searchable.some(v=>v===token || (token.length>3 && v.includes(token)))) return true;
+          return curriculumSearchEntries.some(e=>{
+            const term=normalizeSearch(e.term);
+            const termMatch=term===token || (token.length>3 && term.includes(token));
+            return termMatch && (e.conceptIds||[]).includes(c.id);
+          });
+        };
+
+        return tokens.every(token=>tokenMatches(token));
       }
 
       function filteredCatalog() {
@@ -2759,10 +2759,14 @@
         const yearMatch=normalized.match(/(?:대학교\s*|컴공\s*)?([1-4])학년/);
         const year=yearMatch ? Number(yearMatch[1]) : null;
 
+        const queryTokens=normalized.split(/[^a-z0-9가-힣+.-]+/i).filter(Boolean);
         const course=curriculumCourses.find(c=>
           [c.title,c.titleEn,...(c.aliases||[])].some(name=>{
             const n=normalizeSearch(name);
-            return n && (normalized===n || normalized.includes(n));
+            if(!n) return false;
+            if(normalized===n) return true;
+            if(n.length<=3) return queryTokens.includes(n);
+            return normalized.includes(n);
           })
         ) || null;
 
