@@ -65,10 +65,50 @@
       "category": "guide",
       "status": "active",
       "icon": "square-terminal",
-      "tags": ["CLI", "macOS", "Ubuntu"],
-      "keywords": ["개발 환경", "터미널", "명령어", "셸"],
+      "tags": [
+        "CLI",
+        "macOS",
+        "Ubuntu"
+      ],
+      "keywords": [
+        "개발 환경",
+        "터미널",
+        "명령어",
+        "셸"
+      ],
       "featured": true,
       "updatedAt": "2026-10-05"
+    },
+    {
+      "id": "cs-roadmap",
+      "name": "CS Curriculum Roadmap",
+      "description": "컴퓨터공학 학부 졸업 수준의 전체 지식을 추천 학습 순서, 전공 커리큘럼, 필요 수학, 실제 기술 연결로 탐색하는 학습 지도입니다.",
+      "path": "./cs-roadmap/",
+      "category": "study",
+      "status": "active",
+      "icon": "route",
+      "tags": [
+        "CS",
+        "커리큘럼",
+        "로드맵",
+        "AI 학습"
+      ],
+      "keywords": [
+        "컴퓨터공학",
+        "컴퓨터구조",
+        "운영체제",
+        "OS",
+        "Linux",
+        "Network",
+        "Database",
+        "Backend",
+        "Kernel",
+        "수학",
+        "AI 프롬프트",
+        "독학"
+      ],
+      "featured": true,
+      "updatedAt": "2026-10-06"
     }
   ]
 }
