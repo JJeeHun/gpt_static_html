@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ERP/WMS 운영 현황을 한눈에 확인하는 반응형 대시보드 UI 샘플">
+  <title>WMS Operations Dashboard</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://unpkg.com/lucide@0.468.0/dist/umd/lucide.min.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="../../../" aria-label="프로젝트 허브로 이동">
+        <span class="brand-mark"><i data-lucide="boxes"></i></span>
+        <span class="brand-copy"><strong>FlowStock</strong><small>WMS Console</small></span>
+      </a>
+
+      <nav class="topnav" aria-label="주요 업무 메뉴">
+        <button type="button" data-module="기준정보">기준정보</button>
+        <button type="button" data-module="입고관리">입고관리</button>
+        <button type="button" data-module="출고관리">출고관리</button>
+        <button type="button" class="active" data-module="재고관리">재고관리</button>
+        <button type="button" data-module="운영관리">운영관리</button>
+      </nav>
+
+      <div class="topbar-actions">
+        <span class="center-chip"><i data-lucide="map-pin"></i><span id="headerCenter">서울물류센터</span></span>
+        <button type="button" class="icon-button menu-button" id="menuButton" aria-label="사이드 메뉴 열기" aria-controls="sidebar" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
+        <button type="button" class="profile" data-demo-message="사용자 메뉴는 샘플에서 제공하지 않습니다.">
+          <span class="avatar">A</span>
+          <span class="profile-copy"><strong>관리자</strong><small>운영 담당</small></span>
+          <i data-lucide="chevron-down"></i>
+        </button>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-heading">
+        <span>재고관리</span>
+        <button type="button" class="icon-button close-button" id="closeSidebar" aria-label="사이드 메뉴 닫기"><i data-lucide="x"></i></button>
+      </div>
+      <nav class="side-nav" aria-label="재고관리 메뉴">
+        <div class="nav-group">
+          <p>대시보드</p>
+          <button type="button" class="active"><i data-lucide="layout-dashboard"></i><span>운영 대시보드</span></button>
+          <button type="button" data-demo-message="운영 모니터링은 샘플에서 제공하지 않습니다."><i data-lucide="activity"></i><span>운영 모니터링</span></button>
+        </div>
+        <div class="nav-group">
+          <p>재고 조회</p>
+          <button type="button" data-demo-message="재고현황은 샘플에서 제공하지 않습니다."><i data-lucide="package-search"></i><span>재고현황</span></button>
+          <button type="button" data-demo-message="LOT별 조회는 샘플에서 제공하지 않습니다."><i data-lucide="scan-barcode"></i><span>LOT별 재고</span></button>
+          <button type="button" data-demo-message="유통기한 조회는 샘플에서 제공하지 않습니다."><i data-lucide="calendar-clock"></i><span>유통기한 현황</span></button>
+        </div>
+        <div class="nav-group">
+          <p>재고 작업</p>
+          <button type="button" data-demo-message="재고이동은 샘플에서 제공하지 않습니다."><i data-lucide="move-right"></i><span>재고이동</span></button>
+          <button type="button" data-demo-message="재고실사는 샘플에서 제공하지 않습니다."><i data-lucide="clipboard-check"></i><span>재고실사</span></button>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <i data-lucide="circle-help"></i>
+        <span><strong>Demo UI</strong><small>실제 데이터와 연결되지 않습니다.</small></span>
+      </div>
+    </aside>
+
+    <div class="sidebar-backdrop" id="sidebarBackdrop" hidden></div>
+
+    <main class="main-content">
+      <section class="page-head">
+        <div>
+          <div class="eyebrow">Inventory Operations</div>
+          <h1>물류 운영 대시보드</h1>
+          <p>입출고·재고·창고 가동 현황을 한 화면에서 확인합니다.</p>
+        </div>
+        <div class="filters" aria-label="대시보드 조회 조건">
+          <label>
+            <span>물류센터</span>
+            <select id="centerSelect">
+              <option value="seoul">서울물류센터</option>
+              <option value="incheon">인천물류센터</option>
+              <option value="daejeon">대전물류센터</option>
+            </select>
+          </label>
+          <label>
+            <span>기준일</span>
+            <input type="date" id="dateInput" value="2026-09-19">
+          </label>
+          <button type="button" class="primary-button" id="refreshButton">
+            <i data-lucide="refresh-cw"></i><span>새로고침</span>
+          </button>
+        </div>
+      </section>
+
+      <div class="dashboard-content">
+        <section class="status-strip" aria-label="현재 조회 상태">
+          <div><span class="status-dot"></span><strong>운영 데이터 정상</strong></div>
+          <span id="lastUpdated">마지막 갱신 09:42</span>
+        </section>
+
+        <section class="kpi-grid" id="kpiGrid" aria-label="주요 지표"></section>
+
+        <section class="content-grid content-grid-wide">
+          <article class="panel chart-panel">
+            <div class="panel-head">
+              <div><span class="panel-kicker">FLOW</span><h2>최근 7일 입고 / 출고 추이</h2></div>
+              <div class="legend"><span><i class="legend-line inbound"></i>입고</span><span><i class="legend-line outbound"></i>출고</span></div>
+            </div>
+            <div class="chart-wrap">
+              <svg id="flowChart" viewBox="0 0 760 260" role="img" aria-label="최근 7일 입고 출고 추이 차트"></svg>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div><span class="panel-kicker">CAPACITY</span><h2>창고별 적재율</h2></div>
+              <span class="head-note">85% 이상 주의</span>
+            </div>
+            <div class="capacity-list" id="capacityList"></div>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <article class="panel">
+            <div class="panel-head">
+              <div><span class="panel-kicker">INVENTORY</span><h2>재고 상태</h2></div>
+              <span class="head-note">품목 기준</span>
+            </div>
+            <div class="stock-layout">
+              <div class="donut" id="stockDonut" aria-label="재고 상태 비율">
+                <div><strong id="stockTotal">0</strong><span>전체 품목</span></div>
+              </div>
+              <div class="stock-legend" id="stockLegend"></div>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div><span class="panel-kicker">TODAY</span><h2>금일 작업 처리 현황</h2></div>
+              <span class="head-note">완료 / 전체</span>
+            </div>
+            <div class="work-list" id="workList"></div>
+          </article>
+        </section>
+
+        <section class="panel alert-panel">
+          <div class="panel-head alert-head">
+            <div><span class="panel-kicker">ALERTS</span><h2>주요 알림 / 확인 필요</h2></div>
+            <button type="button" class="filter-button" id="alertFilter" aria-pressed="false">
+              <i data-lucide="list-filter"></i><span>문제 항목만</span>
+            </button>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>우선순위</th><th>품목 / 작업번호</th><th>내용</th><th>창고</th><th>발생시각</th><th>상태</th></tr></thead>
+              <tbody id="alertTableBody"></tbody>
+            </table>
+          </div>
+          <div class="mobile-alerts" id="mobileAlerts"></div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
