@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - stage
-      - feature/wms-dashboard-sample
   workflow_dispatch:
 
 permissions:
