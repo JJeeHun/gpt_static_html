@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - stage
+      - main
   workflow_dispatch:
 
 permissions:
@@ -17,7 +18,7 @@ concurrency:
 
 jobs:
   deploy:
-    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy-stage]')
+    if: github.event_name == 'workflow_dispatch' || contains(github.event.head_commit.message, '[deploy-stage]') || contains(github.event.head_commit.message, '[deploy-main]')
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
